@@ -1,0 +1,282 @@
+
+In this section, we empirically compare the  performance of AugUCB against APT, UCBE, UCBEV, CSAR and the uniform-allocation (UA) algorithms. A brief note about these algorithms are as follows:
+%\begin{itemize}
+
+$\bullet$ APT: This algorithm is from \cite{locatelli2016optimal}; we set $\epsilon=0.05$, which is the margin-of-error within which APT suggests the set of good arms.
+
+$\bullet$ AugUCB: This is the Augmented-UCB algorithm proposed in this paper; as in Theorem \ref{Result:Theorem:1} we set $\rho=\frac{1}{3}$.
+
+$\bullet$ UCBE: This is a modification of the algorithm in \cite{audibert2009exploration} (as it was originally proposed for the best arm identification problem); here, we set $a=\frac{T-K}{H_1}$, and at each time-step an arm $i\in\argmin\left\lbrace |\hat{r}_{i} -\tau|-\sqrt{\frac{a}{n_{i}}} \right\rbrace$ is pulled.
+
+$\bullet$ UCBEV: This is a modification of the algorithm in \cite{gabillon2011multi} (proposed for the TopM problem); its implementation is identical to UCBE, but with $a = \frac{T-2K}{H_{\sigma,1}}$. As mentioned earlier, note that UCBEV's implementation would not be possible in real scenarios, as it requires computing the problem complexity $H_{\sigma,1}$. However, for theoretical reasons we show the best performance achievable by UCBEV. In experiment 6 we perform further explorations of UCBEV with alternate settings of $a$.
+
+$\bullet$ CSAR:  Modification of the successive-reject algorithm in \cite{chen2014combinatorial}; here, we reject the arm farthest from $\tau$ after each round. 
+
+$\bullet$ UA: The naive strategy where at each time-step an arm is uniformly sampled from $\mathcal{A}$ (the set of all arms); however, UA is known to be optimal if all arms are equally difficult to classify. 
+%\end{itemize}
+
+%We also implement the uniform-allocation (labeled UA) strategy,  CSAR is modified for the TBP setting such that it behaves as a Successive Reject algorithm whereby it rejects the arm farthest from $\tau$ after each round.
+%Similarly we modify the UCBE \cite{audibert2009exploration} and UCBEV \cite{gabillon2011multi} algorithms  (originally proposed for single best arm and TopM identification problems, respectively) to suit the TBP setting. 
+%%to \cite{locatelli2016optimal} to suit the goal of finding arms above the threshold $\tau$. 
+%Following  \cite{locatelli2016optimal} the exploration parameter $a$ in UCBE is set to $a=\frac{T-K}{H_1}$, while for UCBEV we set $a = \frac{T-2K}{H_{\sigma,1}}$. Then, at each time-step $t=1,2,..,T$ we pull the arm that minimizes
+% $\lbrace |\hat{r}_{i} -\tau|-\sqrt{\frac{a}{n_{i}}} \rbrace$, where $a$ is set as mentioned above for UCBE and UCBEV respectively. Finally, for AugUCB we take $\rho=\frac{1}{3}$ as in  Theorem \ref{Result:Theorem:1}.
+
+%Again, for UCBEV, following \cite{gabillon2011multi}, we modify it such that the exploration parameter $a = \frac{T-2K}{H_{\sigma,1}}$. Then for each timestep $t=1,2,..,T$ we pull the arm that minimizes $\lbrace |\hat{r}_{i} -\tau|-\sqrt{\frac{a}{n_{i}}} \rbrace$, where $n_{i}$ is the number of times the arm $i$ is pulled till $t-1$ timestep and $a$ is set as mentioned above for UCBE and UCBEV respectively. Also, APT is run with $\epsilon=0.05$, which denotes the precision with which the algorithm suggests the best set of arms and we modify CSAR as per \cite{locatelli2016optimal} such that it behaves as a Successive Reject algorithm whereby it rejects the arm farthest from $\tau$ after each phase. For AugUCB we take $\rho_{\mu}=\frac{1}{8}$ and $\rho_v=\frac{1}{3}$ as in Theorem \ref{Result:Theorem:1}. In all the testbeds AugUCB, APT, CSAR, Uniform Allocation, UCBE and UCBEV are run with the same settings as mentioned above.
+
+\noindent
+Motivated by the settings considered in \cite{locatelli2016optimal}, 
+we design six different experimental scenarios that are obtained by varying the arm means and variances. 
+%We conduct a set of six experiments with different reward means and variances. 
+Across all experiments consists of $K=100$  arms (indexed $i=1,2,\cdots,100$) of which ${S}_\tau=\{6,7,\cdots,10\}$, where we have fixed $\tau=0.5$.
+%in all the experiments, the threshold $\tau$ is set to $0.5$. %for all experiments. 
+%Also, the number of arms in each experiment is $K=100$ , of which $\lbrace 6,7,8,9,10 \rbrace$ arms have their reward means above $\tau$. 
+In all the experiments, each algorithm is run independently for $10000$ time-steps. At every time-step, the output set,  $\hat{S}_\tau$, suggested by each algorithm is recorded; the output is counted as an error if $\hat{S}_\tau\ne S_\tau$. In Figure~1, for each experiment, we have reported the percentage of error incurred by the different algorithms as a function of time; Error percentage is obtained by repeating each experiment independently  for $500$ iterations, and then respectively computing the fraction of errors. The details of the considered experiments are as follows.
+
+%that is obtained by computing the fraction of errors when   The experiment is repeated for $500$ independent iterations, and the average error percentage is plotted against the $10000$ time-steps. 
+
+ %The output is considered erroneous if the correct set of arms is not $i=\lbrace 6,7,8,9,10 \rbrace$ (true for all the experiments). The error percentage over $500$ runs is plotted against $10000$ timesteps. 
+ 
+ %For the uniform allocation algorithm, for each $t=1,2,..,T$ the arms are sampled uniformly. 
+ 
+ 
+%Also we run AugUCBM with arm elimination just by mean estimation and AugUCBV with arm elimination just by variance estimation. For AugUCBM, at every timestep we pull arm that minimizes $i\in\argmin_{j\in B_{m}}\bigg\lbrace |\hat{r}_{j} - \tau | - 2c_{j}\bigg\rbrace$ while for AugUCBV we pull arm that minimizes $i\in\argmin_{j\in B_{m}}\bigg\lbrace |\hat{r}_{j} - \tau | - 2s_{j}\bigg\rbrace$.
+
+%	The first experiment is conducted on a testbed of $100$ arms involving 
+	
+\textbf{Experiment-1:} The reward distributions are Gaussian with  means  $r_{1:4}=0.2+(0:3)\cdot0.05$, $r_{5}=0.45$, $r_{6}=0.55$, $r_{7:10}=0.65+(0:3)\cdot0.05$ and $r_{11:100}=0.4$. Thus, the means of the first $10$ arms follow an arithmetic progression. The remaining arms have identical means; this setting is chosen because now a significant budget is required in exploring these arms, thus increasing the problem complexity.
+
+ The corresponding variances are $\sigma_{1:5}^{2}=0.5$ and $\sigma_{6:10}^{2}=0.6$, while $\sigma_{11:100}^{2}$ is chosen independently and uniform in the  interval $[0.38,0.42]$;
+% Then $\sigma_{11:100}^{2}$ is chosen uniform randomly between $0.38-0.42$.
+note that, the variances of the arms in $S_\tau$ are higher than those of the other arms.
+% The means in the testbed are chosen in such a way that any algorithm has to spend a significant amount of budget to explore all the arms and variance is chosen in such a way that the arms above $\tau$ have high variance whereas arms below $\tau$ have lower variance. 
+ The corresponding  results are shown in Figure \ref{Fig:budgetExpt1},
+ from where we see that UCBEV, which has access to the problem complexity while being variance-aware, outperforms all other algorithm (including UCBE which also has access to the problem complexity but does not take into account the variances of the arms).  Interestingly, the performance of our AugUCB (without requiring any complexity input) is comparable with UCBEV, while it 
+   % with the said parameters 
+ outperforms UCBE, APT and the other non variance-aware algorithms that we have considered. 	
+%AugUCBM with just mean estimation performs worse than AugUCB or AugUCBV, which have a matching performance in this setup.
+	
+\begin{figure}[th!]
+    \centering
+    \begin{tabular}{cc}
+    \subfigure[0.32\textwidth][Expt-$1$: Arithmetic Progression (Gaussian)]
+    {
+    		\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		}
+        \begin{tikzpicture}[scale=0.6]
+      	\begin{axis}[
+		xlabel={Time-step},
+		ylabel={Error Percentage},
+		grid=major,
+        %clip mode=individual,grid,grid style={gray!30},
+        clip=true,
+        %clip mode=individual,grid,grid style={gray!30},
+  		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
+      	% UCB
+		\addplot table{tbandit/results/budgetTestAP/APT12_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestAP/AugUCBV1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestAP/AugUCBV_1_13_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestAP/UCBEM1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestAP/UCBEMV1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestAP/SR1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestAP/UA1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestAP/AugUCBM12_comp_subsampled.txt};
+		%\addplot table{results/budgetTestAP/AugUCBV1_comp_subsampled.txt};
+      	%\legend{APT,AugUCB,UCBE,UCBEV,CSAR,Unif Alloc,AugUCBM,AugUCBV}
+      	\legend{APT,AugUCB,UCBE,UCBEV,CSAR,UA}
+      	\end{axis}
+      	\end{tikzpicture}
+  		\label{Fig:budgetExpt1}
+    }
+    &
+    \subfigure[0.32\textwidth][Expt-$2$: Geometric Progression (Gaussian)]
+    {
+    	\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		}
+        \begin{tikzpicture}[scale=0.6]
+        \begin{axis}[
+		xlabel={Time-step},
+		ylabel={Error Percentage},
+        %clip mode=individual,grid,grid style={gray!30},
+		grid=major,
+		clip=true,
+  		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
+        % UCB
+		\addplot table{tbandit/results/budgetTestGP/APT12_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGP/AugUCBV1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBV_1_13_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGP/UCBEM1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGP/UCBEMV1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGP/SR1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGP/UA1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBM12_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBV1_comp_subsampled.txt};
+        %\legend{APT,AugUCB,UCBE,UCBEV,CSAR,Unif Alloc,AugUCBM,AugUCBV}
+        \legend{APT,AugUCB,UCBE,UCBEV,CSAR,UA}
+      	\end{axis}
+      	\label{Fig:budgetExpt2}
+        \end{tikzpicture}
+    }
+    \end{tabular}
+
+	\begin{tabular}{cc}
+	\centering
+    \subfigure[0.32\textwidth][Expt-$3$: Three Group Setting (Gaussian)]
+    {
+    		\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		}
+        \begin{tikzpicture}[scale=0.6]
+        \begin{axis}[
+		xlabel={Time-step},
+		ylabel={Error Percentage},
+        %clip mode=individual,grid,grid style={gray!30},
+       	grid=major,
+       	clip=true,
+  		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
+      	% UCB
+		\addplot table{tbandit/results/budgetTestGR1/APT1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR1/AugUCB1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR1/UCBEM1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR1/UCBEMV1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR1/SR1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR1/UA1_comp_subsampled.txt};
+        \legend{APT,AugUCB,UCBE,UCBEV,CSAR,UA}
+      	\end{axis}
+      	\end{tikzpicture}
+   		\label{Fig:budgetExpt3} 
+    }
+    &
+    \subfigure[0.32\textwidth][Expt-$4$: Two Group Setting (Gaussian) ]
+    {
+    	\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		}
+        \begin{tikzpicture}[scale=0.6]
+        \begin{axis}[
+		xlabel={Time-step},
+		ylabel={Error Percentage},
+        %clip mode=individual,grid,grid style={gray!30},
+		grid=major,
+		clip=true,
+  		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
+        % UCB
+		\addplot table{tbandit/results/budgetTestGR2/APT1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR2/AugUCBV1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBV_1_13_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR2/UCBEM1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR2/UCBEMV1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR2/SR1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR2/UA1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBM12_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBV1_comp_subsampled.txt};
+        %\legend{APT,AugUCB,UCBE,UCBEV,CSAR,Unif Alloc,AugUCBM,AugUCBV}
+        \legend{APT,AUgUCB,UCBE,UCBEV,CSAR,UA}
+        %\legend{APT,AugUCB,UCBE,UCBEV,CSAR,Unif Alloc}
+      	\end{axis}
+      	\label{Fig:budgetExpt4}
+        \end{tikzpicture}
+    }
+    \end{tabular}
+
+	\begin{tabular}{cc}
+    \subfigure[0.32\textwidth][Expt-$5$: Two Group Setting (Advance) ]
+    {
+    	\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		}
+        \begin{tikzpicture}[scale=0.6]
+        \begin{axis}[
+		xlabel={Time-step},
+		ylabel={Error Percentage},
+        %clip mode=individual,grid,grid style={gray!30},
+		grid=major,
+		clip=true,
+  		legend style={at={(0.5,1.3)},anchor=north, legend columns=3} ]
+        % UCB
+		\addplot table{tbandit/results/budgetTestGR4/APT1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/AugUCB1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/UCBEM1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/UCBEMV1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/SR1_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/UA1_comp_subsampled.txt};
+        \legend{APT,AUgUCB,UCBE,UCBEV,CSAR,UA}
+      	\end{axis}
+      	\label{Fig:budgetExpt5}
+        \end{tikzpicture}
+    }
+    &
+    \subfigure[0.32\textwidth][Expt-$6$: Two Group Setting (Advance) ]
+    {
+    	\pgfplotsset{
+		tick label style={font=\Large},
+		label style={font=\Large},
+		legend style={font=\Large},
+		}
+        \begin{tikzpicture}[scale=0.6]
+        \begin{axis}[
+		xlabel={Time-step},
+		ylabel={Error Percentage},
+        %clip mode=individual,grid,grid style={gray!30},
+		grid=major,
+		clip=true,
+  		legend style={at={(0.5,1.3)},anchor=north, legend columns=2} ]
+        % UCB
+		\addplot table{tbandit/results/budgetTestGR3/testUCBEMV1_0.25_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/AugUCB1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBV_1_13_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGR3/testUCBEMV1_0.25_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR3/testUCBEMV1_256_comp_subsampled.txt};
+		\addplot table{tbandit/results/budgetTestGR4/UCBEMV1_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGR3/testUCBEMV1_64_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBM12_comp_subsampled.txt};
+		%\addplot table{results/budgetTestGP/AugUCBV1_comp_subsampled.txt};
+        %\legend{APT,AugUCB,UCBE,UCBEV,CSAR,Unif Alloc,AugUCBM,AugUCBV}
+        \legend{UCBEV($0.25$), AugUCB, UCBEV($256$), UCBEV($1$)}
+        %\legend{UCBEV($0.06$),AUgUCB,UCBEV($0.25$),UCBEV($1$),UCBEV($64$),UCBEV($256$)}
+        %\legend{APT,AugUCB,UCBE,UCBEV,CSAR,Unif Alloc}
+      	\end{axis}
+      	\label{Fig:budgetExpt6}
+        \end{tikzpicture}
+    }
+    \end{tabular}
+    \caption{Performances of the various TBP algorithms in terms of error percentage vs. time-step, for  six different experimental scenarios.}
+    \label{fig:budgetExpt}
+    \vspace{-6mm}
+\end{figure}
+
+	
+\textbf{Experiment-2:} We again consider  Gaussian reward distributions. However, here the means of the first $10$ arms constitute a geometric progression. Formally, the reward means are $r_{1:4}=0.4-(0.2)^{1:4}$, $r_{5}=0.45$, $r_{6}=0.55$, $r_{7:10}=0.6+(0.2)^{5-(1:4)}$ and $r_{11:100}=0.4$; the arm variances are as in experiment-$1$. The corresponding results are shown in Figure \ref{Fig:budgetExpt2}.  We again observe AugUCB outperforming the other algorithms, except UCBEV. 
+	
+
+\textbf{Experiment-3:} Here, the first
+$10$ arms are partitioned into three groups, with all arms in a group being assigned the same mean; the reward distributions are again Gaussian. Specifically, the reward means are $r_{1:3}=0.1$, $r_{4:7}=\lbrace 0.35, 0.45, 0.55, 0.65\rbrace$ and $r_{8:10}=0.9$; as before,  $r_{11:100}=0.4$ and all the variances are as in Experiment-$1$. The results for this scenario are presented in Figure \ref{Fig:budgetExpt3}. The observations are inline with those made in the previous experiments. 
+
+
+	
+\textbf{Experiment-4:} The setting is similar to that considered in Experiment-3, but with the first $10$ arms partitioned into two groups; the respective means are $r_{1:5}=0.45$, $r_{6:10}=0.55$. The corresponding results are shown in Figure \ref{Fig:budgetExpt4}, from where the good performance of AugUCB is again validated.
+
+
+\textbf{Experiment-5:} This is again the two group setting involving Gaussian reward distributions. The reward means are as in Experiment-4, while the variances are  $\sigma_{1:5}^{2}=0.3$ and $\sigma_{6:10}^{2}=0.8$;  $\sigma_{11:100}^{2}$ are independently and uniformly chosen in the interval $[0.2,0.3]$.  The corresponding results are shown in Figure \ref{Fig:budgetExpt5}.
+ We refer to this setup as \emph{Advanced} because here the chosen variance values are such that only  variance-aware algorithms will perform well.Hence, we see that UCBEV performs very well in comparison with the other algorithms. However,  it is interesting to note that the performance of  AugUCB catches-up with UCBEV as the time-step increases, while significantly outperforming the other non-variance aware algorithms.
+
+
+\textbf{Experiment-6:} We use the same setting as in Experiment-5, but conduct more exploration of UCBEV with different values of the exploration parameter $a$. The corresponding results are shown in Figure \ref{Fig:budgetExpt6}. As studied in \cite{locatelli2016optimal}, we implement UCBEV with $ a_{i} = 4^{i} \frac{T-2K}{H_{\sigma,1}}$ for $i = -1,0,4$. Here, $a_{0}$ corresponds to UCBEV($1$) (in Figure \ref{Fig:budgetExpt6}) which is UCBEV run with the optimal choice of $H_{\sigma ,1}$. For other choices of $a_i$ we see that UCBEV($a_i$) is significantly outperformed by AugUCB. 
+	
+Finally, note that in all the above experiments, the CSAR algorithm, although performs well initially, quickly exhausts its budget and saturates at a higher error percentage. This is because it pulls all arms equally in each round, with the round lengths being non-adaptive.
+
+
+
+
+

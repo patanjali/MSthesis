@@ -1,0 +1,283 @@
+\documentclass[PhD]{iitmdiss}
+%\documentclass[MS]{iitmdiss}
+%\documentclass[MTech]{iitmdiss}
+%\documentclass[BTech]{iitmdiss}
+\usepackage{times}
+ \usepackage{t1enc}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{hyperref} % hyperlinks for references.
+\usepackage{amsmath} % easier math formulae, align, subequations \ldots
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{ijcai17}
+
+
+\usepackage{macros}
+
+\usepackage{latexsym} 
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+
+\title{\LaTeX\ CLASS FOR DISSERTATIONS SUBMITTED TO IITM}
+
+\author{Name}
+
+\date{December 2017}
+\department{Computer Science and Engineering}
+
+%\nocite{*}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Certificate
+\certificate
+
+\vspace*{0.5in}
+
+\noindent This is to certify that the thesis titled {\bf \LaTeX\ CLASS  
+  FOR DISSERTATIONS SUBMITTED TO IIT-M}, submitted by {\bf Subhojyoti Mukherjee}, 
+  to the Indian Institute of Technology, Madras, for
+the award of the degree of {\bf Master of Science (Research)}, is a bona fide
+record of the research work done by him under our supervision.  The
+contents of this thesis, in full or in parts, have not been submitted
+to any other Institute or University for the award of any degree or
+diploma.
+
+\vspace*{1.5in}
+
+\begin{singlespacing}
+\hspace*{-0.25in}
+\parbox{2.5in}{
+\noindent {\bf Prof.~1} \\
+\noindent Research Guide \\ 
+\noindent Professor \\
+\noindent Dept. of Physics\\
+\noindent IIT-Madras, 600 036 \\
+} 
+\hspace*{1.0in} 
+%\parbox{2.5in}{
+%\noindent {\bf Prof.~S.~C.~Rajan} \\
+%\noindent Research Guide \\ 
+%\noindent Assistant Professor \\
+%\noindent Dept.  of  Aerospace Engineering\\
+%\noindent IIT-Madras, 600 036 \\
+%}  
+\end{singlespacing}
+\vspace*{0.25in}
+\noindent Place: Chennai\\
+Date: 22nd December 2017 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgements
+\acknowledgements
+
+Thanks to all those who made \TeX\ and \LaTeX\ what it is today.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+
+\abstract
+
+\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{\LaTeX ; Thesis;
+  Style files; Format.}
+
+\vspace*{24pt}
+
+\noindent A \LaTeX\ class along with a simple template thesis are
+provided here.  These can be used to easily write a thesis suitable
+for submission at IIT-Madras.  The class provides options to format
+PhD, MS, M.Tech.\ and B.Tech.\ thesis.  It also allows one to write a
+synopsis using the same class file.  Also provided is a BIB\TeX\ style
+file that formats all bibliography entries as per the IITM format.
+
+The formatting is as (as far as the author is aware) per the current
+institute guidelines.
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of contents etc.
+
+\begin{singlespace}
+\tableofcontents
+\thispagestyle{empty}
+
+\listoftables
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\end{singlespace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbreviations
+\abbreviations
+
+\noindent 
+\begin{tabbing}
+xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+\textbf{IITM}   \> Indian Institute of Technology, Madras \\
+\textbf{RTFM} \> Read the Fine Manual \\
+\end{tabbing}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation
+
+\chapter*{\centerline{NOTATION}}
+\addcontentsline{toc}{chapter}{NOTATION}
+
+\begin{singlespace}
+\begin{tabbing}
+xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+\textbf{$r$}  \> Radius, $m$ \\
+\textbf{$\alpha$}  \> Angle of thesis in degrees \\
+\textbf{$\beta$}   \> Flight path in degrees \\
+\end{tabbing}
+\end{singlespace}
+
+\pagebreak
+\clearpage
+
+% The main text will follow from this point so set the page numbering
+% to arabic from here on.
+\pagenumbering{arabic}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction.
+\chapter{Introduction}
+\label{chap:intro}
+\input{ThesisIntro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Thresholding Bandits}
+\label{chap:tbandit}
+\section{Introduction}
+\label{tbandit:intro}
+\input{tbandit/intro}
+\input{tbandit/motivation}
+
+\subsection{Related Work}
+\label{tbandit:prevRes}
+\input{tbandit/prevRes}
+
+\subsection{Our Contribution}
+\label{tbandit:contribution}
+\input{tbandit/contribution}
+
+
+\section{Augmented-UCB Algorithm}
+\label{tbandit:algorithm}
+\input{tbandit/algo}
+
+
+\section{Theoretical Results}
+\label{tbandit:results}
+\input{tbandit/results}
+
+
+\section{Numerical Experiments}
+\label{tbandit:expt}
+\input{tbandit/expt}
+
+
+\section{Conclusion}
+\label{tbandit:conclusion}
+\input{tbandit/conclusion}
+
+
+\section{Summary}
+\label{tbandit:Summary}
+In this chapter we looked at the Augmented-UCB (AugUCB) algorithm for a fixed-budget version of the thresholding bandit problem (TBP), where the objective is to identify a set of arms whose expected mean is above a threshold. A key feature of AugUCB is that it uses both mean and variance estimates to eliminate arms that have been sufficiently explored; to the best of our knowledge this is the first algorithm to employ such an approach for the considered TBP.  Theoretically, we obtain an upper bound on the loss (probability of mis-classification) incurred by AugUCB. Although UCBEV in literature provides a better guarantee, it is important to emphasize that UCBEV has access to problem complexity (whose computation requires arms' mean and variances), and hence is not realistic in practice; this is in contrast to AugUCB whose implementation does not require any such complexity inputs. We conduct extensive simulation experiments to validate the performance of AugUCB. Through our simulation work, we establish that AugUCB, owing to its utilization of variance estimates, performs significantly better than the state-of-the-art APT, CSAR and other non variance-based algorithms.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Efficient UCB Variance}
+\label{chap:EUCBV}
+\section{Introduction}
+\label{sec:intro}
+\input{EUCBV/intro}
+
+\subsection{Related Work}
+\label{sec:related}
+\input{EUCBV/related}
+
+
+\subsection{Our Contributions}
+\label{sec:contri}
+\input{EUCBV/contribution}
+
+\section{Algorithm: Efficient UCB Variance}
+\label{sec:eucbv}
+\input{EUCBV/ealgo}
+
+\section{Main Results} 
+\label{sec:results}
+\input{EUCBV/results}
+
+\section{Proofs}
+\label{sec:proofTheorem}
+\input{EUCBV/proofTheorem}
+
+\section{Experiments}
+\label{sec:expt}
+\input{EUCBV/expts}
+
+\section{Conclusion and Future Works}
+\label{sec:conc}
+\input{EUCBV/Conclusion}
+
+\section{Summary}
+\label{tbandit:Summary}
+In this chapter we looked at a novel variant of the UCB algorithm (referred to as Efficient-UCB-Variance (EUCBV)) for minimizing cumulative regret in the stochastic multi-armed bandit (MAB) setting. EUCBV incorporates the arm elimination strategy proposed in UCB-Improved \citep{auer2010ucb}, while taking into account the variance estimates to compute the arms' confidence bounds, similar to UCBV \citep{audibert2009exploration}. Through a theoretical analysis we establish that EUCBV incurs a \emph{gap-dependent} regret bound of {\scriptsize $O\left( \dfrac{K\sigma^2_{\max} \log (T\Delta^2 /K)}{\Delta}\right)$} after $T$ trials, where $\Delta$ is the minimal gap between optimal and sub-optimal arms; the above bound is an improvement over that of existing state-of-the-art UCB algorithms (such as UCB1, UCB-Improved, UCBV,  MOSS). Further, EUCBV incurs a \emph{gap-independent} regret bound of {\scriptsize $O\left(\sqrt{KT}\right)$}  which is an improvement over that of UCB1, UCBV and UCB-Improved, while being comparable with that of MOSS and OCUCB. Through an extensive numerical study we show that EUCBV significantly outperforms the popular UCB variants (like MOSS, OCUCB, etc.) as well as Thompson sampling and Bayes-UCB algorithms. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendices.
+
+\appendix
+
+\chapter{APPENDIX}
+\section{Appendix for EUCBV}
+\label{sec:app}
+\input{EUCBV/Appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography.
+
+\begin{singlespace}
+\bibliographystyle{iitm}
+\bibliography{refs}
+\end{singlespace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of papers
+
+\listofpapers
+
+\begin{enumerate}  
+\item Authors....  \newblock
+ Title...
+  \newblock {\em Journal}, Volume,
+  Page, (year).
+\end{enumerate}  
+
+\end{document}

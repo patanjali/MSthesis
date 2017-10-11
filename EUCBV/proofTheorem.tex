@@ -1,0 +1,343 @@
+%\subsection{Lemma 1}
+%\label{sec:proofTheorem:Lemma1}
+We first present a few technical lemmas that is required  to prove the result in Theorem \ref{Result:Theorem:1}.
+
+\begin{lemma}
+\label{proofTheorem:Lemma:1}
+If $T\geq K^{2.4}$, $\psi=\frac{T}{ K^2}$, $\rho=\frac{1}{2}$ and $m\leq \frac{1}{2} \log_2\left(\frac{T}{e}\right) $, then,
+\begin{align*}
+\dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} \leq \frac{3}{2}.
+\end{align*}
+\end{lemma}
+
+
+
+\begin{lemma}
+\label{proofTheorem:Lemma:2}
+If $T\geq K^{2.4}$, $\psi=\frac{T}{ K^2}$, $\rho =\frac{1}{2}$, $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $ and $c_{i} =\sqrt{\frac{\rho (\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_i}}$, then,
+%\begin{align*}
+\center $c_{i} < \frac{\Delta_i}{4}$.
+%\end{align*}
+\end{lemma}
+
+
+
+\begin{lemma}
+\label{proofTheorem:Lemma:3}
+If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,  $c_{i} = \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ and $n_{m_i} = \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$ then we can show that,
+\begin{align*}
+\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}.
+\end{align*}
+\end{lemma}
+
+
+
+%\begin{lemma}
+%\label{proofTheorem:Lemma:3}
+%If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,  $\bar{c}_i=\sqrt{\frac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4z_i}}$ and $n_{m_i} = \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$ then we can show that,
+%\begin{align*}
+%\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) 
+%+ \mathbb{P}\left( \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\right) \leq \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}.
+%\end{align*}
+%\end{lemma}
+
+
+
+\begin{lemma}
+\label{proofTheorem:Lemma:4}
+If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $, $\psi=\frac{T}{ K^2}$, $\rho=\frac{1}{2}$, $c_{i} =\sqrt{\frac{\rho(\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ and $n_{m_i}=\frac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ then in the $m_i$-th round, 
+\begin{align*}
+\Pb\lbrace c^{*} > c_i \rbrace  \leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
+\end{align*}
+\end{lemma}
+
+
+
+\begin{lemma}
+\label{proofTheorem:Lemma:5}
+If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,$\psi=\frac{T}{ K^2}$, $\rho=\frac{1}{2}$, $c_{i} =\sqrt{\frac{\rho (\hat{v}_i + 2)\log (\psi T\epsilon_{m_{i}})}{4 z_i}}$ and $n_{m_i}=\frac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$ then in the $m_i$-th round, 
+\begin{align*}
+\Pb\lbrace z_i < n_{m_i} \rbrace  \leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
+\end{align*}
+\end{lemma}
+
+
+
+%\begin{lemma}
+%\label{proofTheorem:Lemma:6}
+%For $T\geq K^{2.4}$, $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$, $\psi=\frac{T}{K^2}$ and $\rho=\frac{1}{2}$,  
+%\begin{align*}
+%\dfrac{6K}{(\psi T \epsilon_{m_i})^{\frac{3\rho}{2}}} > \dfrac{K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m_i}^{3\rho + 1}}
+%\end{align*}
+%\end{lemma}
+
+
+
+%\begin{lemma}
+%\label{proofTheorem:Lemma:6}
+%For all bounded rewards in $[0,1]$, $\frac{\Delta_i}{4} \geq \frac{\Delta_i}{4\sigma_i^2 + 4} $.
+%\end{lemma}
+
+
+
+\begin{lemma}
+\label{proofTheorem:Lemma:6}
+For two integer constants $c_1$ and $c_2$, if $20 c_1 \leq c_2$ then,
+\begin{align*}
+c_1 \frac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg) \leq c_2 \frac{\sigma_i^2}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg).
+\end{align*}
+\end{lemma}
+
+
+%\begin{lemma}
+%\label{proofTheorem:Lemma:8}
+%If $m_*$ be the first round that the optimal arm $*$ gets eliminated, then we can show that the regret is upper bounded by,
+%
+%\begin{align*}
+%\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% \leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%\end{align*}
+%
+%\end{lemma}
+
+
+The proofs of lemmas \ref{proofTheorem:Lemma:1} - \ref{proofTheorem:Lemma:6} can be found in Appendix ~\ref{App:Lemma:1}, ~\ref{App:Lemma:2}, ~\ref{App:Lemma:3}, ~\ref{App:Lemma:4}, ~\ref{App:Lemma:5} and
+ ~\ref{App:Lemma:6} respectively.
+
+%The proofs of all the Lemmas can be found in Appendix ~\ref{App:Lemma:1} - Appendix ~\ref{App:Lemma:9} respectively.
+
+\subsection*{Proof of Theorem 1}
+\label{sec:proofTheorem:Theorem1}
+\begin{customproof}{1}
+For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \frac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Note that as all rewards are bounded in $[0,1]$, it implies that $0\leq \sigma_i^2 \leq \frac{1}{4},\forall i\in \A$. Now, as in \citet{auer2010ucb}, we bound the regret under the following two cases: 
+\begin{itemize}
+\item {Case $(a)$}: some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$
+\item {Case $(b)$}: an arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ (or before), or there is no optimal arm $*\in B_{m_i}$
+\end{itemize} 
+The details of each case are contained in the following sub-sections.
+
+%Note that in in round $m_i$ as $\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4}$ implies that $\sqrt{4\epsilon_{m_i}} < \dfrac{\Delta_{i}}{4\sigma_i^2}$, since $\sigma_i^2\in (0,1]$
+
+\textbf{Case $(a)$:}
+For simplicity, let $c_{i} := \sqrt{\frac{\rho (\hat{v}_i + 2) \log (\psi T\epsilon_{m_{i}})}{4 z_{i}}}$ denote the length of the confidence interval corresponding to arm $i$ in round $m_i$. Thus, in round $m_i$ (or before) whenever $z_i \geq n_{m_{i}}\ge\frac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}$, by applying Lemma \ref{proofTheorem:Lemma:2} we obtain $c_{i} < \frac{\Delta_{i}}{4}$.
+%\begin{align*}
+%	c_{i} < \dfrac{\Delta_{i}}{4} 
+%\end{align*}
+Now, the sufficient conditions for arm $i$ to get eliminated by an optimal arm in round $m_i$ is given by
+	\begin{eqnarray}
+	\hat{r}_{i} \leq r_{i} + c_{i} \text{, } 
+ 	\hat{r}^{*} \geq r^{*} - c^{*} \text{, } c_{i} \geq c^* \text{ and } z_i \geq n_{m_i} \label{eq:armelim-casea}.
+	\end{eqnarray}
+
+Indeed, in round $m_i$ suppose (\ref{eq:armelim-casea}) holds, then we have
+%	 
+  \begin{align*}
+\hat{r}_{i} + c_{i}&\leq r_{i} + 2c_{i} 
+= r_{i} + 4c_{i} - 2c_{i} \\
+ &< r_{i} + \Delta_{i} - 2c_{i}
+ \leq r^{*} -2c^{*} 
+ \leq \hat{r}^{*} - c^{*}
+  \end{align*}
+  so that a sub-optimal arm ${i} \in \A^{'}$ gets eliminated.	
+Thus, the probability of the complementary event of these four conditions in (\ref{eq:armelim-casea}) yields a bound on the probability that arm $i$ is not eliminated in round $m_i$. Following the proof of Lemma 1 of \citet{audibert2009exploration} we can show that a bound on the complementary of the first condition is given by,
+
+\begin{align}
+\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})
+&\leq \mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) 
++ \mathbb{P}\left( \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\right)\label{eq:prob_eq2}
+\end{align}
+where 
+\begin{align*}
+\bar{c}_i=\sqrt{\dfrac{\rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi T\epsilon_{m_{i}})}{4n_{m_i}}}.
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Shifted as Lemma
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Note that, substituting $ n_{m_i} \geq \frac{\log{(\psi T\epsilon_{m_{i}})}}{2\epsilon_{m_{i}}}$, $\bar{c}_i$ can be simplified to obtain,
+%\begin{align}
+%\bar{c}_i
+%\leq \sqrt{\dfrac{\rho\epsilon_{m_{i}}(\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)}{2}}\leq \sqrt{ \epsilon_{m_{i}}}.
+%\label{si_bar_equn}
+%\end{align}
+%%
+%The first term in the LHS of (\ref{eq:prob_eq2}) can be bounded using the Bernstein inequality as below:
+%\begin{align}
+%&\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right)\nonumber 
+%\le \exp\left(- \dfrac{(\bar{c}_i)^2 z_{i}}{2\sigma_i^2 + \frac{2}{3}\bar{c}_i} \right)\nonumber 
+%%%%%%%%%%%%%%%%
+%\\
+%& \overset{(a)}{\le} \exp\left(- \rho \left(\dfrac{3\sigma_{i}^{2}+3\sqrt{\epsilon_{m_{i}}} + 6}{6\sigma_i^2 + 2\sqrt{\epsilon_{m_i}}} \right)\log(\psi  T\epsilon_{m_{i}}\right)\nonumber \\
+%%%%%%%%%%%%%%%%
+%% &\le \exp\left(- \rho (\sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} + 2)\log(\psi  T\epsilon_{m_{i}})\right)\nonumber \\
+%%%%%%%%%%%%%%%%
+%& \overset{(b)}{\leq} \exp\left(- \rho \log(\psi  T\epsilon_{m_{i}})\right) 
+%%%%%%%%%%%%%%%%
+%\le \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\rho}}
+%\label{lhs1_equn}
+%\end{align}
+%where, $(a)$ is obtained by substituting equation \ref{si_bar_equn} and $(b)$ occurs because for all $\sigma_{i}^2 \in [0,1]$, $\left(\dfrac{3\sigma_{i}^{2}+3\sqrt{\epsilon_{m_{i}}} + 6}{6\sigma_i^2 + 2\sqrt{\epsilon_{m_i}}}\right) \geq 1$ .
+%
+% 
+%The second term in the LHS of (\ref{eq:prob_eq2}) can be simplified as follows:
+%\begin{align}
+%&\mathbb{P}\bigg\lbrace \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber\\
+%%%%%%%%%%%%%%%%%%%
+%&\leq \mathbb{P}\bigg\lbrace \dfrac{1}{n_{i}}\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}-(\hat{r}_{i}-r_{i})^{2}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\bigg\rbrace\nonumber\\
+%%%%%%%%%%%%%%%%%%%
+%&\leq \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}} \bigg\rbrace\nonumber\\
+%%%%%%%%%%%%%%%%%%%
+%&\overset{(a)}{\leq} \mathbb{P}\bigg\lbrace \dfrac{\sum_{t=1}^{n_{i}}(X_{i,t}-r_{i})^{2}}{n_{i}}\geq \sigma_{i}^{2} + \bar{c}_i\bigg\rbrace \nonumber\\
+%%%%%%%%%%%%%%%%%%%
+%&\overset{(b)}{\leq} \exp\left(- \rho \left(\dfrac{3\sigma_{i}^{2}+3\sqrt{\epsilon_{m_{i}}} + 6}{6\sigma_i^2 + 2\sqrt{\epsilon_{m_i}}} \right)\log(\psi  T\epsilon_{m_{i}})\right)
+%%%%%%%%%%%%%%%%%%
+%\le \dfrac{1}{(\psi  T\epsilon_{m_{i}})^{\rho}}
+%\label{lhs2_equn}
+%\end{align}
+%where inequality $(a)$ is obtained using (\ref{si_bar_equn}), while $(b)$ follows from the Bernstein inequality.
+  
+%Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq2}) we obtain $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\rho}}$. 
+
+From Lemma \ref{proofTheorem:Lemma:3} we can show that $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\leq\mathbb{P}\left( \hat{r}_{i} > r_{i}+ \bar{c}_i\right) + \mathbb{P}\left( \hat{v}_{i}\geq \sigma_{i}^{2}+\sqrt{\epsilon_{m_{i}}}\right) \leq \frac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}$. Similarly, $\mathbb{P}\lbrace\hat{r}^{*} < r^{*} - c^{*}\rbrace \leq \frac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}$. Summing the above two contributions, the probability that a sub-optimal arm ${i}$ is not eliminated on or before $m_{i}$-th round by the first two conditions in  (\ref{eq:armelim-casea}) is,  
+\begin{eqnarray}
+\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg). \label{eq:arm:elim:c1}
+\end{eqnarray}
+ 
+
+Again, from Lemma \ref{proofTheorem:Lemma:4} and Lemma \ref{proofTheorem:Lemma:5} we can bound the probability of the  complementary of the event $c_{i} \geq c^* $ and $ z_i \geq n_{m_i}$ by,
+
+\begin{eqnarray}
+\dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}} + \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\leq \dfrac{364 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}. \label{eq:arm:elim:c2}
+\end{eqnarray}
+
+Also, for eq. $(\ref{eq:arm:elim:c1})$ we can show that for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$
+\begin{eqnarray}
+\bigg(\dfrac{4}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}} \bigg) &\overset{(a)}{\leq} \bigg(\dfrac{4}{(\frac{T^2}{K^2}\epsilon_{m_{i}})^{\frac{3}{4}}} \bigg)\leq \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^\frac{3}{2} \epsilon_{m_i}^{\frac{1}{4}}\sqrt{\epsilon_{m_{i}}})}\bigg) \nonumber \\
+%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(b)}{\leq} \bigg(\dfrac{4 K^{\frac{3}{2}}}{(T^{\frac{3}{2}-\frac{1}{8}}\sqrt{\epsilon_{m_{i}}})}  \bigg)
+\leq \dfrac{4 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}. \label{eq:arm:elim:c3}
+\end{eqnarray}
+
+Here, in $(a)$ we substitute the values of $\psi$ and $\rho$ and $(b)$ follows from the identity $\epsilon_{m_i}^{\frac{1}{4}}\geq (\frac{e}{T})^{\frac{1}{8}} $ as $\epsilon_{m_i}\geq \sqrt{\frac{e}{T}}$.
+
+Summing up over all arms in $\A^{'}$ and bounding the regret for all the \textit{four} arm elimination conditions in (\ref{eq:armelim-casea}) by $(\ref{eq:arm:elim:c2}) + (\ref{eq:arm:elim:c3})$ for each arm $i\in \A^{'}$ trivially by $T\Delta_{i}$, we obtain
+	\begin{align*}
+&\sum_{i\in \A^{'}}\bigg(\dfrac{4 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg) + \sum_{i\in \A^{'}}\bigg(\dfrac{364 K^4 T\Delta_i}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}\bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(a)}{\leq}\sum_{i\in \A^{'}}\bigg(\dfrac{368 K^4 T\Delta_{i}}{T^{\frac{5}{4}}\left(\frac{\Delta_{i}^{2}}{4.16}\right)^{\frac{1}{2}}}\bigg)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\overset{(b)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{C_1 K^4}{(T)^{\frac{1}{4}}}\bigg).\\  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\end{align*}
+
+%   \begin{align*}
+%&\sum_{i\in \A^{'}}\bigg(\dfrac{388 K T\Delta_{i}}{(\psi T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}\bigg)
+%\leq\sum_{i\in \A^{'}}\bigg(\dfrac{388 K T\Delta_{i}}{(\psi T\dfrac{\Delta_{i}^{2}}{4.16})^{\frac{3\rho}{2}}}\bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+2\frac{3\rho}{2}}.16^{\frac{3\rho}{2}} K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}\Delta_{i}^{2\frac{3\rho}{2} -1}}\bigg)\\  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%& \overset{(a)}{\leq} \sum_{i\in \A^{'}}\bigg(\dfrac{388.2^{2+\frac{3}{2}}.16^{\frac{3}{4}} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}}\bigg)\leq \sum_{i\in \A^{'}}\dfrac{C_1 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}  
+%   \end{align*}
+%Here in $(a)$ we substitute the values of $\rho$ and $\psi$ and $C_1$ denotes a constant integer value.\\
+Here, $(a)$ happens because $\sqrt{4\epsilon_{m_i}} < \frac{\Delta_i}{4}$, and in $(b)$, $C_1$ denotes a constant integer value.\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Case (b)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Case $(b)$:} Here, there are two sub-cases to be considered.
+% \subsection*{Case $b$: \textit{An arm ${i}\in B_{m_i}$ is eliminated in round $m_{i}$ or before or there is no $*\in B_{m_i}$}}
+
+\noindent
+\textbf{Case $(b1)$ (\textit{${*}\in B_{m_{i}}$ and each ${i}\in \A^{'}$ is  eliminated on or before $m_{i}$ }): } Since we are eliminating a sub-optimal arm ${i}$ on or before round $m_{i}$, it is pulled no longer than, 
+ \begin{align*}
+ z_{i} < \bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil
+ \end{align*}
+%\hspace*{4em}
+%%$, since $\sqrt{\rho_{a}\epsilon_{m_{i}}}\leq\dfrac{\Delta_{i}}{2}
+So, the total contribution of ${i}$  till round $m_{i}$ is given by, 
+\begin{align*}
+&\Delta_{i}\bigg\lceil\dfrac{\log{(\psi T\epsilon_{m_{i}}^{2})}}{2\epsilon_{m_{i}}}\bigg\rceil
+\overset{(a)}{\leq}    \Delta_{i}\bigg\lceil\dfrac{\log{(\psi T(\dfrac{\Delta_{i}}{16 \times 256})^{4})}}{2(\dfrac{\Delta_{i}}{4\sqrt{4}})^{2}}\bigg\rceil \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq   \Delta_{i}\bigg(1+\dfrac{32\log{(\psi T(\dfrac{\Delta_{i}^{4}}{16384})}}{\Delta_{i}^{2}}\bigg)
+\leq \Delta_{i}\bigg(1+\dfrac{32\log{(\psi T\Delta_{i}^{4})}}{\Delta_{i}^{2}}\bigg) .
+\end{align*} 
+
+Here, $(a)$ happens because $\sqrt{4\epsilon_{m_{i}}} < \frac{\Delta_{i}}{4}$. Summing over all arms in $\A^{'}$ the total regret is given by, 
+\begin{align*}
+&\sum_{i\in \A^{'}}\Delta_{i}\bigg(1+\dfrac{32\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}^{2}}\bigg) = \sum_{i\in \A^{'}}\bigg(\Delta_{i} +\dfrac{32\log{(\psi T\Delta_{i}^{4}})}{\Delta_{i}}\bigg) \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(a)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i}+\dfrac{64\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(b)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{16(4\sigma_i^2 + 4)\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right)\\
+&%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\overset{(c)}{\leq} \sum_{i\in \A^{'}} \left(\Delta_{i} +\dfrac{320\sigma_i^2\log{( \frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\right).\\
+\end{align*}
+
+We obtain $(a)$ by substituting the value of $\psi$, $(b)$ from $0\leq\sigma_i^2 \leq\frac{1}{4},\forall i\in \A$ and $(c)$ from Lemma \ref{proofTheorem:Lemma:6}.\\
+
+\noindent
+\textbf{Case $(b2)$ (\textit{Optimal arm ${*}$ is eliminated by a sub-optimal arm):  }} Firstly, if conditions of Case $a$ holds then the optimal arm ${*}$ will not be eliminated in round $m=m_{*}$ or it will lead to the contradiction that $r_{i}>r^{*}$. In any round $m_{*}$, if the optimal arm ${*}$ gets eliminated then for any round from $1$ to $m_{j}$ all arms ${j}$ such that $m_{j}< m_{*}$ were eliminated according to assumption in Case $a$. Let the arms surviving till $m_{*}$ round be denoted by $\A^{'}$. This leaves any arm $a_{b}$ such that $m_{b}\geq m_{*}$ to still survive and eliminate arm ${*}$ in round $m_{*}$. Let such arms that survive ${*}$ belong to $\A^{''}$. Also maximal regret per step after eliminating ${*}$ is the maximal $\Delta_{j}$ among the remaining arms ${j}$ with $m_{j}\geq m_{*}$.  Let $m_{b}=\min\left\lbrace m|\sqrt{4\epsilon_{m}}<\frac{\Delta_{b}}{4}\right\rbrace$. Hence, the maximal regret after eliminating the arm ${*}$ is upper bounded by, 
+
+\begin{align*}
+&\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{368 K^4}{(T^{\frac{5}{4}}\sqrt{\epsilon_{m_{*}}})} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{368 K^4 \sqrt{4}}{(T^{\frac{5}{4}}\sqrt{\epsilon_{m_{*}}})} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\overset{(a)}{\leq}\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}\epsilon_{m_{*}}^{\frac{1}{2}-\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K^4}{T^{\frac{1}{4}}} \bigg).\\
+\end{align*}
+Here at $(a)$, $C_2$ denotes an integer constant.
+
+
+
+%\begin{align*}
+%\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}
+%\end{align*}
+%
+%Again applying Lemma \ref{proofTheorem:Lemma:8} we can show that the above expression is upper bounded by 
+%\begin{align*}
+%\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Moved to Appendix as Lemma 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{align*}
+%&\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T\max_{j\in \A^{''}:m_{j}\geq m_{*}}{\Delta}_{j}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}\bigg(\dfrac{388 K\sqrt{4}}{(\psi  T\epsilon_{m_{*}})^{\frac{3\rho}{2}}} \bigg).T.4\sqrt{\epsilon_{m_{*}}}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{m_{*}=0}^{max_{j\in \A^{'}}m_{j}}\sum_{i\in \A^{''}:m_{i}>m_{*}}C_2 K\bigg(\dfrac{T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}\epsilon_{m_{*}}^{\frac{3\rho}{2}-\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{''}:m_{i}>m_{*}}\sum_{m_{*}=0}^{\min{\lbrace m_{i},m_{b}\rbrace}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{*}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{*}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2} }}{\psi^{\frac{3\rho}{2}}2^{-(\frac{3\rho}{2} -\frac{1}{2})m_{b}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}.2^{\frac{\frac{3\rho}{2}}{2}-\frac{1}{4}}}{\psi^{\frac{3\rho}{2}}\Delta_{i}^{\frac{3\rho}{2} -\frac{1}{2}}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K T^{1-\frac{3\rho}{2}}.2^{\frac{\frac{3\rho}{2}}{2}-\frac{1}{4}}}{\psi^{\frac{3\rho}{2}}b^{\frac{3\rho}{2} -\frac{1}{2}}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\bigg(\dfrac{ C_2 K 2^{\frac{\frac{3\rho}{2}}{2}+\frac{19}{4}}.T^{1-\frac{3\rho}{2} } }{\psi^{\rho}\Delta_{i}^{2\frac{3\rho}{2} -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2 K 2^{\frac{\frac{3\rho}{2}}{2}+\frac{19}{4}}.T^{1-\frac{3\rho}{2}} }{\psi^{\frac{3\rho}{2} }b^{2\frac{3\rho}{2}-1}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\overset{(a)}{\leq}\sum_{i\in \A^{'}}\bigg(\dfrac{C_2^{'} K .T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}\Delta_{i}^{2.\frac{3}{4} -1}} \bigg)+\sum_{i\in \A^{''}\setminus \A^{'}}\bigg(\dfrac{C_2^{'} K T^{1-\frac{3}{4}}}{(\frac{T}{K^2})^{\frac{3}{4}}b^{2.\frac{3}{4}-1}} \bigg)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&\leq\sum_{i\in \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} +\sum_{i\in \A^{''}\setminus \A^{'}}\dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T b}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{align*}
+%In the above simplification, $(a)$ is obtained by substituting the values of $\psi$ and $\rho$.
+
+Finally, summing up the regrets in \textbf{Case a} and \textbf{Case b}, the total regret is given by
+\begin{align*}
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T
+\end{align*}
+
+where $C_0, C_1, C_2$ are integer constants s.t. $C_0 = C_1 + C_2$.
+\end{customproof}
+
+

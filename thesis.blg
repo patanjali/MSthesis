@@ -1,0 +1,13 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: iitm.bst
+Illegal, another \bibstyle command---line 289 of file thesis.aux
+ : \bibstyle
+ :          {iitm}
+I'm skipping whatever remains of this command
+Database file #1: refs.bib
+Warning--I didn't find a database entry for "lamport:86"
+Warning--I didn't find a database entry for "prabhu:xx"
+Warning--I didn't find a database entry for "viz:mayavi"
+Warning--I didn't find a database entry for "pan:pr:flat-fst"
+Warning--I didn't find a database entry for "py:python"
+(There was 1 error message)

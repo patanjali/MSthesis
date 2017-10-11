@@ -1,0 +1,67 @@
+Stochastic multi-armed bandit (MAB) problems are instances of the classic sequential decision-making scenario; specifically an MAB problem comprises of a learner and a collection of actions (or arms), denoted $\mathcal{A}$. In each trial the learner plays (or pulls) an arm $i\in\mathcal{A}$ which yields independent and identically distributed (i.i.d.) reward samples from a distribution (corresponding to arm $i$), whose expectation is denoted by $r_i$. 
+%whose rewards are  samples from the distribution specific to the arm $i\in A$ and whose expected reward is denoted by $r_{i},\forall i\in A$. 
+The learner's objective is to identify an arm corresponding to the maximum expected reward, denoted $r^{*}$. Thus, at each time-step the learner 
+%selects an arm $i$ and hence
+is faced with the \emph{exploration vs.\ exploitation dilemma}, where it can pull an arm which has yielded the highest mean reward (denoted $\hat{r}_{i}$) thus far (\emph{exploitation}) or continue to explore other arms with the prospect of finding a better arm 
+%superior performance 
+whose performance has not been observed sufficiently (\emph{exploration}).
+
+%In the stochastic multi-armed bandit setting a learning agent is required to choose from a set of decisions or arms at every round. The agent is then presented with a reward for that round, which is an independent draw from a stationary distribution specific to the arm selected. The agent, however, does not know the mean of the distributions associated with each arm, denoted by $r_{i}$, including the optimal arm which will give it the best reward, denoted by $r^{*}$. The agent attempts to make arm choices that will maximize some performance measure by keeping track of the reward that has been gathered from previous selections of the arm, for each arm. This is called the estimated mean reward of an arm denoted by $\hat{r}_{i}$. The bandit problem can be conceptualized as a sequential decision making process where the agent is at each round presented with an \emph{exploration-exploitation dilemma}. The agent could pull the arm which has the highest observed mean reward till now (exploitation) or to explore other arms, with the prospect of finding superior performance which was previously unobserved (exploration). 
+
+%
+%	Formally, let $r_i$, $i=1,\ldots,K$ denote the mean rewards of the $K$ arms and $r^* = \max_i r_i$ the optimal mean reward. The objective in some of the stochastic bandit problem is to minimize the cumulative regret, which is defined as follows:
+%\begin{align*}
+%R_{T}=r^{*}T - \sum_{i\in A} r_{i}N_{i}(T),
+%\end{align*}
+%where $T$ is the number of rounds, $N_{i}(T)=\sum_{m=1}^T I(I_m=i)$ is the number of times the algorithm chose arm $i$ up to round $T$.
+%The expected regret of an algorithm after $T$ rounds can be written as,
+%
+%\begin{align*}
+%\E[R_{T}]= \sum_{i=1}^K \E[N_i(T)] \Delta_i,
+%\end{align*}
+%where $\Delta_{i}=r^{*}-r_{i}$ denotes the gap between the means of the optimal arm and of the $i$-th arm. 
+
+
+Pure-exploration MAB problems are unlike their traditional (exploration vs.\ exploitation)  counterparts where the  objective is to minimize the cumulative regret (which is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$). Instead, in pure-exploration problems a learning algorithm, until time $T$, can invest entirely on exploring the arms without being concerned about the loss incurred while exploring; the objective is to minimize the probability that the arm recommended at time $T$ is not the best arm.  In this paper, we further consider a combinatorial version of the pure-exploration MAB, called the thresholding bandit problem (TBP).  Here, the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. 
+It is important to emphasize that the \emph{thresholding} bandit problem is different from the \emph{threshold} bandit setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. 
+
+%%%%%%%%%%%%%%%
+% Old para
+%%%%%%%%%%%%%%%
+%Pure-exploration problems are unlike their traditional (exploration vs.\ exploitation) counterparts where the  objective is to minimize the cumulative regret, which is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$. Instead, in the pure exploration setup the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. Thus, the learning algorithm, until  time $T$, can invest entirely on exploring the arms  without being concerned about the loss incurred while exploring. It is important to emphasize that the \emph{thresholding bandit} problem is different from the \emph{threshold bandit} setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. 
+%<<<<<<< Updated upstream
+%Pure-exploration problems are unlike their traditional (exploration vs.\ exploitation) counterparts where the  objective is to minimize the cumulative regret, which is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$. In this paper we study the fixed-budget setting of a specific combinatorial pure-exploration problem, called the thresholding bandit problem (TBP), in the context of (MAB) setting. In this pure-exploration setup the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. Thus, the learning algorithm, until time $T$, can invest entirely on exploring the arms  without being concerned about the loss incurred while exploring. It is important to emphasize that the \emph{thresholding} bandit problem is different from the \emph{threshold} bandit setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. 
+%=======
+
+%Pure-exploration problems are unlike their traditional (exploration vs.\ exploitation) counterparts where the  objective is to minimize the cumulative regret, which is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$. Instead, in the pure exploration setup the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. Thus, the learning algorithm, until  time $T$, can invest entirely on exploring the arms  without being concerned about the loss incurred while exploring. It is important to emphasize that the \emph{thresholding bandit} problem is different from the \emph{threshold bandit} setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. 
+%>>>>>>> Stashed changes
+
+% reward on each time-step depends on a threshold value and the learner receives the reward only if the reward is above the threshold.
+
+
+%This is a specific instance of combinatorial pure exploration where the learning algorithm can explore as much as possible given a fixed horizon $T$ and not be concerned with the usual exploration-exploitation dilemma. 
+
+Formally, the problem we consider is the following. First, we define the set $S_{\tau}=\lbrace i\in \mathcal{A}: r_{i}\geq \tau \rbrace$. Note that, $S_\tau$ is the set of all arms whose reward mean is greater than $\tau$. Let 
+$S_\tau^c$ % =\mathcal{A}\backslash S_\tau$
+ denote the complement of $S_\tau$, i.e.,  $S_{\tau}^{c}=\lbrace i\in \mathcal{A}: r_{i} < \tau \rbrace$. Next, let $\hat{S}_{\tau}=\hat{S}_{\tau}(T)\subseteq \mathcal{A}$ denote the recommendation of a learning algorithm (under consideration) after $T$ time units of exploration, while $\hat{S}_{\tau}^c$ denotes its complement.
+%  Also we define $\hat{S}_{\tau}=\hat{S}_{\tau}(T)\subset \mathcal{A}$ and its complementary set $\hat{S}_{\tau}^{C}$ as the recommendation of the learning algorithm after $T$ rounds. 
+% Given such sets exists, 
+The performance of the learning agent is measured by the accuracy with which it can classify the arms into $S_{\tau}$ and $S_{\tau}^{c}$ after time horizon $T$. Equivalently, using $\mathbb{I}(E)$ to denote the indicator of an event $E$, the \emph{loss} $\mathcal{L}(T)$ is defined as
+\begin{align*}
+\Ls (T) = \mathbb{I}\big(\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c}\neq \emptyset\rbrace    \cup    \lbrace\hat{S}_{\tau}\cap S_{\tau}^{c}\neq \emptyset\rbrace\big).
+\end{align*}			
+Finally, the goal of the learning agent is to minimize the expected loss:
+% So, the expected loss after $T$ rounds is,
+\begin{align*}
+\E[\Ls(T)] = \Pb\big(\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c} \neq \emptyset \rbrace  \cup   \lbrace \hat{S}_{\tau}\cap S_{\tau}^{c} \neq \emptyset\rbrace\big).
+\end{align*}
+Note that the expected loss is simply the \emph{probability of mis-classification} (i.e., error), that occurs either if a good arm is rejected or a bad arm is accepted as a good one.
+% (represented by the events $\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c} \neq \emptyset \rbrace$ and $\lbrace \hat{S}_{\tau}\cap S_{\tau}^{c} \neq \emptyset\rbrace$, respectively).
+
+%which we can say is the probability of making mistake, that is whether the learning agent at the end of round $T$ rejects arms from $S_{\tau}$ or accepts arms from $S_{\tau}^{C}$ in its final recommendation. 
+
+%Also, we are looking at an anytime algorithm, so the knowledge of $T$ may not be known to the learner.
+
+
+
+

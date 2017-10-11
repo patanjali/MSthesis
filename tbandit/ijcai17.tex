@@ -1,0 +1,101 @@
+%%%% ijcai17.tex
+
+\typeout{IJCAI-17 Instructions for Authors}
+
+% These are the instructions for authors for IJCAI-17.
+% They are the same as the ones for IJCAI-11 with superficical wording
+%   changes only.
+
+\documentclass{article}
+% The file ijcai17.sty is the style file for IJCAI-17 (same as ijcai07.sty).
+\usepackage{ijcai17}
+
+% Use the postscript times font!
+\usepackage{times}
+
+\usepackage{macros}
+
+\usepackage{latexsym} 
+
+
+\title{Thresholding Bandits with Augmented UCB}
+%\author{Author names withheld}
+
+\author{Subhojyoti Mukherjee${}^1$, K. P. Naveen${}^2$, Nandan
+Sudarsanam${}^3$, Balaraman Ravindran${}^1$\\
+${}^1$Department of Computer Science \& Engineering,\\ ${}^2$Department of Electrical Engineering,
+${}^3$Department of Management Studies,\\ Indian Institute of
+Technology Madras}
+
+
+\begin{document}
+\maketitle
+
+
+\vspace*{2mm}
+\begin{abstract}
+In this paper we propose the Augmented-UCB (AugUCB) algorithm for a fixed-budget version of the thresholding bandit problem (TBP), where the objective is to identify a set of arms whose quality is above a threshold. A key feature of AugUCB is that it uses both mean and variance estimates to eliminate arms that have been sufficiently explored; to the best of our knowledge this is the first algorithm to employ such an approach for the considered TBP.  Theoretically, we obtain an upper bound on the loss (probability of mis-classification) incurred by AugUCB. Although UCBEV in literature provides a better guarantee, it is important to emphasize that UCBEV has access to problem complexity (whose computation requires arms' mean and variances), and hence is not realistic in practice; this is in contrast to AugUCB whose implementation does not require any such complexity inputs. We conduct extensive simulation experiments to validate the performance of AugUCB. Through our simulation work, we establish that AugUCB, owing to its utilization of variance estimates, performs significantly better than the state-of-the-art APT, CSAR and other non variance-based algorithms.
+\end{abstract}
+
+%\begin{keywords}
+%Multi-Armed Bandit, Regret, Exploration-exploitation, UCB
+%\end{keywords}
+
+\section{Introduction}
+\label{intro}
+\input{intro}
+%\subsection{Motivation}
+%\label{motivation}
+\input{motivation}
+\subsection{Related Work}
+\label{prevRes}
+\input{prevRes}
+
+\subsection{Our Contribution}
+\label{contribution}
+\input{contribution}
+%
+%\section{Notation Used and Assumptions}
+%\label{notation}
+%\input{notation}
+%
+%
+\vspace*{-1em}
+\section{Augmented-UCB Algorithm}
+\label{algorithm}
+\input{algo}
+%
+\vspace{-2mm}
+\section{Theoretical Results}
+\label{results}
+\input{results}
+%
+%
+%\vspace{-1em}
+\vspace{-5mm}
+\section{Numerical Experiments}
+\label{expt}
+\input{expt}
+%
+%\vspace{-1.2em}
+\vspace{-1mm}
+\section{Conclusion}
+\label{conclusion}
+\input{conclusion}
+
+% Acknowledgments---Will not appear in anonymized version
+%\acks{We thank a bunch of people.}
+
+%\clearpage
+%\newpage
+%\bibliographystyle{named}
+%\bibliography{ijcai17}
+
+%\clearpage
+%\newpage
+%\section{Appendix}
+%\label{appendix}
+%\input{appendix}
+
+\end{document}
+

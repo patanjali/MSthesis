@@ -1,0 +1,62 @@
+In this paper we propose the Augmented UCB (AugUCB) algorithm for the fixed-budget setting of a specific combinatorial, pure-exploration, stochastic MAB called the thresholding bandit problem.
+%In this paper we propose AugUCB algorithm for the fixed-budget, comp thresholding bandit problem.
+ AugUCB essentially combines the approach of UCB-Improved, CCB \citep{liu2016modification} and APT algorithms. Our algorithm takes into account the empirical variances of the arms along with mean estimates; to the best of our knowledge this is the first variance-based algorithm for the considered TBP. 
+Thus, we also address an open problem discussed in \cite{auer2010ucb} of designing an algorithm that can eliminate arms based on variance estimates. In this regard, note that both CSAR and APT are not variance-based algorithms. 
+
+\begin{table}[b]
+\caption{AugUCB vs.\ State of the art}
+\label{tab:regret-bds}
+\begin{center}
+\begin{tabular}{|p{2.3cm}|p{8.4cm}|}
+% \toprule
+\hline
+Algorithm  & Upper Bound on Expected Loss \\
+% \midrule
+\hline
+\hline
+AugUCB      &$ \exp\left(- \dfrac{T}{4096 \log(K\log K)H_{\sigma,2}} + \log\left(2KT\right) \right) $ \\
+\hline
+\hline
+UCBEV		&$\exp\left(-\dfrac{1}{512}\frac{T-2K}{H_{\sigma,1}} + \log\left(6KT\right)\right)$ \\
+%\midrule
+\hline
+\hline
+APT         &$\exp\left(-\dfrac{T}{64 H_1}+2\log((\log(T)+1)K)\right)$ \\
+% \midrule
+\hline
+\hline
+CSAR		&$\exp\left(-\dfrac{T-K}{72\log(K)H_{CSAR,2}}+2\log(K)\right)$ \\
+%\midrule
+\hline
+
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Our theoretical contribution comprises 
+ proving an upper bound on the expected loss incurred by AugUCB (Theorem~\ref{tbandit:Result:Theorem:1}).
+In Table \ref{tab:regret-bds} we compare the upper bound on the losses incurred by the various algorithms, including AugUCB. The terms $H_1, H_2$, $H_{CSAR,2}, H_{\sigma,1}$ and $H_{\sigma,2}$ represent various problem complexities, and are as defined in Section~\ref{tbandit:results}. From Section~\ref{tbandit:results} we note that, for all $K\ge8$, we have
+\begin{align*}
+\log\left(K\log K\right) H_{\sigma,2} > \log(2K) H_{\sigma,2} \ge H_{\sigma,1}.
+\end{align*}
+%; relation between these quantities are also given in Section~\ref{results} 
+%The term containing $H_{\sigma,2}$ is comparable to the similar terms (containing $H_{\sigma,1}$) for the error probability of GapE-V \cite{gabillon2011multi} algorithm which we modify to perform in the TBP problem and name it as UCBEV.
+Thus, it follows that the upper bound for UCBEV is better than that for AugUCB.
+ %The error probability of UCBEV for single bandit multi-armed case is given in Table \ref{tab:regret-bds}. We see that $\log(\frac{3}{16} K\log K) H_2^{\sigma} > \log(2K) H_2^{\sigma} \ge H_1^{\sigma}$ and hence our algorithm is weaker with respect to UCBEV for single  multi-armed bandit scenario.
+ However, implementation of UCBEV algorithm requires $H_{\sigma,1}$ as input, whose computation is not realistic in practice. In contrast, our AugUCB algorithm requires no such complexity factor as input. 
+%Theoretically, we can compare the first term (containing $H_2$) of our expected loss and see that for all $K\geq 4$, $ H_2 \log(\frac{3}{16} K\log K) > (\log K)H_{CSAR,2}\geq H_1 $ and hence our result is weaker than CSAR and APT.
+
+Proceeding with the comparisons, we emphasize that the upper bound for  AugUCB is, in fact, not comparable with that of APT and CSAR; this is because the complexity term $H_{\sigma,2}$ is not explicitly comparable with either $H_1$ or $H_{CSAR,2}$. However, through extensive simulation experiments we find that AugUCB significantly outperforms both APT, CSAR and other non variance-based algorithms. AugUCB also outperforms UCBEV under explorations where non-optimal values of $H_{\sigma,1}$  are used. In particular, we consider experimental scenarios comprising large number of arms, with the variances of arms in $S_\tau$ being large. AugUCB, being variance based, exhibits superior performance under these settings.  
+%
+
+
+%Empirically we show that for a large number of arms when the variance of the arms lying above $\tau$ are high, our algorithm performs better than all other algorithms, except the algorithm UCBEV which has access to the underlying problem complexity and also is a variance-aware algorithm. 
+%
+%AugUCB requires one input parameter and the exact choice for the parameter is derived in Theorem \ref{Result:Theorem:1}. Also, unlike SAR or CSAR, AugUCB does not have explicit accept or reject sets rather the arm elimination condition simply removes arm(s) if it is sufficiently sure that the mean of the arms are very high or very low about the threshold based on mean and variance estimation thereby re-allocating the remaining budget among the surviving arms. This although is a tactic similar to SAR or CSAR, but here at any round, an arbitrary number of arms can be accepted or rejected thereby improving upon SAR and CSAR which accepts/rejects one arm in every round. Also their round lengths are non-adaptive and they pull all the arms equal number of times in each round. 
+%At every timestep AugUCB pulls the arm that minimizes thereby making this an anytime algorithm whereby we need not finish every round. 
+%Irrespective of this case AugUCB also employs elimination of arms based on mean estimation only and is the first such algorithm which uses elimination by both mean and variance estimation simultaneously.
+
+The remainder of the paper is organized as follows. In section \ref{tbandit:algorithm} we present our AugUCB algorithm. 
+Section \ref{tbandit:results} contains our main theorem on expected loss, while section \ref{tbandit:expt} contains simulation experiments. We finally draw our conclusions in section \ref{tbandit:conclusion}.
+%in section \ref{notation} we introduce the notations and the

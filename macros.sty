@@ -1,0 +1,106 @@
+
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb}
+\allowdisplaybreaks
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proof}{Proof}
+
+\newtheorem{innercustomlem}{Lemma}
+\newenvironment{customlem}[1]
+  {\renewcommand\theinnercustomlem{#1}\innercustomlem}
+  {\endinnercustomlem}
+  
+\newtheorem{innercustomCorollary}{Corollary}
+\newenvironment{customCorollary}[1]
+  {\renewcommand\theinnercustomCorollary{#1}\innercustomCorollary}
+  {\endinnercustomCorollary}
+  
+\newtheorem{innercustomproof}{Proof}
+\newenvironment{customproof}[1]
+  {\renewcommand\theinnercustomproof{#1}\innercustomproof}
+  {\endinnercustomproof}
+
+
+\usepackage{graphicx}
+
+%\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Ls}{\mathcal{L}}
+
+\usepackage{pifont}
+\newcommand{\xmark}{\ding{55}}
+
+
+%%%%%%%%%%%%%%% alg-custom-block %%%%%%%%%%%%
+\algblock{ArmElim}{EndArmElim}
+\algnewcommand\algorithmicArmElim{\textbf{\em Arm Elimination by Mean Estimation}}
+ \algnewcommand\algorithmicendArmElim{}
+\algrenewtext{ArmElim}[1]{\algorithmicArmElim\ #1}
+\algrenewtext{EndArmElim}{\algorithmicendArmElim}
+\algtext*{EndArmElim}
+
+\algblock{ArmElimV}{EndArmElimV}
+\algnewcommand\algorithmicArmElimV{\textbf{\em Arm Elimination by Mean and Variance Estimation}}
+ \algnewcommand\algorithmicendArmElimV{}
+\algrenewtext{ArmElimV}[1]{\algorithmicArmElimV\ #1}
+\algrenewtext{EndArmElimV}{\algorithmicendArmElimV}
+\algtext*{EndArmElimV}
+
+\algblock{ResetParam}{EndResetParam}
+\algnewcommand\algorithmicResetParam{\textbf{\em Reset Parameters}}
+ \algnewcommand\algorithmicendResetParam{}
+\algrenewtext{ResetParam}[1]{\algorithmicResetParam\ #1}
+\algrenewtext{EndResetParam}{\algorithmicendResetParam}
+\algtext*{EndResetParam}
+
+\algblock{ResParam}{EndResParam}
+\algnewcommand\algorithmicResParam{\textbf{\em Reset Parameters}}
+ \algnewcommand\algorithmicendResParam{}
+\algrenewtext{ResParam}[1]{\algorithmicResParam\ #1}
+\algrenewtext{EndResParam}{\algorithmicendResParam}
+
+% For figures
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\usepackage{xcolor}
+\usepackage{paralist}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{subfigure}
+\usepackage[english]{babel}
+\usetikzlibrary{positioning,shapes,calc,patterns,fit,decorations}
+
+\usepackage{natbib}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{xspace}
+%\usepackage{todonotes}
+\newcommand{\todos}[2][]{\xspace\todo[color=red!20!white,size=\tiny,#1]{#2}}
+%
+\usepackage{makecell}
+\newcommand{\tabl}[2]{\begin{tabular}{#1} #2 \end{tabular}}
+%\newcommand{\ith}[2][th]{$#2^{\text{#1}}$}
+
+
+
+
+

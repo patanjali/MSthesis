@@ -1,0 +1,18 @@
+In this paper, we deal with the stochastic multi-armed bandit (MAB) setting. In its classical form, stochastic MABs represent a sequential learning problem where a learner is exposed to a finite set of actions (or arms) and needs to choose one of the actions at each timestep. After choosing (or pulling) an arm the learner  receives a reward, which is conceptualized as an independent random draw from stationary distribution associated with the selected arm. 
+%Each of these rewards is random and drawn independently from the distribution associated with each arm. 
+The mean of the reward distribution associated with an arm $i$ is denoted by $r_i$ whereas the mean of the reward distribution of the optimal arm $*$ is denoted by $r^*$ such that $r_i < r^*, \forall i\in \A$, where $\A$ is the set of arms such that $|\A|=K$. With this formulation the learner faces the task of balancing exploitation and exploration. In other words, should the learner pull the arm which currently has the best known estimates or explore arms more thoroughly to ensure that a correct decision is being made. The objective in the stochastic bandit problem is to minimize the cumulative regret, which is defined as follows:
+\begin{align*}
+R_{T}=r^{*}T - \sum_{i\in \A} r_{i}z_{i}(T),
+\end{align*}
+where $T$ is the number of timesteps, and  $z_{i}(T)$ is the number of times the algorithm has chosen arm $i$ up to timestep $T$.
+The expected regret of an algorithm after $T$ timesteps can be written as,
+\begin{align*}
+\E[R_{T}]= \sum_{i=1}^{K} \E[z_i (T)] \Delta_i,
+\end{align*}
+where $\Delta_{i}=r^{*}-r_{i}$ is the gap between the means of the optimal arm and the $i$-th arm.
+
+% One of the fundamental assumptions in stochastic MAB is that the distribution associated with each arm does not change over the entire time horizon $T$.
+
+	In recent years the MAB setting has garnered extensive popularity because of its simple learning  model and its practical applications in a wide-range of industries, including, but not limited to, mobile channel allocations, online advertising and computer simulation games. 
+	
+	%industry defined problems
