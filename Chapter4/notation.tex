@@ -1,0 +1,8 @@
+To benefit the reader, we again recall the notations we stated in chapter \ref{chap:SMAB} and also a few additional notations. $\mathcal{A}$ denotes the set of arms, and $|\mathcal{A}|=K$ is the number of arms in $\mathcal{A}$. For arm $i\in\mathcal{A}$, we use $r_{i}$ to denote the true mean of the distribution from which the rewards are sampled, while $\hat{r}_{i}(t)$ denotes the estimated mean at time $t$. Formally, using $n_i(t)$ to denote the number of times arm $i$ has been pulled until time $t$, we have $\hat{r}_{i}(t)=\frac{1}{n_{i}(t)}\sum_{z=1}^{n_i(t)} X_{i,z}$, where $X_{i,z}$ is the reward sample received when arm $i$ is pulled for the $z$-th time. %
+Similarly, we use $\sigma_{i}^{2}$ to denote the true variance of the reward distribution corresponding to arm $i$, while $\hat{v}_{i}(t)$ is the estimated variance, i.e., $\hat{v}_{i}(t)=\frac{1}{n_i(t)}\sum_{z=1}^{n_{i}(t)}(X_{i,z}-\hat{r}_{i})^{2}$. Whenever there is no ambiguity about the underlaying  time index $t$, for simplicity we neglect $t$ from the notations and simply use  $\hat{r}_i, \hat{v}_i,$ and $n_i, $ to denote the respective quantities.  Let  $\Delta_{i}=|\tau-r_{i}|$ denote the distance of the true mean from the threshold $\tau$. Also, the rewards are assumed to take values in $[0,1]$.
+
+%%%%%%%%%%
+%1-sub-gaussian assumption removed
+%%%%%%%%%%
+%Along the lines of \cite{locatelli2016optimal} we assume that all the reward distributions are $1$-sub-Gaussian (note that,  $1$-sub-Gaussian includes Gaussian distributions with variance less than $1$, distributions supported on an interval of length less than 2, etc).
+

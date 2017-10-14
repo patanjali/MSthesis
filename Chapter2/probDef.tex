@@ -1,0 +1,13 @@
+With the formulation of SMAB stated in algorithm \ref{alg:SMAB}, the learner faces the task of balancing exploitation and exploration. In other words, should the learner pull the arm which currently has the best-known estimates (exploit) or explore arms more thoroughly to ensure that a correct decision is being made. This is termed as the \textit{exploration-exploitation dilemma}, one of the fundamental challenges of Reinforcement learning.
+
+
+	The objective in the stochastic bandit problem is to minimize the cumulative regret, which is defined as follows:
+\begin{align*}
+R_{T}=r^{*}T - \sum_{i\in \A} r_{i}z_{i}(T),
+\end{align*}
+where $T$ is the number of timesteps, and  $z_{i}(T)$ is the number of times the algorithm has chosen arm $i$ up to timestep $T$.
+The expected regret of an algorithm after $T$ timesteps can be written as,
+\begin{align*}
+\E[R_{T}]= \sum_{i=1}^{K} \E[z_i (T)] \Delta_i,
+\end{align*}
+where $\Delta_{i}=r^{*}-r_{i}$ is the gap between the means of the optimal arm and the $i$-th arm.

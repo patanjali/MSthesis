@@ -5,36 +5,42 @@
 \BOOKMARK [0][-]{chapter*.6}{ABBREVIATIONS}{}% 5
 \BOOKMARK [0][-]{chapter*.7}{NOTATION}{}% 6
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
-\BOOKMARK [1][-]{section.1.1}{Package Options}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.2}{Example Figures and tables}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.3}{Bibliography with BIBTeX}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.4}{Other useful LaTeX packages}{chapter.1}% 11
-\BOOKMARK [0][-]{chapter.2}{Thresholding Bandits}{}% 12
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.1.1}{Related Work}{section.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.1.2}{Our Contribution}{section.2.1}% 15
-\BOOKMARK [1][-]{section.2.2}{Augmented-UCB Algorithm}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.3}{Theoretical Results}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.4}{Numerical Experiments}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.5}{Conclusion}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 20
-\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance}{}% 21
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.1.1}{Related Work}{section.3.1}% 23
-\BOOKMARK [2][-]{subsection.3.1.2}{Our Contributions}{section.3.1}% 24
-\BOOKMARK [1][-]{section.3.2}{Algorithm: Efficient UCB Variance}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.3}{Main Results}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Proofs}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Experiments}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.6}{Conclusion and Future Works}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 30
-\BOOKMARK [0][-]{appendix.A}{APPENDIX}{}% 31
-\BOOKMARK [1][-]{section.A.1}{Appendix for EUCBV}{appendix.A}% 32
-\BOOKMARK [2][-]{subsection.A.1.1}{Proof of Lemma 1}{section.A.1}% 33
-\BOOKMARK [2][-]{subsection.A.1.2}{Proof of Lemma 2}{section.A.1}% 34
-\BOOKMARK [2][-]{subsection.A.1.3}{Proof of Lemma 3}{section.A.1}% 35
-\BOOKMARK [2][-]{subsection.A.1.4}{Proof of Lemma 4}{section.A.1}% 36
-\BOOKMARK [2][-]{subsection.A.1.5}{Proof of Lemma 5}{section.A.1}% 37
-\BOOKMARK [2][-]{subsection.A.1.6}{Proof of Lemma 6}{section.A.1}% 38
-\BOOKMARK [2][-]{subsection.A.1.7}{Proof of Corollary 1}{section.A.1}% 39
-\BOOKMARK [0][-]{appendix*.17}{LIST OF PAPERS BASED ON THESIS}{}% 40
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Stochastic Multi-armed Bandits}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Notations}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Related Work}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Our Contributions}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Algorithm: Efficient UCB Variance}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Main Results}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Proofs}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Experiments}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.6}{Conclusion and Future Works}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.5}{Related Work}{chapter.4}% 29
+\BOOKMARK [0][-]{chapter.5}{Augmented UCB for TBP}{}% 30
+\BOOKMARK [1][-]{section.5.1}{Our Contribution}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.2}{Augmented-UCB Algorithm}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.3}{Theoretical Results}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.4}{Numerical Experiments}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.5}{Conclusion and Future Works}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 36
+\BOOKMARK [0][-]{appendix.A}{APPENDIX}{}% 37
+\BOOKMARK [1][-]{section.A.1}{Appendix for EUCBV}{appendix.A}% 38
+\BOOKMARK [2][-]{subsection.A.1.1}{Proof of Lemma 1}{section.A.1}% 39
+\BOOKMARK [2][-]{subsection.A.1.2}{Proof of Lemma 2}{section.A.1}% 40
+\BOOKMARK [2][-]{subsection.A.1.3}{Proof of Lemma 3}{section.A.1}% 41
+\BOOKMARK [2][-]{subsection.A.1.4}{Proof of Lemma 4}{section.A.1}% 42
+\BOOKMARK [2][-]{subsection.A.1.5}{Proof of Lemma 5}{section.A.1}% 43
+\BOOKMARK [2][-]{subsection.A.1.6}{Proof of Lemma 6}{section.A.1}% 44
+\BOOKMARK [2][-]{subsection.A.1.7}{Proof of Corollary 1}{section.A.1}% 45
+\BOOKMARK [0][-]{appendix*.15}{LIST OF PAPERS BASED ON THESIS}{}% 46

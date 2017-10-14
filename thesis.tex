@@ -27,10 +27,10 @@
 
 \title{\LaTeX\ CLASS FOR DISSERTATIONS SUBMITTED TO IITM}
 
-\author{Name}
+\author{Subhojyoti Mukherjee}
 
 \date{December 2017}
-\department{Computer Science and Engineering}
+\department{COMPUTER SCIENCE AND ENGINEERING}
 
 %\nocite{*}
 \maketitle
@@ -55,20 +55,20 @@ diploma.
 \begin{singlespacing}
 \hspace*{-0.25in}
 \parbox{2.5in}{
-\noindent {\bf Prof.~1} \\
+\noindent {\bf Dr. Balaraman Ravindran} \\
 \noindent Research Guide \\ 
-\noindent Professor \\
-\noindent Dept. of Physics\\
+\noindent Associate Professor \\
+\noindent Dept. of Computer Science\\
 \noindent IIT-Madras, 600 036 \\
 } 
 \hspace*{1.0in} 
-%\parbox{2.5in}{
-%\noindent {\bf Prof.~S.~C.~Rajan} \\
-%\noindent Research Guide \\ 
-%\noindent Assistant Professor \\
-%\noindent Dept.  of  Aerospace Engineering\\
-%\noindent IIT-Madras, 600 036 \\
-%}  
+\parbox{2.5in}{
+\noindent {\bf Dr. Nandan Sudarsanam} \\
+\noindent Research Co-Guide \\ 
+\noindent Assistant Professor \\
+\noindent Dept.  of  Management Studies\\
+\noindent IIT-Madras, 600 036 \\
+}  
 \end{singlespacing}
 \vspace*{0.25in}
 \noindent Place: Chennai\\
@@ -86,20 +86,11 @@ Thanks to all those who made \TeX\ and \LaTeX\ what it is today.
 
 \abstract
 
-\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{\LaTeX ; Thesis;
-  Style files; Format.}
+\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Bandits, UCB.}
 
 \vspace*{24pt}
 
-\noindent A \LaTeX\ class along with a simple template thesis are
-provided here.  These can be used to easily write a thesis suitable
-for submission at IIT-Madras.  The class provides options to format
-PhD, MS, M.Tech.\ and B.Tech.\ thesis.  It also allows one to write a
-synopsis using the same class file.  Also provided is a BIB\TeX\ style
-file that formats all bibliography entries as per the IITM format.
-
-The formatting is as (as far as the author is aware) per the current
-institute guidelines.
+\noindent The thesis studies the following topics in the area of Reinforcement Learning: Multi-armed Bandits, Multi-armed bandits in stationary distribution with the goal of cumulative regret minimization, Thresholding bandits in pure exploration setting, and analysis of bandit theory in piece-wise stationary distributions. The common underlying theme is the study of bandit theory and its application in various types of environments. We start with a general introduction to Multi-armed bandits, its connection to the wider reinforcement learning theory and then we discuss the various types of bandits available in the literature. The subsequent chapter deals with the classic multi-armed bandit problem in stationary distribution, one of the first setting studied by the bandit community and which successively gave rise to several new directions in bandit theory. We propose a novel algorithm in this setting and compare both theoretically and empirically its performance against the available algorithms in this setting. In the next chapter, we move onto a very specific type of bandit setup called the thresholding bandit problem and discuss extensively on its usage, available state-of-the-art algorithms on this setting and our solution to the problem. We give theoretical guarantees on the expected loss of our algorithm and also analyze its performance against state-of-the-art algorithms in numerical simulations in multiple synthetic environments. The final chapter deals with the notion of piece-wise stationary distribution and how available bandit algorithms can be modified to perform well in this setting. We propose a set of algorithms for this setting with the goal of minimizing cumulative regret which uses various techniques ranging from changepoint detection mechanism to aggregation of experts.
 
 \pagebreak
 
@@ -157,94 +148,152 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 % Introduction.
 \chapter{Introduction}
 \label{chap:intro}
-\input{ThesisIntro}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Thresholding Bandits}
-\label{chap:tbandit}
 \section{Introduction}
-\label{tbandit:intro}
-\input{tbandit/intro}
-\input{tbandit/motivation}
+\label{intro}
+\input{Chapter1/intro}
 
-\subsection{Related Work}
-\label{tbandit:prevRes}
-\input{tbandit/prevRes}
-
-\subsection{Our Contribution}
-\label{tbandit:contribution}
-\input{tbandit/contribution}
-
-
-\section{Augmented-UCB Algorithm}
-\label{tbandit:algorithm}
-\input{tbandit/algo}
-
-
-\section{Theoretical Results}
-\label{tbandit:results}
-\input{tbandit/results}
-
-
-\section{Numerical Experiments}
-\label{tbandit:expt}
-\input{tbandit/expt}
-
-
-\section{Conclusion}
-\label{tbandit:conclusion}
-\input{tbandit/conclusion}
-
-
-\section{Summary}
-\label{tbandit:Summary}
-In this chapter we looked at the Augmented-UCB (AugUCB) algorithm for a fixed-budget version of the thresholding bandit problem (TBP), where the objective is to identify a set of arms whose expected mean is above a threshold. A key feature of AugUCB is that it uses both mean and variance estimates to eliminate arms that have been sufficiently explored; to the best of our knowledge this is the first algorithm to employ such an approach for the considered TBP.  Theoretically, we obtain an upper bound on the loss (probability of mis-classification) incurred by AugUCB. Although UCBEV in literature provides a better guarantee, it is important to emphasize that UCBEV has access to problem complexity (whose computation requires arms' mean and variances), and hence is not realistic in practice; this is in contrast to AugUCB whose implementation does not require any such complexity inputs. We conduct extensive simulation experiments to validate the performance of AugUCB. Through our simulation work, we establish that AugUCB, owing to its utilization of variance estimates, performs significantly better than the state-of-the-art APT, CSAR and other non variance-based algorithms.
+\section{Motivation}
+\label{motivation}
+\input{Chapter1/motivation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Stochastic Multi-armed Bandits}
+\label{chap:SMAB}
+
+\section{Introduction}
+\label{sec:intro}
+\input{Chapter2/intro}
+
+\section{Notations}
+\label{sec:notations}
+\input{Chapter2/notation}
+
+\section{Problem Definition}
+\label{sec:probDef}
+\input{Chapter2/probDef}
+
+\section{Motivation}
+\label{sec:motivation}
+\input{Chapter2/motivation}
+
+\section{Related Work}
+\label{sec:related}
+\input{Chapter2/related}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Efficient UCB Variance}
 \label{chap:EUCBV}
-\section{Introduction}
-\label{sec:intro}
-\input{EUCBV/intro}
-
-\subsection{Related Work}
-\label{sec:related}
-\input{EUCBV/related}
 
 
-\subsection{Our Contributions}
+\section{Our Contributions}
 \label{sec:contri}
-\input{EUCBV/contribution}
+\input{Chapter3/contribution}
 
 \section{Algorithm: Efficient UCB Variance}
 \label{sec:eucbv}
-\input{EUCBV/ealgo}
+\input{Chapter3/ealgo}
 
 \section{Main Results} 
 \label{sec:results}
-\input{EUCBV/results}
+\input{Chapter3/results}
 
 \section{Proofs}
 \label{sec:proofTheorem}
-\input{EUCBV/proofTheorem}
+\input{Chapter3/proofTheorem}
 
 \section{Experiments}
 \label{sec:expt}
-\input{EUCBV/expts}
+\input{Chapter3/expts}
 
 \section{Conclusion and Future Works}
 \label{sec:conc}
-\input{EUCBV/Conclusion}
+\input{Chapter3/Conclusion}
+
+\section{Summary}
+\label{Chapter3:Summary}
+In this chapter we looked at a novel variant of the UCB algorithm (referred to as Efficient-UCB-Variance (EUCBV)) for minimizing cumulative regret in the stochastic multi-armed bandit (MAB) setting. EUCBV incorporates the arm elimination strategy proposed in UCB-Improved \citep{auer2010ucb}, while taking into account the variance estimates to compute the arms' confidence bounds, similar to UCBV \citep{audibert2009exploration}. Through a theoretical analysis we establish that EUCBV incurs a \emph{gap-dependent} regret bound of {\scriptsize $O\left( \dfrac{K\sigma^2_{\max} \log (T\Delta^2 /K)}{\Delta}\right)$} after $T$ trials, where $\Delta$ is the minimal gap between optimal and sub-optimal arms; the above bound is an improvement over that of existing state-of-the-art UCB algorithms (such as UCB1, UCB-Improved, UCBV,  MOSS). Further, EUCBV incurs a \emph{gap-independent} regret bound of {\scriptsize $O\left(\sqrt{KT}\right)$}  which is an improvement over that of UCB1, UCBV and UCB-Improved, while being comparable with that of MOSS and OCUCB. Through an extensive numerical study we show that EUCBV significantly outperforms the popular UCB variants (like MOSS, OCUCB, etc.) as well as Thompson sampling and Bayes-UCB algorithms. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Thresholding Bandits}
+\label{chap:tbandit1}
+
+\section{Introduction}
+\label{tbandit:intro}
+\input{Chapter4/intro}
+
+\section{Notations}
+\label{tbandit:notation}
+\input{Chapter4/notation}
+
+\section{Problem Definition}
+\label{tbandit:probDef}
+\input{Chapter4/probDef}
+
+\section{Motivation}
+\label{tbandit:intro}
+\input{Chapter4/motivation}
+
+\section{Related Work}
+\label{tbandit:prevRes}
+\input{Chapter4/prevRes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Augmented UCB for TBP}
+\label{chap:tbandit2}
+
+
+\section{Our Contribution}
+\label{tbandit:contribution}
+\input{Chapter5/contribution}
+
+
+\section{Augmented-UCB Algorithm}
+\label{tbandit:algorithm}
+\input{Chapter5/algo}
+
+
+\section{Theoretical Results}
+\label{tbandit:results}
+\input{Chapter5/results}
+
+
+\section{Numerical Experiments}
+\label{tbandit:expt}
+\input{Chapter5/expt}
+
+
+\section{Conclusion and Future Works}
+\label{tbandit:conclusion}
+\input{Chapter5/conclusion}
+
 
 \section{Summary}
 \label{tbandit:Summary}
-In this chapter we looked at a novel variant of the UCB algorithm (referred to as Efficient-UCB-Variance (EUCBV)) for minimizing cumulative regret in the stochastic multi-armed bandit (MAB) setting. EUCBV incorporates the arm elimination strategy proposed in UCB-Improved \citep{auer2010ucb}, while taking into account the variance estimates to compute the arms' confidence bounds, similar to UCBV \citep{audibert2009exploration}. Through a theoretical analysis we establish that EUCBV incurs a \emph{gap-dependent} regret bound of {\scriptsize $O\left( \dfrac{K\sigma^2_{\max} \log (T\Delta^2 /K)}{\Delta}\right)$} after $T$ trials, where $\Delta$ is the minimal gap between optimal and sub-optimal arms; the above bound is an improvement over that of existing state-of-the-art UCB algorithms (such as UCB1, UCB-Improved, UCBV,  MOSS). Further, EUCBV incurs a \emph{gap-independent} regret bound of {\scriptsize $O\left(\sqrt{KT}\right)$}  which is an improvement over that of UCB1, UCBV and UCB-Improved, while being comparable with that of MOSS and OCUCB. Through an extensive numerical study we show that EUCBV significantly outperforms the popular UCB variants (like MOSS, OCUCB, etc.) as well as Thompson sampling and Bayes-UCB algorithms. 
+In this chapter we looked at the Augmented-UCB (AugUCB) algorithm for a fixed-budget version of the thresholding bandit problem (TBP), where the objective is to identify a set of arms whose expected mean is above a threshold. A key feature of AugUCB is that it uses both mean and variance estimates to eliminate arms that have been sufficiently explored; to the best of our knowledge this is the first algorithm to employ such an approach for the considered TBP.  Theoretically, we obtain an upper bound on the loss (probability of mis-classification) incurred by AugUCB. Although UCBEV in literature provides a better guarantee, it is important to emphasize that UCBEV has access to problem complexity (whose computation requires arms' mean and variances), and hence is not realistic in practice; this is in contrast to AugUCB whose implementation does not require any such complexity inputs. We conduct extensive simulation experiments to validate the performance of AugUCB. Through our simulation work, we establish that AugUCB, owing to its utilization of variance estimates, performs significantly better than the state-of-the-art APT, CSAR and other non variance-based algorithms.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,7 +306,7 @@ In this chapter we looked at a novel variant of the UCB algorithm (referred to a
 \chapter{APPENDIX}
 \section{Appendix for EUCBV}
 \label{sec:app}
-\input{EUCBV/Appendix}
+\input{Chapter3/Appendix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography.
