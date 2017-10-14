@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  15 OCT 2017 02:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  15 OCT 2017 03:04
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1679,7 +1679,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex [40])
 [41]
 Appendix A.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Appendix.tex
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/Appendix.tex
 Underfull \vbox (badness 3838) has occurred while \output is active []
 
  [42
@@ -1724,22 +1724,22 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 [52
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
  (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: E24B265857DD1788F20E62FD628D6E41;2837.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
  ) 
 Here is how much of TeX's memory you used:
- 32475 strings out of 493921
- 765001 string characters out of 3144861
+ 32477 strings out of 493921
+ 765063 string characters out of 3144861
  1082797 words of memory out of 3000000
  34782 multiletter control sequences out of 15000+200000
  57628 words of font info for 94 fonts, out of 3000000 for 9000
