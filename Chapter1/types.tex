@@ -1,0 +1,53 @@
+In this section we discuss on the various types of bandits that are available in literature. 
+
+
+\subsection{Types of Bandits based on Environment}
+
+
+\subsubsection{Stochastic Bandits}
+In stochastic bandits, the distribution associated with each of the arms remains fixed throughout the time horizon $T$. Some of the notable papers associated with this type of setup are \citet{robbins1952some}, \citet{lai1985asymptotically},  \citet{agrawal1995sample}, \citet{auer2002finite}, \citet{auer2010ucb}, \citet{audibert2009minimax}, \citet{lattimore2015optimally}, etc. Chapter \ref{chap:SMAB} and Chapter \ref{chap:EUCBV} is based on this setup where we discuss extensively on the latest state-of-the-art algorithms.
+
+
+
+\subsubsection{Non-stochastic Bandits}
+
+In non-stochastic setting the distribution associated with each arm varies over the duration of the play. Two natoable examples of this are:-
+
+\begin{itemize}
+\item \textbf{Adversarial bandits: } In adversarial bandits, an adversary decides the payoff for each arm before the learner selects an arm. This adversary may or may not be oblivious to the learning algorithm employed by the learner. In each of these cases a different guarantee on the performance of the learner can be arrived at. Some of the important papers in this setting are \citet{auer2002nonstochastic}, \citet{auer2002nonstochastic}, \citet{auer2002using}, \citet{kocak2014efficient}.
+
+\item \textbf{Piece-wise stationary:} Another setup under this setting can be the piece-wise stationary setting. In this setting, the distribution associated with each arm is not fixed throughout the time horizon and changes either arbitrarily at particular changepoints, or changes at a fixed period. The distribution associated with each arm then  remains fixed till the next chnagepoint is encountered. Chapter (to be added) is based on this.
+\end{itemize}
+
+
+\subsubsection{Contextual Bandits}
+
+The idea of clustering has been extensively studied in the contextual bandit setup, an extension of the MAB where side information or features are attached to each arm. The clustering is done over the features representing the arms to capture the complexity of the problem better when a large-number of arms are involved. Typical examples of this setting are in web-advertising domain, news article selection, etc. Some notable papers available for this setting are   \citet{auer2002using}, \citet{langford2008epoch}, \citet{li2010contextual}, \citet{beygelzimer2011contextual}, \citet{slivkins2014contextual},etc. 
+
+
+%
+
+%Clustering has been extensively studied in the area of contextual MAB. In contextual MAB, there are side-information or features attached to each arm (see  \citet{auer2002using,langford2008epoch,li2010contextual,beygelzimer2011contextual, slivkins2014contextual}).   \cite{bui2012clustered,cesa2013gang,gentile2014online}. Please note that we do not cluster over the context rather we cluster the arms into groups.
+
+
+
+
+\subsection{Types of Bandits based on goal}
+
+
+
+\subsubsection{Cumulative regret minimization}
+
+
+
+\subsubsection{Simple regret minimization}
+
+
+
+\subsubsection{External Regret minimization}
+
+
+
+\subsection{Collaborative Bandits}
+
+Distributed bandits are specific setup of MAB where a network of bandits collaborate with each other to identify the optimal arm(s) (see \citet{awerbuch2008competitive,liu2010distributed,szorenyi2013gossip,hillel2013distributed}). In our setting we can assign each of the $p$ clusters to individual bandits and at the end of each round they can share information synchronously to identify the optimal arm. This naturally results in a speedup of operation and helps in identifying the best arm faster. The clustering in this case is typically done over the feature space \citet{bui2012clustered}, \citet{cesa2013gang}, \citet{gentile2014online}.

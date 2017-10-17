@@ -1,5 +1,5 @@
-\documentclass[PhD]{iitmdiss}
-%\documentclass[MS]{iitmdiss}
+%\documentclass[PhD]{iitmdiss}
+\documentclass[MS]{iitmdiss}
 %\documentclass[MTech]{iitmdiss}
 %\documentclass[BTech]{iitmdiss}
 \usepackage{times}
@@ -25,7 +25,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page
 
-\title{\LaTeX\ CLASS FOR DISSERTATIONS SUBMITTED TO IITM}
+\title{A study on online sequential learning using Bandits}
 
 \author{Subhojyoti Mukherjee}
 
@@ -41,8 +41,7 @@
 
 \vspace*{0.5in}
 
-\noindent This is to certify that the thesis titled {\bf \LaTeX\ CLASS  
-  FOR DISSERTATIONS SUBMITTED TO IIT-M}, submitted by {\bf Subhojyoti Mukherjee}, 
+\noindent This is to certify that the thesis titled {\bf A study on online sequential learning using Bandits}, submitted by {\bf Subhojyoti Mukherjee}, 
   to the Indian Institute of Technology, Madras, for
 the award of the degree of {\bf Master of Science (Research)}, is a bona fide
 record of the research work done by him under our supervision.  The
@@ -158,6 +157,16 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 \input{Chapter1/motivation}
 
 
+\section{Types of Information Feedback}
+\label{feed}
+\input{Chapter1/feedback}
+
+
+\section{Different types of Bandits}
+\label{types}
+\input{Chapter1/types}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,9 +190,11 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 \label{sec:motivation}
 \input{Chapter2/motivation}
 
-\section{Related Work}
+\section{Related Work in SMAB}
 \label{sec:related}
 \input{Chapter2/related}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,9 +263,15 @@ In this chapter we looked at a novel variant of the UCB algorithm (referred to a
 \label{tbandit:intro}
 \input{Chapter4/motivation}
 
-\section{Related Work}
+\section{Related Work in Pure Exploration}
 \label{tbandit:prevRes}
 \input{Chapter4/prevRes}
+
+
+\section{Related Work in Thresholding Bandits}
+\label{tbandit:prevResAPT}
+\input{Chapter4/prevResAPT}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -303,11 +320,17 @@ In this chapter we looked at the Augmented-UCB (AugUCB) algorithm for a fixed-bu
 
 \appendix
 
-\chapter{APPENDIX}
+%\chapter{APPENDIX}
 
-\section{Appendix for EUCBV}
-\label{sec:app}
-\input{Appendix/Appendix}
+\chapter{Appendix on Concentration Inequalities}
+\label{sec:app:Conc}
+\input{Appendix/AppendixConc}
+
+%\newpage
+
+\chapter{Appendix for EUCBV}
+\label{sec:app:EUCBV}
+\input{Appendix/AppendixEUCBV}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography.

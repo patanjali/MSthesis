@@ -1,0 +1,16 @@
+
+\begin{algorithm}[!h]
+\caption{APT}
+\label{alg:apt}
+\begin{algorithmic}
+\State {\bf Input:} Time horizon $T$, threshold $\tau$, tolerance factor $\epsilon\geq 0$
+\State Pull each arm once
+\State \For{$t=K+1,..,T$}
+\State Pull arm $j\in\argmin_{i\in A}\big\lbrace \left(|\hat{r}_{i} - \tau | + \epsilon\right)\sqrt{n_i}\big\rbrace$ and observe the reward for arm $j$.
+\EndFor
+\State \textbf{Output:} $\hat{S}_{\tau}=\lbrace i: \hat{r}_{i}\geq \tau \rbrace$.
+\end{algorithmic}
+\end{algorithm}
+
+
+In the latest work of \citet{locatelli2016optimal} Anytime Parameter-Free Thresholding (APT) algorithm comes up with an improved anytime guarantee than CSAR for the thresholding bandit problem.	
