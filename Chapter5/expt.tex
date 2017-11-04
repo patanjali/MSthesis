@@ -4,7 +4,7 @@ In this section, we empirically compare the  performance of AugUCB against APT, 
 
 $\bullet$ APT: This algorithm is from \cite{locatelli2016optimal}; we set $\epsilon=0.05$, which is the margin-of-error within which APT suggests the set of good arms.
 
-$\bullet$ AugUCB: This is the Augmented-UCB algorithm proposed in this paper; as in Theorem \ref{Result:Theorem:1} we set $\rho=\frac{1}{3}$.
+$\bullet$ AugUCB: This is the Augmented-UCB algorithm proposed in this paper; as in Theorem \ref{tbandit:Result:Theorem:1} we set $\rho=\frac{1}{3}$.
 
 $\bullet$ UCBE: This is a modification of the algorithm in \cite{audibert2009exploration} (as it was originally proposed for the best arm identification problem); here, we set $a=\frac{T-K}{H_1}$, and at each time-step an arm $i\in\argmin\left\lbrace |\hat{r}_{i} -\tau|-\sqrt{\frac{a}{n_{i}}} \right\rbrace$ is pulled.
 

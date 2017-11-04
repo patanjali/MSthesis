@@ -1,13 +1,13 @@
-In this chapter, we deal with the stochastic multi-armed bandit (SMAB) setting. In its classical form, stochastic MABs represent a sequential learning problem where a learner is exposed to a finite set of actions (or arms) and needs to choose one of the actions at each timestep. After choosing (or pulling) an arm the learner  receives a reward, which is conceptualized as an independent random draw from stationary distribution associated with the selected arm. Also, note that in SMAB, the distribution associated with each arm is fixed throughout the entire duration of the horizon denoted by $T$.
+In this chapter, we deal with the stochastic multi-armed bandit (SMAB) setting. In its classical form, stochastic MABs represent a sequential learning problem where a learner is exposed to a finite set of actions (or arms) and needs to choose one of the actions at each timestep. After choosing (or pulling) an arm the learner receives a reward, which is conceptualized as an independent random draw from stationary distribution associated with the selected arm. Also, note that in SMAB, the distribution associated with each arm is fixed throughout the entire duration of the horizon denoted by $T$.
 
 \begin{algorithm}[!th]
-\caption{SMAB algorithm}
+\caption{SMAB formulation}
 \label{alg:SMAB}
 \begin{algorithmic}
 \State {\bf Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution
 \State \For{ each timestep $t=1,2,\ldots, T$}
 \State The learner chooses an arm $i\in\A$, where $A$ is the set of arms and $|A|=K$.
-\State The learner observes the reward $X_{i,t}\sim^{i.i.d} D_{i,t}$ where, $D_{i,t}$ is the distribution associated with the arm $i$. 
+\State The learner observes the reward $X_{i,t}\sim^{i.i.d} D_{i}$ where, $D_{i}$ is the distribution associated with the arm $i$. 
 \State \EndFor
 \end{algorithmic}
 \end{algorithm}

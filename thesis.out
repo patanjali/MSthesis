@@ -17,64 +17,66 @@
 \BOOKMARK [2][-]{subsection.1.4.3}{Collaborative Bandits}{section.1.4}% 17
 \BOOKMARK [0][-]{chapter.2}{Stochastic Multi-armed Bandits}{}% 18
 \BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.2}{Notations}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.2}{Notations and assumptions}{chapter.2}% 20
 \BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}% 21
 \BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}% 22
 \BOOKMARK [1][-]{section.2.5}{Related Work in SMAB}{chapter.2}% 23
 \BOOKMARK [2][-]{subsection.2.5.1}{Lower bound in SMAB}{section.2.5}% 24
-\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence bound approach}{section.2.5}% 25
+\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound approach}{section.2.5}% 25
 \BOOKMARK [2][-]{subsection.2.5.3}{Bayesian Approach}{section.2.5}% 26
 \BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}% 27
-\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance}{}% 28
-\BOOKMARK [1][-]{section.3.1}{Our Contributions}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.2}{Algorithm: Efficient UCB Variance}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.3}{Main Results}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.4}{Proofs}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.5}{Experiments}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.6}{Conclusion and Future Works}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 35
-\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 36
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 42
-\BOOKMARK [2][-]{subsection.4.5.2}{Fixed Confidence setting}{section.4.5}% 43
-\BOOKMARK [2][-]{subsection.4.5.3}{Unified Setting}{section.4.5}% 44
-\BOOKMARK [1][-]{section.4.6}{Related Work in Thresholding Bandits}{chapter.4}% 45
-\BOOKMARK [0][-]{chapter.5}{Augmented UCB for TBP}{}% 46
-\BOOKMARK [1][-]{section.5.1}{Our Contribution}{chapter.5}% 47
-\BOOKMARK [1][-]{section.5.2}{Augmented-UCB Algorithm}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.3}{Theoretical Results}{chapter.5}% 49
-\BOOKMARK [1][-]{section.5.4}{Numerical Experiments}{chapter.5}% 50
-\BOOKMARK [1][-]{section.5.5}{Conclusion and Future Works}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 52
-\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 53
-\BOOKMARK [1][-]{subsection.A.0.1}{Sample space}{appendix.A}% 54
-\BOOKMARK [2][-]{subsection.A.0.2}{Events}{subsection.A.0.1}% 55
-\BOOKMARK [2][-]{subsection.A.0.3}{Sigma-algebra}{subsection.A.0.1}% 56
-\BOOKMARK [2][-]{subsection.A.0.4}{Measure}{subsection.A.0.1}% 57
-\BOOKMARK [2][-]{subsection.A.0.5}{The triplet}{subsection.A.0.1}% 58
-\BOOKMARK [2][-]{subsection.A.0.6}{Filtration}{subsection.A.0.1}% 59
-\BOOKMARK [1][-]{section.A.1}{Martingale}{appendix.A}% 60
-\BOOKMARK [2][-]{subsection.A.1.1}{Super-martingale}{section.A.1}% 61
-\BOOKMARK [2][-]{subsection.A.1.2}{Sub-martingale}{section.A.1}% 62
-\BOOKMARK [1][-]{section.A.2}{Convergence theorems}{appendix.A}% 63
-\BOOKMARK [2][-]{subsection.A.2.1}{Monotone convergence theorem}{section.A.2}% 64
-\BOOKMARK [2][-]{subsection.A.2.2}{Dominated convergence theorem}{section.A.2}% 65
-\BOOKMARK [2][-]{subsection.A.2.3}{Fatou's Lemma}{section.A.2}% 66
-\BOOKMARK [1][-]{section.A.3}{Sub-Gaussian distribution}{appendix.A}% 67
-\BOOKMARK [1][-]{section.A.4}{Concentration Inequalities}{appendix.A}% 68
-\BOOKMARK [2][-]{subsection.A.4.1}{Markov's inequality}{section.A.4}% 69
-\BOOKMARK [2][-]{subsection.A.4.2}{Chernoff-Hoeffding Bound}{section.A.4}% 70
-\BOOKMARK [2][-]{subsection.A.4.3}{Empirical Bernstein inequality}{section.A.4}% 71
-\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 72
-\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 73
-\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 74
-\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 75
-\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 76
-\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 77
-\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 78
-\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 79
-\BOOKMARK [0][-]{appendix*.28}{LIST OF PAPERS BASED ON THESIS}{}% 80
+\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}% 28
+\BOOKMARK [1][-]{section.2.6}{Conclusion}{chapter.2}% 29
+\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{}% 30
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.2}{Our Contributions}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.3}{Algorithm: Efficient UCB Variance}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.4}{Main Results}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.5}{Proofs}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.6}{Experiments}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.7}{Conclusion and Future Works}{chapter.3}% 37
+\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 38
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 44
+\BOOKMARK [2][-]{subsection.4.5.2}{Fixed Confidence setting}{section.4.5}% 45
+\BOOKMARK [2][-]{subsection.4.5.3}{Unified Setting}{section.4.5}% 46
+\BOOKMARK [1][-]{section.4.6}{Related Work in Thresholding Bandits}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{Augmented UCB for TBP}{}% 48
+\BOOKMARK [1][-]{section.5.1}{Our Contribution}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{Augmented-UCB Algorithm}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.3}{Theoretical Results}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.4}{Numerical Experiments}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.5}{Conclusion and Future Works}{chapter.5}% 53
+\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 54
+\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 55
+\BOOKMARK [1][-]{subsection.A.0.1}{Sample space}{appendix.A}% 56
+\BOOKMARK [2][-]{subsection.A.0.2}{Events}{subsection.A.0.1}% 57
+\BOOKMARK [2][-]{subsection.A.0.3}{Sigma-algebra}{subsection.A.0.1}% 58
+\BOOKMARK [2][-]{subsection.A.0.4}{Measure}{subsection.A.0.1}% 59
+\BOOKMARK [2][-]{subsection.A.0.5}{The triplet}{subsection.A.0.1}% 60
+\BOOKMARK [2][-]{subsection.A.0.6}{Filtration}{subsection.A.0.1}% 61
+\BOOKMARK [1][-]{section.A.1}{Martingale}{appendix.A}% 62
+\BOOKMARK [2][-]{subsection.A.1.1}{Super-martingale}{section.A.1}% 63
+\BOOKMARK [2][-]{subsection.A.1.2}{Sub-martingale}{section.A.1}% 64
+\BOOKMARK [1][-]{section.A.2}{Convergence theorems}{appendix.A}% 65
+\BOOKMARK [2][-]{subsection.A.2.1}{Monotone convergence theorem}{section.A.2}% 66
+\BOOKMARK [2][-]{subsection.A.2.2}{Dominated convergence theorem}{section.A.2}% 67
+\BOOKMARK [2][-]{subsection.A.2.3}{Fatou's Lemma}{section.A.2}% 68
+\BOOKMARK [1][-]{section.A.3}{Sub-Gaussian distribution}{appendix.A}% 69
+\BOOKMARK [1][-]{section.A.4}{Concentration Inequalities}{appendix.A}% 70
+\BOOKMARK [2][-]{subsection.A.4.1}{Markov's inequality}{section.A.4}% 71
+\BOOKMARK [2][-]{subsection.A.4.2}{Chernoff-Hoeffding Bound}{section.A.4}% 72
+\BOOKMARK [2][-]{subsection.A.4.3}{Empirical Bernstein inequality}{section.A.4}% 73
+\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 74
+\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 75
+\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 76
+\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 77
+\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 78
+\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 79
+\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 80
+\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 81
+\BOOKMARK [0][-]{appendix*.33}{LIST OF PAPERS BASED ON THESIS}{}% 82

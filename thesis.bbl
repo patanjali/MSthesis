@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{46}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -112,6 +112,14 @@
 {\bf Cappe, O.}, {\bf A.~Garivier}, and {\bf E.~Kaufmann} (2012).
 \newblock pymabandits.
 \newblock \url{http://mloss.org/software/view/415/}.
+
+\bibitem[{Capp{\'e} {\em et~al.\/}(2013)Capp{\'e}, Garivier, Maillard, Munos,
+  Stoltz {\em et~al.\/}}]{cappe2013kullback}
+{\bf Capp{\'e}, O.}, {\bf A.~Garivier}, {\bf O.-A. Maillard}, {\bf R.~Munos},
+  {\bf G.~Stoltz}, {\em et~al.\/} (2013).
+\newblock Kullback--leibler upper confidence bounds for optimal sequential
+  allocation.
+\newblock {\em The Annals of Statistics\/}, {\bf 41}(3), 1516--1541.
 
 \bibitem[{Cesa-Bianchi {\em et~al.\/}(2013)Cesa-Bianchi, Gentile, and
   Zappella}]{cesa2013gang}
@@ -274,5 +282,10 @@
 \newblock On the likelihood that one unknown probability exceeds another in
   view of the evidence of two samples.
 \newblock {\em Biometrika\/}, 285--294.
+
+\bibitem[{Thompson(1935)}]{thompson1935theory}
+{\bf Thompson, W.~R.} (1935).
+\newblock On the theory of apportionment.
+\newblock {\em American Journal of Mathematics\/}, {\bf 57}(2), 450--456.
 
 \end{thebibliography}

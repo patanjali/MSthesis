@@ -1,5 +1,8 @@
-The main result of the paper is presented in the following theorem, where we establish a regret upper bound for the proposed EUCBV  algorithm. 
+The main result of this chapter is presented in the following theorem, where we establish a regret upper bound for the proposed EUCBV  algorithm. 
 % \subsection*{Main Theorem}
+
+\subsubsection{Gap-Dependent bound of EUCBV}
+
 \begin{theorem}[\textbf{\textit{Gap-Dependent Bound}}]
 \label{Result:Theorem:1}
 For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_T$ for EUCBV satisfies
@@ -17,9 +20,15 @@ The proof is along the lines of the technique in \citet{auer2010ucb}. It compris
 \hfill $\blacksquare$
 \end{proof}
 
-\emph{Discussion:} From the above result we see that the most significant term in the gap-dependent bound is of the order $O\left(\frac{K\sigma^2_{\max}\log{(T\Delta^{2}/K)}}{\Delta}\right)$ which is better than the existing results for UCB1, UCBV, MOSS and UCB-Improved (see Table~\ref{tab:comp-bds}). Also as like UCBV, this term scales with the variance. \citet{audibert2010best} have defined the term $H_1=\sum_{i=1}^{K}\frac{1}{\Delta_i^2}$, which is referred to as the hardness of a problem; \citet{bubeck2012regret} have conjectured that the gap-dependent regret upper bound can match $O\left(\frac{K\log{(T/H_1)}}{\Delta}\right)$. However, in  \citet{lattimore2015optimally} it is proved that the gap-dependent regret bound cannot be lower than $O\left(\sum_{i=2}^{K}\frac{\log\left(T/H_i\right)}{\Delta_i}\right)$, where $H_i=\sum_{j=1}^{K}\min\left\lbrace \frac{1}{\Delta_i^2},\frac{1}{\Delta_j^2}\right\rbrace$ (OCUCB proposed in \citet{lattimore2015optimally} achieves this bound). Further, in \citet{lattimore2015optimally} it is shown that only in the worst case scenario when all the gaps are equal (so that $H_1=H_{i}=\sum_{i=1}^{K}\frac{1}{\Delta^2}$) the above two bounds match. In the latter scenario, considering $\sigma^2_{\max}\leq \frac{1}{4}$ as all rewards are bounded in $[0,1]$, we see that the gap-dependent bound of EUCBV simplifies to $O\left(\frac{K\log{(T/H_1)}}{\Delta}\right)$, thus matching the gap-dependent bound of OCUCB which is order optimal.
+\begin{discussion}
+\label{Result:discussion1}
+From the above result we see that the most significant term in the gap-dependent bound is of the order $O\left(\frac{K\sigma^2_{\max}\log{(T\Delta^{2}/K)}}{\Delta}\right)$ which is better than the existing results for UCB1, UCBV, MOSS and UCB-Improved (see Table~\ref{tab:comp-bds}). Also as like UCBV, this term scales with the variance. \citet{audibert2010best} have defined the term $H_1=\sum_{i=1}^{K}\frac{1}{\Delta_i^2}$, which is referred to as the hardness of a problem; \citet{bubeck2012regret} have conjectured that the gap-dependent regret upper bound can match $O\left(\frac{K\log{(T/H_1)}}{\Delta}\right)$. However, in  \citet{lattimore2015optimally} it is proved that the gap-dependent regret bound cannot be lower than $O\left(\sum_{i=2}^{K}\frac{\log\left(T/H_i\right)}{\Delta_i}\right)$, where $H_i=\sum_{j=1}^{K}\min\left\lbrace \frac{1}{\Delta_i^2},\frac{1}{\Delta_j^2}\right\rbrace$ (OCUCB proposed in \citet{lattimore2015optimally} achieves this bound). Further, in \citet{lattimore2015optimally} it is shown that only in the worst case scenario when all the gaps are equal (so that $H_1=H_{i}=\sum_{i=1}^{K}\frac{1}{\Delta^2}$) the above two bounds match. In the latter scenario, considering $\sigma^2_{\max}\leq \frac{1}{4}$ as all rewards are bounded in $[0,1]$, we see that the gap-dependent bound of EUCBV simplifies to $O\left(\frac{K\log{(T/H_1)}}{\Delta}\right)$, thus matching the gap-dependent bound of OCUCB which is order optimal.
+\end{discussion}
 
-Next, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \ref{Result:Corollary:1} to  obtain the gap-independent worst case regret bound. %and Corollary \ref{Result:Corollary:2}.
+
+\subsubsection{Gap-Independent bound of EUCBV}
+
+In this section, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \ref{Result:Corollary:1} to  obtain the gap-independent worst case regret bound. %and Corollary \ref{Result:Corollary:2}.
 
 
 %\subsection*{Corollary 1}
@@ -37,8 +46,10 @@ regret of EUCBV is upper bounded by the following gap-independent expression:
 The proof is given in Appendix \ref{App:Corollary:1}.
 %\end{proof}
 
-\emph{Discussion:} In the non-stochastic scenario, \citet{auer2002nonstochastic} showed that the bound on the cumulative regret for EXP-4 is $O\left(\sqrt{KT\log K}\right)$. However, in the stochastic case, UCB1 proposed in \citet{auer2002finite} incurred a regret of order of  $O\left(\sqrt{KT\log T}\right)$ which is clearly improvable. From the above result we see that in the gap-independent bound of EUCBV the most significant term is $O\left(\sqrt{KT}\right)$ which  matches the upper bound of MOSS and OCUCB, and is better than UCB-Improved, UCB1 and UCBV (see Table~\ref{tab:comp-bds}).
-
+\begin{discussion}
+\label{Result:discussion2}
+ In the non-stochastic scenario, \citet{auer2002nonstochastic} showed that the bound on the cumulative regret for EXP-4 is $O\left(\sqrt{KT\log K}\right)$. However, in the stochastic case, UCB1 proposed in \citet{auer2002finite} incurred a regret of order of  $O\left(\sqrt{KT\log T}\right)$ which is clearly improvable. From the above result we see that in the gap-independent bound of EUCBV the most significant term is $O\left(\sqrt{KT}\right)$ which  matches the upper bound of MOSS and OCUCB, and is better than UCB-Improved, UCB1 and UCBV (see Table~\ref{tab:comp-bds}).
+\end{discussion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Shifted to Appendix

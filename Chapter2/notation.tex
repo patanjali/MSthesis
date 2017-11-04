@@ -1,1 +1,16 @@
-The mean of the reward distribution $D_i$ associated with an arm $i$ is denoted by $r_i$ whereas the mean of the reward distribution of the optimal arm $*$ is denoted by $r^*$ such that $r_i < r^*, \forall i\in \A$, where $\A$ is the set of arms such that $|\A|=K$. We denote the individual arms labeled $i$, where  $i=1,\ldots,K$. We denote an arbitrary round of EUCBV by $m$. For simplicity, we assume that the optimal arm is unique and denote it by ${*}$. We denote the sample mean of the rewards for an arm $i$ at time instant $t$ by $\hat{r}_{i}(t)=\frac{1}{z_{i}(t)}\sum_{\ell=1}^{z_i(t)} X_{i,\ell}$, where $X_{i,\ell}$ is the reward sample received when arm $i$ is pulled for the $\ell$-th time, and $z_i(t)$ is the number of times arm $i$ has been pulled until timestep $t$. We denote the true variance of an arm by $\sigma_i^{2}$ while $\hat{v}_{i}(t)$ is the estimated variance, i.e., $\hat{v}_{i}(t)=\frac{1}{z_i(t)}\sum_{\ell=1}^{z_{i}(t)}(X_{i,\ell}-\hat{r}_{i})^{2}$. Whenever there is no ambiguity about the underlying  time index $t$, for simplicity we neglect $t$ from the notations and simply use  $\hat{r}_i, \hat{v}_i,$ and $z_i$ to denote the respective quantities. We assume the rewards of all arms are bounded in $[0,1]$.
+\begin{assumption}
+\label{SMAB:assm:1}
+In the considered SMAB setting we assume the optimal arm to be unique and it is denoted by $*$.
+\end{assumption}
+
+\begin{assumption}
+\label{SMAB:assm:2}
+We assume the rewards of all arms are bounded in $[0,1]$.
+\end{assumption}
+
+
+\textbf{Notations:} The mean of the reward distribution $D_i$ associated with an arm $i$ is denoted by $r_i$ whereas the mean of the reward distribution of the optimal arm $*$ is denoted by $r^*$ such that $r_i < r^*, \forall i\in \A$, where $\A$ is the set of arms such that $|\A|=K$. We denote the individual arms labeled $i$, where  $i=1,\ldots,K$. We denote the sample mean of the rewards for an arm $i$ at time instant $t$ by $\hat{r}_{i}(t)=\frac{1}{z_{i}(t)}\sum_{\ell=1}^{z_i(t)} X_{i,\ell}$, where $X_{i,\ell}$ is the reward sample received when arm $i$ is pulled for the $\ell$-th time, and $z_i(t)$ is the number of times arm $i$ has been pulled until timestep $t$. We denote the true variance of an arm by $\sigma_i^{2}$ while $\hat{v}_{i}(t)$ is the estimated variance, i.e., $\hat{v}_{i}(t)=\frac{1}{z_i(t)}\sum_{\ell=1}^{z_{i}(t)}(X_{i,\ell}-\hat{r}_{i})^{2}$. Whenever there is no ambiguity about the underlying  time index $t$, for simplicity we neglect $t$ from the notations and simply use  $\hat{r}_i, \hat{v}_i,$ and $z_i$ to denote the respective quantities. Also, $\Delta$ denotes the minimum gap such that $\Delta=\min_{i\in\A}\lbrace \Delta_{i}\rbrace$.
+
+
+%For simplicity, we assume that the optimal arm is unique and denote it by ${*}$.
+%We denote an arbitrary round of EUCBV by $m$.
