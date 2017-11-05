@@ -37,65 +37,66 @@
 \contentsline {subsection}{\numberline {2.5.3}Bayesian Approach}{14}{subsection.2.5.3}
 \contentsline {subsection}{\numberline {2.5.4}Information Theoretic approach}{14}{subsection.2.5.4}
 \contentsline {subsection}{\numberline {2.5.5}Discussion on the various confidence intervals}{15}{subsection.2.5.5}
-\contentsline {section}{\numberline {2.6}Conclusion}{15}{section.2.6}
-\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Our Contributions}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Algorithm: Efficient UCB Variance}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Main Results}{20}{section.3.4}
-\contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{20}{section*.20}
-\contentsline {subsubsection}{Gap-Independent bound of EUCBV}{21}{section*.21}
-\contentsline {section}{\numberline {3.5}Proofs}{22}{section.3.5}
-\contentsline {section}{\numberline {3.6}Experiments}{27}{section.3.6}
-\contentsline {section}{\numberline {3.7}Conclusion and Future Works}{31}{section.3.7}
-\contentsline {chapter}{\numberline {4}Thresholding Bandits}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{32}{section.4.1}
-\contentsline {section}{\numberline {4.2}Notations}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}Problem Definition}{33}{section.4.3}
-\contentsline {section}{\numberline {4.4}Motivation}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration}{34}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{34}{subsection.4.5.1}
-\contentsline {subsubsection}{UCB-Exploration Algorithm}{34}{section*.25}
-\contentsline {subsubsection}{Successive Reject Algorithm}{35}{section*.26}
-\contentsline {subsection}{\numberline {4.5.2}Fixed Confidence setting}{36}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Unified Setting}{36}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Related Work in Thresholding Bandits}{36}{section.4.6}
-\contentsline {chapter}{\numberline {5}Augmented UCB for TBP}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Our Contribution}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Augmented-UCB Algorithm}{38}{section.5.2}
-\contentsline {section}{\numberline {5.3}Theoretical Results}{39}{section.5.3}
-\contentsline {subsubsection}{Problem Complexity}{39}{section*.28}
-\contentsline {subsubsection}{Proof of expected loss of AugUCB}{41}{section*.29}
-\contentsline {section}{\numberline {5.4}Numerical Experiments}{45}{section.5.4}
-\contentsline {section}{\numberline {5.5}Conclusion and Future Works}{48}{section.5.5}
-\contentsline {section}{\numberline {5.6}Summary}{49}{section.5.6}
-\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{50}{appendix.A}
-\contentsline {subsection}{\numberline {A.0.1}Sample space}{52}{subsection.A.0.1}
-\contentsline {subsection}{\numberline {A.0.2}Events}{52}{subsection.A.0.2}
-\contentsline {subsection}{\numberline {A.0.3}Sigma-algebra}{52}{subsection.A.0.3}
-\contentsline {subsubsection}{Borel-sigma algebra}{52}{section*.31}
-\contentsline {subsection}{\numberline {A.0.4}Measure}{52}{subsection.A.0.4}
-\contentsline {subsubsection}{The probability measure}{52}{section*.32}
-\contentsline {subsection}{\numberline {A.0.5}The triplet}{52}{subsection.A.0.5}
-\contentsline {subsection}{\numberline {A.0.6}Filtration}{52}{subsection.A.0.6}
-\contentsline {section}{\numberline {A.1}Martingale}{52}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Super-martingale}{52}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Sub-martingale}{52}{subsection.A.1.2}
-\contentsline {section}{\numberline {A.2}Convergence theorems}{52}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Monotone convergence theorem}{52}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Dominated convergence theorem}{52}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Fatou's Lemma}{52}{subsection.A.2.3}
-\contentsline {section}{\numberline {A.3}Sub-Gaussian distribution}{52}{section.A.3}
-\contentsline {section}{\numberline {A.4}Concentration Inequalities}{53}{section.A.4}
-\contentsline {subsection}{\numberline {A.4.1}Markov's inequality}{53}{subsection.A.4.1}
-\contentsline {subsection}{\numberline {A.4.2}Chernoff-Hoeffding Bound}{54}{subsection.A.4.2}
-\contentsline {subsection}{\numberline {A.4.3}Empirical Bernstein inequality}{54}{subsection.A.4.3}
-\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{56}{appendix.B}
-\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{56}{subsection.B.0.4}
-\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{56}{subsection.B.0.5}
-\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{57}{subsection.B.0.6}
-\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{59}{subsection.B.0.7}
-\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{60}{subsection.B.0.8}
-\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{61}{subsection.B.0.9}
-\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{62}{subsection.B.0.10}
-\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{67}{appendix*.34}
+\contentsline {section}{\numberline {2.6}Conclusion}{16}{section.2.6}
+\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Our Contributions}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Algorithm: Efficient UCB Variance}{19}{section.3.3}
+\contentsline {section}{\numberline {3.4}Main Results}{21}{section.3.4}
+\contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{21}{section*.20}
+\contentsline {subsubsection}{Gap-Independent bound of EUCBV}{22}{section*.21}
+\contentsline {section}{\numberline {3.5}Proofs}{23}{section.3.5}
+\contentsline {section}{\numberline {3.6}Experiments}{28}{section.3.6}
+\contentsline {section}{\numberline {3.7}Conclusion and Future Works}{32}{section.3.7}
+\contentsline {chapter}{\numberline {4}Thresholding Bandits}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Notations}{34}{section.4.2}
+\contentsline {section}{\numberline {4.3}Problem Definition}{34}{section.4.3}
+\contentsline {section}{\numberline {4.4}Motivation}{35}{section.4.4}
+\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration}{35}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{36}{subsection.4.5.1}
+\contentsline {subsubsection}{UCB-Exploration Algorithm}{36}{section*.25}
+\contentsline {subsubsection}{Successive Reject Algorithm}{36}{section*.26}
+\contentsline {subsection}{\numberline {4.5.2}Fixed Confidence setting}{37}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Unified Setting}{37}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Related Work in Thresholding Bandits}{37}{section.4.6}
+\contentsline {section}{\numberline {4.7}Conclusion}{38}{section.4.7}
+\contentsline {chapter}{\numberline {5}Augmented UCB for TBP}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Our Contribution}{39}{section.5.2}
+\contentsline {section}{\numberline {5.3}Augmented-UCB Algorithm}{41}{section.5.3}
+\contentsline {section}{\numberline {5.4}Theoretical Results}{43}{section.5.4}
+\contentsline {subsubsection}{Problem Complexity}{43}{section*.28}
+\contentsline {subsubsection}{Proof of expected loss of AugUCB}{44}{section*.29}
+\contentsline {section}{\numberline {5.5}Numerical Experiments}{47}{section.5.5}
+\contentsline {section}{\numberline {5.6}Conclusion and Future Works}{51}{section.5.6}
+\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{52}{appendix.A}
+\contentsline {subsection}{\numberline {A.0.1}Sample space}{54}{subsection.A.0.1}
+\contentsline {subsection}{\numberline {A.0.2}Events}{54}{subsection.A.0.2}
+\contentsline {subsection}{\numberline {A.0.3}Sigma-algebra}{54}{subsection.A.0.3}
+\contentsline {subsubsection}{Borel-sigma algebra}{54}{section*.31}
+\contentsline {subsection}{\numberline {A.0.4}Measure}{54}{subsection.A.0.4}
+\contentsline {subsubsection}{The probability measure}{54}{section*.32}
+\contentsline {subsection}{\numberline {A.0.5}The triplet}{54}{subsection.A.0.5}
+\contentsline {subsection}{\numberline {A.0.6}Filtration}{54}{subsection.A.0.6}
+\contentsline {section}{\numberline {A.1}Martingale}{54}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Super-martingale}{54}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Sub-martingale}{54}{subsection.A.1.2}
+\contentsline {section}{\numberline {A.2}Convergence theorems}{54}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Monotone convergence theorem}{54}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Dominated convergence theorem}{54}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Fatou's Lemma}{54}{subsection.A.2.3}
+\contentsline {section}{\numberline {A.3}Sub-Gaussian distribution}{54}{section.A.3}
+\contentsline {section}{\numberline {A.4}Concentration Inequalities}{55}{section.A.4}
+\contentsline {subsection}{\numberline {A.4.1}Markov's inequality}{55}{subsection.A.4.1}
+\contentsline {subsection}{\numberline {A.4.2}Chernoff-Hoeffding Bound}{56}{subsection.A.4.2}
+\contentsline {subsection}{\numberline {A.4.3}Empirical Bernstein inequality}{56}{subsection.A.4.3}
+\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{58}{appendix.B}
+\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{58}{subsection.B.0.4}
+\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{58}{subsection.B.0.5}
+\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{59}{subsection.B.0.6}
+\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{61}{subsection.B.0.7}
+\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{62}{subsection.B.0.8}
+\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{63}{subsection.B.0.9}
+\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{64}{subsection.B.0.10}
+\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{69}{appendix*.34}
