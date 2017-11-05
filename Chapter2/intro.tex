@@ -6,9 +6,10 @@ In this chapter, we deal with the stochastic multi-armed bandit (SMAB) setting. 
 \begin{algorithmic}
 \State {\bf Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution
 \State \For{ each timestep $t=1,2,\ldots, T$}
-\State The learner chooses an arm $i\in\A$, where $A$ is the set of arms and $|A|=K$.
+\State The learner chooses an arm $i\in\A$, where $\A$ is the set of arms and $|\A|=K$.
 \State The learner observes the reward $X_{i,t}\sim^{i.i.d} D_{i}$ where, $D_{i}$ is the distribution associated with the arm $i$. 
 \State \EndFor
 \end{algorithmic}
 \end{algorithm}
 	 
+The rest of the chapter is organized as follows. We specify all the notations and assumptions in section~\ref{sec:notations}. Then we define the problem statement for the SMAB setting in section~\ref{sec:probDef}. In the next section~\ref{sec:motivation} we discuss the motivations behind the SMAB setting. In section~\ref{sec:related} we discuss extensively on the various state-of-the-art algorithms available for the SMAB setting. Finally, we draw our conclusions in section \ref{chap2:conc}.

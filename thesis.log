@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  5 NOV 2017 05:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  5 NOV 2017 09:31
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1442,18 +1442,15 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
  [5]) [6]
 Chapter 2.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/intro.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/notation.tex [7
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/notation.tex
+Underfull \vbox (badness 3492) has occurred while \output is active []
+
+ [7
 
 ])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex
-Underfull \vbox (badness 2409) has occurred while \output is active []
-
- [8])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [8])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [9])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [10]
 Overfull \hbox (16.37508pt too wide) in paragraph at lines 32--33
 []\T1/ptm/m/n/12 UCB1 has a gap-dependent re-gret up-per bound of $\OML/cmm/m/i
 t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
@@ -1462,7 +1459,10 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 46.
-[11] [12]
+[11]
+Underfull \vbox (badness 1728) has occurred while \output is active []
+
+ [12]
 Overfull \hbox (8.18733pt too wide) in paragraph at lines 80--81
 []\T1/ptm/m/n/12 Recently in []Lat-ti-more[] ([]2015[]), the au-thors showed th
 at the al-go-rithm OCUCB achieves
@@ -1481,17 +1481,30 @@ Overfull \hbox (6.40132pt too wide) in paragraph at lines 80--81
 1/ptm/m/n/12 . This is the best known gap-dependent
  []
 
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+[]|\T1/ptm/m/n/12 Horizon
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-[14]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/conclusion.tex)
+Overfull \hbox (5.16708pt too wide) in paragraph at lines 138--157
+ [] 
+ []
+
+) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/conclusion.tex)
 [15]
 Chapter 3.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/contribution.tex [16
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/introduction.tex)
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/contribution.tex
+Underfull \vbox (badness 1917) has occurred while \output is active []
+
+ [16
 
 ]
-[17]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/ealgo.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/ealgo.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1501,10 +1514,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
  []
 
 [18]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-[20] [21])
+[19] [20] [21])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/proofTheorem.tex
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 27--28
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
@@ -1780,20 +1790,20 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 [67
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
  (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 358.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 943FD66B99BAE5C961C38F14AF484C60;5708.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
+(rerunfilecheck)             Checksum: 2824B7D9775CEEBFA00E71711148EA5F;5708.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
  ) 
 Here is how much of TeX's memory you used:
- 32736 strings out of 493921
- 769810 string characters out of 3144861
- 1084936 words of memory out of 3000000
- 34923 multiletter control sequences out of 15000+200000
+ 32741 strings out of 493921
+ 769991 string characters out of 3144861
+ 1086031 words of memory out of 3000000
+ 34924 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,108p,1874b,2489s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1818,9 +1828,9 @@ s/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
 rw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
 mbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (78 pages, 716428 bytes).
+Output written on thesis.pdf (78 pages, 719802 bytes).
 PDF statistics:
- 1474 PDF objects out of 1728 (max. 8388607)
- 319 named destinations out of 1000 (max. 500000)
+ 1484 PDF objects out of 1728 (max. 8388607)
+ 320 named destinations out of 1000 (max. 500000)
  674 words of extra memory for PDF output out of 10000 (max. 10000000)
 
