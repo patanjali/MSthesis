@@ -14,9 +14,9 @@ In stochastic bandits, the distribution associated with each of the arms remains
 In non-stochastic setting the distribution associated with each arm varies over the duration of the play. Two natoable examples of this are:-
 
 \begin{itemize}
-\item \textbf{Adversarial bandits: } In adversarial bandits, an adversary decides the payoff for each arm before the learner selects an arm. This adversary may or may not be oblivious to the learning algorithm employed by the learner. In each of these cases a different guarantee on the performance of the learner can be arrived at. Some of the important papers in this setting are \citet{auer2002nonstochastic}, \citet{auer2002nonstochastic}, \citet{auer2002using}, \citet{kocak2014efficient}.
+\item \textbf{Adversarial bandits: } In adversarial bandits, an adversary decides the payoff for each arm before the learner selects an arm. This adversary may or may not be oblivious to the learning algorithm employed by the learner. In each of these cases a different guarantee on the performance of the learner can be arrived at. Some of the important papers in this setting are \citet{auer2002nonstochastic}, \citet{auer2002using}, \citet{kocak2014efficient}.
 
-\item \textbf{Piece-wise stationary:} Another setup under this setting can be the piece-wise stationary setting. In this setting, the distribution associated with each arm is not fixed throughout the time horizon and changes either arbitrarily at particular changepoints, or changes at a fixed period. The distribution associated with each arm then  remains fixed till the next chnagepoint is encountered. Chapter (to be added) is based on this.
+\item \textbf{Piece-wise stationary:} Another setup under this setting can be the piece-wise stationary setting. In this setting, the distribution associated with each arm is not fixed throughout the time horizon and changes either arbitrarily at particular changepoints, or changes at a fixed period. The distribution associated with each arm then  remains fixed till the next chnagepoint is encountered. Several recent works have focussed on this such as  \citep{garivier2011upper}, \citep{mellor2013thompson}, and \citep{allesiardo2017non}. In our thesis, chapter \ref{chap:psbandit} is based on this setting. 
 \end{itemize}
 
 
@@ -34,20 +34,48 @@ The idea of clustering has been extensively studied in the contextual bandit set
 
 \subsection{Types of Bandits based on goal}
 
+In bandit literature, based on the goal we can divide bandits into several categories. To illustrate his we put forward a simple scenario let us consider a stochastic bandit scenario where there are $K$ arms labeled $i=1,2,\ldots,K$ with their expected means of reward distributions ($D_i$) be denoted by $r_i$. Also let there be single optimal arm $*$ such that $r^* = \max_{i\in\A}r_i$. 
+
 
 
 \subsubsection{Cumulative regret minimization}
+In cumulative regret minimization the goal of the bandit is to minimize the cumulative regret which is the total loss suffered by the learner throughout the time horizon $T$ for not choosing the optimal arm. Formally, we can define the cumulative regret as,
 
+\begin{eqnarray}
+R_{T} = \sum_{t=1}^{T}r^* - \sum_{i\neq *}r_{i}n_{i,T} \label{eqn:chap1:regret}
+\end{eqnarray}
 
+where, $n_{i,T}$ is the number of times the learner has chosen arm $i$ over the entire horizon $T$. We can further reduce equation \ref{eqn:chap1:regret} to obtain,
+
+\begin{align*}
+R_{T} = \sum_{t=1}^{T}r^* - \sum_{i\neq *}r_{i}n_{i,T} = \sum_{i=1}^{K}\Delta_{i}n_{i,T}
+\end{align*}
+
+where $\Delta_{i}=r^* - r_i$ is called the gap between the optimal and the sub-optimal arm.
 
 \subsubsection{Simple regret minimization}
+In simple regret minimization the goal of the bandit is to minimize the instantaneous regret that is suffered at any  timestep by the learner. Formally, the simple regret at $t$-th timestep where $J_n\in\A$ is the recommendation by the learner at timestep $t$ is defined,
 
+\begin{align*}
+SR_{t} = r^* - r_{J_{n}} = \Delta_{J_n}
+\end{align*}
 
+where, $\Delta_{J_n}$ is the instantaneous gap between the expected mean of he optimal arm and the recommended arm by the learner.
 
-\subsubsection{External Regret minimization}
+\subsubsection{Weak Regret minimization}
+In the non-stochastic scenario, when the distribution associated with each arm changes, the notion of regret is defined differently than cumulative regret. In this scenario, considering that there is a single best arm, the learner is more interested in minimizing the worst-case regret. Formally, for any sequence of actions $\left( j_1, \ldots , j_T \right)$ over the time horizon $T$, the weak regret for single best action is defined as the difference between,
+\begin{align*}
+G_{\max}(j_1,\ldots,j_T) - G_{\pi}(T)
+\end{align*}
+where, $G_{\max}(j_1,\ldots,j_T) = \max_{i\in\A}\sum_{t=1}^{T}x_{i_t}$ is the return of the globally best action over the entire horizon $T$ and $G_{\pi}(T)$ is the return following the policy $\pi$ over the horizon $T$ instead of choosing $j_1,\ldots,j_T$.
 
 
 
 \subsection{Collaborative Bandits}
 
 Distributed bandits are specific setup of MAB where a network of bandits collaborate with each other to identify the optimal arm(s) (see \citet{awerbuch2008competitive,liu2010distributed,szorenyi2013gossip,hillel2013distributed}). In our setting we can assign each of the $p$ clusters to individual bandits and at the end of each round they can share information synchronously to identify the optimal arm. This naturally results in a speedup of operation and helps in identifying the best arm faster. The clustering in this case is typically done over the feature space \citet{bui2012clustered}, \citet{cesa2013gang}, \citet{gentile2014online}.
+
+\subsection{Bandits with Corrupt Feedback}
+
+
+\subsection{Conservative Bandits}

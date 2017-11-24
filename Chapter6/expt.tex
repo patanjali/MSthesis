@@ -1,0 +1,128 @@
+In this section we present two experiments in two different environments.
+
+
+\begin{figure}[!th]
+    \centering
+    \begin{tabular}{cc}
+    %\setlength{\tabcolsep}{0.1pt}
+    \subfigure[\Large\textwidth][\large Expt-$1$: $3$ Bernoulli-distributed arms (From Dr. Odalric's Draft).]
+    %with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$
+    {
+    		\pgfplotsset{
+		tick label style={font=\normalsize},
+		label style={font=\normalsize},
+		legend style={font=\normalsize},
+		ylabel style={yshift=12pt},
+		%legend style={legendshift=32pt},
+		}
+        \begin{tikzpicture}[scale=0.7]
+      	\begin{axis}[
+		xlabel={timestep},
+		ylabel={Cumulative Regret},
+		grid=major,
+        %clip mode=individual,grid,grid style={gray!30},
+        clip=true,
+        %clip mode=individual,grid,grid style={gray!30},
+  		legend style={at={(0.5,1.4)},anchor=north, legend columns=3} ]
+      	% UCB
+		
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_DUCB01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS02.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS03.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E02.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_TS01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_OTS01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_DTS01.txt};
+      	
+      	\legend{DUCB($\gamma=1-\frac{1}{4\sqrt{T}}$),ETSDAE1,ETSDAE2,ETSDAE3,ETSD1E1,ETSD1E2,TS,OTS,DTS($\gamma=1-\frac{1}{4\sqrt{T}})$}    
+      	\end{axis}
+      	\end{tikzpicture}
+  		\label{psbandit:fig:1}
+    }
+    &
+    \subfigure[\Large\textwidth][\large Expt-$1$: $3$ Bernoulli-distributed arms (From Dr. Odalric's Draft).]
+    %with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$
+    {
+    		\pgfplotsset{
+		tick label style={font=\normalsize},
+		label style={font=\normalsize},
+		legend style={font=\normalsize},
+		ylabel style={yshift=12pt},
+		%legend style={legendshift=32pt},
+		}
+        \begin{tikzpicture}[scale=0.7]
+      	\begin{axis}[
+		xlabel={timestep},
+		ylabel={Cumulative Regret},
+		grid=major,
+        %clip mode=individual,grid,grid style={gray!30},
+        clip=true,
+        %clip mode=individual,grid,grid style={gray!30},
+  		legend style={at={(0.5,1.4)},anchor=north, legend columns=3} ]
+      	% UCB
+		
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_DUCB01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS04.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E03.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS06.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E04.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_TS01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_OTS01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_DTS01.txt};
+		\addplot table{Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E06.txt};
+      	
+      	\legend{DUCB($\gamma=1-\frac{1}{4\sqrt{T}}$),EAggrCPD1,CPD1-E1,EAggrCPD2,CPD2-E1,TS,OTS,DTS($\gamma=1-\frac{1}{4\sqrt{T}})$,CPD2-E1-N}    
+      	\end{axis}
+      	\end{tikzpicture}
+  		\label{psbandit:fig:2}
+    }
+    \end{tabular}
+    \caption{Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. }
+    \label{fig:karmed1}
+\end{figure}
+
+
+%\begin{figure}[!th]
+%    \centering
+%    \begin{tabular}{c}
+%    %\setlength{\tabcolsep}{0.1pt}
+%    \subfigure[\Large\textwidth][\large Expt-$1$: $3$ Bernoulli-distributed arms (From Dr. Odalric's Draft).]
+%    %with $r_{i_{{i}\neq {*}}}=0.07$ and $r^{*}=0.1$
+%    {
+%    		\pgfplotsset{
+%		tick label style={font=\normalsize},
+%		label style={font=\normalsize},
+%		legend style={font=\normalsize},
+%		ylabel style={yshift=12pt},
+%		%legend style={legendshift=32pt},
+%		}
+%        \begin{tikzpicture}[scale=0.7]
+%      	\begin{axis}[
+%		xlabel={timestep},
+%		ylabel={Cumulative Regret},
+%		grid=major,
+%        %clip mode=individual,grid,grid style={gray!30},
+%        clip=true,
+%        %clip mode=individual,grid,grid style={gray!30},
+%  		legend style={at={(0.5,1.4)},anchor=north, legend columns=3} ]
+%      	% UCB
+%		
+%		\addplot table{results/NewExpt/Expt5/comp_subsampled_DUCB01.txt};
+%		\addplot table{results/NewExpt/Expt5/comp_subsampled_ETS04.txt};
+%		\addplot table{results/NewExpt/Expt5/comp_subsampled_ETS1E03.txt};
+%		\addplot table{results/NewExpt/Expt5/comp_subsampled_TS01.txt};
+%		\addplot table{results/NewExpt/Expt5/comp_subsampled_OTS01.txt};
+%		\addplot table{results/NewExpt/Expt5/comp_subsampled_DTS01.txt};
+%      	
+%      	\legend{DUCB($\gamma=1-\frac{1}{4\sqrt{T}}$),ETSDAE4,ETSD1E3,TS,OTS,DTS($\gamma=1-\frac{1}{4\sqrt{T}})$}    
+%      	\end{axis}
+%      	\end{tikzpicture}
+%  		\label{fig:2}
+%    }
+%    \end{tabular}
+%    \caption{Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. }
+%    \label{fig:karmed2}
+%\end{figure}
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  6 NOV 2017 02:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  24 NOV 2017 20:26
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -636,13 +636,14 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \c@remark=\count132
 \c@assumption=\count133
 \c@discussion=\count134
-\c@proposition=\count135
-\c@corollary=\count136
-\c@lemma=\count137
-\c@proof=\count138
-\c@innercustomlem=\count139
-\c@innercustomCorollary=\count140
-\c@innercustomproof=\count141
+\c@definition=\count135
+\c@proposition=\count136
+\c@corollary=\count137
+\c@lemma=\count138
+\c@proof=\count139
+\c@innercustomlem=\count140
+\c@innercustomCorollary=\count141
+\c@innercustomproof=\count142
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip52
@@ -737,10 +738,10 @@ ode.tex"
 \pgf@yc=\dimen156
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count142
-\c@pgf@countb=\count143
-\c@pgf@countc=\count144
-\c@pgf@countd=\count145
+\c@pgf@counta=\count143
+\c@pgf@countb=\count144
+\c@pgf@countc=\count145
+\c@pgf@countd=\count146
 \t@pgf@toka=\toks31
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
@@ -761,8 +762,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
 code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count146
-\pgfsyssoftpath@bigbuffer@items=\count147
+\pgfsyssoftpath@smallbuffer@items=\count147
+\pgfsyssoftpath@bigbuffer@items=\count148
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
 code.tex"
@@ -777,7 +778,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
 "
 \pgfmath@dimen=\dimen157
-\pgfmath@count=\count148
+\pgfmath@count=\count149
 \pgfmath@box=\box31
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
@@ -802,7 +803,7 @@ code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
 erarithmetics.code.tex")))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count149
+\c@pgfmathroundto@lastzeros=\count150
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
 de.tex"
@@ -840,7 +841,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box32
 \pgf@hbox=\box33
 \pgf@layerbox@main=\box34
-\pgf@picture@serial@count=\count150
+\pgf@picture@serial@count=\count151
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
 ate.code.tex"
@@ -875,7 +876,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 e.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen181
-\pgf@sys@shading@range@num=\count151
+\pgf@sys@shading@range@num=\count152
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
 e.tex"
@@ -938,7 +939,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
 dlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count152
+\pgf@plot@mark@count=\count153
 \pgfplotmarksize=\dimen186
 )
 \tikz@lastx=\dimen187
@@ -951,19 +952,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box38
 \tikz@tempbox=\box39
 \tikz@tempbox@bg=\box40
-\tikztreelevel=\count153
-\tikznumberofchildren=\count154
-\tikznumberofcurrentchild=\count155
-\tikz@fig@count=\count156
+\tikztreelevel=\count154
+\tikznumberofchildren=\count155
+\tikznumberofcurrentchild=\count156
+\tikz@fig@count=\count157
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
 e.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count157
-\pgfmatrixcurrentcolumn=\count158
-\pgf@matrix@numberofcolumns=\count159
+\pgfmatrixcurrentrow=\count158
+\pgfmatrixcurrentcolumn=\count159
+\pgf@matrix@numberofcolumns=\count160
 )
-\tikz@expandcount=\count160
+\tikz@expandcount=\count161
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarytopaths.code.tex"
@@ -979,8 +980,8 @@ Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
 \t@pgfplots@tokb=\toks40
 \t@pgfplots@tokc=\toks41
 \pgfplots@tmpa=\dimen193
-\c@pgfplots@coordindex=\count161
-\c@pgfplots@scanlineindex=\count162
+\c@pgfplots@coordindex=\count162
+\c@pgfplots@scanlineindex=\count163
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric
 .code.tex"))
@@ -996,7 +997,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 soldpgfsupp_pgflibraryfpu.code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplot
 soldpgfsupp_pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count163
+\c@pgfmathroundto@lastzeros=\count164
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.code
 .tex"
@@ -1006,13 +1007,13 @@ liststructure.code.tex")
 liststructureext.code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
 array.code.tex"
-\c@pgfplotsarray@tmp=\count164
+\c@pgfplotsarray@tmp=\count165
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
 matrix.code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstable
 shared.code.tex"
-\c@pgfplotstable@counta=\count165
+\c@pgfplotstable@counta=\count166
 \t@pgfplotstable@a=\toks42
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplots
@@ -1025,7 +1026,7 @@ ta.code.tex"))
 .code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplot
 s.surfshading.code.tex"
-\c@pgfplotslibrarysurf@no=\count166
+\c@pgfplotslibrarysurf@no=\count167
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots
 .surfshading.pgfsys-pdftex.def")))
@@ -1062,7 +1063,7 @@ s.code.tex"
 \pgfdecoratedinputsegmentcompleteddistance=\dimen196
 \pgfdecoratedinputsegmentremainingdistance=\dimen197
 \pgf@decorate@distancetomove=\dimen198
-\pgf@decorate@repeatstate=\count167
+\pgf@decorate@repeatstate=\count168
 \pgfdecorationsegmentamplitude=\dimen199
 \pgfdecorationsegmentlength=\dimen200
 )
@@ -1076,7 +1077,7 @@ brarydecorations.pathmorphing.code.tex"))
 s\tikzlibrarydecorations.pathreplacing.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.pathreplacing.code.tex"))
-\pgfplots@numplots=\count168
+\pgfplots@numplots=\count169
 \pgfplots@xmin@reg=\dimen201
 \pgfplots@xmax@reg=\dimen202
 \pgfplots@ymin@reg=\dimen203
@@ -1100,10 +1101,10 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigbottomskip=\skip67
 \subfigcapmargin=\dimen208
 \subfiglabelskip=\skip68
-\c@subfigure=\count169
-\c@lofdepth=\count170
-\c@subtable=\count171
-\c@lotdepth=\count172
+\c@subfigure=\count170
+\c@lofdepth=\count171
+\c@subtable=\count172
+\c@lotdepth=\count173
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -1219,7 +1220,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \backup@length=\skip72
 )
 \rotheadsize=\dimen211
-\c@nlinenum=\count173
+\c@nlinenum=\count174
 \TeXr@lab=\toks44
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
@@ -1289,16 +1290,16 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count174
+\scratchcounter=\count175
 \scratchdimen=\dimen212
 \scratchbox=\box62
-\nofMPsegments=\count175
-\nofMParguments=\count176
+\nofMPsegments=\count176
+\nofMParguments=\count177
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count177
+\MPscratchCnt=\count178
 \MPscratchDim=\dimen213
-\MPnumerator=\count178
-\makeMPintoPDFobject=\count179
+\MPnumerator=\count179
+\makeMPintoPDFobject=\count180
 \everyMPtoPDFconversion=\toks46
 )
 \AtBeginShipoutBox=\box63
@@ -1309,7 +1310,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count180
+\c@section@level=\count181
 )
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
@@ -1398,27 +1399,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.toc [3
 
-] [4])
+] [4]
+Underfull \vbox (badness 2221) has occurred while \output is active []
+
+ [5])
 \tf@toc=\write5
- [5]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lot)
+
+[6] (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lot)
 \tf@lot=\write6
- [6
+ [7
 
 ]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lof)
 \tf@lof=\write7
- [7
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [8
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10
 
 ]
 Chapter 1.
@@ -1439,18 +1443,28 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
- [5]) [6]
+
+Underfull \vbox (badness 2012) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 1776) has occurred while \output is active []
+
+ [7])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/outline.tex) [8] [9]
 Chapter 2.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/intro.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/notation.tex
 Underfull \vbox (badness 3492) has occurred while \output is active []
 
- [7
+ [10
 
 ])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [8])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [9])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [10]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [11])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [12])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [13]
 Overfull \hbox (16.37508pt too wide) in paragraph at lines 33--34
 []\T1/ptm/m/n/12 UCB1 has a gap-dependent re-gret up-per bound of $\OML/cmm/m/i
 t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
@@ -1459,7 +1473,7 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[11] [12]
+[14] [15]
 Overfull \hbox (8.18733pt too wide) in paragraph at lines 82--83
 []\T1/ptm/m/n/12 Recently in []Lat-ti-more[] ([]2015[]), the au-thors showed th
 at the al-go-rithm OCUCB achieves
@@ -1478,7 +1492,7 @@ Overfull \hbox (6.40132pt too wide) in paragraph at lines 82--83
 1/ptm/m/n/12 . This is the best known gap-dependent
  []
 
-[13] [14]
+[16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []|\T1/ptm/m/n/12 Horizon
  []
@@ -1501,19 +1515,19 @@ Overfull \hbox (5.16708pt too wide) in paragraph at lines 141--160
 ) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/conclusion.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-[16]
+ [18]
+[19]
 Chapter 3.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/introduction.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/contribution.tex
 Underfull \vbox (badness 1917) has occurred while \output is active []
 
- [17
+ [20
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18])
+ [21])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/ealgo.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1523,11 +1537,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[19]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex
+[22]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
-[21] [22])
+ [23]
+[24] [25])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/proofTheorem.tex
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 27--28
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
@@ -1536,10 +1550,10 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 ]$ \T1/ptm/m/it/12 and $\OML/cmm/m/it/12 n[] \OT1/cmr/m/n/12 = []$
  []
 
-[23]
+[26]
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
- [24]
+ [27]
 Overfull \hbox (34.85158pt too wide) in paragraph at lines 202--203
 []\T1/ptm/m/it/12 From Lemma []3[] we can show that $\U/msb/m/n/12 P\OT1/cmr/m/
 n/12 ([] \OML/cmm/m/it/12 > r[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c[]\OT1/cmr/
@@ -1550,7 +1564,7 @@ P [] \OMS/cmsy/m/n/12 $
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [28]
 Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
@@ -1558,7 +1572,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
+ [29]
 Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
@@ -1566,7 +1580,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27])
+ [30])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/expts.tex
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
@@ -1587,13 +1601,11 @@ PGFPlots: reading {Chapter3/results/NewExpt/Expt2/TS01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt2/OCUCB01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt2/BU01_comp_subsampled.txt}
 
+Overfull \hbox (23.5079pt too wide) in paragraph at lines 5--75
+ [][] 
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
+[31] [32]
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/MOSS01_comp_subsampled.txt}
@@ -1608,82 +1620,95 @@ PGFPlots: reading {Chapter3/results/NewExpt/Expt41/TS01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt41/OCUCB01_comp_subsampled.txt}
 
 PGFPlots: reading {Chapter3/results/NewExpt/Expt41/BU01_comp_subsampled.txt}
-
-[30]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex
+ [33])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31])
-[32]
+ [34])
+[35]
 Chapter 4.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [33
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [36
 
 ])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/notation.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/probDef.tex [34])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/probDef.tex [37])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/motivation.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevRes.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [38]
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/ptm/m/n/12 Exploration
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 37--38
+\T1/ptm/m/n/12 achieves a bal-ance be-tween
+ []
+
+
+Overfull \hbox (5.8815pt too wide) in paragraph at lines 40--40
+[] 
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 40--40
+\T1/ptm/m/n/12 con-cern is to min-i-mize the
+ []
+
+
+Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
+ [] 
+ []
+
+[39] [40]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevResAPT.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevResAPT.tex
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/conc.tex) [37] [38]
+ [41]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/conc.tex) [42]
 Chapter 5.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/intro.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/contribution.tex [39
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/contribution.tex [43
 
 ]
 Underfull \vbox (badness 6592) has occurred while \output is active []
 
- [40])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [41])
+ [44])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [45])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/results.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-[43]
+ [46]
+[47]
 Underfull \vbox (badness 7704) has occurred while \output is active []
 
- [44]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/expt.tex [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/expt.tex [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
 PGFPlots: reading {Chapter5/results/budgetTestAP/APT12_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/AugUCBV1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/UCBEM1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/UCBEMV1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/SR1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/UA1_comp_subsampled.txt}
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[]\T1/ptm/m/n/10 (a) Expt-$\OT1/cmr/m/n/10 1$\T1/ptm/m/n/10 : Arith-metic Pro-g
-res-sion
- []
-
 PGFPlots: reading {Chapter5/results/budgetTestGP/APT12_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGP/AugUCBV1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGP/UCBEM1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGP/UCBEMV1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGP/SR1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGP/UA1_comp_subsampled.txt}
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]\T1/ptm/m/n/10 (b) Expt-$\OT1/cmr/m/n/10 2$\T1/ptm/m/n/10 : Ge-o-met-ric Pro-
-gres-sion
- []
-
 PGFPlots: reading {Chapter5/results/budgetTestGR1/APT1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGR1/AugUCB1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGR1/UCBEM1_comp_subsampled.txt}
@@ -1710,49 +1735,108 @@ PGFPlots: reading {Chapter5/results/budgetTestGR3/testUCBEMV1_256_comp_subsampl
 ed.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGR4/UCBEMV1_comp_subsampled.txt}
 
-Underfull \hbox (badness 1097) in paragraph at lines 202--202
-[]\T1/ptm/m/n/10 (f) Expt-$\OT1/cmr/m/n/10 6$\T1/ptm/m/n/10 : Two Group Set-tin
-g (Ad-
+[53] [54]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex
+[55]) [56]
+Chapter 6.
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/intro.tex)
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/notations.tex [57
+
+]
+Overfull \hbox (21.93855pt too wide) in paragraph at lines 51--52
+[]\T1/ptm/m/it/12 We as-sume that for ev-ery two con-sec-u-tive seg-ments $\OML
+/cmm/m/it/12 []$ \T1/ptm/m/it/12 and $\OML/cmm/m/it/12 []; \OMS/cmsy/m/n/12 8
+\OML/cmm/m/it/12 j \OT1/cmr/m/n/12 =$
+ []
+
+
+Overfull \hbox (17.73407pt too wide) in paragraph at lines 68--69
+[]\T1/ptm/m/it/12 Thus, as-sump-tion []4[] makes sure that all the change-point
+s $\OML/cmm/m/it/12 t[]; \OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 j \OT1/cmr/m/n/12 =
+ 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; G$
+ []
+
+[58]
+Overfull \hbox (3.1915pt too wide) in paragraph at lines 104--105
+[]\T1/ptm/m/n/12 Also, re-call from Def-i-ni-tion []2[] that the change-point g
+ap $\OT1/cmr/m/n/12 [] = \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 [] \OMS/cmsy/m/n/
+12   \OML/cmm/m/it/12 []\OMS/cmsy/m/n/12 j$\T1/ptm/m/n/12 . 
+ []
+
+) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/probDef.tex
+Underfull \vbox (badness 1097) has occurred while \output is active []
+
+ [59])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/related.tex
+Underfull \vbox (badness 1924) has occurred while \output is active []
+
+ [60])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/contribution.tex)
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/algo.tex
+Overfull \hbox (11.95943pt too wide) in paragraph at lines 3--4
+\T1/ptm/m/n/12 us-ing Chernoff-Hoeffding in-equal-ity whereas CPD([]14[]) uses 
+the peel-ing trick and CPD([]15[])
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+[] \T1/ptm/b/n/12 if $[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 < [] \OMS/cmsy/m
+/n/12  $
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+[] \T1/ptm/b/n/12 else$[] \OMS/cmsy/m/n/12   [] \OML/cmm/m/it/12 > [] \OT1/cmr/
+m/n/12 +$
+ []
+
+) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/expt.tex
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_DUCB01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS02.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS03.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E02.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_TS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_OTS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_DTS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_DUCB01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS04.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E03.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS06.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E04.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_TS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_OTS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_DTS01.txt}
+PGFPlots: reading {Chapter6/results/NewExpt/Expt5/comp_subsampled_ETS1E06.txt}
+
+Overfull \hbox (79.76225pt too wide) in paragraph at lines 6--82
+ [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex) [51]
+ [62])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/conclusion.tex) [63]
+[64] [65] [66]
 Appendix A.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [52
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [67
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
-Overfull \vbox (38.05301pt too high) has occurred while \output is active []
-
-
-[54] [55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56])
-[57]
+ [68])
+[69]
 Appendix B.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixEUCBV.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[58
+[70
 
 ]
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 72--73
@@ -1765,10 +1849,10 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60]
+ [72]
 Overfull \hbox (8.47412pt too wide) in paragraph at lines 152--156
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
 in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
@@ -1777,10 +1861,10 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 OML/cmm/m/it/12 c[] \OT1/cmr/m/n/12 = []$
  []
 
-[61] [62]
+[73] [74]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [75]
 Overfull \hbox (2.82367pt too wide) in paragraph at lines 438--439
 []\T1/ptm/m/it/12 From []Bubeck \T1/ptm/m/n/12 et al.[] \T1/ptm/m/it/12 ([]2011
 []) we know that the func-tion $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OT1/cmr/
@@ -1789,32 +1873,32 @@ t/12 x []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12  \OML/cmm/m/it/12 Cx[]\OT1/cmr/m/n/1
 2 )$
  []
 
-[64]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [65] [66
+[76]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [77] [78
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 114.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 116.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [67]) [68]
-[69
+) [79] [80]
+[81]) [82] [83
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 415.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 415.
  (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 415.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 415.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 15677E93B8275BF633A8F5BDE13D657A;5771.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
+(rerunfilecheck)             Checksum: 08B7EF7855291CE62050B2001B6B25FB;5823.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 415.
  ) 
 Here is how much of TeX's memory you used:
- 32751 strings out of 493921
- 770294 string characters out of 3144861
- 1086002 words of memory out of 3000000
- 34926 multiletter control sequences out of 15000+200000
- 54825 words of font info for 92 fonts, out of 3000000 for 9000
+ 33013 strings out of 493921
+ 776962 string characters out of 3144861
+ 1090709 words of memory out of 3000000
+ 35083 multiletter control sequences out of 15000+200000
+ 57554 words of font info for 100 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,108p,1874b,2489s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
@@ -1837,9 +1921,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (80 pages, 716155 bytes).
+Output written on thesis.pdf (95 pages, 811627 bytes).
 PDF statistics:
- 1499 PDF objects out of 1728 (max. 8388607)
- 323 named destinations out of 1000 (max. 500000)
+ 1736 PDF objects out of 2073 (max. 8388607)
+ 376 named destinations out of 1000 (max. 500000)
  682 words of extra memory for PDF output out of 10000 (max. 10000000)
 

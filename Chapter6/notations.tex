@@ -1,0 +1,119 @@
+In this paper, $T$ denotes the time horizon. $\A$ denotes the set of arms with individual arm is denoted by $i$ such that $i=1,\ldots, K$. We assume that the total number of arms is constant throughout the time horizon and $|\A|=K$. In this setting each arm has a piece-wise stationary distribution associated with it. Let $c_0,c_1,c_2,\ldots,c_G$ denotes $G$ such changepoints which belong to the set $\G$ and $|\G|=G$. Here, $c_0$ is a virtual changepoint which starts at $t=1$. 
+We denote each of the \textit{non-overlapping reward generating processes} as $\rho_{c_j}$, $j\in\mathbb{N}$. Note that the learner does not know these changepoints or the total number of changepoints in the environment. 
+
+%We assume a global switching model where at particular breakpoint all the arms' distribution changes.
+
+	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t_p}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t_p$ timesteps. $\mu_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{\mu}_{i,t_0:t_p}$ denotes the sample mean for the arm $i$ from $t_0$ to $t_p$ timesteps.
+
+
+
+\begin{definition}
+\label{Def:tcj}
+We define $t_{c_j}$ for a $c_j\in\G$ between two consecutive segments $\rho_{c_{j-1}:cj}$ and $\rho_{c_j:c_{j+1}}$ as the first time instant that the changepoint $c_j$ happens $\forall i\in\A$, that is,
+
+\begin{align*}
+t_{c_j}& = \min\left\lbrace t\in[1,T],\forall i\in\A : \mu_{i,t_{c_{j-1}:c_j}} \neq \mu_{i,t_{c_{j}:c_{j+1}}}   \right\rbrace\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&= \min\left\lbrace t\in[1,T],\forall i\in\A: \Delta^{chg}_{i,c_j} \geq \Delta_0 \right\rbrace
+\end{align*}
+
+\end{definition}
+
+\begin{assumption}
+In this work we have assumed the global changepoint setting and hence $t_{c_j}$ is common across all the arms and the learner does not know the $t_{c_j},\forall c_j\in\G$. 
+\end{assumption}
+
+%Also, note that we have assumed that all changepoint gaps $\Delta^{chg}_{i,c_j}$ are above $\Delta_0$.
+
+
+
+
+%\begin{definition}
+%\label{Def:d-chg-gap}
+%We define a changepoint $c_j$ at time $t_{c_j}$ to be a $d$-optimal changepoint such that for an arm $i\in\A$,
+%\begin{align*}
+%\left|t_{c_{j-1}} - t_{c_j}\right| \geq d 
+%\end{align*}
+%
+%%\Delta^{chg}_{d,c_j}=\lbrace \exists i\in\A : |\mu_{i,\rho_{c_{j-1}:c_j}}-\mu_{i,\rho_{c_j:c_{j+1}}}|\geq \Delta^{chg}_{i,d}, \text{ where } \\
+%%d\geq\dfrac{C\log(t_{c_j}-t_{c_{j-1}})}{\Delta^{chg}_{i,t_{c_j}}}
+%
+%where $d=\dfrac{C\log(t_{c_j}-t_{c_{j-1}})}{(\Delta^{chg}_{i,c_j})^2}$ and $C$ is an integer constant.
+%\end{definition}
+%
+%\begin{assumption}
+%\label{assm:gap}
+%We assume that for every two segments $\rho_{c_{j-1}:c_j}$ and $\rho_{c_j:c_{j+1}}$, for $j=1,2,\ldots,G$ there exists atleast one arm $i\in\A$ such that $t_{c_j}$ is a $d$-optimal changepoint.
+%\end{assumption}
+
+\begin{assumption}
+\label{assm:space-gap}
+We assume that for every two consecutive segments $\rho_{c_{j-1}:c_j}$ and $\rho_{c_j:c_{j+1}}, \forall j=1,2,\ldots,G$ all the three  changepoints $t_{c_{j-1}}, t_{c_j}$ and $t_{c_{j+1}}$ satisfy the following condition,
+\begin{align*}
+\dfrac{d(t_{c_j} - t_{c_{j-1}})}{t_{c_{j+1}} - t_{c_j}} \leq \dfrac{\epsilon_0}{1-\epsilon_0}
+\end{align*}
+where $d(t_{c_j} - t_{c_{j-1}})$ denotes the delay in detecting a changepoint at $t_{c_j}$ by the learner and $ \epsilon_0 \in (0,1)$.
+\end{assumption}
+
+\begin{definition}
+\label{Def:chg-gap}
+We define the changepoint gap at $t_{c_j}$ for an arm $i\in\A$ between the segments $\rho_{c_{j-1}:c_j}$ and $\rho_{c_j:c_{j+1}}$ as,
+\begin{align*}
+\Delta^{chg}_{i,c_j}=|\mu_{i,t_{c_{j-1}:c_j}}-\mu_{i,t_{c_j:c_{j+1}}}|.
+\end{align*}
+\end{definition}
+
+\begin{discussion}
+\label{dis:gap-delay}
+Thus, assumption \ref{assm:space-gap} makes sure that all the changepoints $t_{c_j},\forall j=1,2,\ldots,G$ are sufficiently far apart to detect a change. A good learner tries to minimize the delay ($d$) in detection of a changepoint at $t_{c_j},\forall c_{j}\in\G$ by achieving atmost a delay of $d\left(t_{c_j} - t_{c_{j-1}}\right) \leq O\left( \dfrac{\log( t_{c_j} - t_{c_{j-1}} )}{\Delta_{i,c_j}^{2}}\right)$. Note, that when the gaps are same such that for all $i\in\A$, $\Delta_{i,c_j}^{chg}=\Delta_{\epsilon_0,c_j}^{chg}$ and $d\left(t_{c_j} - t_{c_{j-1}}\right) = \left( \dfrac{\log( t_{c_j} - t_{c_{j-1}} )}{\Delta_{\epsilon_0,c_j}^{2}}\right)$, then due to assumption \ref{assm:space-gap} we get,
+\begin{align*}
+\Delta_{\epsilon_0,c_j}^{chg}\geq \sqrt{\dfrac{1-\epsilon_0}{\epsilon_0}\dfrac{\log(t_{c_j} - t_{c_{j-1}})}{(t_{c_{j+1}} - t_{c_{j}})}}.
+\end{align*} 
+
+Hence, $\Delta_{\epsilon_0,c_j}^{chg}$ is the minimum gap possible that can be detected by the learner given the changepoints $t_{c_{j-1}}, t_{c_j}$ and $t_{c_{j+1}}$ follow assumption \ref{assm:space-gap}.
+
+% that is atleast $\epsilon_0 \geq \dfrac{t_{c_j} - t_{c_{j-1}}}{t_{c_{j+1}} - t_{c_{j-1}}}$. Hence, smaller the $\epsilon_0$, harder it is to detect a changepoint at $t_{c_j}$ and a larger succeeding segment $\rho_{c_j:c_{j+1}}$ is required.
+\end{discussion}
+
+
+%as the preceding segment $t_{c_{j+1}} - t_{c_{j}}$ is smaller and less observation is available from the segment $\rho_{c_{j-1}:c_j}$ 
+
+\begin{definition}
+\label{Def:e-chg-gap}
+We define a changepoint gap $\Delta^{chg}_{i,c_j}$ at changepoint $c_j\in\G$ for an arm $i\in\A$ to be an $\epsilon_0$-optimal changepoint such that,
+\begin{align*}
+\Delta^{chg}_{i,c_j} \geq \Delta_{\epsilon_0,c_j}^{chg}.
+\end{align*}
+\end{definition}
+
+
+\begin{assumption}
+\label{assm:chg-gap}
+In this paper we assume that $\forall c_{j}\in\G$ the changepoint gaps $\Delta^{chg}_{i,c_j},\forall i\in\A$ are $\epsilon_0$-optimal.
+\end{assumption}
+
+
+\begin{definition}
+\label{Def:opt-gap}
+We define the optimality gap $\Delta^{opt}_{i,c_j}$ for an arm $i_{t'}\neq i^*_{t'},\forall t'\in[t_{c_{j-1}},t_{c_j}]$ as,
+\begin{align*}
+\Delta^{opt}_{i,c_j}= \mu_{i^*,t_{c_{j-1}:c_j}}-\mu_{i,t_{c_{j-1}:c_j}}.
+\end{align*}
+\end{definition}
+
+Also, recall from Definition \ref{Def:chg-gap} that the changepoint gap $\Delta^{chg}_{i,c_j}=|\mu_{i,t_{c_{j-1}:c_j}}-\mu_{i,t_{c_j:c_{j+1}}}|$.
+
+
+
+\begin{definition}
+\label{Def:ratio}
+We define $\Psi_{i,c_j}$ as the ratio between $\Delta^{opt}_{i,c_j}$ and $\Delta^{chg}_{i,c_j}$ for the $i$-th arm in $\A$ and the $c_j$-th changepoint in $\G$ such that,
+
+\begin{align*}
+\Psi_{i,c_j} = \dfrac{\Delta^{opt}_{i,c_{j+1}}}{\Delta^{chg}_{i,c_j}}
+\end{align*}
+
+\end{definition}
+
+ 
+%	We define each expert or forecaster as $f_{j}\in \M_{t_0:t_p}$, where $\M_{t_0:t_p}$ is the set of all forecasters from time $t_0$ to $t_p$. $\M^+_{t}$ is the set of new forecasters introduced at time $t$. Also, we define $\hat{L}_{f_i,t_0:t_p}=\sum_{s=t_0}^{t_p}\ell_{f_i ,s}$ as the true cumulative loss suffered by the expert $f_i$ from $t_0$ to $t_p$-th timestep and $\hat{L}_{f_i,t_0:t_p}$ as the estimated cumulative loss suffered by an expert $f_i$ from $t_0$ to $t_p$-th timestep such that $\hat{L}_{f_i,t}=\sum_{s=t_0}^{t_p}\hat{\ell}_{f_i ,s}$. Similarly, we define $L_{i,t_0:t_p}$ and $\hat{L}_{i,t_0:t_p}$ as the true loss and the estimated loss suffered by arm $i$. The weight of an expert $f_i$ at time $t$ is defined as $w_{f_i,t}$ and $\eta$ is defined as a parameter for exploration. Also let $i_{f_j,t}$ be the action suggested by expert $f_j$ at time $t$.

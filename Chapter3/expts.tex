@@ -1,6 +1,6 @@
 In this section, we conduct extensive empirical evaluations of EUCBV against several other popular MAB  algorithms. We use expected cumulative regret as the metric of comparison. The comparison is conducted against the following algorithms: KLUCB+ \citep{garivier2011kl}, DMED \citep{honda2010asymptotically}, MOSS \citep{audibert2009minimax}, UCB1 \citep{auer2002finite}, UCB-Improved \citep{auer2010ucb}, Median Elimination \citep{even2006action}, Thompson Sampling (TS) \citep{agrawal2011analysis}, OCUCB \citep{lattimore2015optimally}, Bayes-UCB (BU) \citep{kaufmann2012bayesian} and UCB-V \citep{audibert2009exploration}\footnote{The implementation for KLUCB, Bayes-UCB and DMED were taken from \citet{CapGarKau12}}. The parameters of EUCBV algorithm for all the experiments are set as follows: $\psi=\frac{T}{K^2}$ and $\rho =0.5$ (as in Corollary \ref{Result:Corollary:1}). Note that KLUCB+ empirically outperforms KLUCB (as shown in \citet{garivier2011kl}).
 
-\begin{figure}[!h]
+\begin{figure}[!th]
     \centering
     \begin{tabular}{cc}
     \setlength{\tabcolsep}{0.1pt}
@@ -14,7 +14,7 @@ In this section, we conduct extensive empirical evaluations of EUCBV against sev
 		ylabel style={yshift=5pt},
 		%legend style={legendshift=32pt},
 		}
-        \begin{tikzpicture}[scale=0.6]
+        \begin{tikzpicture}[scale=0.7]
       	\begin{axis}[
 		xlabel={timestep},
 		ylabel={Cumulative Regret},
@@ -48,7 +48,7 @@ In this section, we conduct extensive empirical evaluations of EUCBV against sev
 		legend style={font=\Large},
 		ylabel style={yshift=5pt},
 		}
-        \begin{tikzpicture}[scale=0.6]
+        \begin{tikzpicture}[scale=0.7]
         \begin{axis}[
 		xlabel={timestep},
 		ylabel={Cumulative Regret},
@@ -95,7 +95,7 @@ In this section, we conduct extensive empirical evaluations of EUCBV against sev
 		legend style={font=\Large},
 		ylabel style={yshift=5pt},
 		}
-        \begin{tikzpicture}[scale=0.6]
+        \begin{tikzpicture}[scale=0.7]
       	\begin{axis}[
 		ylabel={Cumulative Regret},
 		xlabel={timestep},
@@ -126,7 +126,7 @@ In this section, we conduct extensive empirical evaluations of EUCBV against sev
 		legend style={font=\Large},
 		ylabel style={yshift=5pt},
 		}
-        \begin{tikzpicture}[scale=0.6]
+        \begin{tikzpicture}[scale=0.7]
         \begin{axis}[
 		xlabel={timestep},
 		ylabel={Cumulative Regret},

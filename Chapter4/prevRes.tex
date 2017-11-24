@@ -3,15 +3,18 @@ The pure exploration problem has been explored  mainly under the following two s
 	
 \subsection{Fixed Budget setting} 
 
-Here the learning algorithm has to suggest the best arm(s) within a fixed time-horizon $T$, that is usually given as an input. The objective is to maximize the probability of returning the best arm(s).  This is the scenario we consider in this chapter. Some of the important algorithms used in pure exploration setting are discussed in the next part.
+Here the learning algorithm has to suggest the best arm(s) within a fixed budget or time-horizon $T$, that is given as an input. The objective is to maximize the probability of returning the best arm(s).  This is the scenario we consider in this chapter. Some of the important algorithms used in pure exploration setting are discussed in the next part.
 
 \subsubsection{UCB-Exploration Algorithm}
 
-\begin{algorithm}[!h]
+One of the first algorithms proposed for the fixed budget setting is the UCB-Exploration (UCBE) algorithm in \citet{audibert2010best} used for identifying a single best arm. This is shown in algorithm \ref{alg:ucbe}.
+
+
+\begin{algorithm}[!ht]
 \caption{UCBE}
 \label{alg:ucbe}
 \begin{algorithmic}[1]
-\State \textbf{Input: } The budget $T$
+\State \textbf{Input: } The budget $T$, exploration parameter $a$
 \State Pull each arm once
 \For{$t=K+1,..., T$}
 \State Pull the arm such that $\argmax_{i\in \A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{a}{n_i}}\bigg\rbrace$, where $a = \dfrac{25(T-K)}{36 H_1}$ and $H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}$.
@@ -20,13 +23,32 @@ Here the learning algorithm has to suggest the best arm(s) within a fixed time-h
 \end{algorithmic}
 \end{algorithm}
 
-In \citet{audibert2010best} the authors propose the  UCBE and the Successive Reject (SR) algorithm, and prove simple-regret guarantees for the problem of identifying the single best arm.  In the combinatorial fixed budget setup \citet{gabillon2011multi} propose the GapE and GapE-V algorithms that suggest, with high probability, the best $m$ arms at the end of the time budget. 
+This algorithm is quite similar to the UCB1 algorithm discussed in \citet{auer2002finite} (see algorithm \ref{alg:ucb1}). The major difference between the two algorithms is the confidence interval such that for UCB1 it is designed for minimizing the cumulative regret but for UCBE it is designed for minimizing simple regret. An illustrative table comparing the two is provided in table \ref{table:comp-exp}.
+
+\begin{table}
+\caption{Confidence interval and exploration parameters of different algorithms}
+\label{table:comp-exp}
+\begin{center}
+\begin{tabular}{|p{5em}|p{6em}|p{8em}|p{12em}|}
+\hline
+Algorithm  &  Confidence interval & Exploration Parameter$(a)$ & Remarks \\
+\hline
+\hline
+UCB1       & $\sqrt{\dfrac{a}{n_i}}$ & \begin{align*}a = 2\log (t)\end{align*} & $a$ is logarithmic in $t$ to minimize cumulative regret. This achieves a balance between exploration and exploitation. Hence, the cumulative regret grows logarithmically with $t$. \\%\midrule
+\hline
+\hline
+UCBE       & $\sqrt{\dfrac{a}{n_i}}$ & \begin{align*}a = \dfrac{25(T-K)}{36 H_1},\\ \text{ where }H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}\end{align*} & $a$ is linear in $T$ to minimize simple regret. Here, the main concern is to minimize the probability of error at the end of budget $T$ and conduct as much exploration as possible. Hence, a large $a$ helps to reach exponentially low probability of error.\\\midrule
+\end{tabular}
+\end{center}
+\end{table}
 
 
 \subsubsection{Successive Reject Algorithm}
 
+The Successive Reject (SR) algorithm has also been proposed in \citet{audibert2010best} and is used for identifying a single best arm. This algorithm is quite different than upper confidence bound based algorithms because it does not rely on any explicit confidence interval to select arm at every timestep. It is shown in algorithm \ref{alg:sr}.
 
-\begin{algorithm}[h!]
+
+\begin{algorithm}[!th]
 \caption{Successive Reject(SR)}
 \label{alg:sr}
 \begin{algorithmic}[1]
@@ -34,7 +56,7 @@ In \citet{audibert2010best} the authors propose the  UCBE and the Successive Rej
 \State \textbf{Initialization: } $n_0 = 0$
 \State \textbf{Definition: } $\bar{\log K} = \dfrac{1}{2} + \sum_{i=2}^{K}\dfrac{1}{i}$, $n_k = \dfrac{1}{\bar{\log K}}\dfrac{T-K}{K + 1 - m}$
 \For{For each phase $m=1,..., K-1$}
-\State For each $i \in B_{m}$, select arm $i$ for $n_k - n_{k-1}$ rounds.
+\State For each $i \in B_{m}$, select arm $i$ for $n_k - n_{k-1}$ timesteps.
 \State Let $B_{m+1} = B_m\setminus \argmin_{i\in B_m} \hat{r}_i$
 (remove one element from $B_m$ , if there
 is a tie, select randomly the arm to dismiss among the worst arms).
@@ -44,6 +66,10 @@ is a tie, select randomly the arm to dismiss among the worst arms).
 \end{algorithmic}
 \end{algorithm}
 
+
+From algorithm \ref{alg:sr} we see that SR is a round based algorithm quite similar to UCB-Improved (see algorithm \ref{alg:ucbi}). Similar to UCB-Improved, SR pulls all arms equal number of times in each round and then discards some arm that it deems to be sub-optimal until it is left with a single best arm. However, SR does not have any explicit confidence interval as UCBE, rather the idea of the confidence interval is hidden in the number of pulls allocated to each arm in every round. The number of times each arm is pulled in every round, that is $n_k - n_{k-1}$ timesteps makes sure that the optimal arm is not eliminated in the $k$-th round with high probability. 
+
+In the combinatorial fixed budget setup \citet{gabillon2011multi} propose the GapE and GapE-V algorithms that suggest, with high probability, the best $m$ arms at the end of the time budget. 
 
 Similarly, \citet{bubeck2013multiple} introduce the  Successive Accept Reject (SAR) algorithm, which is an extension of the SR algorithm; SAR is a round based algorithm whereby at the end of each round an arm is either accepted or rejected (based on certain confidence conditions) until the top $m$ arms are suggested at the end of the budget with high probability. A similar combinatorial setup was explored in \citet{chen2014combinatorial} where the authors propose the Combinatorial Successive Accept Reject (CSAR) algorithm, which is similar in concept to SAR but with a more general setup. 
 

@@ -1,0 +1,214 @@
+\subsection{Proposed Algorithms}
+
+In this section, we first introduce the three changepoint detection algorithms CPD(\ref{alg:CPD1}), CPD(\ref{alg:CPD2}) and CPD(\ref{alg:CPD3}) which uses three different confidence intervals which are carefully constructed using three different approaches.  CPD(\ref{alg:CPD1}) uses a simple union bound using Chernoff-Hoeffding inequality whereas CPD(\ref{alg:CPD2}) uses the peeling trick and CPD(\ref{alg:CPD3}) uses the Laplace method which results in a confidence interval that is valid uniformly over time.
+
+Then we introduce the single expert changepoint detection algorithm in Algorithm \ref{alg:SECPD1} which calls one of this CPD algorithms at every timestep while running an expert bandit algorithm which is restarted once a changepoint is detected. Finally, we introduce in Algorithm \ref{alg:SECPD2} which uses the UCB-Improved \citep{auer2010ucb}  style phases where at the end of each phase the algorithm calls one of the CPD to detect the changepoints. Naturally, SECPD2 results in more speedup than SECPD1 which employs the changepoint detection algorithms at every timestep at the cost of only additional logarithmic regret.  
+
+\begin{algorithm}[!ht]
+\caption{Changepoint-Detection-1($t_0$, $t_p$) (CPD1)}
+\label{alg:CPD1}
+\begin{algorithmic}
+\For{$k=1,..,K$}
+\For{$t' = t_0 ,..,t_p$}
+\State \If{$\hat{\mu}_{k,t_0:t'} + \sqrt{\dfrac{\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t_0:t'}}} < \hat{\mu}_{k,t'+1:t_p} - \sqrt{\dfrac{\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t'+1:t_p}}}$}
+\State Return True
+\Else{$\hat{\mu}_{k,t_0:t'} - \sqrt{\dfrac{\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t_0:t'}}} > \hat{\mu}_{k,t'+1:t_p} + \sqrt{\dfrac{\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t'+1:t_p}}}$}
+\State Return True
+\EndIf
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[!ht]
+\caption{Changepoint-Detection-2($t_0$, $t_p$) (CPD2)}
+\label{alg:CPD2}
+\begin{algorithmic}
+\State {\bf Input:} Exploration parameter $B>1$
+\For{$k=1,..,K$}
+\For{$t' = t_0 ,..,t_p$}
+\State \If{$\hat{\mu}_{k,t_0:t'} + \sqrt{\dfrac{B\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t_0:t'}}} < \hat{\mu}_{k,t'+1:t_p} - \sqrt{\dfrac{B\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t'+1:t_p}}}$}
+\State Return True
+\Else{$\hat{\mu}_{k,t_0 , t'} - \sqrt{\dfrac{B\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t_0:t'}}} > \hat{\mu}_{k,t'+1:t_p} + \sqrt{\dfrac{B\log(\frac{t_p}{\sqrt{\delta}})}{n_{k,t'+1:t_p}}}$}
+\State Return True
+\EndIf
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[!ht]
+\caption{Changepoint-Detection-3($t_0$, $t_p$) (CPD3)}
+\label{alg:CPD3}
+\begin{algorithmic}
+\For{$k=1,..,K$}
+\For{$t' = t_0 ,..,t_p$}
+\State \If{$\hat{\mu}_{k,t_0:t'} + \sqrt{\dfrac{(n_{i,t_0:t'}+1)\log(\frac{(n_{i,t_0:t'}+1)}{\sqrt{\delta}})}{2n_{i,t_0:t'}^2}} < \hat{\mu}_{k,t'+1:t_p} - \sqrt{\dfrac{(n_{i,t'+1:t}+1)\log(\frac{(n_{i,t'+1:t}+1)}{\sqrt{\delta}})}{2n_{i,t'+1:t}^2}}$}
+\State Return True
+\Else{$\hat{\mu}_{k,t_0 , t'} - \sqrt{\dfrac{(n_{i,t_0:t'}+1)\log(\frac{(n_{i,t_0:t'}+1)}{\sqrt{\delta}})}{2n_{i,t_0:t'}^2}} > \hat{\mu}_{k,t'+1:t_p} + \sqrt{\dfrac{(n_{i,t'+1:t}+1)\log(\frac{(n_{i,t'+1:t}+1)}{\sqrt{\delta}})}{2n_{i,t'+1:t}^2}}$}
+\State Return True
+\EndIf
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+%\begin{algorithm}[!ht]
+%\caption{Changepoint-Detection-4($t_0$, $t_p$) (CPD4)}
+%\label{alg:CPD4}
+%\begin{algorithmic}
+%\State \textbf{Initialization: } $m=0$, $\epsilon_0 = 1$, $B>1$
+%\State \textbf{Definition: } $n_m = \dfrac{B\log(\frac{t}{{\delta}})}{\epsilon_m}$
+%\State \If{$tp == n_{m+1}$}
+%\For{$k=1,..,K$}
+%\For{$t' = t_0 ,..,t_p$}
+%\State \If{$\hat{\mu}_{k,t_0:t'} + \sqrt{\dfrac{\log(\frac{t}{{\delta}} )}{2t}} < \hat{\mu}_{k,t':t_p} - \sqrt{\dfrac{\log(\frac{t}{{\delta}} )}{2t}}$}
+%\State Return True
+%\Else{$\hat{\mu}_{k,t_0 , t'} - \sqrt{\dfrac{\log(\frac{t}{{\delta}} )}{2t}} > \hat{\mu}_{k,t':t_p} + \sqrt{\dfrac{\log(\frac{t}{{\delta}} )}{2t}}$}
+%\State Return True
+%\EndIf
+%\EndFor
+%\EndFor
+%\EndIf
+%\end{algorithmic}
+%\end{algorithm}
+
+\begin{algorithm}[!ht]
+\caption{Single Expert with change-point detection (SECPD-1)}
+\label{alg:SECPD1}
+\begin{algorithmic}
+\State {\bf Input:} Time horizon $T$; 
+\State {\bf Initialization:} $t_0 = 1$, $t_p = 1$, $\M=\lbrace 0\rbrace$;
+\State {\bf New Expert:} Start a new expert $f_{t_0}$ and add it to $\M$.
+\State Pull each arm once
+\State \For{$t=K+1,..,T$}
+\State Play the arm $i_{t}$ suggested by $f_{t_0}$, observe reward $x_{i_t,t}$.
+
+\If{ (Changepoint-Detection($t_0$, $t_p$)) == True}\hspace*{4em} /* Call CPD\ref{alg:CPD1} or CPD\ref{alg:CPD2} or CPD\ref{alg:CPD3} */
+\State {\bf Reset Parameters:} $t_0=1$, $t_p = 1$, $\M=\lbrace 0\rbrace$\hspace*{4em}/* Changepoint detected, forget old expert  */
+\State  Start a new expert $f_{t_0}$ and add it to $\M$\hspace*{4em}/* Add a new expert*/
+\Else{
+\State Update the local model of $f_{t_0}$
+\State $t_p = t_p + 1$}
+\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}[!ht]
+\caption{Single Expert with change-point detection (SECPD-2)}
+\label{alg:SECPD2}
+\begin{algorithmic}
+
+\State {\bf Input:} Time horizon $T$, parameter exploration $\delta$; 
+\State {\bf Initialization:} $t_0 = 1$, $t_p = 1$, $\M=\lbrace 0\rbrace$, $m=0$, $\epsilon_0 = 1$, $n_0 = \frac{B\log (\frac{t_p}{\sqrt{\delta}})}{\epsilon_0}$, $p_{0}=Kn_0$;
+\State {\bf New Expert:} Start a new expert $f_{t_0}$ and add it to $\M$.
+\State Pull each arm once
+\State \For{$t=K+1,..,T$}
+\State Play the arm $i_{t}$ suggested by $f_{t_0}$, observe reward $x_{i_t,t}$.
+\State \State Update the local model of $f_{t_0}$
+\State $t_p = t_p + 1$
+\If{($t_p \neq p_{m}$)}
+\State \State Update the local model of $f_{e}$
+\State $t_p = t_p + 1$
+\Else{
+\If{ (Changepoint-Detection($t_0$, $t_p$)) == True}\hspace*{4em} /* Call CPD\ref{alg:CPD1} or CPD\ref{alg:CPD2} or CPD\ref{alg:CPD3} */
+\State {\bf Reset Parameters:} $t_0=1$, $t_p = 1$, $\M=\lbrace 0\rbrace$\hspace*{4em}/* Changepoint detected, forget old expert  */
+\State Start a new expert $f_{t_0}$ and add it to $\M$\hspace*{4em}/* Add a new expert */
+\State $m=0$, $\epsilon_0 = 1$, $n_0 = \dfrac{K B\log (\frac{t_p}{\sqrt{\delta}})}{\epsilon_0}$;
+\Else{
+\State {\bf Update Parameters:} $\epsilon_{m+1} = \max{\left\lbrace\sqrt{\frac{e}{t_p}},\frac{\epsilon_m}{B}\right\rbrace}$,  $n_{m+1} = \frac{B\log (\frac{t_p}{\sqrt{\delta}})}{\epsilon_{m+1}}$, $p_{m+1}=t_p + Kn_{m+1}$, $m=m+1$;
+}
+\EndIf}
+\EndIf
+%\State\If{($t_p \neq n_m$)}
+%\State Update the local model of $f_{t_0}$
+%\State $t_p = t_p + 1$
+%\EndIf
+\EndFor
+
+\end{algorithmic}
+\end{algorithm}
+
+
+%\begin{algorithm}[!ht]
+%\caption{Aggregate Expert with change-point detection (AECPD-1)}
+%\label{alg:AECPD1}
+%\begin{algorithmic}
+%
+%\State {\bf Input:} Time horizon $T$, parameter exploration $\delta$; 
+%\State {\bf Initialization:} $t_0 = 1$, $e = 1$, $t_p = 1$, $\M =\lbrace 0\rbrace$, $m=0$, $\epsilon_0 = 1$, $n_0 = \frac{B\log (\frac{t_p}{\sqrt{\delta}})}{\epsilon_0}$, $p_{0}=Kn_{0}$;
+%\State {\bf New Expert:} Start a new expert $f_{e}$ and add it to $\M $.
+%\State \For{$t=1,..,T$}
+%\State Play the arm $i_{t}$ suggested by $f_{e}$, observe reward $x_{i_t,t}$.
+%\If{($t_p \neq p_{m}$)}
+%\State \State Update the local model of $f_{e}$
+%\State $t_p = t_p + 1$
+%\Else{
+%\If{ (Changepoint-Detection($t_0$, $t_p$)) == True}\hspace*{4em} /* Call CPD\ref{alg:CPD1} or CPD\ref{alg:CPD2} or CPD\ref{alg:CPD3} */
+%\State {\bf Reset Parameters:} $t_0=1$, $t_p = 1$, $\M =\lbrace f_{e}(\text{model})\rbrace$\hspace*{0.0em}/*Changepoint detected, store old expert*/
+%\State $e=e+1$
+%\State Start a new expert $f_{e}$ and add it to $\M $\hspace*{4em}/* Add a new expert */
+%\State $m=0$, $\epsilon_0 = 1$, $n_0 = \dfrac{K B\log (\frac{t_p}{\sqrt{\delta}})}{\epsilon_0}$;
+%\ElsIf{(Model-Overlap($\M$,$f_e$)==True)}
+%\State $f_e = f_{suggest}$
+%\Else{
+%\State {\bf Update Parameters:} $\epsilon_{m+1} = \max{\left\lbrace\sqrt{\frac{e}{t_p}},\frac{\epsilon_m}{B}\right\rbrace}$,  $n_{m+1} =\frac{B\log (\frac{t_p}{\sqrt{\delta}})}{\epsilon_{m+1}}$, $p_{m+1}=t_p + Kn_{m+1}$, $m=m+1$;
+%}
+%\EndIf}
+%\EndIf
+%\EndFor
+%
+%\end{algorithmic}
+%\end{algorithm}
+%
+%%\If{(Model-Overlap($\M$,$f_e$)==True)}
+%%\State $f_e = f_{suggest}$
+%%\State \State Update the local model of $f_{e}$
+%%\State $t_p = t_p + 1$
+%%\Else{
+%
+%\begin{algorithm}[!ht]
+%\caption{Aggregation of Expert with change-point detection (EAggrCPD)}
+%\label{alg:EAggrCPD}
+%\begin{algorithmic}
+%\State {\bf Input:} Time horizon $T$, parameter exploration $\eta$; 
+%\State {\bf Initialization:} $t_0 = 1$, $t_p = 1$, $M_{t_0}=\lbrace 0\rbrace$, $\hat{L}_{i,t_0}=0,\forall i\in\A$;
+%\State \For{$t=1,..,T$}
+%\State {\bf New Expert:} Start a new expert $f_{t_p}$ and add it to $\M_{t_0:t_p}$.
+%\State Set $\hat{L}_{f_{t_p},t_p}=0 , w_{f_{t_p},0} = \dfrac{1}{t_p}\sum_{f_j\in M_{t_0:t_p}}w_{f_j,t_p -1}\exp(-\eta\hat{L}_{f_j,t_0:t_p -1})$
+%\State \For{$i=1,..,K$}
+%\State $H_{i_{f_j,t_p}}=\sum_{f_j\in \M_{t_0:t_p}}(w_{f_j,t_p -1})\mathbb{I}[i_{f_j,t_p}=i] $
+%\EndFor
+%
+%\State \For{$i=1,..,K$}
+%\State $\hat{p}_{i,t_p} = \dfrac{H_i\exp(-\eta\hat{L}_{i,t_p -1})}{\sum_{i\in \A}H_i\exp(-\eta\hat{L}_{i,t_0:t_p -1})}$ 
+%\EndFor
+%
+%\State Play the arm $i_{t}$ according to the probability $\hat{p}_{i,t}$, observe reward $x_{i_t,t}$.
+%\State $\hat{L}_{i_t,t_0:t_p} = \hat{L}_{i_t,t_0:t_p} + \dfrac{1-x_{i_t,t_p}}{\hat{p}_{i_t,t_p}}$
+%
+%
+%\If{ (Changepoint-Detection($t_0$, $t_p$)) == True}
+%\State {\bf Reset Parameters:} $t_0=1$, $t_p = 1$, $M_{t_0}=\lbrace 0\rbrace$, $\hat{L}_{i,t_0}=0,\forall i\in\A$ \hspace*{4em}/*Changepoint Detected*/
+%\Else{
+%\State {\bf Update Weights:} \For{$j=1,..,|M_{t_0:t_p}|$}
+%\State \If{$i_{t}=i_{f_j,t_p}$}
+%\State $\hat{L}_{f_j,t_0:t_p} = \hat{L}_{f_j,t_0:t_p} + \dfrac{1-x_{i_t,t}}{\hat{p}_{i_t,t}}$
+%\State $w_{f_j,t_p}=\exp(-\eta\hat{L}_{f_j,t_0:t_p})$
+%\State Update the local model of $f_j$
+%\State $t_p = t_p + 1$
+%\EndIf
+%\EndFor}
+%\EndIf
+%\EndFor
+%\end{algorithmic}
+%\end{algorithm}
+
+
+
+%\subsection{Proposed Algorithm 2 (Aggregation of Experts with CPD)
+
+ 

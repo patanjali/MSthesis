@@ -1,7 +1,7 @@
 In an online sequential setting, the feedback that the learner receives from the environment can be characterized into three broad categories, full information feedback, partial information feedback and bandit feedback. 
 
 
-	To illustrate the different types of feedback we will take help of the following example. Let a learner be given a set of actions $i\in\A$ such that $|A|=K$. Let, the environment be such that each action has a probability distribution $D_i$ attached to it which is fixed throughout the time horizon $T$. The learning proceeds as follows:-
+	To illustrate the different types of feedback we will take help of the following example. Let a learner be given a set of finite actions $i\in\A$ such that $|\A|=K$. Let, the environment be such that each action has a probability distribution $D_i$ attached to it which is fixed throughout the time horizon $T$. The learning proceeds as follows, at every timestep the learner selects $m\in\A$ actions and observes some form of feedback vector $R^{obs}_{t}$ (which will be characterized later). Before the learner selects the  the set of arms the environment draws the feedback vector $F^{env}_t\in[0,1]^{K}$ of $K$ i.i.d random rewards for all actions $i\in\A$ from $D_i,\forall i\in\A$ which it decides to reveal in particular format depending on the form of feedback chosen for the game, that is full information, partial information or bandit feedback. This game is shown in algorithm \ref{alg:OSeqGame}. 
 
 \begin{algorithm}[!th]
 \caption{An online sequential game}
@@ -9,9 +9,9 @@ In an online sequential setting, the feedback that the learner receives from the
 \begin{algorithmic}
 \State {\bf Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution
 \State \For{ each timestep $t=1,2,\ldots, T$}
-\State The environment chooses a reward $r_{i,t},\forall i\in\A$.
-\State The learner chooses $m$ actions such that $m < K$, where $A$ is the set of arms and $|A|=K$.
-\State The learner observes the reward $R_{m,t}=F\left( r_{i,t}\right)$.
+\State The environment chooses a reward vector $F^{env}_{t}= \left[r_{i,t}\sim^{i.i.d} D_{i},\forall i\in\A\right]$.
+\State The learner chooses $m$ actions such that $m < K$, where $\A$ is the set of arms and $|\A|=K$.
+\State The learner observes the reward vector $R^{obs}_{t}\subseteq F^{env}_{t}$.
 \State \EndFor
 \end{algorithmic}
 \end{algorithm}
@@ -20,14 +20,12 @@ In an online sequential setting, the feedback that the learner receives from the
 
 
 \subsection{Full information feedback}
-In full information feedback, when a learner selects $m$ actions then the environment reveals the rewards of all the actions $i\in \A$. Hence, in this form of feedback  the learner observes $R_{m,t} = \lbrace r_{i,t},\forall i\in\A\rbrace$.
+In full information feedback, when a learner selects $m$ actions then the environment reveals the rewards of all the actions $i\in \A$. Hence, in this form of feedback  the learner observes $R^{obs}_{t} = F^{env}_{t}=[r_{i,t},\forall i\in\A]$. This has been studied in many forms previously in \citet{takimoto2003path}, \citet{kalai2005efficient} or in online prediction with full information feedback in \citet{cesa2006prediction}.
 
 
 \subsection{Partial information feedback}
-In partial information feedback, when a learner selects $m$ actions then the environment reveals the rewards of only those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $R_{m,t} = \lbrace r_{m,t},\forall m\in\A\rbrace$. This is also sometimes called the semi-bandit feedback.
+In partial information feedback, when a learner selects $m$ actions then the environment reveals the rewards of only those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $R^{obs}_{t} = [ r_{m,t},\forall m\in\A ]$. This is also sometimes called the semi-bandit feedback and has been studied in \citet{awerbuch2004adaptive},   \citet{mcmahan2004online} and \citet{gyorgy2007line}.
 
 
 \subsection{Bandit feedback}
-In bandit feedback, when a learner selects $m$ actions then the environment reveals a cumulative reward of those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $R_{m,t} = \sum_{q=1}^{m} r_{q,t}$. Note, that when $m=1$, then the learner observes the reward of only that action that it has chosen out of $K$ actions.
-
-
+In bandit feedback, when a learner selects $m$ actions then the environment reveals a cumulative reward of those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $R^{obs}_{t} = \sum_{q=1}^{m} r_{q,t}$. Note, that when $m=1$, then the learner observes the reward of only that action that it has chosen out of $K$ actions. Bandit feedback for single action has been extensively studied in literature with many open problems and we focus on its various interpretations in this thesis.
