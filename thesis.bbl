@@ -1,4 +1,4 @@
-\begin{thebibliography}{68}
+\begin{thebibliography}{70}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -206,6 +206,13 @@
 \newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
   2011.
 
+\bibitem[{Gajane {\em et~al.\/}(2017)Gajane, Urvoy, and
+  Kaufmann}]{DBLP:journals/corr/abs-1708-05033}
+{\bf Gajane, P.}, {\bf T.~Urvoy}, and {\bf E.~Kaufmann} (2017).
+\newblock Corrupt bandits for privacy preserving input.
+\newblock {\em CoRR\/}, {\bf abs/1708.05033}.
+\newblock \urlprefix\url{http://arxiv.org/abs/1708.05033}.
+
 \bibitem[{Garivier and Capp{\'e}(2011)}]{garivier2011kl}
 {\bf Garivier, A.} and {\bf O.~Capp{\'e}} (2011).
 \newblock The kl-ucb algorithm for bounded stochastic bandits and beyond.
@@ -412,6 +419,15 @@
 {\bf Thompson, W.~R.} (1935).
 \newblock On the theory of apportionment.
 \newblock {\em American Journal of Mathematics\/}, {\bf 57}(2), 450--456.
+
+\bibitem[{Wu {\em et~al.\/}(2016)Wu, Shariff, Lattimore, and
+  Szepesv{\'{a}}ri}]{DBLP:conf/icml/WuSLS16}
+{\bf Wu, Y.}, {\bf R.~Shariff}, {\bf T.~Lattimore}, and {\bf
+  C.~Szepesv{\'{a}}ri}, Conservative bandits.
+\newblock {\em In\/} {\em Proceedings of the 33nd International Conference on
+  Machine Learning, {ICML} 2016, New York City, NY, USA, June 19-24, 2016\/}.
+  2016.
+\newblock \urlprefix\url{http://jmlr.org/proceedings/papers/v48/wu16.html}.
 
 \bibitem[{Yu and Mannor(2009)}]{yu2009piecewise}
 {\bf Yu, J.~Y.} and {\bf S.~Mannor}, Piecewise-stationary bandit problems with

@@ -2,26 +2,26 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A comparison of the cumulative regret incurred by the various bandit algorithms. \relax }}{32}{figure.caption.23}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{32}{figure.caption.23}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{32}{figure.caption.23}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Further Experiments with EUCBV\relax }}{33}{figure.caption.24}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{33}{figure.caption.24}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{33}{figure.caption.24}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A comparison of the cumulative regret incurred by the various bandit algorithms. \relax }}{33}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{33}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{33}{figure.caption.23}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Further Experiments with EUCBV\relax }}{34}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{34}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{34}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{53}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{53}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{53}{figure.caption.31}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{54}{figure.caption.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{54}{figure.caption.32}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{54}{figure.caption.32}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{54}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{54}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{54}{figure.caption.33}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{54}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{54}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{54}{figure.caption.31}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{55}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{55}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{55}{figure.caption.32}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{55}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{55}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{55}{figure.caption.33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{66}{figure.caption.34}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{66}{figure.caption.34}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{66}{figure.caption.34}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{67}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{67}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{67}{figure.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

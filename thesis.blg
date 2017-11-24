@@ -1,8 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: iitm.bst
-Illegal, another \bibstyle command---line 500 of file thesis.aux
+Illegal, another \bibstyle command---line 502 of file thesis.aux
  : \bibstyle
  :          {iitm}
 I'm skipping whatever remains of this command
 Database file #1: refs.bib
-(There was 1 error message)
+A bad cross reference---entry "DBLP:conf/icml/WuSLS16"
+refers to entry "DBLP:conf/icml/2016", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icml/2016"
+(There were 2 error messages)

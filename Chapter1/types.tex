@@ -85,5 +85,10 @@ Distributed bandits is a special setting where a network of bandits collaborates
 
 \subsection{Bandits with Corrupt Feedback}
 
+Another interesting area in the bandit setting is a variant of the stochastic MAB problem in which the
+rewards are corrupted. In certain recommender systems it is sometimes vital to preserve the privacy of the users. Motivated by these, bandits with corrupt feedback assumes that the rewards it is receiving is corrupted by a stochastic corruption process of known parameters and the goal of the learner is again to maximize the reward by suggesting the best  items to the users in this framework. This setting has been analyzed in \citet{DBLP:journals/corr/abs-1708-05033}.
+
 
 \subsection{Conservative Bandits}
+
+This setting is motivated by the scenario where there is one default safe arm which will always provide the learner with a good reward, but there are several unexplored arms which might provide the learner with better rewards if explored more. But the learner cannot do unconstrained exploration as its budget is limited and every time it pulls an arm it has to pay a cost. Hence, it must balance between pulling the safe arm and constrained exploration. This type of exploration under constraint has been termed as conservative bandits and is studied in \citet{DBLP:conf/icml/WuSLS16} .

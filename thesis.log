@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  24 NOV 2017 23:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  24 NOV 2017 23:59
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1443,18 +1443,18 @@ Underfull \vbox (badness 4266) has occurred while \output is active []
 
  [7]
 [8]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/outline.tex)
-[9]
+[9] [10]
 Chapter 2.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/intro.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/notation.tex
 Underfull \vbox (badness 3492) has occurred while \output is active []
 
- [10
+ [11
 
 ])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [11])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [12])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [13]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [12])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [13])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [14]
 Overfull \hbox (16.37508pt too wide) in paragraph at lines 33--34
 []\T1/ptm/m/n/12 UCB1 has a gap-dependent re-gret up-per bound of $\OML/cmm/m/i
 t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
@@ -1463,7 +1463,7 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[14] [15]
+[15] [16]
 Overfull \hbox (8.18733pt too wide) in paragraph at lines 82--83
 []\T1/ptm/m/n/12 Recently in []Lat-ti-more[] ([]2015[]), the au-thors showed th
 at the al-go-rithm OCUCB achieves
@@ -1482,7 +1482,7 @@ Overfull \hbox (6.40132pt too wide) in paragraph at lines 82--83
 1/ptm/m/n/12 . This is the best known gap-dependent
  []
 
-[16] [17]
+[17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []|\T1/ptm/m/n/12 Horizon
  []
@@ -1505,19 +1505,19 @@ Overfull \hbox (5.16708pt too wide) in paragraph at lines 141--160
 ) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/conclusion.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19]
+ [19]
+[20]
 Chapter 3.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/introduction.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/contribution.tex
 Underfull \vbox (badness 1917) has occurred while \output is active []
 
- [20
+ [21
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21])
+ [22])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/ealgo.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1527,11 +1527,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[22]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex
+[23]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-[24] [25])
+ [24]
+[25] [26])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/proofTheorem.tex
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 27--28
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
@@ -1540,7 +1540,7 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 ]$ \T1/ptm/m/it/12 and $\OML/cmm/m/it/12 n[] \OT1/cmr/m/n/12 = []$
  []
 
-[26]
+[27]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 115.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
@@ -1548,7 +1548,7 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
- [27]
+ [28]
 Overfull \hbox (34.85158pt too wide) in paragraph at lines 202--203
 []\T1/ptm/m/it/12 From Lemma []3[] we can show that $\U/msb/m/n/12 P\OT1/cmr/m/
 n/12 ([] \OML/cmm/m/it/12 > r[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c[]\OT1/cmr/
@@ -1559,7 +1559,7 @@ P [] \OMS/cmsy/m/n/12 $
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
+ [29]
 Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
@@ -1567,7 +1567,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [30]
 Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
@@ -1575,7 +1575,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30])
+ [31])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/expts.tex
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
@@ -1600,7 +1600,7 @@ Overfull \hbox (23.5079pt too wide) in paragraph at lines 5--75
  [][] 
  []
 
-[31] [32]
+[32] [33]
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/MOSS01_comp_subsampled.txt}
@@ -1615,23 +1615,23 @@ PGFPlots: reading {Chapter3/results/NewExpt/Expt41/TS01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt41/OCUCB01_comp_subsampled.txt}
 
 PGFPlots: reading {Chapter3/results/NewExpt/Expt41/BU01_comp_subsampled.txt}
- [33])
+ [34])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34])
-[35]
+ [35])
+[36]
 Chapter 4.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [36
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [37
 
 ])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/notation.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/probDef.tex [37])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/probDef.tex [38])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/motivation.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevRes.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]
+ [39]
 Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []|\T1/ptm/m/n/12 Exploration
  []
@@ -1656,42 +1656,42 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
  [] 
  []
 
-[39] [40]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevResAPT.tex
+[40] [41]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevResAPT.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/conc.tex) [42]
+ [42]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/conc.tex) [43]
 Chapter 5.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/intro.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/contribution.tex [43
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/contribution.tex [44
 
 ]
 Underfull \vbox (badness 6592) has occurred while \output is active []
 
- [44])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [45])
+ [45])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [46])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/results.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-[47]
+ [47]
+[48]
 Underfull \vbox (badness 7704) has occurred while \output is active []
-
- [48]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/expt.tex [51]
+ [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
+ [51])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/expt.tex [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
 PGFPlots: reading {Chapter5/results/budgetTestAP/APT12_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/AugUCBV1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/UCBEM1_comp_subsampled.txt}
@@ -1730,11 +1730,11 @@ PGFPlots: reading {Chapter5/results/budgetTestGR3/testUCBEMV1_256_comp_subsampl
 ed.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGR4/UCBEMV1_comp_subsampled.txt}
 
-[53] [54]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex
-[55]) [56]
+[54] [55]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex
+[56]) [57]
 Chapter 6.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/intro.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/notations.tex [57
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/notations.tex [58
 
 ]
 Overfull \hbox (21.93855pt too wide) in paragraph at lines 51--52
@@ -1750,7 +1750,7 @@ s $\OML/cmm/m/it/12 t[]; \OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 j \OT1/cmr/m/n/12 =
  1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; G$
  []
 
-[58]
+[59]
 Overfull \hbox (3.1915pt too wide) in paragraph at lines 104--105
 []\T1/ptm/m/n/12 Also, re-call from Def-i-ni-tion []2[] that the change-point g
 ap $\OT1/cmr/m/n/12 [] = \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 [] \OMS/cmsy/m/n/
@@ -1760,14 +1760,14 @@ ap $\OT1/cmr/m/n/12 [] = \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 [] \OMS/cmsy/m/n/
 ) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/probDef.tex
 Underfull \vbox (badness 1097) has occurred while \output is active []
 
- [59])
+ [60])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/related.tex
 Underfull \vbox (badness 1924) has occurred while \output is active []
 
- [60])
+ [61])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
+ [62]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/contribution.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/algo.tex
 Overfull \hbox (11.95943pt too wide) in paragraph at lines 3--4
@@ -1814,24 +1814,24 @@ Overfull \hbox (79.76225pt too wide) in paragraph at lines 6--82
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/conclusion.tex) [63]
-[64] [65] [66]
+ [63])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/conclusion.tex) [64]
+[65] [66] [67]
 Appendix A.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [67
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [68
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68])
-[69]
+ [69])
+[70]
 Appendix B.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixEUCBV.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[70
+[71
 
 ]
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 72--73
@@ -1844,10 +1844,10 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
+ [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72]
+ [73]
 Overfull \hbox (8.47412pt too wide) in paragraph at lines 152--156
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
 in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
@@ -1856,10 +1856,10 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 OML/cmm/m/it/12 c[] \OT1/cmr/m/n/12 = []$
  []
 
-[73] [74]
+[74] [75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
+ [76]
 Overfull \hbox (2.82367pt too wide) in paragraph at lines 438--439
 []\T1/ptm/m/it/12 From []Bubeck \T1/ptm/m/n/12 et al.[] \T1/ptm/m/it/12 ([]2011
 []) we know that the func-tion $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OT1/cmr/
@@ -1868,15 +1868,15 @@ t/12 x []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12  \OML/cmm/m/it/12 Cx[]\OT1/cmr/m/n/1
 2 )$
  []
 
-[76]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [77] [78
+[77]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [78] [79
 
 ]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 116.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [79] [80]
-[81]) [82] [83
+) [80] [81]
+[82]) [83] [84
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 422.
@@ -1889,10 +1889,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 422.
  ) 
 Here is how much of TeX's memory you used:
- 33020 strings out of 493921
- 777024 string characters out of 3144861
- 1089727 words of memory out of 3000000
- 35083 multiletter control sequences out of 15000+200000
+ 33029 strings out of 493921
+ 777309 string characters out of 3144861
+ 1089866 words of memory out of 3000000
+ 35089 multiletter control sequences out of 15000+200000
  57554 words of font info for 100 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,108p,1874b,2489s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1916,9 +1916,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (95 pages, 817455 bytes).
+Output written on thesis.pdf (96 pages, 822931 bytes).
 PDF statistics:
- 1757 PDF objects out of 2073 (max. 8388607)
- 383 named destinations out of 1000 (max. 500000)
+ 1771 PDF objects out of 2073 (max. 8388607)
+ 386 named destinations out of 1000 (max. 500000)
  690 words of extra memory for PDF output out of 10000 (max. 10000000)
 
