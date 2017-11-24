@@ -14,70 +14,71 @@
 \BOOKMARK [1][-]{section.1.4}{Different types of Bandits}{chapter.1}% 14
 \BOOKMARK [2][-]{subsection.1.4.1}{Types of Bandits based on Environment}{section.1.4}% 15
 \BOOKMARK [2][-]{subsection.1.4.2}{Types of Bandits based on goal}{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.3}{Collaborative Bandits}{section.1.4}% 17
-\BOOKMARK [2][-]{subsection.1.4.4}{Bandits with Corrupt Feedback}{section.1.4}% 18
-\BOOKMARK [2][-]{subsection.1.4.5}{Conservative Bandits}{section.1.4}% 19
-\BOOKMARK [1][-]{section.1.5}{Outline of the thesis}{chapter.1}% 20
-\BOOKMARK [0][-]{chapter.2}{Stochastic Multi-armed Bandits}{}% 21
-\BOOKMARK [1][-]{section.2.1}{Introduction to SMAB}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.2}{Notations and assumptions}{chapter.2}% 23
-\BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}% 24
-\BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}% 25
-\BOOKMARK [1][-]{section.2.5}{Related Work in SMAB}{chapter.2}% 26
-\BOOKMARK [2][-]{subsection.2.5.1}{Lower bound in SMAB}{section.2.5}% 27
-\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound approach}{section.2.5}% 28
-\BOOKMARK [2][-]{subsection.2.5.3}{Bayesian Approach}{section.2.5}% 29
-\BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}% 30
-\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}% 31
-\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 32
-\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{}% 33
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.2}{Our Contributions}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.3}{Algorithm: Efficient UCB Variance}{chapter.3}% 36
-\BOOKMARK [1][-]{section.3.4}{Main Results}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.5}{Proofs}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.6}{Experiments}{chapter.3}% 39
-\BOOKMARK [1][-]{section.3.7}{Summary and Future Works}{chapter.3}% 40
-\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 41
-\BOOKMARK [1][-]{section.4.1}{Introduction to Thresholding Bandits}{chapter.4}% 42
-\BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 44
-\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 45
-\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 47
-\BOOKMARK [2][-]{subsection.4.5.2}{Fixed Confidence setting}{section.4.5}% 48
-\BOOKMARK [2][-]{subsection.4.5.3}{Unified Setting}{section.4.5}% 49
-\BOOKMARK [1][-]{section.4.6}{Related Work in Thresholding Bandits}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 51
-\BOOKMARK [0][-]{chapter.5}{Augmented UCB for TBP}{}% 52
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 53
-\BOOKMARK [1][-]{section.5.2}{Our Contribution}{chapter.5}% 54
-\BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}% 55
-\BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 56
-\BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 57
-\BOOKMARK [1][-]{section.5.6}{Summary and Future Works}{chapter.5}% 58
-\BOOKMARK [0][-]{chapter.6}{Single Expert Algorithms for Changepoint Detection}{}% 59
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 60
-\BOOKMARK [1][-]{section.6.2}{Notations, Assumptions and Definitions}{chapter.6}% 61
-\BOOKMARK [1][-]{section.6.3}{Problem Definitions}{chapter.6}% 62
-\BOOKMARK [1][-]{section.6.4}{Related Works}{chapter.6}% 63
-\BOOKMARK [1][-]{section.6.5}{Our Contribution}{chapter.6}% 64
-\BOOKMARK [1][-]{section.6.6}{Changepoint Detection Algorithms}{chapter.6}% 65
-\BOOKMARK [2][-]{subsection.6.6.1}{Proposed Algorithms}{section.6.6}% 66
-\BOOKMARK [1][-]{section.6.7}{Numerical Experiments}{chapter.6}% 67
-\BOOKMARK [1][-]{section.6.8}{Summary and Future Works}{chapter.6}% 68
-\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 69
-\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 70
-\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 71
-\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 72
-\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 73
-\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 74
-\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 75
-\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 76
-\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 77
-\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 78
-\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 79
-\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 80
-\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 81
-\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 82
-\BOOKMARK [0][-]{appendix*.36}{LIST OF PAPERS BASED ON THESIS}{}% 83
+\BOOKMARK [2][-]{subsection.1.4.3}{Contextual Bandits}{section.1.4}% 17
+\BOOKMARK [2][-]{subsection.1.4.4}{Collaborative Bandits}{section.1.4}% 18
+\BOOKMARK [2][-]{subsection.1.4.5}{Bandits with Corrupt Feedback}{section.1.4}% 19
+\BOOKMARK [2][-]{subsection.1.4.6}{Conservative Bandits}{section.1.4}% 20
+\BOOKMARK [1][-]{section.1.5}{Outline of the thesis}{chapter.1}% 21
+\BOOKMARK [0][-]{chapter.2}{Stochastic Multi-armed Bandits}{}% 22
+\BOOKMARK [1][-]{section.2.1}{Introduction to SMAB}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.2}{Notations and assumptions}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.5}{Related Work in SMAB}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.5.1}{Lower bound in SMAB}{section.2.5}% 28
+\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound approach}{section.2.5}% 29
+\BOOKMARK [2][-]{subsection.2.5.3}{Bayesian Approach}{section.2.5}% 30
+\BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}% 31
+\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}% 32
+\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 33
+\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{}% 34
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.2}{Our Contributions}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.3}{Algorithm: Efficient UCB Variance}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.4}{Main Results}{chapter.3}% 38
+\BOOKMARK [1][-]{section.3.5}{Proofs}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.6}{Experiments}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.7}{Summary and Future Works}{chapter.3}% 41
+\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 42
+\BOOKMARK [1][-]{section.4.1}{Introduction to Thresholding Bandits}{chapter.4}% 43
+\BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 44
+\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 46
+\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.5.2}{Fixed Confidence setting}{section.4.5}% 49
+\BOOKMARK [2][-]{subsection.4.5.3}{Unified Setting}{section.4.5}% 50
+\BOOKMARK [1][-]{section.4.6}{Related Work in Thresholding Bandits}{chapter.4}% 51
+\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 52
+\BOOKMARK [0][-]{chapter.5}{Augmented UCB for TBP}{}% 53
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 54
+\BOOKMARK [1][-]{section.5.2}{Our Contribution}{chapter.5}% 55
+\BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}% 56
+\BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 57
+\BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 58
+\BOOKMARK [1][-]{section.5.6}{Summary and Future Works}{chapter.5}% 59
+\BOOKMARK [0][-]{chapter.6}{Single Expert Algorithms for Changepoint Detection}{}% 60
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 61
+\BOOKMARK [1][-]{section.6.2}{Notations, Assumptions and Definitions}{chapter.6}% 62
+\BOOKMARK [1][-]{section.6.3}{Problem Definitions}{chapter.6}% 63
+\BOOKMARK [1][-]{section.6.4}{Related Works}{chapter.6}% 64
+\BOOKMARK [1][-]{section.6.5}{Our Contribution}{chapter.6}% 65
+\BOOKMARK [1][-]{section.6.6}{Changepoint Detection Algorithms}{chapter.6}% 66
+\BOOKMARK [2][-]{subsection.6.6.1}{Proposed Algorithms}{section.6.6}% 67
+\BOOKMARK [1][-]{section.6.7}{Numerical Experiments}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.8}{Summary and Future Works}{chapter.6}% 69
+\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 70
+\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 71
+\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 72
+\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 73
+\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 74
+\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 75
+\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 76
+\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 77
+\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 78
+\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 79
+\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 80
+\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 81
+\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 82
+\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 83
+\BOOKMARK [0][-]{appendix*.36}{LIST OF PAPERS BASED ON THESIS}{}% 84
