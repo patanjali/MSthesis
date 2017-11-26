@@ -1,4 +1,4 @@
-In this section we discuss on the various types of bandits that are available in literature. 
+In this section, we discuss the various types of bandits that are available in the literature. 
 
 
 \subsection{Types of Bandits based on Environment}
@@ -11,18 +11,18 @@ In stochastic bandits, the distribution associated with each of the arms remains
 
 \subsubsection{Non-stochastic Bandits}
 
-In non-stochastic setting the distribution associated with each arm varies over the duration of the play. Two natoable examples of this are:-
+In non-stochastic setting, the distribution associated with each arm varies over the duration of the play. Two notable examples of this are:-
 
 \begin{enumerate}
-\item \textbf{Adversarial bandits: } In adversarial bandits, an adversary decides the payoff for each arm before the learner selects an arm. This adversary may or may not be oblivious to the learning algorithm employed by the learner. In each of these cases a different guarantee on the performance of the learner can be arrived at. Some of the important papers in this setting are \citet{auer2002nonstochastic}, \citet{auer2002using}, \citet{kocak2014efficient}.
+\item \textbf{Adversarial bandits: } In adversarial bandits, an adversary decides the payoff for each arm before the learner selects an arm. This adversary may or may not be oblivious to the learning algorithm employed by the learner. In each of these cases, a different guarantee on the performance of the learner can be arrived at. Some of the important papers in this setting are \citet{auer2002nonstochastic}, \citet{auer2002using}, \citet{kocak2014efficient}.
 
-\item \textbf{Piece-wise stationary:} Another setup under this setting can be the piece-wise stationary setting. In this setting, the distribution associated with each arm is not fixed throughout the time horizon and changes either arbitrarily at particular changepoints, or changes at a fixed period. The distribution associated with each arm then  remains fixed till the next chnagepoint is encountered. Several recent works have focussed on this such as  \citep{garivier2011upper}, \citep{mellor2013thompson}, and \citep{allesiardo2017non}. In our thesis, chapter \ref{chap:psbandit} is based on this setting. 
+\item \textbf{Piece-wise stationary:} Another setup under this setting can be the piece-wise stationary setting. In this setting, the distribution associated with each arm is not fixed throughout the time horizon and changes either arbitrarily at particular changepoints, or changes at a fixed period. The distribution associated with each arm then remains fixed till the next changepoint is encountered. Several recent works have focussed on this such as  \citep{garivier2011upper}, \citep{mellor2013thompson}, and \citep{allesiardo2017non}. In our thesis, chapter \ref{chap:psbandit} is based on this setting. 
 \end{enumerate}
 
 
-\subsubsection{Contextual Bandits}
-
-The idea of clustering has been extensively studied in the contextual bandit setup, an extension of the MAB where side information or features are attached to each arm. The clustering is done over the features representing the arms to capture the complexity of the problem better when a large-number of arms are involved. Typical examples of this setting are in web-advertising domain, news article selection, etc. Some notable papers available for this setting are   \citet{auer2002using}, \citet{langford2008epoch}, \citet{li2010contextual}, \citet{beygelzimer2011contextual}, \citet{slivkins2014contextual},etc. 
+%\subsubsection{Contextual Bandits}
+%
+%The idea of clustering has been extensively studied in the contextual bandit setup, an extension of the MAB where side information or features are attached to each arm. The clustering is done over the features representing the arms to capture the complexity of the problem better when a large number of arms are involved. Typical examples of this setting are in a web-advertising domain, news article selection, etc. Some notable papers available for this setting are   \citet{auer2002using}, \citet{langford2008epoch}, \citet{li2010contextual}, \citet{beygelzimer2011contextual}, \citet{slivkins2014contextual},etc. 
 
 
 %
@@ -34,7 +34,7 @@ The idea of clustering has been extensively studied in the contextual bandit set
 
 \subsection{Types of Bandits based on goal}
 
-In bandit literature, based on the goal we can divide bandits into several categories. To illustrate his we put forward a simple scenario let us consider a stochastic bandit scenario where there are $K$ arms labeled $i=1,2,\ldots,K$ with their expected means of reward distributions ($D_i$) be denoted by $r_i$. Also let there be single optimal arm $*$ such that $r^* = \max_{i\in\A}r_i$. 
+In bandit literature, based on the goal we can divide bandits into several categories. To illustrate his we put forward a simple scenario let us consider a stochastic bandit scenario where there are $K$ arms labeled $i=1,2,\ldots, K$ with their expected means of reward distributions ($D_i$) be denoted by $r_i$. Also let there be single optimal arm $*$ such that $r^* = \max_{i\in\A}r_i$. 
 
 
 
@@ -60,7 +60,7 @@ In simple regret minimization the goal of the bandit is to minimize the instanta
 SR_{t} = r^* - r_{J_{n}} = \Delta_{J_n}
 \end{align*}
 
-where, $\Delta_{J_n}$ is the instantaneous gap between the expected mean of he optimal arm and the recommended arm by the learner. In the pure exploration setting the learner tries to minimize the simple regret and we study a very similar setting in chapter \ref{chap:tbandit1} and chapter \ref{chap:tbandit2}. 
+where $\Delta_{J_n}$ is the instantaneous gap between the expected mean of the optimal arm and the recommended arm by the learner. In the pure exploration setting the learner tries to minimize the simple regret and we study a very similar setting in chapter \ref{chap:tbandit1} and chapter \ref{chap:tbandit2}. 
 
 \subsubsection{Weak Regret minimization}
 In the non-stochastic scenario, when the distribution associated with each arm changes, the notion of regret is defined differently than cumulative regret. In this scenario, considering that there is a single best arm, the learner is more interested in minimizing the worst-case regret. Formally, for any sequence of actions $\left( j_1, \ldots , j_T \right)$ chosen by the learner over the time horizon $T$, the weak regret for single best action is defined as the difference between,
@@ -71,9 +71,9 @@ where, $G_{\max}(j_1,\ldots,j_T) = \max_{i\in\A}\sum_{t=1}^{T}X_{i_t}$ is the re
 
 \subsection{Contextual Bandits}
 
-Another interesting variation of the MAB model is the contextual bandit setup, where there are contexts or features associated with each arm. We can envision this with an example of online news article recommendation where there are users and articles and the goal of the learner is to map the correct article to an user so as to generate the user's  interest. Following a similar work in \citet{langford2008epoch} this problem can be formulated as a contextual MAB problem such that at every timestep $t=1,\ldots,T$
+Another interesting variation of the MAB model is the contextual bandit setup, where there are contexts or features associated with each arm. We can envision this with an example of online news article recommendation where there are users and articles and the goal of the learner is to map the correct article to a user so as to generate the user's  interest. Following a similar work in \citet{langford2008epoch} this problem can be formulated as a contextual MAB problem such that at every timestep $t=1,\ldots, T$
 \begin{enumerate}
-\item The learner observes an user $u_t$ and the set of arms (articles) $i\in\A$ along with their feature vectors $\mathcal{v}_{i,t},\forall i\in\A_t$. This vector contains information of both the users and the arms and is referred as the context.
+\item The learner observes an user $u_t$ and the set of arms (articles) $i\in\A$ along with their feature vectors $\mathcal{v}_{i,t},\forall i\in\A_t$. This vector contains information about both the users and the arms and is referred as the context.
 \item On the basis of previous trials the learner pulls an arm $i_t\in\A$ at the $t$-th timestep and observes the reward $X_{i,t}$ for only the arm $i_t\in\A$.
 \item The algorithm then improves its prediction for the next trial with the new observation, $\left(v_{i,t},i_{t}, X_{i,t} \right)$.
 \end{enumerate}
@@ -86,9 +86,9 @@ Distributed bandits is a special setting where a network of bandits collaborates
 \subsection{Bandits with Corrupt Feedback}
 
 Another interesting area in the bandit setting is a variant of the stochastic MAB problem in which the
-rewards are corrupted. In certain recommender systems it is sometimes vital to preserve the privacy of the users. Motivated by these, bandits with corrupt feedback assumes that the rewards it is receiving is corrupted by a stochastic corruption process of known parameters and the goal of the learner is again to maximize the reward by suggesting the best  items to the users in this framework. This setting has been analyzed in \citet{DBLP:journals/corr/abs-1708-05033}.
+rewards are corrupted. In certain recommender systems, it is sometimes vital to preserve the privacy of the users. Motivated by these, bandits with corrupt feedback assumes that the rewards it is receiving is corrupted by a stochastic corruption process of known parameters and the goal of the learner is again to maximize the reward by suggesting the best items to the users in this framework. This setting has been analyzed in \citet{DBLP:journals/corr/abs-1708-05033}.
 
 
 \subsection{Conservative Bandits}
 
-This setting is motivated by the scenario where there is one default safe arm which will always provide the learner with a good reward, but there are several unexplored arms which might provide the learner with better rewards if explored more. But the learner cannot do unconstrained exploration as its budget is limited and every time it pulls an arm it has to pay a cost. Hence, it must balance between pulling the safe arm and constrained exploration. This type of exploration under constraint has been termed as conservative bandits and is studied in \citet{DBLP:conf/icml/WuSLS16} .
+This setting is motivated by the scenario where there is one default safe arm which will always provide the learner with a good reward, but there are several unexplored arms which might provide the learner with better rewards if explored more. But the learner cannot do unconstrained exploration as its budget is limited and every time it pulls an arm it has to pay a cost. Hence, it must balance between pulling the safe arm and constrained exploration. This type of exploration under constraint has been termed as conservative bandits and is studied in \citet{DBLP:conf/icml/WuSLS16}.

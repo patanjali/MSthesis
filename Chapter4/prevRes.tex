@@ -54,9 +54,9 @@ The Successive Reject (SR) algorithm has also been proposed in \citet{audibert20
 \begin{algorithmic}[1]
 \State \textbf{Input: } The budget $T$
 \State \textbf{Initialization: } $n_0 = 0$
-\State \textbf{Definition: } $\bar{\log K} = \dfrac{1}{2} + \sum_{i=2}^{K}\dfrac{1}{i}$, $n_k = \dfrac{1}{\bar{\log K}}\dfrac{T-K}{K + 1 - m}$
+\State \textbf{Definition: } $\overline{\log K} = \dfrac{1}{2} + \sum_{i=2}^{K}\dfrac{1}{i}$, $n_m = \dfrac{1}{\bar{\log K}}\dfrac{T-K}{K + 1 - m}$
 \For{For each phase $m=1,..., K-1$}
-\State For each $i \in B_{m}$, select arm $i$ for $n_k - n_{k-1}$ timesteps.
+\State For each $i \in B_{m}$, select arm $i$ for $n_m - n_{m-1}$ timesteps.
 \State Let $B_{m+1} = B_m\setminus \argmin_{i\in B_m} \hat{r}_i$
 (remove one element from $B_m$ , if there
 is a tie, select randomly the arm to dismiss among the worst arms).
@@ -67,18 +67,53 @@ is a tie, select randomly the arm to dismiss among the worst arms).
 \end{algorithm}
 
 
-From algorithm \ref{alg:sr} we see that SR is a round based algorithm quite similar to UCB-Improved (see algorithm \ref{alg:ucbi}). Similar to UCB-Improved, SR pulls all arms equal number of times in each round and then discards some arm that it deems to be sub-optimal until it is left with a single best arm. However, SR does not have any explicit confidence interval as UCBE, rather the idea of the confidence interval is hidden in the number of pulls allocated to each arm in every round. The number of times each arm is pulled in every round, that is $n_k - n_{k-1}$ timesteps makes sure that the optimal arm is not eliminated in the $k$-th round with high probability. 
+From algorithm \ref{alg:sr} we see that SR is a round based algorithm quite similar to UCB-Improved (see algorithm \ref{alg:ucbi}). Similar to UCB-Improved, SR pulls all arms equal number of times in each round and then discards some arm that it deems to be sub-optimal until it is left with a single best arm. However, SR does not have any explicit confidence interval as UCBE, rather the idea of the confidence interval is hidden in the number of pulls allocated to each arm in every round. The number of times each arm is pulled in every round, that is $n_m - n_{m-1}$ timesteps makes sure that the optimal arm is not eliminated in the $m$-th round with high probability. 
 
-In the combinatorial fixed budget setup \citet{gabillon2011multi} propose the GapE and GapE-V algorithms that suggest, with high probability, the best $m$ arms at the end of the time budget. 
+%In the combinatorial fixed budget setup \citet{gabillon2011multi} propose the GapE and GapE-V algorithms that suggest, with high probability, the best-$p$ arms at the end of the time budget. 
 
-Similarly, \citet{bubeck2013multiple} introduce the  Successive Accept Reject (SAR) algorithm, which is an extension of the SR algorithm; SAR is a round based algorithm whereby at the end of each round an arm is either accepted or rejected (based on certain confidence conditions) until the top $m$ arms are suggested at the end of the budget with high probability. A similar combinatorial setup was explored in \citet{chen2014combinatorial} where the authors propose the Combinatorial Successive Accept Reject (CSAR) algorithm, which is similar in concept to SAR but with a more general setup. 
+\subsection{Successive Accept Reject Algorithm for best-p arms setting}
 
+The goal in best p-arms setting is to identify the top $p$ arms out of $K$ given arms where $p$ is supplied as an input. Several algorithms have been proposed for these setup starting with \citet{gabillon2011multi} where the authors proposed the GapE and GapE-V algorithms that suggest, with high probability, the best-$p$ arms at the end of the time budget. These algorithms are similar to the UCBE type algorithm discussed in previous section. In this section we will discuss the Successive Accept Reject strategy shown in algorithm \ref{alg:sar}.
+
+
+\begin{algorithm}[!th]
+\caption{Successive Accept Reject(SAR)}
+\label{alg:sar}
+\begin{algorithmic}[1]
+\State \textbf{Input: } The budget $T$, $p$ 
+\State \textbf{Initialization: } $n_0 = 0$
+\State \textbf{Definition: } $\overline{\log K} = \dfrac{1}{2} + \sum_{i=2}^{K}\dfrac{1}{i}$, $n_m = \dfrac{1}{\bar{\log K}}\dfrac{T-K}{K + 1 - m}$
+\For{For each phase $m=1,..., K-1$}
+\State For each $i \in B_{m}$, select arm $i$ for $n_m - n_{m-1}$ timesteps.
+\State Let $B'_{m}$ be the set that contains arms in decreasing order of their sample means $\hat{r}_{i},\forall i\in B_{m}$ such that $\hat{r}_{B'_{m}(1),n_m} \geq \hat{r}_{B'_{m}(2),n_m} \geq \ldots \geq \hat{r}_{B'_{m}(K+1-m),n_m}$.
+\State Define the new empirical gaps $\forall i\in B'_{m}$ such that for $1\leq r\leq K+1-m$,
+\begin{align*}
+\Delta_{B'_{m}(r),n_m} =
+    \begin{cases}
+      \hat{r}_{B'_{m}(r),n_m} - \hat{r}_{B'_{m}(p(m)+1),n_m}, & \text{ if }\ r\leq p(m+1) \\
+      \hat{r}_{B'_{m}(p(m)),n_m}  - \hat{r}_{B'_{m}(r),n_m}, & \text{ if }\ r> p(m)+1
+    \end{cases}
+%\Delta_{B'_{m}(r),n_m} = \bigg\lbrace^{\hat{r}_{B'_{m}(r),n_m} - \hat{r}_{B'_{m}(p(m)+1),n_m} \text{, if $r\leq p(m)+1$}}_{\hat{r}_{\hat{r}_{B'_{m}(p(m)),n_m}  - \hat{r}_{B'_{m}(r),n_m} \text{, if $r> p(m)+1$}}}
+\end{align*}
+\State Let $i_m\in \argmax_{i\in B'_m} \hat{\Delta}_{i,n_m}$, then $B_{m+1} = B_m\setminus i_m$ (deactivate $i_m$ with ties broken arbitrarily).
+\State If $\hat{r}_{i_m,n_m} > \hat{r}_{B'_{m}(p(m)+1)}$, then accept $i_m$ and set $p(m+1)=p(m)-1$, $J_{p - p(m+1)}=i_m$.
+\State $m:=m+1 $
+\EndFor
+\State Output the $p$-accepted arms $J_1,J_2,\ldots, J_p$.
+\end{algorithmic}
+\end{algorithm}
+
+\citet{bubeck2013multiple} introduced the  Successive Accept Reject (SAR) algorithm, which is an extension of the SR algorithm; SAR is a round based algorithm whereby at the end of each round an arm is either accepted or rejected (based on certain confidence conditions) until the top $p$ arms are suggested at the end of the budget with high probability. Like SR algorithm, the SAR algorithm divides the budget into rounds where in each round it pulls all the arms equal  number of times that is for $n_m - n_{m-1}$ timesteps. At the end of the round it orders the arms into a decreasing sequence of their empirical means in $B'_{m}$ and computes for the $p(m)$ empirical best arms in $B'_{m}$ the distance (in terms of their empirical means) to the $(p(m) + 1)$-th empirical best arm in $B'_{m}$. Again for the arms not in the $p(m)$ empirical best arms, SAR computes the distance to the $p(m)$-th empirical best arm. Finally, SAR deactivates the arm $i_m$ that has the maximum empirical distance. If $i_m$ is the empirical best arm in the $m$-th round, then SAR accepts $i_m$ and sets $p(m + 1) = p(m) - 1$ and $J_p - p(m+1) = i_m$, or otherwise SAR rejects  $i_m$. 
+
+	A similar combinatorial setup was explored in \citet{chen2014combinatorial} where the authors propose the Combinatorial Successive Accept Reject (CSAR) algorithm, which is similar in concept to SAR but with a more general setup. 
+
+ 
 \subsection{Fixed Confidence setting} 
 
 In this setting the learning algorithm has to suggest the best arm(s) with a fixed confidence (given as input) with as fewer number of attempts as possible. The single best arm identification has been studied in \citet{even2006action}, while for the combinatorial setup \citet{kalyanakrishnan2012pac} have proposed the LUCB algorithm which, on termination, returns  $m$ arms which are at least $\epsilon$ close to the true top-$m$ arms with probability at least $1-\delta$. For a detail survey of this setup we refer the reader to \citet{jamieson2014best}. 
 
 \subsection{Unified Setting}
-Apart from these two settings some unified approaches has also been suggested in \citet{gabillon2012best} which proposes the algorithms UGapEb and UGapEc which can work in both the above two settings. The thresholding bandit problem is a specific instance of the pure-exploration setup of \citet{chen2014combinatorial}. 
+Apart from these two settings some unified approaches has also been suggested in \citet{gabillon2012best} which proposes the algorithms UGapEb and UGapEc which can work in both the above two settings. 
 
 
 

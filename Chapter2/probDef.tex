@@ -3,12 +3,12 @@ With the formulation of SMAB stated in algorithm \ref{alg:SMAB}, the learner see
 
     The objective of the learner in the SMAB setting is to maximize his rewards or in other words, to minimize the cumulative regret, which is defined as follows:
 \begin{align*}
-R_{T}=r^{*}T - \sum_{i\in \A} r_{i}z_{i}(T),
+R_{T}=r^{*}T - \sum_{i=1}^{K} r_{i}n_{i}(T),
 \end{align*}
 where $T$ is the number of timesteps, and  $z_{i}(T)$ is the number of times the algorithm has chosen arm $i$ up to timestep $T$.
 The expected regret of an algorithm after $T$ timesteps can be written as,
 \begin{align*}
-\E[R_{T}]= \sum_{i=1}^{K} \E[z_i (T)] \Delta_i,
+\E[R_{T}]= \sum_{i=1}^{K} \E[n_i (T)] \Delta_i,
 \end{align*}
 where $\Delta_{i}=r^{*}-r_{i}$ is the gap between the means of the optimal arm and the $i$-th arm. In the theoretical analysis of each algorithm, we try to obtain bounds on this cumulative regret. These bounds can be both asymptotic or for a finite horizon. Again, these regret bounds can be either gap-dependent or gap-independent bounds. 
 

@@ -234,7 +234,7 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \dfrac{\Delta_i}{4} \rbrace $, $\
 \begin{proof}
 Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show that in the $m_i$-th round,
 \begin{align*}
-&\Pb\lbrace z_i < n_{m_i} \rbrace \\
+\Pb\lbrace z_i < n_{m_i} \rbrace 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &\leq \sum_{m=0}^{m_i}\sum_{z_i =1}^{n_{m}}\sum_{z^* =1}^{n_{m}}\bigg(\Pb\lbrace \hat{r}^* > r^* - c^{*}\rbrace + \Pb\lbrace \hat{r}_i < r_i + c_i\rbrace\bigg) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -449,8 +449,7 @@ Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we 
 	&\leq  \dfrac{320\sigma_{\max}^2\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}
 	\overset{(a)}{\leq} 320\sigma_{\max}^2\sqrt{KT} 
 	\end{align*}		
-	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. 
-	
+	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. 	
 %For the term $\sum\limits_{i\in \A :\Delta_{i} > b}\dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ by substituting the value of $\Delta_i=\Delta=\sqrt{\dfrac{K\log K}{T}}$ we get,
 %\begin{align*}
 %\dfrac{C_0 K^{\frac{5}{2}+1}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\sqrt{\dfrac{K\log K}{T}}}} \\
@@ -462,11 +461,10 @@ Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we 
 %\begin{align*}
 %\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_2^{'} K^{\frac{5}{2}+1}}{\sqrt{T\sqrt{\dfrac{e}{T}}}} \leq \dfrac{C_2^{'} K^3}{T^{\frac{1}{4}}} 
 %\end{align*}
-
 Thus, the total worst case gap-independent bound is given by
 	\begin{align*}
-	\E[R_{T}] &\overset{(a)}{\leq}  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sigma_{\max}^2\sqrt{KT}\\
-	&\overset{(b)}{\leq} \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sqrt{KT}
+	\E[R_{T}] &\overset{(a)}{\leq}  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sigma_{\max}^2\sqrt{KT}
+	\overset{(b)}{\leq} \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sqrt{KT}
 	\end{align*}	
 	
 where, in$(a)$, $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $ and $(b)$ occurs because $\sigma_i^2 \in [0,\frac{1}{4}], \forall i\in \A$.

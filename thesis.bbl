@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{69}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -373,12 +373,6 @@
 {\bf Robbins, H.}, Some aspects of the sequential design of experiments.
 \newblock {\em In\/} {\em Herbert Robbins Selected Papers\/}. Springer, 1952,
   169--177.
-
-\bibitem[{Slivkins(2014)}]{slivkins2014contextual}
-{\bf Slivkins, A.} (2014).
-\newblock Contextual bandits with similarity information.
-\newblock {\em Journal of Machine Learning Research\/}, {\bf 15}(1),
-  2533--2568.
 
 \bibitem[{Steinwart {\em et~al.\/}(2005)Steinwart, Hush, and
   Scovel}]{steinwart2005classification}

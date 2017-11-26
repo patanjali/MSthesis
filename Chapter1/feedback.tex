@@ -10,7 +10,7 @@ In an online sequential setting, the feedback that the learner receives from the
 \State {\bf Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution
 \State \For{ each timestep $t=1,2,\ldots, T$}
 \State The environment chooses a reward vector $F^{env}_{t}= \left[r_{i,t}\sim^{i.i.d} D_{i},\forall i\in\A\right]$.
-\State The learner chooses $m$ actions such that $m < K$, where $\A$ is the set of arms and $|\A|=K$.
+\State The learner chooses $m$ actions such that $m < K$ following some policy $\pi$, where $\A$ is the set of arms and $|\A|=K$.
 \State The learner observes the reward vector $R^{obs}_{t}\subseteq F^{env}_{t}$.
 \State \EndFor
 \end{algorithmic}
