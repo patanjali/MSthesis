@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  27 NOV 2017 08:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  27 NOV 2017 09:02
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1671,7 +1671,7 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
 
 [41] [42] [43])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1232, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1233, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png>
@@ -1690,7 +1690,7 @@ Underfull \vbox (badness 6592) has occurred while \output is active []
 
  [48])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [49]
-<Chapter5/img/AugUCB_flow.png, id=1307, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1308, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1952,9 +1952,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (100 pages, 1085953 bytes).
+Output written on thesis.pdf (100 pages, 1086190 bytes).
 PDF statistics:
- 1869 PDF objects out of 2073 (max. 8388607)
+ 1870 PDF objects out of 2073 (max. 8388607)
  409 named destinations out of 1000 (max. 500000)
  747 words of extra memory for PDF output out of 10000 (max. 10000000)
 
