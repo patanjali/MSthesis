@@ -428,7 +428,7 @@ c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \le
 When the gaps of all the sub-optimal arms are identical, i.e., $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}, \forall i\in \A$ and $C_3$ being an integer constant, the
 regret of EUCBV is upper bounded by the following gap-independent expression:
 \begin{align*}
-	\E[R_{T}]\leq  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sqrt{KT}.
+	\E[R_{T}]\leq  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 80\sqrt{KT}.
 \end{align*}	
 \end{customCorollary}
 
@@ -464,7 +464,7 @@ Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we 
 Thus, the total worst case gap-independent bound is given by
 	\begin{align*}
 	\E[R_{T}] &\overset{(a)}{\leq}  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sigma_{\max}^2\sqrt{KT}
-	\overset{(b)}{\leq} \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sqrt{KT}
+	\overset{(b)}{\leq} \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 80\sqrt{KT}
 	\end{align*}	
 	
 where, in$(a)$, $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $ and $(b)$ occurs because $\sigma_i^2 \in [0,\frac{1}{4}], \forall i\in \A$.

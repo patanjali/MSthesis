@@ -66,13 +66,13 @@ the expected loss of the AugUCB algorithm is given by,
 
 \end{theorem}
 
-\begin{proof}
-\begin{discussion}
-\label{tbandit:discussion}
+\begin{proof}\textbf{(Proof Outline)}
+%\begin{discussion}
+%\label{tbandit:discussion}
 The proof comprises of two modules. In the first module we investigate the necessary conditions for arm elimination within a specified number of rounds, which is motivated by the technique in \cite{auer2010ucb}. Bounds on the arm-elimination probability is then obtained; however, since we use variance estimates, we invoke the Bernstein inequality (as in \cite{audibert2009exploration}) rather that the Chernoff-Hoeffding bounds (which is appropriate for the UCB-Improved \citep{auer2010ucb}). In the second module, as in \cite{locatelli2016optimal}, we first define a favourable event that will yield an upper bound on the expected loss. Using union bound, we then incorporate the result from module-1 (on the arm elimination probability), and finally derive the result through a series of simplifications.
 %In the final module we conclude by combining the results for the first two modules. 
-\end{discussion}
-The details of the proof as stated in discussion \ref{tbandit:discussion} are as follows. 
+%\end{discussion}
+The details of the proof as stated in the proof outline are as follows. 
 
 
 \textbf{Arm Elimination:} Recall the notations used in the algorithm, Also, for each arm $i\in\mathcal{A}$, define $m_{i}=\min\left\lbrace m| \sqrt{\rho\epsilon_{m}}<\frac{\Delta_{i}}{2}\right\rbrace$. In the $m_i$-th round, whenever $n_i=\ell_{m_i}\ge\frac{2\psi_{m_i}\log{(T\epsilon_{m_{i}})}}{\epsilon_{m_{i}}}$, we obtain (as $\hat{v}_i\in[0,1]$)

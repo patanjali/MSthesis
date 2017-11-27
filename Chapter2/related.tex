@@ -57,10 +57,10 @@ where $KL(Q_{i}||Q^{*})$ is the Kullback-Leibler divergence between the reward d
 \end{algorithmic}
 \end{algorithm}
     
-    The UCB-Improved  stated in algorithm \ref{alg:ucbi}, proposed in \citet{auer2010ucb}, is a round-based variant of UCB1. An algorithm is \textit{round-based} if it pulls all the arms equal number of times in each round and then eliminates one or more arms that it deems to be sub-optimal. Note, that in this algorithm the confidence interval term is $\sqrt{\dfrac{\log{( T\epsilon_{m}^{2})}}{2 n_{m}}}$ which is constant in the $m$-th round as $n_m$ is fixed for that round and all arms are being pulled an equal number of times in each round. This is unlike UCB1 algorithm where the confidence interval term depends on $n_i$ which is a random variable. Also, note that in UCB-Improved the knowledge of horizon is required before-hand to calculate the confidence intervals whereas no such input is required for UCB1. An illustrative flowchart is given in Figure \ref{fig:ucbimp}.
+    The UCB-Improved  stated in algorithm \ref{alg:ucbi}, proposed in \citet{auer2010ucb}, is a round-based variant of UCB1. An algorithm is \textit{round-based} if it pulls all the arms equal number of times in each round and then eliminates one or more arms that it deems to be sub-optimal. Note, that in this algorithm the confidence interval term is $\sqrt{\dfrac{\log{( T\epsilon_{m}^{2})}}{2 n_{m}}}$ which is constant in the $m$-th round as $n_m$ is fixed for that round and all arms are being pulled an equal number of times in each round. This is unlike UCB1 algorithm where the confidence interval term depends on $n_i$ which is a random variable. Also, note that in UCB-Improved the knowledge of horizon is required before-hand to calculate the confidence intervals whereas no such input is required for UCB1. An illustrative flowchart depicting the main steps is given in Figure \ref{fig:ucbimp}.
     
 \begin{figure}[!th]
-\includegraphics[scale=0.5]{Chapter2/img/Ucb-Imp.png}
+\includegraphics[scale=0.45]{Chapter2/img/Ucb-Imp.png}
 \caption{Flowchart of UCB-Improved}
 \label{fig:ucbimp}
 \end{figure}
@@ -83,9 +83,29 @@ where $KL(Q_{i}||Q^{*})$ is the Kullback-Leibler divergence between the reward d
 \end{algorithmic}
 \end{algorithm}
     
-    In the later work of \citet{audibert2009minimax}, the authors propose the MOSS algorithm and showed that the worst case gap-independent regret bound of MOSS is $O\left( \sqrt{KT} \right)$ which improves upon UCB1 by a factor of order $\sqrt{\log T}$. However, the gap-dependent regret of MOSS is $O\left( \frac{K^{2}\log\left(T\Delta^{2}/K\right)}{\Delta}\right)$ and in certain regimes, this can be worse than even UCB1 (see \citet{audibert2009minimax,lattimore2015optimally}).
-    
-Recently in \citet{lattimore2015optimally}, the authors showed that  the algorithm OCUCB achieves order-optimal gap-dependent regret bound of $O\left(\sum_{i=2}^{K}\frac{\log\left(T/H_i\right)}{\Delta_i}\right)$ where $H_i=\sum_{j=1}^{K}\min\left\lbrace \frac{1}{\Delta_i^2},\frac{1}{\Delta_j^2}\right\rbrace$, and a gap-independent regret bound of $O\left( \sqrt{KT}\right)$. This is the best known gap-dependent and gap-independent regret bounds in the stochastic MAB framework. However, unlike our proposed EUCBV algorithm (in chapter \ref{chap:EUCBV}), OCUCB does not take into account the variance of the arms; as a result, empirically  we find  that our algorithm outperforms OCUCB in all the environments considered. 
+    In the later work of \citet{audibert2009minimax}, the authors propose the MOSS algorithm (see algorithm \ref{alg:moss}) and showed that the worst case gap-independent regret bound of MOSS is $O\left( \sqrt{KT} \right)$ which improves upon UCB1 by a factor of order $\sqrt{\log T}$. However, the gap-dependent regret of MOSS is $O\left( \frac{K^{2}\log\left(T\Delta^{2}/K\right)}{\Delta}\right)$ and in certain regimes, this can be worse than even UCB1 (see \citet{audibert2009minimax,lattimore2015optimally}).
+
+\subsubsection{OCUCB Algorithm}   
+
+\begin{algorithm}[!th]
+\caption{OCUCB}
+\label{alg:ocucb}
+\begin{algorithmic}[1]
+\State \textbf{Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution, exploration parameter $\alpha$ and $\psi$
+\State Pull each arm once
+ \For{$t=K+1,..., T$}
+\State Pull the arm such that $\argmax_{i\in \A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{\alpha\log(\psi\frac{T}{t})}{n_i}}\bigg\rbrace$
+\State $t:=t+1 $
+ \EndFor
+\end{algorithmic}
+\end{algorithm}
+
+Recently in \citet{lattimore2015optimally}, the authors showed that the algorithm Optimally Confident UCB (OCUCB) (see algorithm \ref{alg:ocucb}) achieves order-optimal gap-dependent regret bound of $O\left(\sum_{i=2}^{K}\frac{\log\left(T/H_i\right)}{\Delta_i}\right)$ where $H_i=\sum_{j=1}^{K}\min\left\lbrace \frac{1}{\Delta_i^2},\frac{1}{\Delta_j^2}\right\rbrace$, and a gap-independent regret bound of $O\left( \sqrt{KT}\right)$. This is the best known gap-dependent and gap-independent regret bounds in the stochastic MAB framework. However, unlike our proposed EUCBV algorithm (in chapter \ref{chap:EUCBV}), OCUCB does not take into account the variance of the arms; as a result, empirically  we find  that our algorithm outperforms OCUCB in all the environments considered.
+
+
+
+
+	
 
 \subsubsection{UCB-Variance algorithm}
 
@@ -103,7 +123,7 @@ Recently in \citet{lattimore2015optimally}, the authors showed that  the algorit
 \end{algorithm}
 
 
-    In contrast to the above work, the UCBV \citep{audibert2009exploration} algorithm utilizes variance estimates to compute the confidence intervals for each arm. In UCBV the confidence interval term is given by $\sqrt{\dfrac{2\hat{v}_i\log (t)}{s_i}} + \dfrac{3\log (t)}{3}$ where $\hat{v}_i$ denotes the empirical variance of the arm $i$. Hence, the confidence interval makes sure that the arms whose variances are high are pulled more often to get a better estimates of their $\hat{r}_i$.
+    In contrast to the above work, the UCB-Variance (UCBV) algorithm in \citet{audibert2009exploration} utilizes variance estimates to compute the confidence intervals for each arm. In UCBV (see algorithm \ref{alg:ucbv}) the confidence interval term is given by $\sqrt{\dfrac{2\hat{v}_i\log (t)}{s_i}} + \dfrac{3\log (t)}{3}$ where $\hat{v}_i$ denotes the empirical variance of the arm $i$. Hence, the confidence interval makes sure that the arms whose variances are high are pulled more often to get a better estimates of their $\hat{r}_i$.
     
     UCBV has a gap-dependent regret bound of $O\left(\frac{K\sigma_{\max}^{2}\log T}{\Delta}\right)$, where $\sigma_{\max}^{2}$ denotes the maximum variance among all the arms $i\in \A$. Its gap-independent regret bound can be inferred to be same as that of UCB1 i.e $O \left(\sqrt{KT\log T}\right)$. Empirically, \citet{audibert2009exploration} showed that UCBV outperforms UCB1 in several scenarios. 
 
@@ -161,7 +181,7 @@ UCB-Imp 		& $\sqrt{\dfrac{\log{( T\epsilon_{m}^{2})}}{2 n_{m}}}$ & Yes & Same co
 MOSS	     	& $\sqrt{\dfrac{\max\lbrace 0,\log(\frac{T}{K n_i})\rbrace}{n_i}}$ & Yes & Confidence interval is based on dividing the horizon uniformly for $K$ arms.\\%\midrule
 \hline
 \hline
-OCUCB     	& $\sqrt{\dfrac{2\log(\frac{2T}{t})}{n_i}}$ & Yes & Tightest confidence interval leading to order-optimal regret bounds.\\\midrule
+OCUCB     	& $\sqrt{\dfrac{2\log(\frac{2T}{t})}{n_i}}$ & Yes & Tightest confidence interval with exploration parameter $\alpha=2$, $\psi=2$ leading to order-optimal regret bounds.\\\midrule
 \end{tabular}
 \end{center}
 %\vspace*{-2em}

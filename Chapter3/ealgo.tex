@@ -45,7 +45,13 @@ where the quantity $\epsilon_{m}$ is initialized to $1$ and halved after every r
 \end{inparaenum}
 %For any round $m$ UCB-Improved pulls all arms $n_{m}=\left\lceil \frac{ 2\log(T\epsilon_{m})}{\epsilon_{m}} \right\rceil$ number of times. The quantity $\epsilon_{m}$ is initialized to $1$ and halved after every round.
 \\
-	The EUCBV algorithm, which is mainly based on the arm elimination technique of the UCB-Improved algorithm,  remedies these by employing exploration regulatory factor $\psi$ and arm elimination parameter $\rho$ for aggressive elimination of sub-optimal arms. Along with these, similar to CCB \citep{liu2016modification} algorithm, EUCBV uses optimistic greedy sampling whereby at every timestep it only pulls the arm with the highest upper confidence bound rather than pulling all the arms equal number of times in each round. Also, unlike the UCB-Improved, UCB1, MOSS and OCUCB algorithms (which are based on mean estimation) EUCBV employs mean and variance estimates (as in \citet{audibert2009exploration}) for arm elimination. Further, we allow for arm-elimination at every time-step, which is in contrast to the earlier work (e.g., \citet{auer2010ucb}; \citet{even2006action}) where the arm elimination takes place only at the end of the respective exploration rounds. 
+	The EUCBV algorithm, which is mainly based on the arm elimination technique of the UCB-Improved algorithm,  remedies these by employing exploration regulatory factor $\psi$ and arm elimination parameter $\rho$ for aggressive elimination of sub-optimal arms. Along with these, similar to CCB \citep{liu2016modification} algorithm, EUCBV uses optimistic greedy sampling whereby at every timestep it only pulls the arm with the highest upper confidence bound rather than pulling all the arms equal number of times in each round. Also, unlike the UCB-Improved, UCB1, MOSS and OCUCB algorithms (which are based on mean estimation) EUCBV employs mean and variance estimates (as in \citet{audibert2009exploration}) for arm elimination. Further, we allow for arm-elimination at every time-step, which is in contrast to the earlier work (e.g., \citet{auer2010ucb}; \citet{even2006action}) where the arm elimination takes place only at the end of the respective exploration rounds. An illustrative flowchart depicting the main steps is shown in Figure \ref{fig:eucbv}.
+	
+\begin{figure}[!th]
+\includegraphics[scale=0.42]{Chapter3/img/EUCBV_flow.png}
+\caption{Flowchart of EUCBV algorithm}
+\label{fig:eucbv}
+\end{figure}
 
 
 

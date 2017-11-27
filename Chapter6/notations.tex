@@ -1,9 +1,9 @@
-In this paper, $T$ denotes the time horizon. $\A$ denotes the set of arms with individual arm is denoted by $i$ such that $i=1,\ldots, K$. We assume that the total number of arms is constant throughout the time horizon and $|\A|=K$. In this setting each arm has a piece-wise stationary distribution associated with it. Let $c_0,c_1,c_2,\ldots,c_G$ denotes $G$ such changepoints which belong to the set $\G$ and $|\G|=G$. Here, $c_0$ is a virtual changepoint which starts at $t=1$. 
+Again, to benefit the reader we state the notations used in this chapter. $T$ denotes the time horizon. $\A$ denotes the set of arms with individual arm is denoted by $i$ such that $i=1,\ldots, K$. We assume that the total number of arms is constant throughout the time horizon and $|\A|=K$. In this setting each arm has a piece-wise stationary distribution associated with it. Let $c_0,c_1,c_2,\ldots,c_G$ denotes $G$ such changepoints which belong to the set $\G$ and $|\G|=G$. Here, $c_0$ is a virtual changepoint which starts at $t=1$. 
 We denote each of the \textit{non-overlapping reward generating processes} as $\rho_{c_j}$, $j\in\mathbb{N}$. Note that the learner does not know these changepoints or the total number of changepoints in the environment. 
 
 %We assume a global switching model where at particular breakpoint all the arms' distribution changes.
 
-	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t_p}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t_p$ timesteps. $\mu_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{\mu}_{i,t_0:t_p}$ denotes the sample mean for the arm $i$ from $t_0$ to $t_p$ timesteps.
+	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t_p}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t_p$ timesteps. $r_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{r}_{i,t_0:t_p}$ denotes the sample mean for the arm $i$ from $t_0$ to $t_p$ timesteps.
 
 
 
@@ -12,7 +12,7 @@ We denote each of the \textit{non-overlapping reward generating processes} as $\
 We define $t_{c_j}$ for a $c_j\in\G$ between two consecutive segments $\rho_{c_{j-1}:cj}$ and $\rho_{c_j:c_{j+1}}$ as the first time instant that the changepoint $c_j$ happens $\forall i\in\A$, that is,
 
 \begin{align*}
-t_{c_j}& = \min\left\lbrace t\in[1,T],\forall i\in\A : \mu_{i,t_{c_{j-1}:c_j}} \neq \mu_{i,t_{c_{j}:c_{j+1}}}   \right\rbrace\\
+t_{c_j}& = \min\left\lbrace t\in[1,T],\forall i\in\A : r_{i,t_{c_{j-1}:c_j}} \neq r_{i,t_{c_{j}:c_{j+1}}}   \right\rbrace\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %&= \min\left\lbrace t\in[1,T],\forall i\in\A: \Delta^{chg}_{i,c_j} \geq \Delta_0 \right\rbrace
 \end{align*}
@@ -59,7 +59,7 @@ where $d(t_{c_j} - t_{c_{j-1}})$ denotes the delay in detecting a changepoint at
 \label{Def:chg-gap}
 We define the changepoint gap at $t_{c_j}$ for an arm $i\in\A$ between the segments $\rho_{c_{j-1}:c_j}$ and $\rho_{c_j:c_{j+1}}$ as,
 \begin{align*}
-\Delta^{chg}_{i,c_j}=|\mu_{i,t_{c_{j-1}:c_j}}-\mu_{i,t_{c_j:c_{j+1}}}|.
+\Delta^{chg}_{i,c_j}=|r_{i,t_{c_{j-1}:c_j}}-r_{i,t_{c_j:c_{j+1}}}|.
 \end{align*}
 \end{definition}
 
@@ -97,11 +97,11 @@ In this paper we assume that $\forall c_{j}\in\G$ the changepoint gaps $\Delta^{
 \label{Def:opt-gap}
 We define the optimality gap $\Delta^{opt}_{i,c_j}$ for an arm $i_{t'}\neq i^*_{t'},\forall t'\in[t_{c_{j-1}},t_{c_j}]$ as,
 \begin{align*}
-\Delta^{opt}_{i,c_j}= \mu_{i^*,t_{c_{j-1}:c_j}}-\mu_{i,t_{c_{j-1}:c_j}}.
+\Delta^{opt}_{i,c_j}= r_{i^*,t_{c_{j-1}:c_j}}-r_{i,t_{c_{j-1}:c_j}}.
 \end{align*}
 \end{definition}
 
-Also, recall from Definition \ref{Def:chg-gap} that the changepoint gap $\Delta^{chg}_{i,c_j}=|\mu_{i,t_{c_{j-1}:c_j}}-\mu_{i,t_{c_j:c_{j+1}}}|$.
+Also, recall from Definition \ref{Def:chg-gap} that the changepoint gap $\Delta^{chg}_{i,c_j}=|r_{i,t_{c_{j-1}:c_j}}-r_{i,t_{c_j:c_{j+1}}}|$.
 
 
 

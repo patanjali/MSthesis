@@ -39,7 +39,7 @@
 \BOOKMARK [1][-]{section.3.4}{Main Results}{chapter.3}% 39
 \BOOKMARK [1][-]{section.3.5}{Proofs}{chapter.3}% 40
 \BOOKMARK [1][-]{section.3.6}{Experiments}{chapter.3}% 41
-\BOOKMARK [1][-]{section.3.7}{Summary and Future Works}{chapter.3}% 42
+\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 42
 \BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 43
 \BOOKMARK [1][-]{section.4.1}{Introduction to Thresholding Bandits}{chapter.4}% 44
 \BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 45
@@ -59,7 +59,7 @@
 \BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}% 59
 \BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 60
 \BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 61
-\BOOKMARK [1][-]{section.5.6}{Summary and Future Works}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 62
 \BOOKMARK [0][-]{chapter.6}{Single Expert Algorithms for Changepoint Detection}{}% 63
 \BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 64
 \BOOKMARK [1][-]{section.6.2}{Notations, Assumptions and Definitions}{chapter.6}% 65
@@ -69,8 +69,8 @@
 \BOOKMARK [1][-]{section.6.6}{Changepoint Detection Algorithms}{chapter.6}% 69
 \BOOKMARK [2][-]{subsection.6.6.1}{Proposed Algorithms}{section.6.6}% 70
 \BOOKMARK [1][-]{section.6.7}{Numerical Experiments}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.8}{Summary and Future Works}{chapter.6}% 72
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Direction based on the Thesis}{}% 73
+\BOOKMARK [1][-]{section.6.8}{Summary}{chapter.6}% 72
+\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Direction}{}% 73
 \BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 74
 \BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 75
 \BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 76
@@ -85,4 +85,4 @@
 \BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 85
 \BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 86
 \BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 87
-\BOOKMARK [0][-]{appendix*.40}{LIST OF PAPERS BASED ON THESIS}{}% 88
+\BOOKMARK [0][-]{appendix*.42}{LIST OF PAPERS BASED ON THESIS}{}% 88

@@ -1,8 +1,15 @@
-\begin{thebibliography}{69}
+\begin{thebibliography}{75}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Abbasi-Yadkori {\em et~al.\/}(2011)Abbasi-Yadkori, P{\'a}l, and
+  Szepesv{\'a}ri}]{abbasi2011improved}
+{\bf Abbasi-Yadkori, Y.}, {\bf D.~P{\'a}l}, and {\bf C.~Szepesv{\'a}ri},
+  Improved algorithms for linear stochastic bandits.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2011.
 
 \bibitem[{Abernethy {\em et~al.\/}(2016)Abernethy, Amin, and
   Zhu}]{abernethy2016threshold}
@@ -171,12 +178,24 @@
   games\/}.
 \newblock Cambridge university press, 2006.
 
+\bibitem[{Cesa-Bianchi and Lugosi(2012)}]{cesa2012combinatorial}
+{\bf Cesa-Bianchi, N.} and {\bf G.~Lugosi} (2012).
+\newblock Combinatorial bandits.
+\newblock {\em Journal of Computer and System Sciences\/}, {\bf 78}(5),
+  1404--1422.
+
 \bibitem[{Chen {\em et~al.\/}(2014)Chen, Lin, King, Lyu, and
   Chen}]{chen2014combinatorial}
 {\bf Chen, S.}, {\bf T.~Lin}, {\bf I.~King}, {\bf M.~R. Lyu}, and {\bf
   W.~Chen}, Combinatorial pure exploration of multi-armed bandits.
 \newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
   2014.
+
+\bibitem[{Degenne and Perchet(2016)}]{degenne2016anytime}
+{\bf Degenne, R.} and {\bf V.~Perchet}, Anytime optimal algorithms in
+  stochastic multi-armed bandits.
+\newblock {\em In\/} {\em International Conference on Machine Learning\/}.
+  2016.
 
 \bibitem[{Even-Dar {\em et~al.\/}(2006)Even-Dar, Mannor, and
   Mansour}]{even2006action}
@@ -283,6 +302,13 @@
 \newblock {\em In\/} {\em Proceedings of the 29th International Conference on
   Machine Learning (ICML-12)\/}. 2012.
 
+\bibitem[{Kano {\em et~al.\/}(2017)Kano, Honda, Sakamaki, Matsuura, Nakamura,
+  and Sugiyama}]{kano2017good}
+{\bf Kano, H.}, {\bf J.~Honda}, {\bf K.~Sakamaki}, {\bf K.~Matsuura}, {\bf
+  A.~Nakamura}, and {\bf M.~Sugiyama} (2017).
+\newblock Good arm identification via bandit feedback.
+\newblock {\em arXiv preprint arXiv:1710.06360\/}.
+
 \bibitem[{Kaufmann {\em et~al.\/}(2012)Kaufmann, Capp{\'e}, and
   Garivier}]{kaufmann2012bayesian}
 {\bf Kaufmann, E.}, {\bf O.~Capp{\'e}}, and {\bf A.~Garivier}, On bayesian
@@ -316,6 +342,11 @@
 {\bf Lattimore, T.} (2015).
 \newblock Optimally confident ucb: Improved regret for finite-armed bandits.
 \newblock {\em arXiv preprint arXiv:1507.07880\/}.
+
+\bibitem[{Lattimore(2016)}]{lattimore2016regret}
+{\bf Lattimore, T.} (2016).
+\newblock Regret analysis of the anytime optimally confident ucb algorithm.
+\newblock {\em arXiv preprint arXiv:1603.08661\/}.
 
 \bibitem[{Li {\em et~al.\/}(2010)Li, Chu, Langford, and
   Schapire}]{li2010contextual}
@@ -363,6 +394,12 @@
 \newblock Thompson sampling in switching environments with bayesian online
   change point detection.
 \newblock {\em CoRR, abs/1302.3721\/}.
+
+\bibitem[{M{\'e}nard and Garivier(2017)}]{menard2017minimax}
+{\bf M{\'e}nard, P.} and {\bf A.~Garivier} (2017).
+\newblock A minimax and asymptotically optimal algorithm for stochastic
+  bandits.
+\newblock {\em arXiv preprint arXiv:1702.07211\/}.
 
 \bibitem[{Raj and Kalyani(2017)}]{raj2017taming}
 {\bf Raj, V.} and {\bf S.~Kalyani} (2017).
