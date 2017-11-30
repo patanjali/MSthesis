@@ -1,12 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: iitm.bst
-Illegal, another \bibstyle command---line 525 of file thesis.aux
+Illegal, another \bibstyle command---line 530 of file thesis.aux
  : \bibstyle
  :          {iitm}
 I'm skipping whatever remains of this command
 Database file #1: refs.bib
-Repeated entry---line 507 of file refs.bib
- : @inproceedings{abbasi2011improved
- :                                  ,
-I'm skipping whatever remains of this entry
-(There were 2 error messages)
+(There was 1 error message)

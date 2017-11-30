@@ -43,9 +43,9 @@ Then we introduce the single expert changepoint detection algorithm in Algorithm
 \begin{algorithmic}
 \For{$k=1,..,K$}
 \For{$t' = t_0 ,..,t_p$}
-\State \If{$\hat{\mu}_{k,t_0:t'} + \sqrt{\dfrac{(n_{i,t_0:t'}+1)\log(\frac{(n_{i,t_0:t'}+1)}{\sqrt{\delta}})}{2n_{i,t_0:t'}^2}} < \hat{\mu}_{k,t'+1:t_p} - \sqrt{\dfrac{(n_{i,t'+1:t}+1)\log(\frac{(n_{i,t'+1:t}+1)}{\sqrt{\delta}})}{2n_{i,t'+1:t}^2}}$}
+\State \If{$\hat{\mu}_{k,t_0:t'} + \sqrt{\frac{(n_{i,t_0:t'}+1)\log(\frac{(n_{i,t_0:t'}+1)}{\sqrt{\delta}})}{2n_{i,t_0:t'}^2}} < \hat{\mu}_{k,t'+1:t_p} - \sqrt{\frac{(n_{i,t'+1:t}+1)\log(\frac{(n_{i,t'+1:t}+1)}{\sqrt{\delta}})}{2n_{i,t'+1:t}^2}}$}
 \State Return True
-\Else{$\hat{\mu}_{k,t_0 , t'} - \sqrt{\dfrac{(n_{i,t_0:t'}+1)\log(\frac{(n_{i,t_0:t'}+1)}{\sqrt{\delta}})}{2n_{i,t_0:t'}^2}} > \hat{\mu}_{k,t'+1:t_p} + \sqrt{\dfrac{(n_{i,t'+1:t}+1)\log(\frac{(n_{i,t'+1:t}+1)}{\sqrt{\delta}})}{2n_{i,t'+1:t}^2}}$}
+\Else{$\hat{\mu}_{k,t_0 , t'} - \sqrt{\frac{(n_{i,t_0:t'}+1)\log(\frac{(n_{i,t_0:t'}+1)}{\sqrt{\delta}})}{2n_{i,t_0:t'}^2}} > \hat{\mu}_{k,t'+1:t_p} + \sqrt{\frac{(n_{i,t'+1:t}+1)\log(\frac{(n_{i,t'+1:t}+1)}{\sqrt{\delta}})}{2n_{i,t'+1:t}^2}}$}
 \State Return True
 \EndIf
 \EndFor

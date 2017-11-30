@@ -406,22 +406,22 @@
 \citation{locatelli2016optimal}
 \@writefile{toc}{\contentsline {section}{\numberline {5.6}Summary}{60}{section.5.6}}
 \newlabel{tbandit:conclusion}{{5.6}{60}{Summary}{section.5.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Single Expert Algorithms for Changepoint Detection}{61}{chapter.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Expert Algorithms for Piecewise Stationary Distributions}{61}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:psbandit}{{6}{61}{Single Expert Algorithms for Changepoint Detection}{chapter.6}{}}
+\newlabel{chap:psbandit}{{6}{61}{Expert Algorithms for Piecewise Stationary Distributions}{chapter.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{61}{section.6.1}}
 \newlabel{psbandit:intro}{{6.1}{61}{Introduction}{section.6.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{61}{section.6.2}}
-\newlabel{psbandit:notations}{{6.2}{61}{Notations, Assumptions and Definitions}{section.6.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{62}{section.6.2}}
+\newlabel{psbandit:notations}{{6.2}{62}{Notations, Assumptions and Definitions}{section.6.2}{}}
 \newlabel{Def:tcj}{{1}{62}{Notations, Assumptions and Definitions}{definition.1}{}}
+\newlabel{assm:global}{{3}{62}{Notations, Assumptions and Definitions}{assumption.3}{}}
 \newlabel{assm:space-gap}{{4}{62}{Notations, Assumptions and Definitions}{assumption.4}{}}
-\newlabel{Def:chg-gap}{{2}{62}{Notations, Assumptions and Definitions}{definition.2}{}}
-\newlabel{dis:gap-delay}{{3}{62}{Notations, Assumptions and Definitions}{discussion.3}{}}
+\newlabel{Def:chg-gap}{{2}{63}{Notations, Assumptions and Definitions}{definition.2}{}}
+\newlabel{dis:gap-delay}{{3}{63}{Notations, Assumptions and Definitions}{discussion.3}{}}
 \newlabel{Def:e-chg-gap}{{3}{63}{Notations, Assumptions and Definitions}{definition.3}{}}
 \newlabel{assm:chg-gap}{{5}{63}{Notations, Assumptions and Definitions}{assumption.5}{}}
 \newlabel{Def:opt-gap}{{4}{63}{Notations, Assumptions and Definitions}{definition.4}{}}
-\newlabel{Def:ratio}{{5}{63}{Notations, Assumptions and Definitions}{definition.5}{}}
 \citation{thompson1933likelihood}
 \citation{robbins1952some}
 \citation{lai1985asymptotically}
@@ -434,10 +434,9 @@
 \citation{agrawal2012analysis}
 \citation{agrawal2013further}
 \citation{kaufmann2012bayesian}
+\newlabel{Def:ratio}{{5}{64}{Notations, Assumptions and Definitions}{definition.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Problem Definitions}{64}{section.6.3}}
 \newlabel{psbandit:probDef}{{6.3}{64}{Problem Definitions}{section.6.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Related Works}{64}{section.6.4}}
-\newlabel{psbandit:related}{{6.4}{64}{Related Works}{section.6.4}{}}
 \citation{littlestone1994weighted}
 \citation{freund1995desicion}
 \citation{auer1995gambling}
@@ -452,81 +451,87 @@
 \citation{allesiardo2017non}
 \citation{liu2017change}
 \citation{mellor2013thompson}
-\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Related Works}{65}{section.6.4}}
+\newlabel{psbandit:related}{{6.4}{65}{Related Works}{section.6.4}{}}
+\citation{auer2002finite}
+\citation{audibert2009minimax}
+\citation{garivier2011upper}
+\citation{abbasi2011improved}
 \@writefile{toc}{\contentsline {section}{\numberline {6.5}Our Contribution}{66}{section.6.5}}
 \newlabel{psbandit:contribution}{{6.5}{66}{Our Contribution}{section.6.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{66}{section.6.6}}
-\newlabel{psbandit:algorithm}{{6.6}{66}{Changepoint Detection Algorithms}{section.6.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{66}{subsection.6.6.1}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {15}{\ignorespaces Changepoint-Detection-1($t_0$, $t_p$) (CPD1)\relax }}{67}{algorithm.15}}
-\newlabel{alg:CPD1}{{15}{67}{Changepoint-Detection-1($t_0$, $t_p$) (CPD1)\relax }{algorithm.15}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {16}{\ignorespaces Changepoint-Detection-2($t_0$, $t_p$) (CPD2)\relax }}{67}{algorithm.16}}
-\newlabel{alg:CPD2}{{16}{67}{Changepoint-Detection-2($t_0$, $t_p$) (CPD2)\relax }{algorithm.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}Numerical Experiments}{67}{section.6.7}}
-\newlabel{psbandit:expt}{{6.7}{67}{Numerical Experiments}{section.6.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.8}Summary}{67}{section.6.8}}
-\newlabel{psbandit:conclusion}{{6.8}{67}{Summary}{section.6.8}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {17}{\ignorespaces Changepoint-Detection-3($t_0$, $t_p$) (CPD3)\relax }}{68}{algorithm.17}}
-\newlabel{alg:CPD3}{{17}{68}{Changepoint-Detection-3($t_0$, $t_p$) (CPD3)\relax }{algorithm.17}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {18}{\ignorespaces Single Expert with change-point detection (SECPD-1)\relax }}{68}{algorithm.18}}
-\newlabel{alg:SECPD1}{{18}{68}{Single Expert with change-point detection (SECPD-1)\relax }{algorithm.18}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {19}{\ignorespaces Single Expert with change-point detection (SECPD-2)\relax }}{69}{algorithm.19}}
-\newlabel{alg:SECPD2}{{19}{69}{Single Expert with change-point detection (SECPD-2)\relax }{algorithm.19}{}}
-\newlabel{psbandit:fig:1}{{6.1(a)}{70}{Subfigure 6 6.1(a)}{subfigure.6.1.1}{}}
-\newlabel{sub@psbandit:fig:1}{{(a)}{70}{Subfigure 6 6.1(a)\relax }{subfigure.6.1.1}{}}
-\newlabel{psbandit:fig:2}{{6.1(b)}{70}{Subfigure 6 6.1(b)}{subfigure.6.1.2}{}}
-\newlabel{sub@psbandit:fig:2}{{(b)}{70}{Subfigure 6 6.1(b)\relax }{subfigure.6.1.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{70}{figure.caption.40}}
-\newlabel{fig:karmed1}{{6.1}{70}{Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }{figure.caption.40}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{70}{figure.caption.40}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{70}{figure.caption.40}}
+\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{67}{section.6.6}}
+\newlabel{psbandit:algorithm}{{6.6}{67}{Changepoint Detection Algorithms}{section.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{67}{subsection.6.6.1}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {15}{\ignorespaces Changepoint-Detection-1($t_0$, $t_p$) (CPD1)\relax }}{68}{algorithm.15}}
+\newlabel{alg:CPD1}{{15}{68}{Changepoint-Detection-1($t_0$, $t_p$) (CPD1)\relax }{algorithm.15}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {16}{\ignorespaces Changepoint-Detection-2($t_0$, $t_p$) (CPD2)\relax }}{68}{algorithm.16}}
+\newlabel{alg:CPD2}{{16}{68}{Changepoint-Detection-2($t_0$, $t_p$) (CPD2)\relax }{algorithm.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Numerical Experiments}{68}{section.6.7}}
+\newlabel{psbandit:expt}{{6.7}{68}{Numerical Experiments}{section.6.7}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {17}{\ignorespaces Changepoint-Detection-3($t_0$, $t_p$) (CPD3)\relax }}{69}{algorithm.17}}
+\newlabel{alg:CPD3}{{17}{69}{Changepoint-Detection-3($t_0$, $t_p$) (CPD3)\relax }{algorithm.17}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {18}{\ignorespaces Single Expert with change-point detection (SECPD-1)\relax }}{69}{algorithm.18}}
+\newlabel{alg:SECPD1}{{18}{69}{Single Expert with change-point detection (SECPD-1)\relax }{algorithm.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Summary}{69}{section.6.8}}
+\newlabel{psbandit:conclusion}{{6.8}{69}{Summary}{section.6.8}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {19}{\ignorespaces Single Expert with change-point detection (SECPD-2)\relax }}{70}{algorithm.19}}
+\newlabel{alg:SECPD2}{{19}{70}{Single Expert with change-point detection (SECPD-2)\relax }{algorithm.19}{}}
+\newlabel{psbandit:fig:1}{{6.1(a)}{71}{Subfigure 6 6.1(a)}{subfigure.6.1.1}{}}
+\newlabel{sub@psbandit:fig:1}{{(a)}{71}{Subfigure 6 6.1(a)\relax }{subfigure.6.1.1}{}}
+\newlabel{psbandit:fig:2}{{6.1(b)}{71}{Subfigure 6 6.1(b)}{subfigure.6.1.2}{}}
+\newlabel{sub@psbandit:fig:2}{{(b)}{71}{Subfigure 6 6.1(b)\relax }{subfigure.6.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{71}{figure.caption.40}}
+\newlabel{fig:karmed1}{{6.1}{71}{Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{71}{figure.caption.40}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{71}{figure.caption.40}}
 \citation{lai1985asymptotically}
 \citation{menard2017minimax}
 \citation{degenne2016anytime}
 \citation{lattimore2016regret}
 \citation{kano2017good}
 \citation{lattimore2015optimally}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{71}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{72}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ThesisConc}{{7}{71}{Conclusion and Future Direction}{chapter.7}{}}
+\newlabel{ThesisConc}{{7}{72}{Conclusion and Future Direction}{chapter.7}{}}
 \citation{abbasi2011improved}
 \citation{cesa2012combinatorial}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{73}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{74}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:app:Conc}{{A}{73}{Appendix on Concentration Inequalities}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{73}{section.A.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Concentration Inequalities}{73}{section.A.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{74}{subsection.A.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{74}{subsection.A.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{75}{subsection.A.2.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{76}{appendix.B}}
+\newlabel{sec:app:Conc}{{A}{74}{Appendix on Concentration Inequalities}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{74}{section.A.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Concentration Inequalities}{74}{section.A.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{75}{subsection.A.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{75}{subsection.A.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{76}{subsection.A.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{77}{appendix.B}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:app:EUCBV}{{B}{76}{Appendix for EUCBV}{appendix.B}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref  {proofTheorem:Lemma:1}}{76}{subsection.B.0.4}}
-\newlabel{App:Lemma:1}{{B.0.4}{76}{Proof of Lemma \ref {proofTheorem:Lemma:1}}{subsection.B.0.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref  {proofTheorem:Lemma:2}}{76}{subsection.B.0.5}}
-\newlabel{App:Lemma:2}{{B.0.5}{76}{Proof of Lemma \ref {proofTheorem:Lemma:2}}{subsection.B.0.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref  {proofTheorem:Lemma:3}}{77}{subsection.B.0.6}}
-\newlabel{App:Lemma:3}{{B.0.6}{77}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{subsection.B.0.6}{}}
-\newlabel{eq:prob_eq3}{{B.1}{77}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.1}{}}
-\newlabel{si_bar_equn}{{B.2}{78}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.2}{}}
-\newlabel{lhs1_equn}{{B.3}{78}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.3}{}}
-\newlabel{lhs2_equn}{{B.4}{78}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref  {proofTheorem:Lemma:4}}{79}{subsection.B.0.7}}
-\newlabel{App:Lemma:4}{{B.0.7}{79}{Proof of Lemma \ref {proofTheorem:Lemma:4}}{subsection.B.0.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref  {proofTheorem:Lemma:5}}{80}{subsection.B.0.8}}
-\newlabel{App:Lemma:5}{{B.0.8}{80}{Proof of Lemma \ref {proofTheorem:Lemma:5}}{subsection.B.0.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref  {proofTheorem:Lemma:6}}{81}{subsection.B.0.9}}
-\newlabel{App:Lemma:6}{{B.0.9}{81}{Proof of Lemma \ref {proofTheorem:Lemma:6}}{subsection.B.0.9}{}}
+\newlabel{sec:app:EUCBV}{{B}{77}{Appendix for EUCBV}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref  {proofTheorem:Lemma:1}}{77}{subsection.B.0.4}}
+\newlabel{App:Lemma:1}{{B.0.4}{77}{Proof of Lemma \ref {proofTheorem:Lemma:1}}{subsection.B.0.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref  {proofTheorem:Lemma:2}}{77}{subsection.B.0.5}}
+\newlabel{App:Lemma:2}{{B.0.5}{77}{Proof of Lemma \ref {proofTheorem:Lemma:2}}{subsection.B.0.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref  {proofTheorem:Lemma:3}}{78}{subsection.B.0.6}}
+\newlabel{App:Lemma:3}{{B.0.6}{78}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{subsection.B.0.6}{}}
+\newlabel{eq:prob_eq3}{{B.1}{78}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.1}{}}
+\newlabel{si_bar_equn}{{B.2}{79}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.2}{}}
+\newlabel{lhs1_equn}{{B.3}{79}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.3}{}}
+\newlabel{lhs2_equn}{{B.4}{79}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref  {proofTheorem:Lemma:4}}{80}{subsection.B.0.7}}
+\newlabel{App:Lemma:4}{{B.0.7}{80}{Proof of Lemma \ref {proofTheorem:Lemma:4}}{subsection.B.0.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref  {proofTheorem:Lemma:5}}{81}{subsection.B.0.8}}
+\newlabel{App:Lemma:5}{{B.0.8}{81}{Proof of Lemma \ref {proofTheorem:Lemma:5}}{subsection.B.0.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref  {proofTheorem:Lemma:6}}{82}{subsection.B.0.9}}
+\newlabel{App:Lemma:6}{{B.0.9}{82}{Proof of Lemma \ref {proofTheorem:Lemma:6}}{subsection.B.0.9}{}}
 \citation{bubeck2011pure}
 \bibstyle{iitm}
 \bibdata{refs}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref  {Result:Corollary:1}}{82}{subsection.B.0.10}}
-\newlabel{App:Corollary:1}{{B.0.10}{82}{Proof of Corollary \ref {Result:Corollary:1}}{subsection.B.0.10}{}}
-\newlabel{Proof:Corollary:1}{{9}{82}{Proof of Corollary \ref {Result:Corollary:1}}{proof.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref  {Result:Corollary:1}}{83}{subsection.B.0.10}}
+\newlabel{App:Corollary:1}{{B.0.10}{83}{Proof of Corollary \ref {Result:Corollary:1}}{subsection.B.0.10}{}}
+\newlabel{Proof:Corollary:1}{{9}{83}{Proof of Corollary \ref {Result:Corollary:1}}{proof.9}{}}
 \bibcite{abbasi2011improved}{{1}{2011}{{Abbasi-Yadkori {\em  et~al.\/}}}{{Abbasi-Yadkori, P{\'a}l, and Szepesv{\'a}ri}}}
 \bibcite{abernethy2016threshold}{{2}{2016}{{Abernethy {\em  et~al.\/}}}{{Abernethy, Amin, and Zhu}}}
 \bibcite{agrawal1995sample}{{3}{1995}{{Agrawal}}{{}}}
@@ -602,4 +607,4 @@
 \bibcite{thompson1935theory}{{73}{1935}{{Thompson}}{{}}}
 \bibcite{DBLP:conf/icml/WuSLS16}{{74}{2016}{{Wu {\em  et~al.\/}}}{{Wu, Shariff, Lattimore, and Szepesv{\'{a}}ri}}}
 \bibcite{yu2009piecewise}{{75}{2009}{{Yu and Mannor}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{88}{appendix*.42}}
+\@writefile{toc}{\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{89}{appendix*.42}}

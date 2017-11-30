@@ -78,29 +78,29 @@
 \contentsline {subsubsection}{Proof of expected loss of AugUCB}{52}{section*.36}
 \contentsline {section}{\numberline {5.5}Numerical Experiments}{56}{section.5.5}
 \contentsline {section}{\numberline {5.6}Summary}{60}{section.5.6}
-\contentsline {chapter}{\numberline {6}Single Expert Algorithms for Changepoint Detection}{61}{chapter.6}
+\contentsline {chapter}{\numberline {6}Expert Algorithms for Piecewise Stationary Distributions}{61}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{61}{section.6.1}
-\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{61}{section.6.2}
+\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{62}{section.6.2}
 \contentsline {section}{\numberline {6.3}Problem Definitions}{64}{section.6.3}
-\contentsline {section}{\numberline {6.4}Related Works}{64}{section.6.4}
+\contentsline {section}{\numberline {6.4}Related Works}{65}{section.6.4}
 \contentsline {section}{\numberline {6.5}Our Contribution}{66}{section.6.5}
-\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{66}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{66}{subsection.6.6.1}
-\contentsline {section}{\numberline {6.7}Numerical Experiments}{67}{section.6.7}
-\contentsline {section}{\numberline {6.8}Summary}{67}{section.6.8}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{71}{chapter.7}
-\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{73}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{73}{section.A.1}
-\contentsline {section}{\numberline {A.2}Concentration Inequalities}{73}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{74}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{74}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{75}{subsection.A.2.3}
-\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{76}{appendix.B}
-\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{76}{subsection.B.0.4}
-\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{76}{subsection.B.0.5}
-\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{77}{subsection.B.0.6}
-\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{79}{subsection.B.0.7}
-\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{80}{subsection.B.0.8}
-\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{81}{subsection.B.0.9}
-\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{82}{subsection.B.0.10}
-\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{88}{appendix*.42}
+\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{67}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{67}{subsection.6.6.1}
+\contentsline {section}{\numberline {6.7}Numerical Experiments}{68}{section.6.7}
+\contentsline {section}{\numberline {6.8}Summary}{69}{section.6.8}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{72}{chapter.7}
+\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{74}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{74}{section.A.1}
+\contentsline {section}{\numberline {A.2}Concentration Inequalities}{74}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{75}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{75}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{76}{subsection.A.2.3}
+\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{77}{appendix.B}
+\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{77}{subsection.B.0.4}
+\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{77}{subsection.B.0.5}
+\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{78}{subsection.B.0.6}
+\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{80}{subsection.B.0.7}
+\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{81}{subsection.B.0.8}
+\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{82}{subsection.B.0.9}
+\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{83}{subsection.B.0.10}
+\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{89}{appendix*.42}
