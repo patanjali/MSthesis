@@ -1,13 +1,13 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Confidence interval of different algorithms\relax }}{20}{table.caption.20}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Confidence interval of different algorithms\relax }}{21}{table.caption.20}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Regret upper bound of different algorithms\relax }}{24}{table.caption.21}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Regret upper bound of different algorithms\relax }}{25}{table.caption.21}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Confidence interval and exploration parameters of different algorithms\relax }}{42}{table.caption.29}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Confidence interval and exploration parameters of different algorithms\relax }}{43}{table.caption.29}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces AugUCB vs.\ State of the art\relax }}{48}{table.caption.33}
+\contentsline {table}{\numberline {5.1}{\ignorespaces AugUCB vs.\ State of the art\relax }}{49}{table.caption.33}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
