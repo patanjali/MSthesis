@@ -10,98 +10,100 @@
 \contentsline {section}{\numberline {1.2}Connection between Reinforcement Learning and Bandits}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Why study Bandits?}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Motivation}{3}{section.1.4}
-\contentsline {section}{\numberline {1.5}Types of Information Feedback}{4}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Full information feedback}{5}{subsection.1.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Partial information feedback}{5}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.5}Types of Information Feedback}{5}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Full information feedback}{6}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Partial information feedback}{6}{subsection.1.5.2}
 \contentsline {subsection}{\numberline {1.5.3}Bandit feedback}{6}{subsection.1.5.3}
 \contentsline {section}{\numberline {1.6}Different types of Bandits}{6}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Types of Bandits based on Environment}{6}{subsection.1.6.1}
-\contentsline {subsubsection}{Stochastic Bandits}{6}{section*.9}
-\contentsline {subsubsection}{Non-stochastic Bandits}{6}{section*.10}
+\contentsline {subsection}{\numberline {1.6.1}Types of Bandits based on Environment}{7}{subsection.1.6.1}
+\contentsline {subsubsection}{Stochastic Bandits}{7}{section*.9}
+\contentsline {subsubsection}{Non-stochastic Bandits}{7}{section*.10}
 \contentsline {subsection}{\numberline {1.6.2}Types of Bandits based on goal}{7}{subsection.1.6.2}
-\contentsline {subsubsection}{Cumulative regret minimization}{7}{section*.11}
+\contentsline {subsubsection}{Cumulative regret minimization}{8}{section*.11}
 \contentsline {subsubsection}{Simple regret minimization}{8}{section*.12}
-\contentsline {subsubsection}{Weak Regret minimization}{8}{section*.13}
+\contentsline {subsubsection}{Weak Regret minimization}{9}{section*.13}
 \contentsline {subsection}{\numberline {1.6.3}Contextual Bandits}{9}{subsection.1.6.3}
-\contentsline {subsection}{\numberline {1.6.4}Collaborative Bandits}{9}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.4}Collaborative Bandits}{10}{subsection.1.6.4}
 \contentsline {subsection}{\numberline {1.6.5}Bandits with Corrupt Feedback}{10}{subsection.1.6.5}
 \contentsline {subsection}{\numberline {1.6.6}Conservative Bandits}{10}{subsection.1.6.6}
-\contentsline {section}{\numberline {1.7}Outline of the thesis}{10}{section.1.7}
-\contentsline {chapter}{\numberline {2}Stochastic Multi-armed Bandits}{12}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction to SMAB}{12}{section.2.1}
-\contentsline {section}{\numberline {2.2}Notations and assumptions}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Problem Definition}{13}{section.2.3}
-\contentsline {section}{\numberline {2.4}Motivation}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Related Work in SMAB}{15}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Lower bound in SMAB}{15}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}The Upper Confidence Bound approach}{15}{subsection.2.5.2}
-\contentsline {subsubsection}{UCB1 Algorithm}{16}{section*.14}
-\contentsline {subsubsection}{UCB-Improved Algorithm}{16}{section*.15}
-\contentsline {subsubsection}{MOSS Algorithm}{17}{section*.17}
-\contentsline {subsubsection}{OCUCB Algorithm}{19}{section*.18}
-\contentsline {subsubsection}{UCB-Variance algorithm}{19}{section*.19}
-\contentsline {subsection}{\numberline {2.5.3}Bayesian Approach}{20}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Information Theoretic approach}{20}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Discussion on the various confidence intervals}{21}{subsection.2.5.5}
-\contentsline {section}{\numberline {2.6}Summary}{22}{section.2.6}
-\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Our Contributions}{24}{section.3.2}
-\contentsline {section}{\numberline {3.3}Algorithm: Efficient UCB Variance}{25}{section.3.3}
-\contentsline {section}{\numberline {3.4}Main Results}{27}{section.3.4}
-\contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{27}{section*.23}
-\contentsline {subsubsection}{Gap-Independent bound of EUCBV}{29}{section*.24}
-\contentsline {section}{\numberline {3.5}Proofs}{29}{section.3.5}
-\contentsline {section}{\numberline {3.6}Experiments}{35}{section.3.6}
-\contentsline {section}{\numberline {3.7}Summary}{38}{section.3.7}
-\contentsline {chapter}{\numberline {4}Thresholding Bandits}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction to Thresholding Bandits}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Notations}{40}{section.4.2}
-\contentsline {section}{\numberline {4.3}Problem Definition}{40}{section.4.3}
-\contentsline {section}{\numberline {4.4}Motivation}{41}{section.4.4}
-\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration}{41}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{42}{subsection.4.5.1}
-\contentsline {subsubsection}{UCB-Exploration Algorithm}{42}{section*.28}
-\contentsline {subsubsection}{Successive Reject Algorithm}{42}{section*.30}
-\contentsline {subsection}{\numberline {4.5.2}Successive Accept Reject Algorithm for best-p arms setting}{44}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Fixed Confidence setting}{45}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Unified Setting}{45}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration problem}{45}{section.4.6}
-\contentsline {subsubsection}{Challenges in the TBP seeting}{46}{section*.32}
-\contentsline {section}{\numberline {4.7}Related Work in Thresholding Bandits}{47}{section.4.7}
-\contentsline {section}{\numberline {4.8}Summary}{47}{section.4.8}
-\contentsline {chapter}{\numberline {5}Augmented UCB for TBP}{48}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{48}{section.5.1}
-\contentsline {section}{\numberline {5.2}Our Contribution}{48}{section.5.2}
-\contentsline {section}{\numberline {5.3}Augmented-UCB Algorithm}{50}{section.5.3}
-\contentsline {section}{\numberline {5.4}Theoretical Results}{52}{section.5.4}
-\contentsline {subsubsection}{Problem Complexity}{52}{section*.35}
-\contentsline {subsubsection}{Proof of expected loss of AugUCB}{53}{section*.36}
-\contentsline {section}{\numberline {5.5}Numerical Experiments}{57}{section.5.5}
-\contentsline {section}{\numberline {5.6}Summary}{61}{section.5.6}
-\contentsline {chapter}{\numberline {6}Expert Algorithms for Piecewise Stationary Distributions}{62}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{62}{section.6.1}
-\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{63}{section.6.2}
-\contentsline {section}{\numberline {6.3}Problem Definitions}{65}{section.6.3}
-\contentsline {section}{\numberline {6.4}Related Works}{66}{section.6.4}
-\contentsline {section}{\numberline {6.5}Our Contribution}{67}{section.6.5}
-\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{68}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{68}{subsection.6.6.1}
-\contentsline {section}{\numberline {6.7}Numerical Experiments}{69}{section.6.7}
-\contentsline {section}{\numberline {6.8}Summary}{70}{section.6.8}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{73}{chapter.7}
-\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{75}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{75}{section.A.1}
-\contentsline {section}{\numberline {A.2}Concentration Inequalities}{75}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{76}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{76}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{77}{subsection.A.2.3}
-\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{78}{appendix.B}
-\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{78}{subsection.B.0.4}
-\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{78}{subsection.B.0.5}
-\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{79}{subsection.B.0.6}
-\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{81}{subsection.B.0.7}
-\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{82}{subsection.B.0.8}
-\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{83}{subsection.B.0.9}
-\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{84}{subsection.B.0.10}
-\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{90}{appendix*.42}
+\contentsline {section}{\numberline {1.7}Objectives of Thesis}{11}{section.1.7}
+\contentsline {section}{\numberline {1.8}Contributions of Thesis}{11}{section.1.8}
+\contentsline {section}{\numberline {1.9}Outline of the thesis}{12}{section.1.9}
+\contentsline {chapter}{\numberline {2}Stochastic Multi-armed Bandits}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction to SMAB}{14}{section.2.1}
+\contentsline {section}{\numberline {2.2}Notations and assumptions}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Problem Definition}{15}{section.2.3}
+\contentsline {section}{\numberline {2.4}Motivation}{17}{section.2.4}
+\contentsline {section}{\numberline {2.5}Related Work in SMAB}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Lower bound in SMAB}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}The Upper Confidence Bound approach}{17}{subsection.2.5.2}
+\contentsline {subsubsection}{UCB1 Algorithm}{18}{section*.14}
+\contentsline {subsubsection}{UCB-Improved Algorithm}{18}{section*.15}
+\contentsline {subsubsection}{MOSS Algorithm}{19}{section*.17}
+\contentsline {subsubsection}{OCUCB Algorithm}{21}{section*.18}
+\contentsline {subsubsection}{UCB-Variance algorithm}{21}{section*.19}
+\contentsline {subsection}{\numberline {2.5.3}Bayesian Approach}{22}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Information Theoretic approach}{22}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Discussion on the various confidence intervals}{23}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Summary}{24}{section.2.6}
+\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Our Contributions}{26}{section.3.2}
+\contentsline {section}{\numberline {3.3}Algorithm: Efficient UCB Variance}{27}{section.3.3}
+\contentsline {section}{\numberline {3.4}Main Results}{29}{section.3.4}
+\contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{29}{section*.23}
+\contentsline {subsubsection}{Gap-Independent bound of EUCBV}{31}{section*.24}
+\contentsline {section}{\numberline {3.5}Proofs}{31}{section.3.5}
+\contentsline {section}{\numberline {3.6}Experiments}{37}{section.3.6}
+\contentsline {section}{\numberline {3.7}Summary}{40}{section.3.7}
+\contentsline {chapter}{\numberline {4}Thresholding Bandits}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction to Thresholding Bandits}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Notations}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Problem Definition}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}Motivation}{43}{section.4.4}
+\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration}{43}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{44}{subsection.4.5.1}
+\contentsline {subsubsection}{UCB-Exploration Algorithm}{44}{section*.28}
+\contentsline {subsubsection}{Successive Reject Algorithm}{44}{section*.30}
+\contentsline {subsection}{\numberline {4.5.2}Successive Accept Reject Algorithm for best-p arms setting}{46}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Fixed Confidence setting}{47}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Unified Setting}{47}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration problem}{47}{section.4.6}
+\contentsline {subsubsection}{Challenges in the TBP seeting}{48}{section*.32}
+\contentsline {section}{\numberline {4.7}Related Work in Thresholding Bandits}{49}{section.4.7}
+\contentsline {section}{\numberline {4.8}Summary}{49}{section.4.8}
+\contentsline {chapter}{\numberline {5}Augmented UCB for TBP}{50}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{50}{section.5.1}
+\contentsline {section}{\numberline {5.2}Our Contribution}{50}{section.5.2}
+\contentsline {section}{\numberline {5.3}Augmented-UCB Algorithm}{52}{section.5.3}
+\contentsline {section}{\numberline {5.4}Theoretical Results}{54}{section.5.4}
+\contentsline {subsubsection}{Problem Complexity}{54}{section*.35}
+\contentsline {subsubsection}{Proof of expected loss of AugUCB}{55}{section*.36}
+\contentsline {section}{\numberline {5.5}Numerical Experiments}{59}{section.5.5}
+\contentsline {section}{\numberline {5.6}Summary}{63}{section.5.6}
+\contentsline {chapter}{\numberline {6}Expert Algorithms for Piecewise Stationary Distributions}{64}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{64}{section.6.1}
+\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{65}{section.6.2}
+\contentsline {section}{\numberline {6.3}Problem Definitions}{67}{section.6.3}
+\contentsline {section}{\numberline {6.4}Related Works}{68}{section.6.4}
+\contentsline {section}{\numberline {6.5}Our Contribution}{69}{section.6.5}
+\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{70}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{70}{subsection.6.6.1}
+\contentsline {section}{\numberline {6.7}Numerical Experiments}{71}{section.6.7}
+\contentsline {section}{\numberline {6.8}Summary}{72}{section.6.8}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{75}{chapter.7}
+\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{77}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{77}{section.A.1}
+\contentsline {section}{\numberline {A.2}Concentration Inequalities}{77}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{78}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{78}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{79}{subsection.A.2.3}
+\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{80}{appendix.B}
+\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{80}{subsection.B.0.4}
+\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{80}{subsection.B.0.5}
+\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{81}{subsection.B.0.6}
+\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{83}{subsection.B.0.7}
+\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{84}{subsection.B.0.8}
+\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{85}{subsection.B.0.9}
+\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{86}{subsection.B.0.10}
+\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{92}{appendix*.42}

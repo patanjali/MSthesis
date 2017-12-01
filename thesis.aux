@@ -1,0 +1,619 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\bibstyle{iitm}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}}
+\@writefile{toc}{\contentsline {chapter}{ABSTRACT}{ii}{chapter*.2}}
+\@writefile{toc}{\contentsline {chapter}{LIST OF TABLES}{vii}{chapter*.4}}
+\@writefile{toc}{\contentsline {chapter}{LIST OF FIGURES}{viii}{chapter*.5}}
+\@writefile{toc}{\contentsline {chapter}{ABBREVIATIONS}{ix}{chapter*.6}}
+\@writefile{toc}{\contentsline {chapter}{NOTATION}{x}{chapter*.7}}
+\citation{bertsekas1996neuro}
+\citation{sutton1998reinforcement}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:intro}{{1}{1}{Introduction}{chapter.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction to Reinforcement Learning}{1}{section.1.1}}
+\newlabel{intro}{{1.1}{1}{Introduction to Reinforcement Learning}{section.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Reinforcement Learning\relax }}{2}{figure.caption.8}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:rl}{{1.1}{2}{Reinforcement Learning\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Connection between Reinforcement Learning and Bandits}{2}{section.1.2}}
+\newlabel{conn:Bandits}{{1.2}{2}{Connection between Reinforcement Learning and Bandits}{section.1.2}{}}
+\citation{maillard2011apprentissage}
+\citation{robbins1952some}
+\citation{ghavamzadeh2015bayesian}
+\citation{thompson1933likelihood}
+\citation{thompson1935theory}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Why study Bandits?}{3}{section.1.3}}
+\newlabel{study}{{1.3}{3}{Why study Bandits?}{section.1.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Motivation}{3}{section.1.4}}
+\newlabel{motivation}{{1.4}{3}{Motivation}{section.1.4}{}}
+\citation{bubeck2011pure}
+\citation{audibert2009exploration}
+\citation{steinwart2005classification}
+\citation{streeter2006selecting}
+\citation{locatelli2016optimal}
+\citation{takimoto2003path}
+\citation{kalai2005efficient}
+\citation{cesa2006prediction}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Types of Information Feedback}{5}{section.1.5}}
+\newlabel{feed}{{1.5}{5}{Types of Information Feedback}{section.1.5}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces An online sequential game\relax }}{5}{algorithm.1}}
+\newlabel{alg:OSeqGame}{{1}{5}{An online sequential game\relax }{algorithm.1}{}}
+\citation{awerbuch2004adaptive}
+\citation{mcmahan2004online}
+\citation{gyorgy2007line}
+\citation{robbins1952some}
+\citation{lai1985asymptotically}
+\citation{agrawal1995sample}
+\citation{auer2002finite}
+\citation{auer2010ucb}
+\citation{audibert2009minimax}
+\citation{lattimore2015optimally}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}Full information feedback}{6}{subsection.1.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}Partial information feedback}{6}{subsection.1.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.3}Bandit feedback}{6}{subsection.1.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Different types of Bandits}{6}{section.1.6}}
+\newlabel{types}{{1.6}{6}{Different types of Bandits}{section.1.6}{}}
+\citation{auer2002nonstochastic}
+\citation{auer2002using}
+\citation{kocak2014efficient}
+\citation{garivier2011upper}
+\citation{mellor2013thompson}
+\citation{allesiardo2017non}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.1}Types of Bandits based on Environment}{7}{subsection.1.6.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Stochastic Bandits}{7}{section*.9}}
+\@writefile{toc}{\contentsline {subsubsection}{Non-stochastic Bandits}{7}{section*.10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.2}Types of Bandits based on goal}{7}{subsection.1.6.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Cumulative regret minimization}{8}{section*.11}}
+\newlabel{eqn:chap1:regret}{{1.1}{8}{Cumulative regret minimization}{equation.1.6.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Simple regret minimization}{8}{section*.12}}
+\citation{langford2008epoch}
+\citation{li2010contextual}
+\citation{beygelzimer2011contextual}
+\citation{awerbuch2008competitive,liu2010distributed,szorenyi2013gossip,hillel2013distributed}
+\citation{bui2012clustered}
+\citation{cesa2013gang}
+\citation{gentile2014online}
+\@writefile{toc}{\contentsline {subsubsection}{Weak Regret minimization}{9}{section*.13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.3}Contextual Bandits}{9}{subsection.1.6.3}}
+\citation{DBLP:journals/corr/abs-1708-05033}
+\citation{DBLP:conf/icml/WuSLS16}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.4}Collaborative Bandits}{10}{subsection.1.6.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.5}Bandits with Corrupt Feedback}{10}{subsection.1.6.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.6}Conservative Bandits}{10}{subsection.1.6.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.7}Objectives of Thesis}{11}{section.1.7}}
+\newlabel{objThesis}{{1.7}{11}{Objectives of Thesis}{section.1.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.8}Contributions of Thesis}{11}{section.1.8}}
+\newlabel{contriThesis}{{1.8}{11}{Contributions of Thesis}{section.1.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.9}Outline of the thesis}{12}{section.1.9}}
+\newlabel{outline}{{1.9}{12}{Outline of the thesis}{section.1.9}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Stochastic Multi-armed Bandits}{14}{chapter.2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:SMAB}{{2}{14}{Stochastic Multi-armed Bandits}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction to SMAB}{14}{section.2.1}}
+\newlabel{sec:intro}{{2.1}{14}{Introduction to SMAB}{section.2.1}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces SMAB formulation\relax }}{14}{algorithm.2}}
+\newlabel{alg:SMAB}{{2}{14}{SMAB formulation\relax }{algorithm.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Notations and assumptions}{15}{section.2.2}}
+\newlabel{sec:notations}{{2.2}{15}{Notations and assumptions}{section.2.2}{}}
+\newlabel{SMAB:assm:1}{{1}{15}{Notations and assumptions}{assumption.1}{}}
+\newlabel{SMAB:assm:2}{{2}{15}{Notations and assumptions}{assumption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Problem Definition}{15}{section.2.3}}
+\newlabel{sec:probDef}{{2.3}{15}{Problem Definition}{section.2.3}{}}
+\citation{thompson1933likelihood}
+\citation{thompson1935theory}
+\citation{thompson1933likelihood}
+\citation{thompson1935theory}
+\citation{robbins1952some}
+\citation{lai1985asymptotically}
+\citation{lai1985asymptotically}
+\citation{bubeck2012regret}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Motivation}{17}{section.2.4}}
+\newlabel{sec:motivation}{{2.4}{17}{Motivation}{section.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Related Work in SMAB}{17}{section.2.5}}
+\newlabel{sec:related}{{2.5}{17}{Related Work in SMAB}{section.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Lower bound in SMAB}{17}{subsection.2.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}The Upper Confidence Bound approach}{17}{subsection.2.5.2}}
+\citation{agrawal1995sample}
+\citation{auer2002finite}
+\citation{auer2002finite}
+\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {subsubsection}{UCB1 Algorithm}{18}{section*.14}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces UCB1\relax }}{18}{algorithm.3}}
+\newlabel{alg:ucb1}{{3}{18}{UCB1\relax }{algorithm.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{UCB-Improved Algorithm}{18}{section*.15}}
+\citation{audibert2009minimax}
+\citation{audibert2009minimax,lattimore2015optimally}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces UCB-Improved\relax }}{19}{algorithm.4}}
+\newlabel{alg:ucbi}{{4}{19}{UCB-Improved\relax }{algorithm.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{MOSS Algorithm}{19}{section*.17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Flowchart of UCB-Improved\relax }}{20}{figure.caption.16}}
+\newlabel{fig:ucbimp}{{2.1}{20}{Flowchart of UCB-Improved\relax }{figure.caption.16}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces MOSS\relax }}{20}{algorithm.5}}
+\newlabel{alg:moss}{{5}{20}{MOSS\relax }{algorithm.5}{}}
+\citation{lattimore2015optimally}
+\citation{audibert2009exploration}
+\citation{audibert2009exploration}
+\@writefile{toc}{\contentsline {subsubsection}{OCUCB Algorithm}{21}{section*.18}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces OCUCB\relax }}{21}{algorithm.6}}
+\newlabel{alg:ocucb}{{6}{21}{OCUCB\relax }{algorithm.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{UCB-Variance algorithm}{21}{section*.19}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces UCBV\relax }}{21}{algorithm.7}}
+\newlabel{alg:ucbv}{{7}{21}{UCBV\relax }{algorithm.7}{}}
+\citation{thompson1933likelihood}
+\citation{agrawal2011analysis}
+\citation{kaufmann2012bayesian}
+\citation{lattimore2015optimally}
+\citation{honda2010asymptotically}
+\citation{garivier2011kl}
+\citation{cappe2013kullback}
+\citation{lai1985asymptotically}
+\citation{garivier2011kl}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Bayesian Approach}{22}{subsection.2.5.3}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces Bernoulli Thompson Sampling\relax }}{22}{algorithm.8}}
+\newlabel{alg:ts}{{8}{22}{Bernoulli Thompson Sampling\relax }{algorithm.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.4}Information Theoretic approach}{22}{subsection.2.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.5}Discussion on the various confidence intervals}{23}{subsection.2.5.5}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Confidence interval of different algorithms\relax }}{23}{table.caption.20}}
+\newlabel{tab:conf-comp}{{2.1}{23}{Confidence interval of different algorithms\relax }{table.caption.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Summary}{24}{section.2.6}}
+\newlabel{chap2:conc}{{2.6}{24}{Summary}{section.2.6}{}}
+\citation{auer2010ucb}
+\citation{audibert2009exploration}
+\citation{liu2016modification}
+\citation{audibert2009exploration}
+\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{25}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:EUCBV}{{3}{25}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{25}{section.3.1}}
+\newlabel{Chapter3:intro}{{3.1}{25}{Introduction}{section.3.1}{}}
+\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Our Contributions}{26}{section.3.2}}
+\newlabel{sec:contri}{{3.2}{26}{Our Contributions}{section.3.2}{}}
+\citation{even2006action}
+\citation{liu2016modification}
+\citation{audibert2009exploration}
+\citation{auer2010ucb}
+\citation{even2006action}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Regret upper bound of different algorithms\relax }}{27}{table.caption.21}}
+\newlabel{tab:comp-bds}{{3.1}{27}{Regret upper bound of different algorithms\relax }{table.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Algorithm: Efficient UCB Variance}{27}{section.3.3}}
+\newlabel{sec:eucbv}{{3.3}{27}{Algorithm: Efficient UCB Variance}{section.3.3}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {9}{\ignorespaces EUCBV\relax }}{28}{algorithm.9}}
+\newlabel{alg:eucbv}{{9}{28}{EUCBV\relax }{algorithm.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of EUCBV algorithm\relax }}{29}{figure.caption.22}}
+\newlabel{fig:eucbv}{{3.1}{29}{Flowchart of EUCBV algorithm\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Main Results}{29}{section.3.4}}
+\newlabel{sec:results}{{3.4}{29}{Main Results}{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{29}{section*.23}}
+\newlabel{Result:Theorem:1}{{1}{29}{\textbf {\textit {Gap-Dependent Bound}}}{theorem.1}{}}
+\citation{auer2010ucb}
+\citation{audibert2009exploration}
+\citation{auer2010ucb}
+\citation{auer2010ucb}
+\citation{audibert2009exploration}
+\citation{audibert2010best}
+\citation{bubeck2012regret}
+\citation{lattimore2015optimally}
+\citation{lattimore2015optimally}
+\citation{lattimore2015optimally}
+\newlabel{Result:discussion1}{{1}{30}{Gap-Dependent bound of EUCBV}{discussion.1}{}}
+\citation{auer2002nonstochastic}
+\citation{auer2002finite}
+\@writefile{toc}{\contentsline {subsubsection}{Gap-Independent bound of EUCBV}{31}{section*.24}}
+\newlabel{Result:Corollary:1}{{1}{31}{\textbf {\textit {Gap-Independent Bound}}}{corollary.1}{}}
+\newlabel{Result:discussion2}{{2}{31}{Gap-Independent bound of EUCBV}{discussion.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Proofs}{31}{section.3.5}}
+\newlabel{sec:proofTheorem}{{3.5}{31}{Proofs}{section.3.5}{}}
+\newlabel{proofTheorem:Lemma:1}{{1}{31}{Proofs}{lemma.1}{}}
+\citation{auer2010ucb}
+\newlabel{proofTheorem:Lemma:2}{{2}{32}{Proofs}{lemma.2}{}}
+\newlabel{proofTheorem:Lemma:3}{{3}{32}{Proofs}{lemma.3}{}}
+\newlabel{proofTheorem:Lemma:4}{{4}{32}{Proofs}{lemma.4}{}}
+\newlabel{proofTheorem:Lemma:5}{{5}{32}{Proofs}{lemma.5}{}}
+\newlabel{proofTheorem:Lemma:6}{{6}{32}{Proofs}{lemma.6}{}}
+\citation{audibert2009exploration}
+\newlabel{sec:proofTheorem:Theorem1}{{3.5}{33}{Proof of Theorem 1}{section*.25}{}}
+\newlabel{eq:armelim-casea}{{3.1}{33}{Proof of Theorem 1}{equation.3.5.1}{}}
+\newlabel{eq:prob_eq2}{{3.2}{33}{Proof of Theorem 1}{equation.3.5.2}{}}
+\newlabel{eq:arm:elim:c1}{{3.3}{34}{Proof of Theorem 1}{equation.3.5.3}{}}
+\newlabel{eq:arm:elim:c2}{{3.4}{34}{Proof of Theorem 1}{equation.3.5.4}{}}
+\newlabel{eq:arm:elim:c3}{{3.5}{34}{Proof of Theorem 1}{equation.3.5.5}{}}
+\citation{garivier2011kl}
+\citation{honda2010asymptotically}
+\citation{audibert2009minimax}
+\citation{auer2002finite}
+\citation{auer2010ucb}
+\citation{even2006action}
+\citation{agrawal2011analysis}
+\citation{lattimore2015optimally}
+\citation{kaufmann2012bayesian}
+\citation{audibert2009exploration}
+\citation{CapGarKau12}
+\citation{garivier2011kl}
+\citation{garivier2011kl}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Experiments}{37}{section.3.6}}
+\newlabel{sec:expt}{{3.6}{37}{Experiments}{section.3.6}{}}
+\newlabel{fig:1}{{3.2(a)}{38}{Subfigure 3 3.2(a)}{subfigure.3.2.1}{}}
+\newlabel{sub@fig:1}{{(a)}{38}{Subfigure 3 3.2(a)\relax }{subfigure.3.2.1}{}}
+\newlabel{fig:2}{{3.2(b)}{38}{Subfigure 3 3.2(b)}{subfigure.3.2.2}{}}
+\newlabel{sub@fig:2}{{(b)}{38}{Subfigure 3 3.2(b)\relax }{subfigure.3.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces A comparison of the cumulative regret incurred by the various bandit algorithms. \relax }}{38}{figure.caption.26}}
+\newlabel{fig:karmed}{{3.2}{38}{A comparison of the cumulative regret incurred by the various bandit algorithms. \relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 0.25\textwidth }}{38}{figure.caption.26}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 0.25\textwidth }}{38}{figure.caption.26}}
+\citation{lattimore2015optimally}
+\newlabel{fig:3}{{3.3(a)}{39}{Subfigure 3 3.3(a)}{subfigure.3.3.1}{}}
+\newlabel{sub@fig:3}{{(a)}{39}{Subfigure 3 3.3(a)\relax }{subfigure.3.3.1}{}}
+\newlabel{fig:4}{{3.3(b)}{39}{Subfigure 3 3.3(b)}{subfigure.3.3.2}{}}
+\newlabel{sub@fig:4}{{(b)}{39}{Subfigure 3 3.3(b)\relax }{subfigure.3.3.2}{}}
+\newlabel{fig:furtherExpt1}{{\caption@xref {fig:furtherExpt1}{ on input line 150}}{39}{Experiments}{subfigure.3.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Further Experiments with EUCBV\relax }}{39}{figure.caption.27}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 0.25\textwidth }}{39}{figure.caption.27}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 0.25\textwidth }}{39}{figure.caption.27}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Summary}{40}{section.3.7}}
+\newlabel{sec:conc}{{3.7}{40}{Summary}{section.3.7}{}}
+\citation{abernethy2016threshold}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Thresholding Bandits}{41}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:tbandit1}{{4}{41}{Thresholding Bandits}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction to Thresholding Bandits}{41}{section.4.1}}
+\newlabel{tbandit:intro1}{{4.1}{41}{Introduction to Thresholding Bandits}{section.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Notations}{42}{section.4.2}}
+\newlabel{tbandit:notations}{{4.2}{42}{Notations}{section.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Problem Definition}{42}{section.4.3}}
+\newlabel{tbandit:probDef}{{4.3}{42}{Problem Definition}{section.4.3}{}}
+\citation{locatelli2016optimal}
+\citation{audibert2010best}
+\citation{bubeck2011pure}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Motivation}{43}{section.4.4}}
+\newlabel{tbandit:motivation}{{4.4}{43}{Motivation}{section.4.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration}{43}{section.4.5}}
+\newlabel{tbandit:prevRes}{{4.5}{43}{Related Work in Pure Exploration}{section.4.5}{}}
+\citation{audibert2010best}
+\citation{auer2002finite}
+\citation{audibert2010best}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{44}{subsection.4.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{UCB-Exploration Algorithm}{44}{section*.28}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {10}{\ignorespaces UCBE\relax }}{44}{algorithm.10}}
+\newlabel{alg:ucbe}{{10}{44}{UCBE\relax }{algorithm.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Successive Reject Algorithm}{44}{section*.30}}
+\citation{gabillon2011multi}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Confidence interval and exploration parameters of different algorithms\relax }}{45}{table.caption.29}}
+\newlabel{table:comp-exp}{{4.1}{45}{Confidence interval and exploration parameters of different algorithms\relax }{table.caption.29}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {11}{\ignorespaces Successive Reject(SR)\relax }}{45}{algorithm.11}}
+\newlabel{alg:sr}{{11}{45}{Successive Reject(SR)\relax }{algorithm.11}{}}
+\citation{bubeck2013multiple}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Successive Accept Reject Algorithm for best-p arms setting}{46}{subsection.4.5.2}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {12}{\ignorespaces Successive Accept Reject(SAR)\relax }}{46}{algorithm.12}}
+\newlabel{alg:sar}{{12}{46}{Successive Accept Reject(SAR)\relax }{algorithm.12}{}}
+\citation{chen2014combinatorial}
+\citation{even2006action}
+\citation{kalyanakrishnan2012pac}
+\citation{jamieson2014best}
+\citation{gabillon2012best}
+\citation{chen2014combinatorial}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Fixed Confidence setting}{47}{subsection.4.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Unified Setting}{47}{subsection.4.5.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration problem}{47}{section.4.6}}
+\newlabel{tbandit:connection}{{4.6}{47}{TBP connection to Pure Exploration problem}{section.4.6}{}}
+\citation{locatelli2016optimal}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Connection between TBP, Pure Exploration and SMAB\relax }}{48}{figure.caption.31}}
+\newlabel{fig:con}{{4.1}{48}{Connection between TBP, Pure Exploration and SMAB\relax }{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Challenges in the TBP seeting}{48}{section*.32}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Related Work in Thresholding Bandits}{49}{section.4.7}}
+\newlabel{tbandit:prevResAPT}{{4.7}{49}{Related Work in Thresholding Bandits}{section.4.7}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {13}{\ignorespaces APT\relax }}{49}{algorithm.13}}
+\newlabel{alg:apt}{{13}{49}{APT\relax }{algorithm.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Summary}{49}{section.4.8}}
+\newlabel{tbandit:conc}{{4.8}{49}{Summary}{section.4.8}{}}
+\citation{liu2016modification}
+\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Augmented UCB for TBP}{50}{chapter.5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:tbandit2}{{5}{50}{Augmented UCB for TBP}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{50}{section.5.1}}
+\newlabel{tbandit:intro2}{{5.1}{50}{Introduction}{section.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Our Contribution}{50}{section.5.2}}
+\newlabel{tbandit:contribution}{{5.2}{50}{Our Contribution}{section.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces AugUCB vs.\ State of the art\relax }}{51}{table.caption.33}}
+\newlabel{tab:regret-bds}{{5.1}{51}{AugUCB vs.\ State of the art\relax }{table.caption.33}{}}
+\citation{auer2010ucb}
+\citation{locatelli2016optimal}
+\citation{audibert2009exploration}
+\citation{auer2010ucb,chen2014combinatorial}
+\citation{liu2016modification}
+\citation{audibert2010best}
+\citation{bubeck2011pure}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Augmented-UCB Algorithm}{52}{section.5.3}}
+\newlabel{tbandit:algorithm}{{5.3}{52}{Augmented-UCB Algorithm}{section.5.3}{}}
+\citation{locatelli2016optimal}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {14}{\ignorespaces AugUCB\relax }}{53}{algorithm.14}}
+\newlabel{alg:augucb}{{14}{53}{AugUCB\relax }{algorithm.14}{}}
+\citation{chen2014combinatorial}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Flowchart for AugUCB\relax }}{54}{figure.caption.34}}
+\newlabel{fig:augucb}{{5.1}{54}{Flowchart for AugUCB\relax }{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Theoretical Results}{54}{section.5.4}}
+\newlabel{tbandit:results}{{5.4}{54}{Theoretical Results}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Problem Complexity}{54}{section*.35}}
+\citation{locatelli2016optimal}
+\citation{gabillon2011multi}
+\citation{audibert2010best}
+\@writefile{toc}{\contentsline {subsubsection}{Proof of expected loss of AugUCB}{55}{section*.36}}
+\newlabel{tbandit:Result:Theorem:1}{{2}{55}{Proof of expected loss of AugUCB}{theorem.2}{}}
+\citation{auer2010ucb}
+\citation{audibert2009exploration}
+\citation{auer2010ucb}
+\citation{locatelli2016optimal}
+\newlabel{tbandit:si_bound_equn}{{5.1}{56}{Proof of expected loss of AugUCB}{equation.5.4.1}{}}
+\newlabel{tbandit:eq:prob_eq2}{{5.2}{57}{Proof of expected loss of AugUCB}{equation.5.4.2}{}}
+\newlabel{tbandit:si_bar_equn}{{5.3}{57}{Proof of expected loss of AugUCB}{equation.5.4.3}{}}
+\newlabel{tbandit:lhs1_equn}{{5.4}{57}{Proof of expected loss of AugUCB}{equation.5.4.4}{}}
+\citation{locatelli2016optimal}
+\newlabel{tbandit:lhs2_equn}{{5.5}{58}{Proof of expected loss of AugUCB}{equation.5.4.5}{}}
+\newlabel{tbandit:final_bound_equn}{{5.6}{58}{Proof of expected loss of AugUCB}{equation.5.4.6}{}}
+\citation{bubeck2011pure,auer2010ucb}
+\citation{locatelli2016optimal}
+\citation{audibert2009exploration}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Numerical Experiments}{59}{section.5.5}}
+\newlabel{tbandit:expt}{{5.5}{59}{Numerical Experiments}{section.5.5}{}}
+\citation{gabillon2011multi}
+\citation{chen2014combinatorial}
+\citation{locatelli2016optimal}
+\newlabel{Fig:budgetExpt1}{{5.2(a)}{61}{Subfigure 5 5.2(a)}{subfigure.5.2.1}{}}
+\newlabel{sub@Fig:budgetExpt1}{{(a)}{61}{Subfigure 5 5.2(a)\relax }{subfigure.5.2.1}{}}
+\newlabel{Fig:budgetExpt2}{{5.2(b)}{61}{Subfigure 5 5.2(b)}{subfigure.5.2.2}{}}
+\newlabel{sub@Fig:budgetExpt2}{{(b)}{61}{Subfigure 5 5.2(b)\relax }{subfigure.5.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{61}{figure.caption.37}}
+\newlabel{fig:budgetExpt1}{{5.2}{61}{Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 0.32\textwidth }}{61}{figure.caption.37}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 0.32\textwidth }}{61}{figure.caption.37}}
+\newlabel{Fig:budgetExpt3}{{5.3(a)}{61}{Subfigure 5 5.3(a)}{subfigure.5.3.1}{}}
+\newlabel{sub@Fig:budgetExpt3}{{(a)}{61}{Subfigure 5 5.3(a)\relax }{subfigure.5.3.1}{}}
+\newlabel{Fig:budgetExpt4}{{5.3(b)}{61}{Subfigure 5 5.3(b)}{subfigure.5.3.2}{}}
+\newlabel{sub@Fig:budgetExpt4}{{(b)}{61}{Subfigure 5 5.3(b)\relax }{subfigure.5.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{61}{figure.caption.38}}
+\newlabel{fig:budgetExpt2}{{5.3}{61}{Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 0.32\textwidth }}{61}{figure.caption.38}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 0.32\textwidth }}{61}{figure.caption.38}}
+\newlabel{Fig:budgetExpt5}{{5.4(a)}{62}{Subfigure 5 5.4(a)}{subfigure.5.4.1}{}}
+\newlabel{sub@Fig:budgetExpt5}{{(a)}{62}{Subfigure 5 5.4(a)\relax }{subfigure.5.4.1}{}}
+\newlabel{Fig:budgetExpt6}{{5.4(b)}{62}{Subfigure 5 5.4(b)}{subfigure.5.4.2}{}}
+\newlabel{sub@Fig:budgetExpt6}{{(b)}{62}{Subfigure 5 5.4(b)\relax }{subfigure.5.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{62}{figure.caption.39}}
+\newlabel{fig:budgetExpt3}{{5.4}{62}{Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 0.32\textwidth }}{62}{figure.caption.39}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 0.32\textwidth }}{62}{figure.caption.39}}
+\citation{locatelli2016optimal}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Summary}{63}{section.5.6}}
+\newlabel{tbandit:conclusion}{{5.6}{63}{Summary}{section.5.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Expert Algorithms for Piecewise Stationary Distributions}{64}{chapter.6}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:psbandit}{{6}{64}{Expert Algorithms for Piecewise Stationary Distributions}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{64}{section.6.1}}
+\newlabel{psbandit:intro}{{6.1}{64}{Introduction}{section.6.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{65}{section.6.2}}
+\newlabel{psbandit:notations}{{6.2}{65}{Notations, Assumptions and Definitions}{section.6.2}{}}
+\newlabel{Def:tcj}{{1}{65}{Notations, Assumptions and Definitions}{definition.1}{}}
+\newlabel{assm:global}{{3}{65}{Notations, Assumptions and Definitions}{assumption.3}{}}
+\newlabel{assm:space-gap}{{4}{65}{Notations, Assumptions and Definitions}{assumption.4}{}}
+\newlabel{Def:chg-gap}{{2}{66}{Notations, Assumptions and Definitions}{definition.2}{}}
+\newlabel{dis:gap-delay}{{3}{66}{Notations, Assumptions and Definitions}{discussion.3}{}}
+\newlabel{Def:e-chg-gap}{{3}{66}{Notations, Assumptions and Definitions}{definition.3}{}}
+\newlabel{assm:chg-gap}{{5}{66}{Notations, Assumptions and Definitions}{assumption.5}{}}
+\newlabel{Def:opt-gap}{{4}{66}{Notations, Assumptions and Definitions}{definition.4}{}}
+\citation{thompson1933likelihood}
+\citation{robbins1952some}
+\citation{lai1985asymptotically}
+\citation{agrawal1995sample}
+\citation{auer2002finite}
+\citation{audibert2009minimax}
+\citation{audibert2009exploration}
+\citation{auer2010ucb}
+\citation{lattimore2015optimally}
+\citation{agrawal2012analysis}
+\citation{agrawal2013further}
+\citation{kaufmann2012bayesian}
+\newlabel{Def:ratio}{{5}{67}{Notations, Assumptions and Definitions}{definition.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Problem Definitions}{67}{section.6.3}}
+\newlabel{psbandit:probDef}{{6.3}{67}{Problem Definitions}{section.6.3}{}}
+\citation{littlestone1994weighted}
+\citation{freund1995desicion}
+\citation{auer1995gambling}
+\citation{auer2002nonstochastic}
+\citation{kocak2014efficient}
+\citation{kocsis2006discounted}
+\citation{garivier2011upper}
+\citation{raj2017taming}
+\citation{DBLP:journals/corr/BesbesGZ14}
+\citation{hartland2007change}
+\citation{yu2009piecewise}
+\citation{allesiardo2017non}
+\citation{liu2017change}
+\citation{mellor2013thompson}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Related Works}{68}{section.6.4}}
+\newlabel{psbandit:related}{{6.4}{68}{Related Works}{section.6.4}{}}
+\citation{auer2002finite}
+\citation{audibert2009minimax}
+\citation{garivier2011upper}
+\citation{abbasi2011improved}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Our Contribution}{69}{section.6.5}}
+\newlabel{psbandit:contribution}{{6.5}{69}{Our Contribution}{section.6.5}{}}
+\citation{auer2010ucb}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{70}{section.6.6}}
+\newlabel{psbandit:algorithm}{{6.6}{70}{Changepoint Detection Algorithms}{section.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{70}{subsection.6.6.1}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {15}{\ignorespaces Changepoint-Detection-1($t_0$, $t_p$) (CPD1)\relax }}{71}{algorithm.15}}
+\newlabel{alg:CPD1}{{15}{71}{Changepoint-Detection-1($t_0$, $t_p$) (CPD1)\relax }{algorithm.15}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {16}{\ignorespaces Changepoint-Detection-2($t_0$, $t_p$) (CPD2)\relax }}{71}{algorithm.16}}
+\newlabel{alg:CPD2}{{16}{71}{Changepoint-Detection-2($t_0$, $t_p$) (CPD2)\relax }{algorithm.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Numerical Experiments}{71}{section.6.7}}
+\newlabel{psbandit:expt}{{6.7}{71}{Numerical Experiments}{section.6.7}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {17}{\ignorespaces Changepoint-Detection-3($t_0$, $t_p$) (CPD3)\relax }}{72}{algorithm.17}}
+\newlabel{alg:CPD3}{{17}{72}{Changepoint-Detection-3($t_0$, $t_p$) (CPD3)\relax }{algorithm.17}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {18}{\ignorespaces Single Expert with change-point detection (SECPD-1)\relax }}{72}{algorithm.18}}
+\newlabel{alg:SECPD1}{{18}{72}{Single Expert with change-point detection (SECPD-1)\relax }{algorithm.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Summary}{72}{section.6.8}}
+\newlabel{psbandit:conclusion}{{6.8}{72}{Summary}{section.6.8}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {19}{\ignorespaces Single Expert with change-point detection (SECPD-2)\relax }}{73}{algorithm.19}}
+\newlabel{alg:SECPD2}{{19}{73}{Single Expert with change-point detection (SECPD-2)\relax }{algorithm.19}{}}
+\newlabel{psbandit:fig:1}{{6.1(a)}{74}{Subfigure 6 6.1(a)}{subfigure.6.1.1}{}}
+\newlabel{sub@psbandit:fig:1}{{(a)}{74}{Subfigure 6 6.1(a)\relax }{subfigure.6.1.1}{}}
+\newlabel{psbandit:fig:2}{{6.1(b)}{74}{Subfigure 6 6.1(b)}{subfigure.6.1.2}{}}
+\newlabel{sub@psbandit:fig:2}{{(b)}{74}{Subfigure 6 6.1(b)\relax }{subfigure.6.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{74}{figure.caption.40}}
+\newlabel{fig:karmed1}{{6.1}{74}{Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{74}{figure.caption.40}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{74}{figure.caption.40}}
+\citation{lai1985asymptotically}
+\citation{menard2017minimax}
+\citation{degenne2016anytime}
+\citation{lattimore2016regret}
+\citation{kano2017good}
+\citation{lattimore2015optimally}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{75}{chapter.7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ThesisConc}{{7}{75}{Conclusion and Future Direction}{chapter.7}{}}
+\citation{abbasi2011improved}
+\citation{cesa2012combinatorial}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{77}{appendix.A}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:app:Conc}{{A}{77}{Appendix on Concentration Inequalities}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{77}{section.A.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Concentration Inequalities}{77}{section.A.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{78}{subsection.A.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{78}{subsection.A.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{79}{subsection.A.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{80}{appendix.B}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:app:EUCBV}{{B}{80}{Appendix for EUCBV}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref  {proofTheorem:Lemma:1}}{80}{subsection.B.0.4}}
+\newlabel{App:Lemma:1}{{B.0.4}{80}{Proof of Lemma \ref {proofTheorem:Lemma:1}}{subsection.B.0.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref  {proofTheorem:Lemma:2}}{80}{subsection.B.0.5}}
+\newlabel{App:Lemma:2}{{B.0.5}{80}{Proof of Lemma \ref {proofTheorem:Lemma:2}}{subsection.B.0.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref  {proofTheorem:Lemma:3}}{81}{subsection.B.0.6}}
+\newlabel{App:Lemma:3}{{B.0.6}{81}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{subsection.B.0.6}{}}
+\newlabel{eq:prob_eq3}{{B.1}{81}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.1}{}}
+\newlabel{si_bar_equn}{{B.2}{82}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.2}{}}
+\newlabel{lhs1_equn}{{B.3}{82}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.3}{}}
+\newlabel{lhs2_equn}{{B.4}{82}{Proof of Lemma \ref {proofTheorem:Lemma:3}}{equation.B.0.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref  {proofTheorem:Lemma:4}}{83}{subsection.B.0.7}}
+\newlabel{App:Lemma:4}{{B.0.7}{83}{Proof of Lemma \ref {proofTheorem:Lemma:4}}{subsection.B.0.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref  {proofTheorem:Lemma:5}}{84}{subsection.B.0.8}}
+\newlabel{App:Lemma:5}{{B.0.8}{84}{Proof of Lemma \ref {proofTheorem:Lemma:5}}{subsection.B.0.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref  {proofTheorem:Lemma:6}}{85}{subsection.B.0.9}}
+\newlabel{App:Lemma:6}{{B.0.9}{85}{Proof of Lemma \ref {proofTheorem:Lemma:6}}{subsection.B.0.9}{}}
+\citation{bubeck2011pure}
+\bibstyle{iitm}
+\bibdata{refs}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref  {Result:Corollary:1}}{86}{subsection.B.0.10}}
+\newlabel{App:Corollary:1}{{B.0.10}{86}{Proof of Corollary \ref {Result:Corollary:1}}{subsection.B.0.10}{}}
+\newlabel{Proof:Corollary:1}{{9}{86}{Proof of Corollary \ref {Result:Corollary:1}}{proof.9}{}}
+\bibcite{abbasi2011improved}{{1}{2011}{{Abbasi-Yadkori {\em  et~al.\/}}}{{Abbasi-Yadkori, P{\'a}l, and Szepesv{\'a}ri}}}
+\bibcite{abernethy2016threshold}{{2}{2016}{{Abernethy {\em  et~al.\/}}}{{Abernethy, Amin, and Zhu}}}
+\bibcite{agrawal1995sample}{{3}{1995}{{Agrawal}}{{}}}
+\bibcite{agrawal2011analysis}{{4}{2011}{{Agrawal and Goyal}}{{}}}
+\bibcite{agrawal2012analysis}{{5}{2012}{{Agrawal and Goyal}}{{}}}
+\bibcite{agrawal2013further}{{6}{2013}{{Agrawal and Goyal}}{{}}}
+\bibcite{allesiardo2017non}{{7}{2017}{{Allesiardo {\em  et~al.\/}}}{{Allesiardo, F{\'e}raud, and Maillard}}}
+\bibcite{audibert2009minimax}{{8}{2009}{{Audibert and Bubeck}}{{}}}
+\bibcite{audibert2010best}{{9}{2010}{{Audibert and Bubeck}}{{}}}
+\bibcite{audibert2009exploration}{{10}{2009}{{Audibert {\em  et~al.\/}}}{{Audibert, Munos, and Szepesv{\'a}ri}}}
+\bibcite{auer2002using}{{11}{2002}{{Auer}}{{}}}
+\bibcite{auer2002finite}{{12}{2002{{\em  a\/}}}{{Auer {\em  et~al.\/}}}{{Auer, Cesa-Bianchi, and Fischer}}}
+\bibcite{auer1995gambling}{{13}{1995}{{Auer {\em  et~al.\/}}}{{Auer, Cesa-Bianchi, Freund, and Schapire}}}
+\bibcite{auer2002nonstochastic}{{14}{2002{{\em  b\/}}}{{Auer {\em  et~al.\/}}}{{Auer, Cesa-Bianchi, Freund, and Schapire}}}
+\bibcite{auer2010ucb}{{15}{2010}{{Auer and Ortner}}{{}}}
+\bibcite{awerbuch2008competitive}{{16}{2008}{{Awerbuch and Kleinberg}}{{}}}
+\bibcite{awerbuch2004adaptive}{{17}{2004}{{Awerbuch and Kleinberg}}{{}}}
+\bibcite{bertsekas1996neuro}{{18}{1996}{{Bertsekas and Tsitsiklis}}{{}}}
+\bibcite{DBLP:journals/corr/BesbesGZ14}{{19}{2014}{{Besbes {\em  et~al.\/}}}{{Besbes, Gur, and Zeevi}}}
+\bibcite{beygelzimer2011contextual}{{20}{2011}{{Beygelzimer {\em  et~al.\/}}}{{Beygelzimer, Langford, Li, Reyzin, and Schapire}}}
+\bibcite{bubeck2012regret}{{21}{2012}{{Bubeck and Cesa-Bianchi}}{{}}}
+\bibcite{bubeck2011pure}{{22}{2011}{{Bubeck {\em  et~al.\/}}}{{Bubeck, Munos, and Stoltz}}}
+\bibcite{bubeck2013multiple}{{23}{2013}{{Bubeck {\em  et~al.\/}}}{{Bubeck, Wang, and Viswanathan}}}
+\bibcite{bui2012clustered}{{24}{2012}{{Bui {\em  et~al.\/}}}{{Bui, Johari, and Mannor}}}
+\bibcite{CapGarKau12}{{25}{2012}{{Cappe {\em  et~al.\/}}}{{Cappe, Garivier, and Kaufmann}}}
+\bibcite{cappe2013kullback}{{26}{2013}{{Capp{\'e} {\em  et~al.\/}}}{{Capp{\'e}, Garivier, Maillard, Munos, Stoltz {\em  et~al.\/}}}}
+\bibcite{cesa2013gang}{{27}{2013}{{Cesa-Bianchi {\em  et~al.\/}}}{{Cesa-Bianchi, Gentile, and Zappella}}}
+\bibcite{cesa2006prediction}{{28}{2006}{{Cesa-Bianchi and Lugosi}}{{}}}
+\bibcite{cesa2012combinatorial}{{29}{2012}{{Cesa-Bianchi and Lugosi}}{{}}}
+\bibcite{chen2014combinatorial}{{30}{2014}{{Chen {\em  et~al.\/}}}{{Chen, Lin, King, Lyu, and Chen}}}
+\bibcite{degenne2016anytime}{{31}{2016}{{Degenne and Perchet}}{{}}}
+\bibcite{even2006action}{{32}{2006}{{Even-Dar {\em  et~al.\/}}}{{Even-Dar, Mannor, and Mansour}}}
+\bibcite{freund1995desicion}{{33}{1995}{{Freund and Schapire}}{{}}}
+\bibcite{gabillon2012best}{{34}{2012}{{Gabillon {\em  et~al.\/}}}{{Gabillon, Ghavamzadeh, and Lazaric}}}
+\bibcite{gabillon2011multi}{{35}{2011}{{Gabillon {\em  et~al.\/}}}{{Gabillon, Ghavamzadeh, Lazaric, and Bubeck}}}
+\bibcite{DBLP:journals/corr/abs-1708-05033}{{36}{2017}{{Gajane {\em  et~al.\/}}}{{Gajane, Urvoy, and Kaufmann}}}
+\bibcite{garivier2011kl}{{37}{2011}{{Garivier and Capp{\'e}}}{{}}}
+\bibcite{garivier2011upper}{{38}{2011}{{Garivier and Moulines}}{{}}}
+\bibcite{gentile2014online}{{39}{2014}{{Gentile {\em  et~al.\/}}}{{Gentile, Li, and Zappella}}}
+\bibcite{ghavamzadeh2015bayesian}{{40}{2015}{{Ghavamzadeh {\em  et~al.\/}}}{{Ghavamzadeh, Mannor, Pineau, Tamar {\em  et~al.\/}}}}
+\bibcite{gyorgy2007line}{{41}{2007}{{Gy{\"o}rgy {\em  et~al.\/}}}{{Gy{\"o}rgy, Linder, Lugosi, and Ottucs{\'a}k}}}
+\bibcite{hartland2007change}{{42}{2007}{{Hartland {\em  et~al.\/}}}{{Hartland, Baskiotis, Gelly, Sebag, and Teytaud}}}
+\bibcite{hillel2013distributed}{{43}{2013}{{Hillel {\em  et~al.\/}}}{{Hillel, Karnin, Koren, Lempel, and Somekh}}}
+\bibcite{honda2010asymptotically}{{44}{2010}{{Honda and Takemura}}{{}}}
+\bibcite{jamieson2014best}{{45}{2014}{{Jamieson and Nowak}}{{}}}
+\bibcite{kalai2005efficient}{{46}{2005}{{Kalai and Vempala}}{{}}}
+\bibcite{kalyanakrishnan2012pac}{{47}{2012}{{Kalyanakrishnan {\em  et~al.\/}}}{{Kalyanakrishnan, Tewari, Auer, and Stone}}}
+\bibcite{kano2017good}{{48}{2017}{{Kano {\em  et~al.\/}}}{{Kano, Honda, Sakamaki, Matsuura, Nakamura, and Sugiyama}}}
+\bibcite{kaufmann2012bayesian}{{49}{2012}{{Kaufmann {\em  et~al.\/}}}{{Kaufmann, Capp{\'e}, and Garivier}}}
+\bibcite{kocak2014efficient}{{50}{2014}{{Koc{\'a}k {\em  et~al.\/}}}{{Koc{\'a}k, Neu, Valko, and Munos}}}
+\bibcite{kocsis2006discounted}{{51}{2006}{{Kocsis and Szepesv{\'a}ri}}{{}}}
+\bibcite{lai1985asymptotically}{{52}{1985}{{Lai and Robbins}}{{}}}
+\bibcite{langford2008epoch}{{53}{2008}{{Langford and Zhang}}{{}}}
+\bibcite{lattimore2015optimally}{{54}{2015}{{Lattimore}}{{}}}
+\bibcite{lattimore2016regret}{{55}{2016}{{Lattimore}}{{}}}
+\bibcite{li2010contextual}{{56}{2010}{{Li {\em  et~al.\/}}}{{Li, Chu, Langford, and Schapire}}}
+\bibcite{littlestone1994weighted}{{57}{1994}{{Littlestone and Warmuth}}{{}}}
+\bibcite{liu2017change}{{58}{2017}{{Liu {\em  et~al.\/}}}{{Liu, Lee, and Shroff}}}
+\bibcite{liu2010distributed}{{59}{2010}{{Liu and Zhao}}{{}}}
+\bibcite{liu2016modification}{{60}{2016}{{Liu and Tsuruoka}}{{}}}
+\bibcite{locatelli2016optimal}{{61}{2016}{{Locatelli {\em  et~al.\/}}}{{Locatelli, Gutzeit, and Carpentier}}}
+\bibcite{maillard2011apprentissage}{{62}{2011}{{Maillard}}{{}}}
+\bibcite{mcmahan2004online}{{63}{2004}{{McMahan and Blum}}{{}}}
+\bibcite{mellor2013thompson}{{64}{2013}{{Mellor and Shapiro}}{{}}}
+\bibcite{menard2017minimax}{{65}{2017}{{M{\'e}nard and Garivier}}{{}}}
+\bibcite{raj2017taming}{{66}{2017}{{Raj and Kalyani}}{{}}}
+\bibcite{robbins1952some}{{67}{1952}{{Robbins}}{{}}}
+\bibcite{steinwart2005classification}{{68}{2005}{{Steinwart {\em  et~al.\/}}}{{Steinwart, Hush, and Scovel}}}
+\bibcite{streeter2006selecting}{{69}{2006}{{Streeter and Smith}}{{}}}
+\bibcite{sutton1998reinforcement}{{70}{1998}{{Sutton and Barto}}{{}}}
+\bibcite{szorenyi2013gossip}{{71}{2013}{{Sz{\"o}r{\'e}nyi {\em  et~al.\/}}}{{Sz{\"o}r{\'e}nyi, Busa-Fekete, Heged{\"u}s, Orm{\'a}ndi, Jelasity, and K{\'e}gl}}}
+\bibcite{takimoto2003path}{{72}{2003}{{Takimoto and Warmuth}}{{}}}
+\bibcite{thompson1933likelihood}{{73}{1933}{{Thompson}}{{}}}
+\bibcite{thompson1935theory}{{74}{1935}{{Thompson}}{{}}}
+\bibcite{DBLP:conf/icml/WuSLS16}{{75}{2016}{{Wu {\em  et~al.\/}}}{{Wu, Shariff, Lattimore, and Szepesv{\'{a}}ri}}}
+\bibcite{yu2009piecewise}{{76}{2009}{{Yu and Mannor}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{92}{appendix*.42}}

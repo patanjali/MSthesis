@@ -1,0 +1,475 @@
+\begin{thebibliography}{76}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Abbasi-Yadkori {\em et~al.\/}(2011)Abbasi-Yadkori, P{\'a}l, and
+  Szepesv{\'a}ri}]{abbasi2011improved}
+{\bf Abbasi-Yadkori, Y.}, {\bf D.~P{\'a}l}, and {\bf C.~Szepesv{\'a}ri},
+  Improved algorithms for linear stochastic bandits.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2011.
+
+\bibitem[{Abernethy {\em et~al.\/}(2016)Abernethy, Amin, and
+  Zhu}]{abernethy2016threshold}
+{\bf Abernethy, J.~D.}, {\bf K.~Amin}, and {\bf R.~Zhu}, Threshold bandits,
+  with and without censored feedback.
+\newblock {\em In\/} {\em Advances In Neural Information Processing Systems\/}.
+  2016.
+
+\bibitem[{Agrawal(1995)}]{agrawal1995sample}
+{\bf Agrawal, R.} (1995).
+\newblock Sample mean based index policies by o (log n) regret for the
+  multi-armed bandit problem.
+\newblock {\em Advances in Applied Probability\/}, {\bf 27}(4), 1054--1078.
+
+\bibitem[{Agrawal and Goyal(2011)}]{agrawal2011analysis}
+{\bf Agrawal, S.} and {\bf N.~Goyal} (2011).
+\newblock Analysis of thompson sampling for the multi-armed bandit problem.
+\newblock {\em arXiv preprint arXiv:1111.1797\/}.
+
+\bibitem[{Agrawal and Goyal(2012)}]{agrawal2012analysis}
+{\bf Agrawal, S.} and {\bf N.~Goyal}, Analysis of thompson sampling for the
+  multi-armed bandit problem.
+\newblock {\em In\/} {\em COLT\/}. 2012.
+
+\bibitem[{Agrawal and Goyal(2013)}]{agrawal2013further}
+{\bf Agrawal, S.} and {\bf N.~Goyal}, Further optimal regret bounds for
+  thompson sampling.
+\newblock {\em In\/} {\em Aistats\/}. 2013.
+
+\bibitem[{Allesiardo {\em et~al.\/}(2017)Allesiardo, F{\'e}raud, and
+  Maillard}]{allesiardo2017non}
+{\bf Allesiardo, R.}, {\bf R.~F{\'e}raud}, and {\bf O.-A. Maillard} (2017).
+\newblock The non-stationary stochastic multi-armed bandit problem.
+\newblock {\em International Journal of Data Science and Analytics\/}, 1--17.
+
+\bibitem[{Audibert and Bubeck(2009)}]{audibert2009minimax}
+{\bf Audibert, J.-Y.} and {\bf S.~Bubeck}, Minimax policies for adversarial and
+  stochastic bandits.
+\newblock {\em In\/} {\em COLT\/}. 2009.
+
+\bibitem[{Audibert and Bubeck(2010)}]{audibert2010best}
+{\bf Audibert, J.-Y.} and {\bf S.~Bubeck}, Best arm identification in
+  multi-armed bandits.
+\newblock {\em In\/} {\em COLT-23th Conference on Learning Theory-2010\/}.
+  2010.
+
+\bibitem[{Audibert {\em et~al.\/}(2009)Audibert, Munos, and
+  Szepesv{\'a}ri}]{audibert2009exploration}
+{\bf Audibert, J.-Y.}, {\bf R.~Munos}, and {\bf C.~Szepesv{\'a}ri} (2009).
+\newblock Exploration--exploitation tradeoff using variance estimates in
+  multi-armed bandits.
+\newblock {\em Theoretical Computer Science\/}, {\bf 410}(19), 1876--1902.
+
+\bibitem[{Auer(2002)}]{auer2002using}
+{\bf Auer, P.} (2002).
+\newblock Using confidence bounds for exploitation-exploration trade-offs.
+\newblock {\em Journal of Machine Learning Research\/}, {\bf 3}(Nov), 397--422.
+
+\bibitem[{Auer {\em et~al.\/}(2002{\natexlab{{\em a\/}}})Auer, Cesa-Bianchi,
+  and Fischer}]{auer2002finite}
+{\bf Auer, P.}, {\bf N.~Cesa-Bianchi}, and {\bf P.~Fischer}
+  (2002{\natexlab{{\em a\/}}}).
+\newblock Finite-time analysis of the multiarmed bandit problem.
+\newblock {\em Machine learning\/}, {\bf 47}(2-3), 235--256.
+
+\bibitem[{Auer {\em et~al.\/}(1995)Auer, Cesa-Bianchi, Freund, and
+  Schapire}]{auer1995gambling}
+{\bf Auer, P.}, {\bf N.~Cesa-Bianchi}, {\bf Y.~Freund}, and {\bf R.~E.
+  Schapire}, Gambling in a rigged casino: The adversarial multi-armed bandit
+  problem.
+\newblock {\em In\/} {\em Foundations of Computer Science, 1995. Proceedings.,
+  36th Annual Symposium on\/}. IEEE, 1995.
+
+\bibitem[{Auer {\em et~al.\/}(2002{\natexlab{{\em b\/}}})Auer, Cesa-Bianchi,
+  Freund, and Schapire}]{auer2002nonstochastic}
+{\bf Auer, P.}, {\bf N.~Cesa-Bianchi}, {\bf Y.~Freund}, and {\bf R.~E.
+  Schapire} (2002{\natexlab{{\em b\/}}}).
+\newblock The nonstochastic multiarmed bandit problem.
+\newblock {\em SIAM Journal on Computing\/}, {\bf 32}(1), 48--77.
+
+\bibitem[{Auer and Ortner(2010)}]{auer2010ucb}
+{\bf Auer, P.} and {\bf R.~Ortner} (2010).
+\newblock Ucb revisited: Improved regret bounds for the stochastic multi-armed
+  bandit problem.
+\newblock {\em Periodica Mathematica Hungarica\/}, {\bf 61}(1-2), 55--65.
+
+\bibitem[{Awerbuch and Kleinberg(2008)}]{awerbuch2008competitive}
+{\bf Awerbuch, B.} and {\bf R.~Kleinberg} (2008).
+\newblock Competitive collaborative learning.
+\newblock {\em Journal of Computer and System Sciences\/}, {\bf 74}(8),
+  1271--1288.
+
+\bibitem[{Awerbuch and Kleinberg(2004)}]{awerbuch2004adaptive}
+{\bf Awerbuch, B.} and {\bf R.~D. Kleinberg}, Adaptive routing with end-to-end
+  feedback: Distributed learning and geometric approaches.
+\newblock {\em In\/} {\em Proceedings of the thirty-sixth annual ACM symposium
+  on Theory of computing\/}. ACM, 2004.
+
+\bibitem[{Bertsekas and Tsitsiklis(1996)}]{bertsekas1996neuro}
+{\bf Bertsekas, D.~P.} and {\bf J.~N. Tsitsiklis} (1996).
+\newblock Neuro-dynamic programming (optimization and neural computation
+  series, 3).
+\newblock {\em Athena Scientific\/}, {\bf 7}, 15--23.
+
+\bibitem[{Besbes {\em et~al.\/}(2014)Besbes, Gur, and
+  Zeevi}]{DBLP:journals/corr/BesbesGZ14}
+{\bf Besbes, O.}, {\bf Y.~Gur}, and {\bf A.~J. Zeevi} (2014).
+\newblock Optimal exploration-exploitation in a multi-armed-bandit problem with
+  non-stationary rewards.
+\newblock {\em CoRR\/}, {\bf abs/1405.3316}.
+\newblock \urlprefix\url{http://arxiv.org/abs/1405.3316}.
+
+\bibitem[{Beygelzimer {\em et~al.\/}(2011)Beygelzimer, Langford, Li, Reyzin,
+  and Schapire}]{beygelzimer2011contextual}
+{\bf Beygelzimer, A.}, {\bf J.~Langford}, {\bf L.~Li}, {\bf L.~Reyzin}, and
+  {\bf R.~E. Schapire}, Contextual bandit algorithms with supervised learning
+  guarantees.
+\newblock {\em In\/} {\em AISTATS\/}. 2011.
+
+\bibitem[{Bubeck and Cesa-Bianchi(2012)}]{bubeck2012regret}
+{\bf Bubeck, S.} and {\bf N.~Cesa-Bianchi} (2012).
+\newblock Regret analysis of stochastic and nonstochastic multi-armed bandit
+  problems.
+\newblock {\em arXiv preprint arXiv:1204.5721\/}.
+
+\bibitem[{Bubeck {\em et~al.\/}(2011)Bubeck, Munos, and
+  Stoltz}]{bubeck2011pure}
+{\bf Bubeck, S.}, {\bf R.~Munos}, and {\bf G.~Stoltz} (2011).
+\newblock Pure exploration in finitely-armed and continuous-armed bandits.
+\newblock {\em Theoretical Computer Science\/}, {\bf 412}(19), 1832--1852.
+
+\bibitem[{Bubeck {\em et~al.\/}(2013)Bubeck, Wang, and
+  Viswanathan}]{bubeck2013multiple}
+{\bf Bubeck, S.}, {\bf T.~Wang}, and {\bf N.~Viswanathan}, Multiple
+  identifications in multi-armed bandits.
+\newblock {\em In\/} {\em ICML (1)\/}. 2013.
+
+\bibitem[{Bui {\em et~al.\/}(2012)Bui, Johari, and Mannor}]{bui2012clustered}
+{\bf Bui, L.}, {\bf R.~Johari}, and {\bf S.~Mannor} (2012).
+\newblock Clustered bandits.
+\newblock {\em arXiv preprint arXiv:1206.4169\/}.
+
+\bibitem[{Cappe {\em et~al.\/}(2012)Cappe, Garivier, and
+  Kaufmann}]{CapGarKau12}
+{\bf Cappe, O.}, {\bf A.~Garivier}, and {\bf E.~Kaufmann} (2012).
+\newblock pymabandits.
+\newblock \url{http://mloss.org/software/view/415/}.
+
+\bibitem[{Capp{\'e} {\em et~al.\/}(2013)Capp{\'e}, Garivier, Maillard, Munos,
+  Stoltz {\em et~al.\/}}]{cappe2013kullback}
+{\bf Capp{\'e}, O.}, {\bf A.~Garivier}, {\bf O.-A. Maillard}, {\bf R.~Munos},
+  {\bf G.~Stoltz}, {\em et~al.\/} (2013).
+\newblock Kullback--leibler upper confidence bounds for optimal sequential
+  allocation.
+\newblock {\em The Annals of Statistics\/}, {\bf 41}(3), 1516--1541.
+
+\bibitem[{Cesa-Bianchi {\em et~al.\/}(2013)Cesa-Bianchi, Gentile, and
+  Zappella}]{cesa2013gang}
+{\bf Cesa-Bianchi, N.}, {\bf C.~Gentile}, and {\bf G.~Zappella}, A gang of
+  bandits.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2013.
+
+\bibitem[{Cesa-Bianchi and Lugosi(2006)}]{cesa2006prediction}
+{\bf Cesa-Bianchi, N.} and {\bf G.~Lugosi}, {\em Prediction, learning, and
+  games\/}.
+\newblock Cambridge university press, 2006.
+
+\bibitem[{Cesa-Bianchi and Lugosi(2012)}]{cesa2012combinatorial}
+{\bf Cesa-Bianchi, N.} and {\bf G.~Lugosi} (2012).
+\newblock Combinatorial bandits.
+\newblock {\em Journal of Computer and System Sciences\/}, {\bf 78}(5),
+  1404--1422.
+
+\bibitem[{Chen {\em et~al.\/}(2014)Chen, Lin, King, Lyu, and
+  Chen}]{chen2014combinatorial}
+{\bf Chen, S.}, {\bf T.~Lin}, {\bf I.~King}, {\bf M.~R. Lyu}, and {\bf
+  W.~Chen}, Combinatorial pure exploration of multi-armed bandits.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2014.
+
+\bibitem[{Degenne and Perchet(2016)}]{degenne2016anytime}
+{\bf Degenne, R.} and {\bf V.~Perchet}, Anytime optimal algorithms in
+  stochastic multi-armed bandits.
+\newblock {\em In\/} {\em International Conference on Machine Learning\/}.
+  2016.
+
+\bibitem[{Even-Dar {\em et~al.\/}(2006)Even-Dar, Mannor, and
+  Mansour}]{even2006action}
+{\bf Even-Dar, E.}, {\bf S.~Mannor}, and {\bf Y.~Mansour} (2006).
+\newblock Action elimination and stopping conditions for the multi-armed bandit
+  and reinforcement learning problems.
+\newblock {\em The Journal of Machine Learning Research\/}, {\bf 7},
+  1079--1105.
+
+\bibitem[{Freund and Schapire(1995)}]{freund1995desicion}
+{\bf Freund, Y.} and {\bf R.~E. Schapire}, A desicion-theoretic generalization
+  of on-line learning and an application to boosting.
+\newblock {\em In\/} {\em European conference on computational learning
+  theory\/}. Springer, 1995.
+
+\bibitem[{Gabillon {\em et~al.\/}(2012)Gabillon, Ghavamzadeh, and
+  Lazaric}]{gabillon2012best}
+{\bf Gabillon, V.}, {\bf M.~Ghavamzadeh}, and {\bf A.~Lazaric}, Best arm
+  identification: A unified approach to fixed budget and fixed confidence.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2012.
+
+\bibitem[{Gabillon {\em et~al.\/}(2011)Gabillon, Ghavamzadeh, Lazaric, and
+  Bubeck}]{gabillon2011multi}
+{\bf Gabillon, V.}, {\bf M.~Ghavamzadeh}, {\bf A.~Lazaric}, and {\bf
+  S.~Bubeck}, Multi-bandit best arm identification.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2011.
+
+\bibitem[{Gajane {\em et~al.\/}(2017)Gajane, Urvoy, and
+  Kaufmann}]{DBLP:journals/corr/abs-1708-05033}
+{\bf Gajane, P.}, {\bf T.~Urvoy}, and {\bf E.~Kaufmann} (2017).
+\newblock Corrupt bandits for privacy preserving input.
+\newblock {\em CoRR\/}, {\bf abs/1708.05033}.
+\newblock \urlprefix\url{http://arxiv.org/abs/1708.05033}.
+
+\bibitem[{Garivier and Capp{\'e}(2011)}]{garivier2011kl}
+{\bf Garivier, A.} and {\bf O.~Capp{\'e}} (2011).
+\newblock The kl-ucb algorithm for bounded stochastic bandits and beyond.
+\newblock {\em arXiv preprint arXiv:1102.2490\/}.
+
+\bibitem[{Garivier and Moulines(2011)}]{garivier2011upper}
+{\bf Garivier, A.} and {\bf E.~Moulines}, On upper-confidence bound policies
+  for switching bandit problems.
+\newblock {\em In\/} {\em International Conference on Algorithmic Learning
+  Theory\/}. Springer, 2011.
+
+\bibitem[{Gentile {\em et~al.\/}(2014)Gentile, Li, and
+  Zappella}]{gentile2014online}
+{\bf Gentile, C.}, {\bf S.~Li}, and {\bf G.~Zappella}, Online clustering of
+  bandits.
+\newblock {\em In\/} {\em ICML\/}. 2014.
+
+\bibitem[{Ghavamzadeh {\em et~al.\/}(2015)Ghavamzadeh, Mannor, Pineau, Tamar
+  {\em et~al.\/}}]{ghavamzadeh2015bayesian}
+{\bf Ghavamzadeh, M.}, {\bf S.~Mannor}, {\bf J.~Pineau}, {\bf A.~Tamar}, {\em
+  et~al.\/}, {\em Bayesian reinforcement learning: a survey\/}.
+\newblock World Scientific, 2015.
+
+\bibitem[{Gy{\"o}rgy {\em et~al.\/}(2007)Gy{\"o}rgy, Linder, Lugosi, and
+  Ottucs{\'a}k}]{gyorgy2007line}
+{\bf Gy{\"o}rgy, A.}, {\bf T.~Linder}, {\bf G.~Lugosi}, and {\bf
+  G.~Ottucs{\'a}k} (2007).
+\newblock The on-line shortest path problem under partial monitoring.
+\newblock {\em Journal of Machine Learning Research\/}, {\bf 8}(Oct),
+  2369--2403.
+
+\bibitem[{Hartland {\em et~al.\/}(2007)Hartland, Baskiotis, Gelly, Sebag, and
+  Teytaud}]{hartland2007change}
+{\bf Hartland, C.}, {\bf N.~Baskiotis}, {\bf S.~Gelly}, {\bf M.~Sebag}, and
+  {\bf O.~Teytaud} (2007).
+\newblock Change point detection and meta-bandits for online learning in
+  dynamic environments.
+\newblock {\em CAp\/}, 237--250.
+
+\bibitem[{Hillel {\em et~al.\/}(2013)Hillel, Karnin, Koren, Lempel, and
+  Somekh}]{hillel2013distributed}
+{\bf Hillel, E.}, {\bf Z.~S. Karnin}, {\bf T.~Koren}, {\bf R.~Lempel}, and {\bf
+  O.~Somekh}, Distributed exploration in multi-armed bandits.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2013.
+
+\bibitem[{Honda and Takemura(2010)}]{honda2010asymptotically}
+{\bf Honda, J.} and {\bf A.~Takemura}, An asymptotically optimal bandit
+  algorithm for bounded support models.
+\newblock {\em In\/} {\em COLT\/}. Citeseer, 2010.
+
+\bibitem[{Jamieson and Nowak(2014)}]{jamieson2014best}
+{\bf Jamieson, K.} and {\bf R.~Nowak}, Best-arm identification algorithms for
+  multi-armed bandits in the fixed confidence setting.
+\newblock {\em In\/} {\em Information Sciences and Systems (CISS), 2014 48th
+  Annual Conference on\/}. IEEE, 2014.
+
+\bibitem[{Kalai and Vempala(2005)}]{kalai2005efficient}
+{\bf Kalai, A.} and {\bf S.~Vempala} (2005).
+\newblock Efficient algorithms for online decision problems.
+\newblock {\em Journal of Computer and System Sciences\/}, {\bf 71}(3),
+  291--307.
+
+\bibitem[{Kalyanakrishnan {\em et~al.\/}(2012)Kalyanakrishnan, Tewari, Auer,
+  and Stone}]{kalyanakrishnan2012pac}
+{\bf Kalyanakrishnan, S.}, {\bf A.~Tewari}, {\bf P.~Auer}, and {\bf P.~Stone},
+  Pac subset selection in stochastic multi-armed bandits.
+\newblock {\em In\/} {\em Proceedings of the 29th International Conference on
+  Machine Learning (ICML-12)\/}. 2012.
+
+\bibitem[{Kano {\em et~al.\/}(2017)Kano, Honda, Sakamaki, Matsuura, Nakamura,
+  and Sugiyama}]{kano2017good}
+{\bf Kano, H.}, {\bf J.~Honda}, {\bf K.~Sakamaki}, {\bf K.~Matsuura}, {\bf
+  A.~Nakamura}, and {\bf M.~Sugiyama} (2017).
+\newblock Good arm identification via bandit feedback.
+\newblock {\em arXiv preprint arXiv:1710.06360\/}.
+
+\bibitem[{Kaufmann {\em et~al.\/}(2012)Kaufmann, Capp{\'e}, and
+  Garivier}]{kaufmann2012bayesian}
+{\bf Kaufmann, E.}, {\bf O.~Capp{\'e}}, and {\bf A.~Garivier}, On bayesian
+  upper confidence bounds for bandit problems.
+\newblock {\em In\/} {\em AISTATS\/}. 2012.
+
+\bibitem[{Koc{\'a}k {\em et~al.\/}(2014)Koc{\'a}k, Neu, Valko, and
+  Munos}]{kocak2014efficient}
+{\bf Koc{\'a}k, T.}, {\bf G.~Neu}, {\bf M.~Valko}, and {\bf R.~Munos},
+  Efficient learning by implicit exploration in bandit problems with side
+  observations.
+\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
+  2014.
+
+\bibitem[{Kocsis and Szepesv{\'a}ri(2006)}]{kocsis2006discounted}
+{\bf Kocsis, L.} and {\bf C.~Szepesv{\'a}ri}, Discounted ucb.
+\newblock {\em In\/} {\em 2nd PASCAL Challenges Workshop\/}. 2006.
+
+\bibitem[{Lai and Robbins(1985)}]{lai1985asymptotically}
+{\bf Lai, T.~L.} and {\bf H.~Robbins} (1985).
+\newblock Asymptotically efficient adaptive allocation rules.
+\newblock {\em Advances in applied mathematics\/}, {\bf 6}(1), 4--22.
+
+\bibitem[{Langford and Zhang(2008)}]{langford2008epoch}
+{\bf Langford, J.} and {\bf T.~Zhang}, The epoch-greedy algorithm for
+  multi-armed bandits with side information.
+\newblock {\em In\/} {\em Advances in neural information processing systems\/}.
+  2008.
+
+\bibitem[{Lattimore(2015)}]{lattimore2015optimally}
+{\bf Lattimore, T.} (2015).
+\newblock Optimally confident ucb: Improved regret for finite-armed bandits.
+\newblock {\em arXiv preprint arXiv:1507.07880\/}.
+
+\bibitem[{Lattimore(2016)}]{lattimore2016regret}
+{\bf Lattimore, T.} (2016).
+\newblock Regret analysis of the anytime optimally confident ucb algorithm.
+\newblock {\em arXiv preprint arXiv:1603.08661\/}.
+
+\bibitem[{Li {\em et~al.\/}(2010)Li, Chu, Langford, and
+  Schapire}]{li2010contextual}
+{\bf Li, L.}, {\bf W.~Chu}, {\bf J.~Langford}, and {\bf R.~E. Schapire}, A
+  contextual-bandit approach to personalized news article recommendation.
+\newblock {\em In\/} {\em Proceedings of the 19th international conference on
+  World wide web\/}. ACM, 2010.
+
+\bibitem[{Littlestone and Warmuth(1994)}]{littlestone1994weighted}
+{\bf Littlestone, N.} and {\bf M.~K. Warmuth} (1994).
+\newblock The weighted majority algorithm.
+\newblock {\em Information and computation\/}, {\bf 108}(2), 212--261.
+
+\bibitem[{Liu {\em et~al.\/}(2017)Liu, Lee, and Shroff}]{liu2017change}
+{\bf Liu, F.}, {\bf J.~Lee}, and {\bf N.~Shroff} (2017).
+\newblock A change-detection based framework for piecewise-stationary
+  multi-armed bandit problem.
+\newblock {\em arXiv preprint arXiv:1711.03539\/}.
+
+\bibitem[{Liu and Zhao(2010)}]{liu2010distributed}
+{\bf Liu, K.} and {\bf Q.~Zhao} (2010).
+\newblock Distributed learning in multi-armed bandit with multiple players.
+\newblock {\em IEEE Transactions on Signal Processing\/}, {\bf 58}(11),
+  5667--5681.
+
+\bibitem[{Liu and Tsuruoka(2016)}]{liu2016modification}
+{\bf Liu, Y.-C.} and {\bf Y.~Tsuruoka} (2016).
+\newblock Modification of improved upper confidence bounds for regulating
+  exploration in monte-carlo tree search.
+\newblock {\em Theoretical Computer Science\/}.
+
+\bibitem[{Locatelli {\em et~al.\/}(2016)Locatelli, Gutzeit, and
+  Carpentier}]{locatelli2016optimal}
+{\bf Locatelli, A.}, {\bf M.~Gutzeit}, and {\bf A.~Carpentier} (2016).
+\newblock An optimal algorithm for the thresholding bandit problem.
+\newblock {\em arXiv preprint arXiv:1605.08671\/}.
+
+\bibitem[{Maillard(2011)}]{maillard2011apprentissage}
+{\bf Maillard, O.-A.} (2011).
+\newblock {\em LEARNING S {\ 'E} QUENTIAL: Bandits, Statistics and
+  Reinforcement.\/}.
+\newblock Ph.D. thesis.
+
+\bibitem[{McMahan and Blum(2004)}]{mcmahan2004online}
+{\bf McMahan, H.~B.} and {\bf A.~Blum}, Online geometric optimization in the
+  bandit setting against an adaptive adversary.
+\newblock {\em In\/} {\em COLT\/}, volume 3120. Springer, 2004.
+
+\bibitem[{Mellor and Shapiro(2013)}]{mellor2013thompson}
+{\bf Mellor, J.} and {\bf J.~Shapiro} (2013).
+\newblock Thompson sampling in switching environments with bayesian online
+  change point detection.
+\newblock {\em CoRR, abs/1302.3721\/}.
+
+\bibitem[{M{\'e}nard and Garivier(2017)}]{menard2017minimax}
+{\bf M{\'e}nard, P.} and {\bf A.~Garivier} (2017).
+\newblock A minimax and asymptotically optimal algorithm for stochastic
+  bandits.
+\newblock {\em arXiv preprint arXiv:1702.07211\/}.
+
+\bibitem[{Raj and Kalyani(2017)}]{raj2017taming}
+{\bf Raj, V.} and {\bf S.~Kalyani} (2017).
+\newblock Taming non-stationary bandits: A bayesian approach.
+\newblock {\em arXiv preprint arXiv:1707.09727\/}.
+
+\bibitem[{Robbins(1952)}]{robbins1952some}
+{\bf Robbins, H.}, Some aspects of the sequential design of experiments.
+\newblock {\em In\/} {\em Herbert Robbins Selected Papers\/}. Springer, 1952,
+  169--177.
+
+\bibitem[{Steinwart {\em et~al.\/}(2005)Steinwart, Hush, and
+  Scovel}]{steinwart2005classification}
+{\bf Steinwart, I.}, {\bf D.~Hush}, and {\bf C.~Scovel} (2005).
+\newblock A classification framework for anomaly detection.
+\newblock {\em Journal of Machine Learning Research\/}, {\bf 6}(Feb), 211--232.
+
+\bibitem[{Streeter and Smith(2006)}]{streeter2006selecting}
+{\bf Streeter, M.~J.} and {\bf S.~F. Smith} (2006).
+\newblock Selecting among heuristics by solving thresholded k-armed bandit
+  problems.
+\newblock {\em ICAPS 2006\/}, 123.
+
+\bibitem[{Sutton and Barto(1998)}]{sutton1998reinforcement}
+{\bf Sutton, R.~S.} and {\bf A.~G. Barto}, {\em Reinforcement learning: An
+  introduction\/}.
+\newblock MIT press, 1998.
+
+\bibitem[{Sz{\"o}r{\'e}nyi {\em et~al.\/}(2013)Sz{\"o}r{\'e}nyi, Busa-Fekete,
+  Heged{\"u}s, Orm{\'a}ndi, Jelasity, and K{\'e}gl}]{szorenyi2013gossip}
+{\bf Sz{\"o}r{\'e}nyi, B.}, {\bf R.~Busa-Fekete}, {\bf I.~Heged{\"u}s}, {\bf
+  R.~Orm{\'a}ndi}, {\bf M.~Jelasity}, and {\bf B.~K{\'e}gl}, Gossip-based
+  distributed stochastic bandit algorithms.
+\newblock {\em In\/} {\em ICML (3)\/}. 2013.
+
+\bibitem[{Takimoto and Warmuth(2003)}]{takimoto2003path}
+{\bf Takimoto, E.} and {\bf M.~K. Warmuth} (2003).
+\newblock Path kernels and multiplicative updates.
+\newblock {\em Journal of Machine Learning Research\/}, {\bf 4}(Oct), 773--818.
+
+\bibitem[{Thompson(1933)}]{thompson1933likelihood}
+{\bf Thompson, W.~R.} (1933).
+\newblock On the likelihood that one unknown probability exceeds another in
+  view of the evidence of two samples.
+\newblock {\em Biometrika\/}, 285--294.
+
+\bibitem[{Thompson(1935)}]{thompson1935theory}
+{\bf Thompson, W.~R.} (1935).
+\newblock On the theory of apportionment.
+\newblock {\em American Journal of Mathematics\/}, {\bf 57}(2), 450--456.
+
+\bibitem[{Wu {\em et~al.\/}(2016)Wu, Shariff, Lattimore, and
+  Szepesv{\'{a}}ri}]{DBLP:conf/icml/WuSLS16}
+{\bf Wu, Y.}, {\bf R.~Shariff}, {\bf T.~Lattimore}, and {\bf
+  C.~Szepesv{\'{a}}ri}, Conservative bandits.
+\newblock {\em In\/} {\em Proceedings of the 33nd International Conference on
+  Machine Learning, {ICML} 2016, New York City, NY, USA, June 19-24, 2016\/}.
+  2016.
+\newblock \urlprefix\url{http://jmlr.org/proceedings/papers/v48/wu16.html}.
+
+\bibitem[{Yu and Mannor(2009)}]{yu2009piecewise}
+{\bf Yu, J.~Y.} and {\bf S.~Mannor}, Piecewise-stationary bandit problems with
+  side observations.
+\newblock {\em In\/} {\em Proceedings of the 26th Annual International
+  Conference on Machine Learning\/}. ACM, 2009.
+
+\end{thebibliography}
