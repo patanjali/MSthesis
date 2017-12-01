@@ -1,8 +1,0 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
-The style file: iitm.bst
-Illegal, another \bibstyle command---line 530 of file thesis.aux
- : \bibstyle
- :          {iitm}
-I'm skipping whatever remains of this command
-Database file #1: refs.bib
-(There was 1 error message)

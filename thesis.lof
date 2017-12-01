@@ -2,32 +2,32 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Reinforcement Learning\relax }}{2}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Flowchart of UCB-Improved\relax }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flowchart of UCB-Improved\relax }}{18}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of EUCBV algorithm\relax }}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A comparison of the cumulative regret incurred by the various bandit algorithms. \relax }}{35}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{35}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{35}{figure.caption.26}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Further Experiments with EUCBV\relax }}{36}{figure.caption.27}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{36}{figure.caption.27}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{36}{figure.caption.27}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of EUCBV algorithm\relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A comparison of the cumulative regret incurred by the various bandit algorithms. \relax }}{36}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{36}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{36}{figure.caption.26}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Further Experiments with EUCBV\relax }}{37}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.25\textwidth }}{37}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.25\textwidth }}{37}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Connection between TBP, Pure Exploration and SMAB\relax }}{45}{figure.caption.31}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Connection between TBP, Pure Exploration and SMAB\relax }}{46}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Flowchart for AugUCB\relax }}{51}{figure.caption.34}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{58}{figure.caption.37}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{58}{figure.caption.37}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{58}{figure.caption.37}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{58}{figure.caption.38}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{58}{figure.caption.38}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{58}{figure.caption.38}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{59}{figure.caption.39}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{59}{figure.caption.39}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{59}{figure.caption.39}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Flowchart for AugUCB\relax }}{52}{figure.caption.34}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{59}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{59}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{59}{figure.caption.37}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{59}{figure.caption.38}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{59}{figure.caption.38}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{59}{figure.caption.38}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{60}{figure.caption.39}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{60}{figure.caption.39}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{60}{figure.caption.39}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{71}{figure.caption.40}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{71}{figure.caption.40}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{71}{figure.caption.40}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Cumulative regret for various bandit algorithms on a piecewise stochastic 3-armed bandit environment. \relax }}{72}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{72}{figure.caption.40}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \relax \fontsize {17.28}{22}\selectfont \textwidth }}{72}{figure.caption.40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
