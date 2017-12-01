@@ -73,7 +73,7 @@ where, $G_{\max}(j_1,\ldots,j_T) = \max_{i\in\A}\sum_{t=1}^{T}X_{i_t}$ is the re
 
 Another interesting variation of the MAB model is the contextual bandit setup, where there are contexts or features associated with each arm. We can envision this with an example of online news article recommendation where there are users and articles and the goal of the learner is to map the correct article to a user so as to generate the user's  interest. Following a similar work in \citet{langford2008epoch} this problem can be formulated as a contextual MAB problem such that at every timestep $t=1,\ldots, T$
 \begin{enumerate}
-\item The learner observes an user $u_t$ and the set of arms (articles) $i\in\A$ along with their feature vectors $\mathcal{v}_{i,t},\forall i\in\A_t$. This vector contains information about both the users and the arms and is referred as the context.
+\item The learner observes an user $u_t$ and the set of arms (articles) $i\in\A$ along with their feature vectors ${v}_{i,t},\forall i\in\A_t$. This vector contains information about both the users and the arms and is referred as the context.
 \item On the basis of previous trials the learner pulls an arm $i_t\in\A$ at the $t$-th timestep and observes the reward $X_{i,t}$ for only the arm $i_t\in\A$.
 \item The algorithm then improves its prediction for the next trial with the new observation, $\left(v_{i,t},i_{t}, X_{i,t} \right)$.
 \end{enumerate}
