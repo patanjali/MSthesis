@@ -1,0 +1,63 @@
+\subsection{Proposed Algorithms}
+
+In this section, we introduce the an actively adaptive improved changepoint detection algorithm, referred to as ImpCPD as shown in algorithm \ref{alg:ImpCPD}. As discussed before, this algorithm is motivated from UCB-Improved in \citet{auer2010ucb} and is a phase-based algorithm. Further, unlike UCB-Improved which only deals with the exploration-exploitation dilemma, ImpCPD has to handle the exploration-exploitation-changepoint dilemma. In pursuit of this, ImpCPD calls upon an additional sub-routine, the Changpoint-Detection sub-routine in algorithm \ref{alg:CPDI}. This sub-routine is called at the end of every phase to detect the changepoint has occurred or not. Moreover, unlike UCB-Improved, ImpCPD does not pull all arms equally at every timestep, rather between two phases it pulls the arm that maximizes the upper confidence bound as like UCB1 in \citet{auer2002finite}. Also, ImpCPD does not eliminate arms mainly because it deals with a changing environment and it may so happen that for some sub-optimal arm the changepoint is detected very fast and since this is a global changepoint scenario, this helps ImpCPD adapt quickly. Once, the chnagepoint is detected the algorithm restarts as like all the adaptive algorithms by throwing away the past observed data so that the new data from a changed environment is less biased. We also introduce the pseudo arm elimination just like CCB \citep{liu2016modification} algorithm  such that an arm $i$ is never actually eliminated but the active list $B_m$ is just modified to control the phase length.
+
+\begin{algorithm}[!ht]
+\caption{Changepoint-Detection-subroutine($m$) (CPDI)}
+\label{alg:CPDI}
+\begin{algorithmic}
+\For{$i=1,..,K$}
+\For{$m' = 0 ,\ldots,m$}
+\State \If{$\hat{r}_{i,t_0:N_{m'-1}} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:N_{m'-1}}}} < \hat{r}_{i,N_{m'-1}:N_{m}} - \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,N_{m'-1}:N_{m}}}}$}
+\State Return True
+\Else{$\hat{r}_{i,t_0:N_{m'-1}} - \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:N_{m'-1}}}} > \hat{r}_{i,N_{m'-1}:N_{m}} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,N_{m'-1}:N_{m}}}}$}
+\State Return True
+\EndIf
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{algorithm}[t!]
+\caption{ImpCPD}
+\label{alg:ImpCPD}
+\begin{algorithmic}
+\State {\bf Input:} Time horizon $T$; exploration parameter $\alpha$,$\psi$;
+\State {\bf Initialization:} $B_{0}=\mathcal{A}$; $m=0$; $\epsilon_{0}=1$;
+\begin{align*}
+M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor; \hspace*{2mm};\hspace*{2mm}
+\ell_{0}=\left\lceil \dfrac{\log(\psi T\epsilon_{0}^2)}{2\epsilon_{0}} \right\rceil;
+\hspace*{2mm}N_{0}=K\ell_{0};t_0 =1; t_p =1.
+\end{align*}
+\State Pull each arm once
+\State \For{$t=K+1,..,T$}
+\State Pull arm $j\in\argmin_{i\in\A}\left\lbrace \hat{r}_{i,t_0:t_p} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}\right\rbrace$
+\State $t:= t+1, t_p := t_p + 1$ 
+\State \For{$i\in\A$}
+\State \If{$\hat{r}_{i,t_0:t_p} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}  < j\in\argmax_{i\in\A}\lbrace\hat{r}_{i,t_0:t_p} - \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}\rbrace$}
+\State $|B_m| := |B_m|-1$\hspace*{4mm} (Pseudo arm elimination)
+\EndIf
+\EndFor
+\State \If{$t\geq N_{m}$ and $m \leq M$}
+\State \If{CPDI($m$)==True}
+\State \textbf{Restart}
+\State $B_{m}=\A$; $m=0$; 
+\State Set $n_{i,t_0:t_p} = 0, \forall i\in\A$; Set $\hat{r}_{i,t_0:t_p}=0,\forall i\in\A$; $t_0 = 1$; $t_p = 1$;.
+\State Pull each arm once
+\State \Else{
+\State \textbf{Reset Parameters}
+\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$
+\State $B_{m+1}:= B_{m}$
+\State $\ell_{m+1}:=\left\lceil \dfrac{\log(\psi T\epsilon_{m}^2)}{2\epsilon_{m}} \right\rceil$
+\State $N_{m+1}:= t + |B_{m+1}|\ell_{m+1}$
+\State $m := m+1$}
+\EndIf
+\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+ 

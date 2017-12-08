@@ -3,7 +3,7 @@ We denote each of the \textit{non-overlapping reward generating processes} as $\
 
 %We assume a global switching model where at particular breakpoint all the arms' distribution changes.
 
-	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t_p}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t_p$ timesteps. $r_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{r}_{i,t_0:t_p}$ denotes the sample mean for the arm $i$ from $t_0$ to $t_p$ timesteps.
+	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t$ timesteps. $r_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{r}_{i,t_0:t_p}$ denotes the sample mean for the arm $i$ from $t_0$ to $t_p$ timesteps.
 
 
 
@@ -111,7 +111,7 @@ Also, recall from Definition \ref{Def:chg-gap} that the changepoint gap $\Delta^
 We define $\Psi_{i,c_j}$ as the ratio between $\Delta^{opt}_{i,c_j}$ and $\Delta^{chg}_{i,c_j}$ for the $i$-th arm in $\A$ and the $c_j$-th changepoint in $\G$ such that,
 
 \begin{align*}
-\Psi_{i,c_j} = \dfrac{\Delta^{opt}_{i,c_{j+1}}}{\Delta^{chg}_{i,c_j}}
+\Psi_{i,c_j} = \dfrac{\Delta^{opt}_{i,c_{j}}}{\Delta^{chg}_{i,c_j}}
 \end{align*}
 
 \end{definition}
