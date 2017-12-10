@@ -4,8 +4,8 @@
 \BOOKMARK [0][-]{chapter*.5}{LIST OF FIGURES}{}% 4
 \BOOKMARK [0][-]{chapter*.6}{ABBREVIATIONS}{}% 5
 \BOOKMARK [0][-]{chapter*.7}{NOTATION}{}% 6
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
-\BOOKMARK [1][-]{section.1.1}{Introduction to Reinforcement Learning}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.1}{Introduction to Bandits}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Reinforcement Learning}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.2}{Connection between Reinforcement Learning and Bandits}{chapter.1}% 9
 \BOOKMARK [1][-]{section.1.3}{Why study Bandits?}{chapter.1}% 10
 \BOOKMARK [1][-]{section.1.4}{Motivation}{chapter.1}% 11
@@ -45,10 +45,10 @@
 \BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 45
 \BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 46
 \BOOKMARK [1][-]{section.4.1}{Introduction to Thresholding Bandits}{chapter.4}% 47
-\BOOKMARK [1][-]{section.4.2}{Notations}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.2}{Notations and Assumptions}{chapter.4}% 48
 \BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 49
 \BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration}{chapter.4}% 51
+\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration problem}{chapter.4}% 51
 \BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 52
 \BOOKMARK [2][-]{subsection.4.5.2}{Successive Accept Reject Algorithm for best-p arms setting}{section.4.5}% 53
 \BOOKMARK [2][-]{subsection.4.5.3}{Fixed Confidence setting}{section.4.5}% 54
@@ -56,7 +56,7 @@
 \BOOKMARK [1][-]{section.4.6}{TBP connection to Pure Exploration problem}{chapter.4}% 56
 \BOOKMARK [1][-]{section.4.7}{Related Work in Thresholding Bandits}{chapter.4}% 57
 \BOOKMARK [1][-]{section.4.8}{Summary}{chapter.4}% 58
-\BOOKMARK [0][-]{chapter.5}{Augmented UCB for TBP}{}% 59
+\BOOKMARK [0][-]{chapter.5}{Augmented UCB for Thresholding Bandit Problem}{}% 59
 \BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 60
 \BOOKMARK [1][-]{section.5.2}{Our Contribution}{chapter.5}% 61
 \BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}% 62
