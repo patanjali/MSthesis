@@ -24,13 +24,19 @@
 %\nocite{*}
 \maketitle
 
-
+\newpage
+\
+\thispagestyle{empty}
+\clearpage
 
 % The main text will follow from this point so set the page numbering
 % to arabic from here on.
 \pagenumbering{arabic}
-\setcounter{page}{0}
-%\newpage
+\setcounter{page}{1}
+
+%\afterpage{\null\newpage}
+
+
 \section{Introduction}
 \label{synopsis:intro}
 \input{synopsis/intro}
@@ -63,24 +69,23 @@ We divided the research work done into two parts, in the first part we study the
 %\subsubsection{Introduction}
 %In this part, we look at the stochastic multi-armed bandit (SMAB) setting and discussed how it is important in the general reinforcement learning setup. We also look at the various state-of-the-art algorithms in the literature for the SMAB setting and discuss the advantages and disadvantages of them. The regret bounds that have been proven for the said algorithms have also been discussed at length and their confidence intervals have also been compared against each other. Also in this part, we provide our solution to the SMAB setting which achieves an almost order-optimal regret bound. 
 
-In this part, we deal with the stochastic multi-armed bandit (SMAB) setting. In its classical form, stochastic MABs represent a sequential learning problem where a learner is exposed to a finite set of actions (or arms) and needs to choose one of the actions at each timestep. After choosing (or pulling) an arm the learner receives a reward, which is conceptualized as an independent random draw from stationary distribution associated with the selected arm. Also, note that in SMAB, the distribution associated with each arm is fixed throughout the entire duration of the horizon denoted by $T$. This SMAB formulation is shown in algorithm \ref{alg:SMAB}.
+In this part, we deal with the stochastic multi-armed bandit (SMAB) setting. In its classical form, stochastic MABs represent a sequential learning problem where a learner is exposed to a finite set of actions (or arms) and needs to choose one of the actions at each timestep. After choosing (or pulling) an arm the learner receives a reward, which is conceptualized as an independent random draw from stationary distribution associated with the selected arm. Also, note that in SMAB, the distribution associated with each arm is fixed throughout the entire duration of the horizon denoted by $T$. 
 
-\begin{algorithm}[!th]
-\caption{SMAB formulation}
-\label{alg:SMAB}
-\begin{algorithmic}
-\State {\bf Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution
-\State \For{ each timestep $t=1,2,\ldots, T$}
-\State The learner chooses an arm $i\in\A$, where $\A$ is the set of arms and $|\A|=K$.
-\State The learner observes the reward $X_{i,t}\sim^{i.i.d} D_{i}$ where, $D_{i}$ is the distribution associated with the arm $i$. 
-\State \EndFor
-\end{algorithmic}
-\end{algorithm}
+%This SMAB formulation is shown in algorithm \ref{alg:SMAB}.
+%
+%\begin{algorithm}[!th]
+%\caption{SMAB formulation}
+%\label{alg:SMAB}
+%\begin{algorithmic}
+%\State {\bf Input:} Time horizon $T$, $K$ number of arms with unknown parameters of reward distribution
+%\State \For{ each timestep $t=1,2,\ldots, T$}
+%\State The learner chooses an arm $i\in\A$, where $\A$ is the set of arms and $|\A|=K$.
+%\State The learner observes the reward $X_{i,t}\sim^{i.i.d} D_{i}$ where, $D_{i}$ is the distribution associated with the arm $i$. 
+%\State \EndFor
+%\end{algorithmic}
+%\end{algorithm}
 
-In SMAB setting, the learner seeks to identify the optimal arm as quickly as possible to maximize its rewards. In the pursuit of this, the learner faces the task of balancing exploitation and exploration. In other words, should the learner pull the arm which currently has the best-known estimates (exploit) or explores arms more thoroughly to ensure that a correct decision is being made. This is termed as the \textit{exploration-exploitation dilemma}, one of the fundamental challenges of reinforcement learning.
-
-
-    The objective of the learner in the SMAB setting is to maximize his rewards or in other words, to minimize the cumulative regret, which is defined as follows:
+In SMAB setting, the learner seeks to identify the optimal arm as quickly as possible to maximize its rewards. In the pursuit of this, the learner faces the task of balancing exploitation and exploration. In other words, should the learner pull the arm which currently has the best-known estimates (exploit) or explores arms more thoroughly to ensure that a correct decision is being made. This is termed as the \textit{exploration-exploitation dilemma}, one of the fundamental challenges of reinforcement learning. The objective of the learner in the SMAB setting is to maximize his rewards or in other words, to minimize the cumulative regret, which is defined as follows:
 \begin{align*}
 R_{T}=r^{*}T - \sum_{i=1}^{K} r_{i}n_{i}(T),
 \end{align*}
@@ -89,7 +94,10 @@ The expected regret of an algorithm after $T$ timesteps can be written as,
 \begin{align*}
 \E[R_{T}]= \sum_{i=1}^{K} \E[n_i (T)] \Delta_i,
 \end{align*}
-where $\Delta_{i}=r^{*}-r_{i}$ is the gap between the means of the optimal arm and the $i$-th arm. In the theoretical analysis of each algorithm, we try to obtain bounds on this cumulative regret. 
+where $\Delta_{i}=r^{*}-r_{i}$ is the gap between the means of the optimal arm and the $i$-th arm. 
+
+
+%In the theoretical analysis of each algorithm, we try to obtain bounds on this cumulative regret. 
 
 %These bounds can be both asymptotic or for a finite horizon. Again, these regret bounds can be either gap-dependent or gap-independent bounds. 
 %
@@ -167,14 +175,11 @@ Empirically, we show that EUCBV, owing to its estimating the variance of the arm
   < \max_{{j}\in B_{m}}\bigg\lbrace\hat{r}_{j} -\sqrt{\frac{\rho(\hat{v}_{j}+2)\log{(\psi T\epsilon_{m})}}{4 z_{j}}} \bigg\rbrace
 \end{align*}
 \EndArmElim
-
 \If{$t\geq N_{m}$ and $m\leq M$}
 \ResParam
-\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$\vspace{0.5ex}
-\State $B_{m+1}:=B_{m}$
+\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$; $B_{m+1}:=B_{m}$
 \State $n_{m+1}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m+1}^{2})}}{2\epsilon_{m+1}}\bigg\rceil$
-\State $N_{m+1}:=t+|B_{m+1}| n_{m+1}$
-\State $m:=m+1$
+\State $N_{m+1}:=t+|B_{m+1}| n_{m+1}$; $m:=m+1$
 \EndResParam
 \EndIf
 \State Stop if $|B_{m}|=1$ and pull ${i}\in B_{m}$ till $T$ is reached.
@@ -203,22 +208,22 @@ where the quantity $\epsilon_{m}$ is initialized to $1$ and halved after every r
 %\label{fig:eucbv}
 %\end{figure}
 
-\subsubsection{Summary}
-
-Here, we study the Efficient UCB Variance (EUCBV) algorithm which takes into account the empirical variance of the arms and employs aggressive exploration parameters in conjunction with non-uniform arm selection to eliminate sub-optimal arms. Our theoretical analysis conclusively established that EUCBV exhibits an order-optimal gap-independent regret bound of $O\left(\sqrt{KT}\right)$. Empirically, we show that EUCBV performs superbly across diverse experimental settings and outperforms most of the bandit algorithms in an SMAB setup. Our experiments showed that EUCBV is extremely stable for large horizons and performs consistently well across different types of distributions.
+%\subsubsection{Summary}
+%
+%Here, we study the Efficient UCB Variance (EUCBV) algorithm which takes into account the empirical variance of the arms and employs aggressive exploration parameters in conjunction with non-uniform arm selection to eliminate sub-optimal arms. Our theoretical analysis conclusively established that EUCBV exhibits an order-optimal gap-independent regret bound of $O\left(\sqrt{KT}\right)$. Empirically, we show that EUCBV performs superbly across diverse experimental settings and outperforms most of the bandit algorithms in an SMAB setup. Our experiments showed that EUCBV is extremely stable for large horizons and performs consistently well across different types of distributions.
 
 
 \subsection{Augmented UCB for Thresholding Bandits Problem}
 %In this part, we study the pure exploration MAB and thresholding bandit (TBP) setting which is a special case of combinatorial pure exploration MAB. We also study the various state-of-the-art algorithms in the literature for the pure-exploration setting and discussed the advantages and disadvantages of them. Then we look at the latest algorithm for the TBP setting. The expected loss that has been proven for the said algorithms have also been discussed at length and their exploration parameters have also been compared against each other. We provide our solution to this TBP setting which uses variance estimation to find the set of arms above the threshold. 
 
-In the previous part we studied the stochastic multi-armed bandit (SMAB) setting with the goal of minimizing cumulative regret. In this part we study another setting called pure-exploration multi-armed bandits. Pure-exploration MAB problems are unlike their traditional (exploration vs.\ exploitation)  counterparts, the SMABs, where the  objective is to minimize the cumulative regret. The cumulative regret is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$. 
-	In pure-exploration problems a learning algorithm, until time $T$, can invest entirely on exploring the arms without being concerned about the loss incurred while exploring; the objective is to minimize the probability that the arm recommended at time $T$ is not the best arm.  In this chapter, we further consider a combinatorial version of the pure-exploration MAB, called the thresholding bandit problem (TBP).  Here, the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. 
+%In the previous part we studied the stochastic multi-armed bandit (SMAB) setting with the goal of minimizing cumulative regret. 
+In this part we study another setting called pure-exploration thresholding multi-armed bandits which are unlike their traditional (exploration vs.\ exploitation)  counterparts, the SMABs, where the  objective is to minimize the cumulative regret. 
+%The cumulative regret is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$. 
+In pure-exploration problems a learning algorithm, until time $T$, can invest entirely on exploring the arms without being concerned about the loss incurred while exploring; the objective is to minimize the probability that the arm recommended at time $T$ is not the best arm.  In this chapter, we further consider a combinatorial version of the pure-exploration MAB, called the thresholding bandit problem (TBP).  Here, the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. 
 It is important to emphasize that the \emph{thresholding} bandit problem is different from the \emph{threshold} bandit setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. 
 
 Formally, the problem we consider is the following. First, we define the set $S_{\tau}=\lbrace i\in \mathcal{A}: r_{i}\geq \tau \rbrace$. Note that, $S_\tau$ is the set of all arms whose reward mean is greater than threshold $\tau$. Let 
-$S_\tau^c$ denote the complement of $S_\tau$, i.e.,  $S_{\tau}^{c}=\lbrace i\in \mathcal{A}: r_{i} < \tau \rbrace$. Next, let $\hat{S}_{\tau}=\hat{S}_{\tau}(T)\subseteq \mathcal{A}$ denote the recommendation of a learning algorithm (under consideration) after $T$ time units of exploration, while $\hat{S}_{\tau}^c$ denotes its complement.
-
-The performance of the learning agent is measured by the accuracy with which it can classify the arms into $S_{\tau}$ and $S_{\tau}^{c}$ after time horizon $T$. Equivalently, using $\mathbb{I}(E)$ to denote the indicator of an event $E$, the \emph{loss} $\mathcal{L}(T)$ is defined as
+$S_\tau^c$ denote the complement of $S_\tau$, i.e.,  $S_{\tau}^{c}=\lbrace i\in \mathcal{A}: r_{i} < \tau \rbrace$. Next, let $\hat{S}_{\tau}=\hat{S}_{\tau}(T)\subseteq \mathcal{A}$ denote the recommendation of a learning algorithm (under consideration) after $T$ time units of exploration, while $\hat{S}_{\tau}^c$ denotes its complement. The performance of the learning agent is measured by the accuracy with which it can classify the arms into $S_{\tau}$ and $S_{\tau}^{c}$ after time horizon $T$. Equivalently, using $\mathbb{I}(E)$ to denote the indicator of an event $E$, the \emph{loss} $\mathcal{L}(T)$ is defined as
 \begin{align*}
 \Ls (T) = \mathbb{I}\big(\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c}\neq \emptyset\rbrace    \cup    \lbrace\hat{S}_{\tau}\cap S_{\tau}^{c}\neq \emptyset\rbrace\big).
 \end{align*}			
@@ -258,7 +263,6 @@ APT         &$\exp\left(-\dfrac{T}{64 H_1}+2\log((\log(T)+1)K)\right)$ \\
 CSAR		&$\exp\left(-\dfrac{T-K}{72\log(K)H_{CSAR,2}}+2\log(K)\right)$ \\
 %\midrule
 \hline
-
 %\bottomrule
 \end{tabular}
 \end{center}
@@ -269,23 +273,14 @@ Our theoretical contribution comprises proving an upper bound on the expected lo
 \log\left(K\log K\right) H_{\sigma,2} > \log(2K) H_{\sigma,2} \ge H_{\sigma,1}.
 \end{align*}
 
-Thus, it follows that the upper bound for UCBEV \citep{gabillon2011multi} is better than that for AugUCB. However, implementation of UCBEV algorithm requires $H_{\sigma,1}$ as input, whose computation is not realistic in practice. In contrast, our AugUCB algorithm requires no such complexity factor as input. 
-
-Proceeding with the comparisons, we emphasize that the upper bound for  AugUCB is, in fact, not comparable with that of APT and CSAR; this is because the complexity term $H_{\sigma,2}$ is not explicitly comparable with either $H_1$ or $H_{CSAR,2}$. However, through extensive simulation experiments we find that AugUCB significantly outperforms both APT, CSAR and other non variance-based algorithms. AugUCB also outperforms UCBEV under explorations where non-optimal values of $H_{\sigma,1}$  are used. In particular, we consider experimental scenarios comprising large number of arms, with the variances of arms in $S_\tau$ being large. AugUCB, being variance based, exhibits superior performance under these settings.  
+Thus, it follows that the upper bound for UCBEV \citep{gabillon2011multi} is better than that for AugUCB. However, implementation of UCBEV algorithm requires $H_{\sigma,1}$ as input, whose computation is not realistic in practice. In contrast, our AugUCB algorithm requires no such complexity factor as input. Proceeding with the comparisons, we emphasize that the upper bound for  AugUCB is, in fact, not comparable with that of APT and CSAR; this is because the complexity term $H_{\sigma,2}$ is not explicitly comparable with either $H_1$ or $H_{CSAR,2}$. However, through extensive simulation experiments we find that AugUCB significantly outperforms both APT, CSAR and other non variance-based algorithms. AugUCB also outperforms UCBEV under explorations where non-optimal values of $H_{\sigma,1}$  are used. In particular, we consider experimental scenarios comprising large number of arms, with the variances of arms in $S_\tau$ being large. AugUCB, being variance based, exhibits superior performance under these settings.  
 
 \subsubsection{The Augmented UCB algorithm}
 
 \textbf{The algorithm:} The Augmented-UCB (AugUCB) algorithm is presented in Algorithm~\ref{alg:augucb}.
 AugUCB is essentially based on the arm elimination method of the UCB-Improved \cite{auer2010ucb}, but adapted to the thresholding bandit setting proposed in \cite{locatelli2016optimal}. However, unlike the UCB improved (which is based on mean estimation) our algorithm employs \emph{variance estimates} (as in \cite{audibert2009exploration}) for arm elimination; to the best of our knowledge this is the first variance-aware  algorithm for the thresholding bandit problem. Further, we allow for arm-elimination at each time-step, which is in contrast to the earlier work (e.g., \cite{auer2010ucb,chen2014combinatorial}) where the arm elimination task is deferred to the end of the respective exploration rounds. The details are presented below.
 
-The active set $B_{0}$ is initialized with all the arms from $\mathcal{A}$. We divide the entire budget $T$ into rounds/phases like in UCB-Improved, CCB, SAR and CSAR. At every time-step AugUCB checks for arm elimination conditions, while updating parameters at the end of each round. As suggested by \cite{liu2016modification} to make AugUCB to overcome too much early exploration, we no longer pull all the arms equal number of times in each round. Instead, we choose an arm in the active set $B_m$ that minimizes $(|\hat{r}_{i} - \tau |-2s_i)$ where 
-%$\min_{i\in B_{m}}\big\lbrace |\hat{r}_{i} - \tau | - 2\sqrt{\frac{\rho_v\psi_m \hat{V}_{i} \log ( T \epsilon_{m})}{4 n_{i}} + \frac{\rho_v\psi_m \log{( T\epsilon_{m})}}{4 n_{i}}} \big\rbrace $
-\begin{small}
-\begin{align*}
-s_i & = \sqrt{\frac{\rho\psi_m (\hat{v}_{i}+1) \log ( T \epsilon_{m})}{4 n_{i}}} %+ \frac{\rho\psi_m \log{( T\epsilon_{m})}}{4 n_{i}}}.
-\end{align*}
-\end{small} 
-with $\rho$ being the arm elimination parameter and $\psi_{m}$ being the exploration regulatory factor.
+The active set $B_{0}$ is initialized with all the arms from $\mathcal{A}$. We divide the entire budget $T$ into rounds/phases like in UCB-Improved, CCB, SAR and CSAR. At every time-step AugUCB checks for arm elimination conditions, while updating parameters at the end of each round. As suggested by \cite{liu2016modification} to make AugUCB to overcome too much early exploration, we no longer pull all the arms equal number of times in each round. Instead, we choose an arm in the active set $B_m$ that minimizes $(|\hat{r}_{i} - \tau |-2s_i)$ where $s_i  = \sqrt{\frac{\rho\psi_m (\hat{v}_{i}+1) \log ( T \epsilon_{m})}{4 n_{i}}}$ with $\rho$ being the arm elimination parameter and $\psi_{m}$ being the exploration regulatory factor.
 %  in the active set $B_{m}$. 
 The above condition ensures that an arm closer to the threshold $\tau$ is pulled; 
 %and with suitable choice of $\rho_{\mu}$ and $\rho_v$ we can fine tune the exploration. 
@@ -325,12 +320,9 @@ M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor;
 \State \If{$t\geq N_{m}$ and $m \leq M$}
 %\ResetParam
 \State \textbf{Reset Parameters}
-\State $\epsilon_{m+1}\leftarrow\frac{\epsilon_{m}}{2}$
-\State $B_{m+1} \leftarrow B_{m}$
-\State $\psi_{m+1}\leftarrow \frac{T\epsilon_{m+1}}{128(\log(\frac{3}{16}K\log K))^{2}}$
-\State $\ell_{m+1}\leftarrow\left\lceil \frac{2\psi_{m+1}\log( T\epsilon_{m+1})}{\epsilon_{m+1}} \right\rceil$
-\State $N_{m+1} \leftarrow t + |B_{m+1}|\ell_{m+1}$
-\State $m \leftarrow m+1$
+\State $\epsilon_{m+1}\leftarrow\frac{\epsilon_{m}}{2}$; $B_{m+1} \leftarrow B_{m}$
+\State $\psi_{m+1}\leftarrow \frac{T\epsilon_{m+1}}{128(\log(\frac{3}{16}K\log K))^{2}}$; $\ell_{m+1}\leftarrow\left\lceil \frac{2\psi_{m+1}\log( T\epsilon_{m+1})}{\epsilon_{m+1}} \right\rceil$
+\State $N_{m+1} \leftarrow t + |B_{m+1}|\ell_{m+1}$; $m \leftarrow m+1$
 %\EndResetParam
 \EndIf
 \EndFor
@@ -348,8 +340,8 @@ M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor;
 %
 
 
-\subsubsection{Summary}
-We proposed the AugUCB algorithm for a fixed-budget, pure-exploration TBP. Our algorithm employs both mean and variance estimates for arm elimination. This, to our knowledge is the first variance-based algorithm for the specific TBP that we have considered. We first prove an upper bound on the expected loss incurred by AugUCB. We then conduct simulation experiments to validate the performance of AugUCB. In comparison with APT, CSAR and other non variance-based algorithms, we find that the performance of AugUCB is significantly better. Further, the performance of AugUCB is comparable with UCBEV (which is also variance-based), although the latter exhibits a slightly better performance.  However, UCBEV is not implementable in practice as it requires computing problem complexity, $H_{\sigma,1}$, while AugUCB (requiring no such inputs) can be easily deployed in real-life scenarios.
+%\subsubsection{Summary}
+%We proposed the AugUCB algorithm for a fixed-budget, pure-exploration TBP. Our algorithm employs both mean and variance estimates for arm elimination. This, to our knowledge is the first variance-based algorithm for the specific TBP that we have considered. We first prove an upper bound on the expected loss incurred by AugUCB. We then conduct simulation experiments to validate the performance of AugUCB. In comparison with APT, CSAR and other non variance-based algorithms, we find that the performance of AugUCB is significantly better. Further, the performance of AugUCB is comparable with UCBEV (which is also variance-based), although the latter exhibits a slightly better performance.  However, UCBEV is not implementable in practice as it requires computing problem complexity, $H_{\sigma,1}$, while AugUCB (requiring no such inputs) can be easily deployed in real-life scenarios.
 
 %Also because of the said condition, like \cite{liu2016modification} we also claim that AugUCB is an anytime algorithm.
 
@@ -460,21 +452,21 @@ In the subsequent chapter 4 (table \ref{tab:chap4-5})  we introduce a new varian
 \label{tab:chap4-5}
 \end{table}
 
-Finally, in chapter 6 (table \ref{tab:chap6}), we conclude with a brief discussion on the work done in the thesis and future directions. 
+Finally, in chapter 6, we conclude with a brief discussion on the work done in the thesis and future directions. 
 
-
-\begin{table}[!th]
-\begin{center}
-\begin{tabular}{|p{16em}|}
-\hline\\
-\textbf{6. Conclusion and Future Direction} \\\hline
-6.1 Conclusion and Future Direction \\
-\hline
-\end{tabular}
-\end{center}
-\caption{Conclusion and Future Direction of thesis}
-\label{tab:chap6}
-\end{table}
+%(table \ref{tab:chap6})
+%\begin{table}[!th]
+%\begin{center}
+%\begin{tabular}{|p{16em}|}
+%\hline\\
+%\textbf{6. Conclusion and Future Direction} \\\hline
+%6.1 Conclusion and Future Direction \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Conclusion and Future Direction of thesis}
+%\label{tab:chap6}
+%\end{table}
 
 
 %Finally, in chapter \ref{chap:psbandit} we introduce the piecewise-stochastic bandit model which is a new variant that strides between the stochastic and adversarial setting. We discuss extensively on this setting and also provide our solution to this setting and show in numerical simulations that our solution is very close to the optimal solution. 
