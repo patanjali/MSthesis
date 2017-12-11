@@ -36,7 +36,7 @@ M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor; \hspace*{2mm};\hspa
 \State Pull arm $j\in\argmin_{i\in\A}\left\lbrace \hat{r}_{i,t_0:t_p} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}\right\rbrace$
 \State $t:= t+1, t_p := t_p + 1$ 
 \State \For{$i\in\A$}
-\State \If{$\hat{r}_{i,t_0:t_p} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}  < j\in\argmax_{i\in\A}\lbrace\hat{r}_{i,t_0:t_p} - \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}\rbrace$}
+\State \If{$\hat{r}_{i,t_0:t_p} + \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{i,t_0:t_p}}}  < \argmax_{j\in\A}\lbrace\hat{r}_{j,t_0:t_p} - \sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{2n_{j,t_0:t_p}}}\rbrace$}
 \State $|B_m| := |B_m|-1$\hspace*{4mm} (Pseudo arm elimination)
 \EndIf
 \EndFor
