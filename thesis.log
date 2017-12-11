@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 DEC 2017 19:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 DEC 2017 20:27
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1854,28 +1854,23 @@ Overfull \hbox (67.39925pt too wide) in paragraph at lines 159--159
  []
 
 
-Overfull \hbox (22.7394pt too wide) in paragraph at lines 165--165
-[] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
-Overfull \hbox (1.58617pt too wide) in paragraph at lines 218--218
+Overfull \hbox (1.58617pt too wide) in paragraph at lines 219--219
 [] 
  []
 
 
-Overfull \hbox (89.64941pt too wide) in paragraph at lines 247--247
+Overfull \hbox (89.64941pt too wide) in paragraph at lines 248--248
 [] 
  []
 
 [79]
-Overfull \hbox (79.89667pt too wide) in paragraph at lines 282--282
+Overfull \hbox (79.89667pt too wide) in paragraph at lines 283--283
 [] 
  []
 
@@ -1883,7 +1878,7 @@ Overfull \hbox (79.89667pt too wide) in paragraph at lines 282--282
 Underfull \vbox (badness 5189) has occurred while \output is active []
 
  [80]
-Overfull \hbox (43.51375pt too wide) in paragraph at lines 298--298
+Overfull \hbox (43.51375pt too wide) in paragraph at lines 299--299
 [] 
  []
 
@@ -1998,7 +1993,7 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (112 pages, 1122820 bytes).
+Output written on thesis.pdf (112 pages, 1122733 bytes).
 PDF statistics:
  1974 PDF objects out of 2073 (max. 8388607)
  432 named destinations out of 1000 (max. 500000)

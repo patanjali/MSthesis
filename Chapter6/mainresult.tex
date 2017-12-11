@@ -161,9 +161,10 @@ Conversely, for the case $r_{i,c_{j-1}} > r_{i,c_j}$ the second condition will h
 Also, again by using Chernoff-Hoeffding bound we can show that,
 
 \begin{align*}
-\sum_{m=0}^{p_{i,c_j}}\sum_{n_i=\ell_{p_{i-1}}}^{\ell_{p_{i,c_j}}}\Pb\lbrace \hat{r}_{i,c_j} \leq  r_{i,c_j} - s_i \rbrace &\leq \sum_{m=0}^{p_{i,c_j}}\sum_{n_i=\ell_{p_{i-1, c_j}}}^{\ell_{p_{i,c_j}}}\exp\left(-2s_i^2n_i \right) \leq \dfrac{\log(\psi T\epsilon_{p_{i,c_j}}^2)}{2(\psi T)^{\alpha}}\sum_{m=0}^{p_{i,c_j}}\dfrac{1}{\epsilon_{p_{i,c_j}}^{2\alpha + 1}}.
+\sum_{m=0}^{p_{i,c_j}}\sum_{n_i=1}^{\ell_{p_{i,c_j}}}\Pb\lbrace \hat{r}_{i,c_j} \leq  r_{i,c_j} - s_i \rbrace &\leq \sum_{m=0}^{p_{i,c_j}}\sum_{n_i=1}^{\ell_{p_{i,c_j}}}\exp\left(-2s_i^2n_i \right) \leq \dfrac{\log(\psi T\epsilon_{p_{i,c_j}}^2)}{2(\psi T)^{\alpha}}\sum_{m=0}^{p_{i,c_j}}\dfrac{1}{\epsilon_{p_{i,c_j}}^{2\alpha + 1}}.
 \end{align*}
 
+%\ell_{p_{i-1, c_j}}
 Hence, the probability that the changepoint is not detected by the first event in equation \ref{eq:arm-pull-chg} is bounded by,
 \begin{align*}
 \dfrac{\log(\psi T)}{(\psi T \epsilon_{p_{i,c_j}}^2)^{\alpha}}\sum_{m=0}^{p_{i,c_j}}\dfrac{1}{\epsilon_{p_{i,c_j}}^{2\alpha + 1}}.
