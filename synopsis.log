@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 DEC 2017 11:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 DEC 2017 11:31
 entering extended mode
 **synopsis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.tex
@@ -1365,14 +1365,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--202
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/ThesisConc.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.bbl [12] [13]) [14]
 [15] [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 521.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 521.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
  (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 521.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 521.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
 Package rerunfilecheck Info: File `synopsis.out' has not changed.
 (rerunfilecheck)             Checksum: 8273A89D484471D35CA12BA9A8A9DEFE;1157.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 521.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
  ) 
 Here is how much of TeX's memory you used:
  31270 strings out of 493921
@@ -1398,7 +1398,7 @@ type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
 w/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on synopsis.pdf (18 pages, 362279 bytes).
+Output written on synopsis.pdf (18 pages, 362358 bytes).
 PDF statistics:
  382 PDF objects out of 1000 (max. 8388607)
  82 named destinations out of 1000 (max. 500000)

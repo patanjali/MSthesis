@@ -278,7 +278,7 @@ Thus, it follows that the upper bound for UCBEV \citep{gabillon2011multi} is bet
 \subsubsection{The Augmented UCB algorithm}
 
 \textbf{The algorithm:} The Augmented-UCB (AugUCB) algorithm is presented in Algorithm~\ref{alg:augucb}.
-AugUCB is essentially based on the arm elimination method of the UCB-Improved \citep{auer2010ucb}, but adapted to the thresholding bandit setting proposed in \cite{locatelli2016optimal}. However, unlike the UCB improved (which is based on mean estimation) our algorithm employs \emph{variance estimates} (as in \cite{audibert2009exploration}) for arm elimination; to the best of our knowledge this is the first variance-aware  algorithm for the thresholding bandit problem. Further, we allow for arm-elimination at each time-step, which is in contrast to the earlier work (e.g., \cite{auer2010ucb,chen2014combinatorial}) where the arm elimination task is deferred to the end of the respective exploration rounds. The details are presented below.
+AugUCB is essentially based on the arm elimination method of the UCB-Improved \citep{auer2010ucb}, but adapted to the thresholding bandit setting proposed in \cite{locatelli2016optimal}. However, unlike the UCB-Improved (which is based on mean estimation) our algorithm employs \emph{variance estimates} (as in \cite{audibert2009exploration}) for arm elimination; to the best of our knowledge this is the first variance-aware  algorithm for the thresholding bandit problem. Further, we allow for arm-elimination at each time-step, which is in contrast to the earlier work (e.g., \cite{auer2010ucb,chen2014combinatorial}) where the arm elimination task is deferred to the end of the respective exploration rounds. The details are presented below.
 
 The active set $B_{0}$ is initialized with all the arms from $\mathcal{A}$. We divide the entire budget $T$ into rounds/phases like in UCB-Improved, CCB, SAR and CSAR. At every time-step AugUCB checks for arm elimination conditions, while updating parameters at the end of each round. As suggested by \cite{liu2016modification} to make AugUCB to overcome too much early exploration, we no longer pull all the arms equal number of times in each round. Instead, we choose an arm in the active set $B_m$ that minimizes $(|\hat{r}_{i} - \tau |-2s_i)$ where $s_i  = \sqrt{\frac{\rho\psi_m (\hat{v}_{i}+1) \log ( T \epsilon_{m})}{4 n_{i}}}$ with $\rho$ being the arm elimination parameter and $\psi_{m}$ being the exploration regulatory factor.
 %  in the active set $B_{m}$. 
@@ -382,7 +382,7 @@ M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor;
 
 \section{Proposed Contents of the Thesis}
 
-In chapter 1 (table \ref{tab:chap1}), we discuss on Reinforcement Learning and its connection to bandits, we give an overview of the various types of bandits available in the literature and also discuss about the main objectives of the thesis and our contributions. 
+In chapter 1 (table \ref{tab:chap1}), we discuss on Reinforcement Learning and its connection to bandits, we give an overview of the various types of bandits available in the literature and also discuss about the main objectives of the thesis and our contributions. Appendix A provides some useful results on Concentration inequalities. 
 
 
 %\begin{center}
@@ -400,6 +400,7 @@ In chapter 1 (table \ref{tab:chap1}), we discuss on Reinforcement Learning and i
 1.7 Objectives of Thesis\\
 1.8 Contributions of Thesis\\
 1.9 Outline of the Thesis\\
+2.0 Appendix A\\
 \hline
 \end{tabular}
 \end{center}
