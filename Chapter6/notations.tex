@@ -3,7 +3,7 @@ We denote each of the \textit{non-overlapping reward generating processes} as $\
 
 %We assume a global switching model where at particular breakpoint all the arms' distribution changes.
 
-	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t$ timesteps. $r_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{r}_{i,t_0:t_p}$ denotes the sample mean for the arm $i$ from $t_0$ to $t_p$ timesteps.
+	The distribution associated with individual arm $i$ is denoted by $D_{i,\rho_{c_j:c_{j+1}}}$ for the segment $\rho_{c_j:c_{j+1}}$ whereas the reward drawn from that distribution for the $t$-th time instant is denoted by $X_{i,t}$. We assume all rewards are bounded in $[0,1]$. $n_{i,t_0:t}$ denotes the number of times arm $i$ has been pulled from $t_0$ to $t$ timesteps. $r_{i,t_{c_j:c_{j+1}}}$ denotes the expected mean of the reward distribution $D_{i,\rho_{c_j:c_{j+1}}}$ and $\hat{r}_{i,t_0:t}$ denotes the sample mean for the arm $i$ from $t_0$ to $t$ timesteps.
 
 
 
@@ -66,9 +66,9 @@ We define the changepoint gap at $t_{c_j}$ for an arm $i\in\A$ between the segme
 
 \begin{discussion}
 \label{dis:gap-delay}
-Thus, assumption \ref{assm:space-gap} makes sure that all the changepoints $t_{c_j},\forall j=1,2,\ldots,G$ are sufficiently far apart to detect a change. A good learner tries to minimize the delay ($d$) in detection of a changepoint at $t_{c_j},\forall c_{j}\in\G$ by achieving atmost a delay of $d\left(t_{c_j} - t_{c_{j-1}}\right) \leq O\left( \dfrac{\log( t_{c_j} - t_{c_{j-1}} )}{\Delta_{i,c_j}^{2}}\right)$. Note, that when the gaps are same such that for all $i\in\A$, $\Delta_{i,c_j}^{chg}=\Delta_{\epsilon_0,c_j}^{chg}$ and $d\left(t_{c_j} - t_{c_{j-1}}\right) = \left( \dfrac{\log( t_{c_j} - t_{c_{j-1}} )}{\Delta_{\epsilon_0,c_j}^{2}}\right)$, then due to assumption \ref{assm:space-gap} we get,
+Thus, assumption \ref{assm:space-gap} makes sure that all the changepoints $t_{c_j},\forall j=1,2,\ldots,G$ are sufficiently far apart to detect a change. A good learner tries to minimize the delay ($d$) in detection of a changepoint at $t_{c_j},\forall c_{j}\in\G$ by achieving atmost a delay of $d\left(t_{c_j} - t_{c_{j-1}}\right) \leq O\left( \dfrac{\log( t_{c_j} - t_{c_{j-1}} )}{(\Delta^{chg}_{i,c_j})^{2}}\right)$. Note, that when the gaps are same such that for all $i\in\A$, $\Delta_{i,c_j}^{chg}=\Delta_{\epsilon_0,c_j}^{chg}$ and $d\left(t_{c_j} - t_{c_{j-1}}\right) = \left( \dfrac{\log( t_{c_j} - t_{c_{j-1}} )}{(\Delta^{chg}_{\epsilon_0,c_j})^{2}}\right)$, then due to assumption \ref{assm:space-gap} we get,
 \begin{align*}
-\Delta_{\epsilon_0,c_j}^{chg}\geq \sqrt{\dfrac{1-\epsilon_0}{\epsilon_0}\dfrac{\log(t_{c_j} - t_{c_{j-1}})}{(t_{c_{j+1}} - t_{c_{j}})}}.
+\Delta_{\epsilon_0,c_j}^{chg}\geq \sqrt{\left(\dfrac{1-\epsilon_0}{\epsilon_0}\right)\dfrac{\log(t_{c_j} - t_{c_{j-1}})}{(t_{c_{j+1}} - t_{c_{j}})}}.
 \end{align*} 
 
 Hence, $\Delta_{\epsilon_0,c_j}^{chg}$ is the minimum gap possible that can be detected by the learner given the changepoints $t_{c_{j-1}}, t_{c_j}$ and $t_{c_{j+1}}$ follow assumption \ref{assm:space-gap}.
