@@ -24,10 +24,10 @@ In this section, we introduce the an actively adaptive improved changepoint dete
 \caption{ImpCPD}
 \label{alg:ImpCPD}
 \begin{algorithmic}
-\State {\bf Input:} Time horizon $T$; exploration parameter $\alpha$,$\psi$;
+\State {\bf Input:} Time horizon $T$; exploration parameter $\alpha\geq \dfrac{1}{2}$,$\psi > 1$,$\gamma > 0$;
 \State {\bf Initialization:} $B_{0}=\mathcal{A}$; $m=0$; $\epsilon_{0}=1$;
 \begin{align*}
-M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor; \hspace*{2mm};\hspace*{2mm}
+M=\left\lfloor \frac{1}{2}\log_{1+\gamma} \frac{T}{e}\right\rfloor; \hspace*{2mm};\hspace*{2mm}
 \ell_{0}=\left\lceil \dfrac{\log(\psi T\epsilon_{0}^2)}{2\epsilon_{0}} \right\rceil;
 \hspace*{2mm}N_{0}=K\ell_{0};t_0 =1; t_p =1.
 \end{align*}
@@ -48,7 +48,7 @@ M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor; \hspace*{2mm};\hspa
 \State Pull each arm once
 \State \Else{
 \State \textbf{Reset Parameters}
-\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$
+\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{(1+\gamma)}$
 \State $B_{m+1}:= B_{m}$
 \State $\ell_{m+1}:=\left\lceil \dfrac{\log(\psi T\epsilon_{m}^2)}{2\epsilon_{m}} \right\rceil$
 \State $N_{m+1}:= t + |B_{m+1}|\ell_{m+1}$

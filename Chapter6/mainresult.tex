@@ -8,37 +8,37 @@ The expected cumulative regret of ImpCPD algorithm is upper bounded by,
 \begin{align*}
 \E[R_t] &\leq \sum_{i = 1}^K\sum_{j=1}^{G}\bigg[ 1 
 %%%%%%%%%%
-+ \dfrac{4T^{\frac{3}{2}}\Delta^{opt}_{i,c_j}\log(\psi T (\Delta^{opt}_{i,c_j})^4)}{(\psi)^{\alpha}}
++ \dfrac{4T^{\frac{3}{2}}C_{\gamma}\Delta^{opt}_{i,c_j}\log(\psi T (\Delta^{opt}_{i,c_j})^4)}{(\psi)^{\alpha}}
 %%%%%%%%%%
 + \Delta^{opt}_{i,c_j} + \dfrac{4\log(\psi T(\Delta^{opt}_{i,c_j})^4)}{2(\Delta^{opt}_{i,c_j})}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-& + \dfrac{2T^{\frac{3}{2}}\Delta^{opt}_{i,c_{j+1}}\log(\psi T (\Delta^{chg}_{i,c_j})^4)}{(\psi)^{\alpha}}\\
+& + \dfrac{2T^{\frac{3}{2}}C_{\gamma}\Delta^{opt}_{i,c_{j+1}}\log(\psi T (\Delta^{chg}_{i,c_j})^4)}{(\psi)^{\alpha}}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 &+ \Delta^{opt}_{\max,c_{j+1}} + \dfrac{\Delta^{opt}_{\max,c_{j+1}}\log(\psi T(\Delta^{chg}_{i,c_j})^4)}{2(\Delta^{chg}_{\epsilon_0,c_j})^2} + \Delta^{opt}_{i,c_{j+1}} + \dfrac{\Delta^{opt}_{i,c_{j+1}}\log(\psi T(\Delta^{chg}_{i,c_j})^4)}{2(\Delta^{chg}_{i,c_j})^2}
 \bigg]
 \end{align*}
 
-where $\alpha,\psi$ are exploration parameters and $\Delta^{opt}_{i,c_{G+1}} = 0,\forall i\in\A$.
+where $\alpha,\psi,\gamma$ are exploration parameters, $C_{\gamma}=\left( \dfrac{1+\gamma}{\gamma}\right)$ and $\Delta^{opt}_{i,c_{G+1}} = 0,\forall i\in\A$.
 \end{theorem}
 
 \begin{proof}
 
 We proceed as like Theorem 3.1 in \citet{auer2010ucb} and we combine the changepoint detection sub-routine with this. 
 
-\textbf{Step 0.(Vital Assumption for proving):} In this proof, we assume that all the changepoints are detected by the algorithm. 
+\textbf{Step 0.(Vital Assumption for proving):} In this proof, we assume that all the changepoints are detected by the algorithm with some delay. Since, all the gaps are significant (Assumption \ref{assm:chg-gap}) and there is sufficient delay between two changepoints (Assumption \ref{assm:space-gap}), we can take this assumption for proving the result.
 
-\textbf{Step 1.(Define some notations):} In this proof, we define the confidence interval for the $i$-th arm as $s_i=\sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{n_{i}}}$. The phase numbers are denoted by $m=0,1,\ldots,M$ where $M=\frac{1}{2}\log_{2}\frac{T}{e}$. For the sake of brevity, in this proof we write $n_i$ instead of $n_{i,t_0:t_p}$ denoting only the number of times the arm $i$ is pulled between two restarts, ie, between $t_0$ to $t_p$.
+\textbf{Step 1.(Define some notations):} In this proof, we define the confidence interval for the $i$-th arm as $s_i=\sqrt{\dfrac{\alpha\log(\psi T\epsilon_m^2)}{n_{i}}}$. The phase numbers are denoted by $m=0,1,\ldots,M$ where $M=\frac{1}{2}\log_{1+\gamma}\frac{T}{e}$. For the sake of brevity, in this proof we write $n_i$ instead of $n_{i,t_0:t_p}$ denoting the number of times the arm $i$ is pulled between two restarts, ie, between $t_0$ to $t_p$ (as shown in algorithm). For each sub-optimal arm $i$, we consider their contribution to cumulative regret individually till each of the changepoint 
 
-\textbf{Step 2.(Define an optimality stopping phase $m_{i,c_j}$):} We define an optimality stopping phase $m_{i,c_j}$ for a sub-optimal arm $i\in\A$ as the first phase after which the arm $i$ is no longer pulled till the $c_j$-th changepoint is detected such that,
+\textbf{Step 2.(Define an optimality stopping phase $m_{i,c_j}$):} We define an optimality stopping phase $m_{i,c_j}$ for a sub-optimal arm $i\in\A$ as the first phase after which the arm $i$ is no longer pulled till the $c_j$-th changepoint is detected such that for $\gamma>0$,
 
 \begin{align*}
-m_{i,c_j} = \min\left\lbrace m: \sqrt{\alpha\epsilon_{m}} < \dfrac{\Delta^{opt}_{i,c_j}}{4} \right\rbrace
+m_{i,c_j} = \min\left\lbrace m: \sqrt{\alpha\epsilon_{m}} < \dfrac{\Delta^{opt}_{i,c_j}}{(1+\gamma)^2} \right\rbrace
 \end{align*} 
 
-\textbf{Step 3.(Define a changepoint stopping phase $p_{i,c_j}$):} We define a changepoint stopping phase $p_{i,c_j}$ for an arm $i\in\A$ such that it is the first phase when the changepoint $c_j$ is detected such that,
+\textbf{Step 3.(Define a changepoint stopping phase $p_{i,c_j}$):} We define a changepoint stopping phase $p_{i,c_j}$ for an arm $i\in\A$ such that it is the first phase when the changepoint $c_j$ is detected such that for $\gamma > 0$,
 
 \begin{align*}
-p_{i,c_j} = \min\left\lbrace m: \sqrt{\alpha\epsilon_{m}} < \dfrac{\Delta^{chg}_{i,c_j}}{4} \right\rbrace
+p_{i,c_j} = \min\left\lbrace m: \sqrt{\alpha\epsilon_{m}} < \dfrac{\Delta^{chg}_{i,c_j}}{(1+\gamma)^2} \right\rbrace
 \end{align*}
 
 \textbf{Step 4.(Regret for sub-optimal arm $i$ being pulled after $m_{i,c_j}$-th phase):} Note, that on or after the $m_{i,c_j}$-th phase a sub-optimal arm $i$ is not pulled anymore if these four conditions hold,
@@ -49,13 +49,13 @@ p_{i,c_j} = \min\left\lbrace m: \sqrt{\alpha\epsilon_{m}} < \dfrac{\Delta^{chg}_
 
 Also, in the $m_{i,c_j}$-th phase if $n_i \geq \ell_{m_{i,c_j}} = \dfrac{\log(\psi T\epsilon_{m_{i,c_j}}^2)}{2\epsilon_{m_{i,c_j}}}$ then we can show that,
 \begin{align*}
-s_i = \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{m_{i,c_j}}^2)}{2n_{i}}} \leq \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{m_{i,c_j}}^2)}{2\ell_{m_{i,c_j}}}} \leq \sqrt{\alpha\epsilon_{m_{i,c_j}}\dfrac{\log(\psi T\epsilon_{m_{i,c_j}}^2)}{\log(\psi T\epsilon_{m_{i,c_j}}^2)}} \leq \dfrac{\Delta^{opt}_{i,c_j}}{4}.
+s_i = \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{m_{i,c_j}}^2)}{2n_{i}}} \leq \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{m_{i,c_j}}^2)}{2\ell_{m_{i,c_j}}}} \leq \sqrt{\alpha\epsilon_{m_{i,c_j}}\dfrac{\log(\psi T\epsilon_{m_{i,c_j}}^2)}{\log(\psi T\epsilon_{m_{i,c_j}}^2)}} \leq \dfrac{\Delta^{opt}_{i,c_j}}{(1+\gamma)^2}.
 \end{align*}
 
 If indeed the four conditions in equation \ref{eq:arm-pull-opt} hold then we can show that in the $m_{i,c_j}$-th phase,
 
 \begin{align*}
-\hat{r}_{i,c_j} + s_i \leq {r}_{i,c_j} + 4s_i - 2s_i \leq {r}_{i,c_j} + \Delta^{opt}_{i,c_j} - 2s_i \leq {r}_{i*,c_j} - 2s_{i*} \leq \hat{r}_{i*,c_j} - s_{i*}
+\hat{r}_{i,c_j} + s_i \leq {r}_{i,c_j} + (1+\gamma)^2 s_i - (1+\gamma)s_i \leq {r}_{i,c_j} + \Delta^{opt}_{i,c_j} - (1+\gamma)s_i \leq {r}_{i*,c_j} - (1+\gamma)s_{i*} \leq \hat{r}_{i*,c_j} - s_{i*}
 \end{align*}
 
 Hence, the sub-optimal arm $i$ is no longer pulled on or after the $m_{i,c_j}$-th phase. Therefore, to bound the number of pulls of the sub-optimal arm $i$, we need to bound the probability of the complementary of the four events in equation \ref{eq:arm-pull-chg}.
@@ -80,37 +80,49 @@ Similarly, for the second event in equation \ref{eq:arm-pull-opt}, we can bound 
 Also, for the third event in equation \ref{eq:arm-pull-opt}, we can bound the probability of its complementary event by,
 
 \begin{align*}
-\sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace s_i < s_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace n_i > n_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace \hat{r}_{i,c_j} + s_i > \hat{r}_{i*,c_j} + s_{i*} \rbrace.
+\sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace s_i < s_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace n_i > n_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace \hat{r}_{i,c_j} + s_i > \hat{r}_{i*,c_j} + s_{i*} \rbrace.
 \end{align*}
 
-But the event $\hat{r}_{i,c_j} + s_i > \hat{r}_{i*,c_j} + s_i$ is possible only when the following three events occur, $\hat{r}_{i*,c_j} \leq r_{i*,c_j} - s_{i*} , \hat{r}_{i,c_j} \geq r_{i,c_j} + s_i$ and $r_{i*}-r_{i} < 2s_i $. But the third event will not happen for $n_i\geq \ell_{m_{i,c_j}}$. Proceeding as before, we can show that the probability of the remaining two events is bounded by,
+But the event $\hat{r}_{i,c_j} + s_i > \hat{r}_{i*,c_j} + s_i$ is possible only when the following three events occur, $\hat{r}_{i*,c_j} \leq r_{i*,c_j} - s_{i*} , \hat{r}_{i,c_j} \geq r_{i,c_j} + s_i$ and $r_{i*}-r_{i} < (1+\gamma)^2 s_i $. But the third event will not happen for $n_i\geq \ell_{m_{i,c_j}}$. Proceeding as before, we can show that the probability of the remaining two events is bounded by,
 
 \begin{align*}
-&\sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace s_i < s_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace n_i > n_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace \hat{r}_{i,c_j} + s_i > \hat{r}_{i*,c_j} + s_{i*} \rbrace \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-&\leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\left( \Pb\lbrace \hat{r}_{i,c_j} \geq r_{i,c_j} + s_i \rbrace \bigcup \Pb\lbrace \hat{r}_{i*,c_j} \leq r_{i*,c_j} - s_{i*} \rbrace \right)\leq 2\left(\dfrac{\log(\psi T \epsilon_{m_{i,c_j}}^2)}{2(\psi T)^{\alpha}}\right)\sum_{m=0}^{m_{i,c_j}}\dfrac{1}{\epsilon_{m_{i,c_j}}^{2\alpha + 1}}.
+&\sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace s_i < s_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace n_i > n_{i*}\rbrace \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+& \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace \hat{r}_{i,c_j} + s_i > \hat{r}_{i*,c_j} + s_{i*} \rbrace \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\left( \Pb\lbrace \hat{r}_{i,c_j} \geq r_{i,c_j} + s_i \rbrace \bigcup \Pb\lbrace \hat{r}_{i*,c_j} \leq r_{i*,c_j} - s_{i*} \rbrace \right)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\left( \Pb\lbrace \hat{r}_{i,c_j} \geq r_{i,c_j} + s_i \rbrace \right) +  \sum_{m=0}^{m_{i,c_j}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\left( \Pb\lbrace \hat{r}_{i*,c_j} \leq r_{i*,c_j} - s_{i*} \rbrace \right) \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\dfrac{1}{\psi T\epsilon_{m_{i,c_j}}^2} +  \sum_{m=0}^{m_{i,c_j}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\dfrac{1}{\psi T\epsilon_{m_{i,c_j}}^2} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq 2\left(\dfrac{\log(\psi T \epsilon_{m_{i,c_j}}^2)}{2(\psi T)^{\alpha}}\right)\sum_{m=0}^{m_{i,c_j}}\dfrac{1}{\epsilon_{m_{i,c_j}}^{2\alpha + 1}}.
 \end{align*}
 
 %\sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}
 Finally for the fourth event in equation \ref{eq:arm-pull-opt}, we can bound the probability of its complementary event by following the same steps as above,
 
 \begin{align*}
-\sum_{m=0}^{m_i}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace n_i > n_{i*}\rbrace \leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace r_{i,c_j} + s_i > r_{i*,c_j} + s_{i*} \rbrace \leq \dfrac{\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\sum_{m=0}^{m_{i,c_j}}\dfrac{1}{\epsilon_{m_i}^{2\alpha +1}}.
+\sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace n_i > n_{i*}\rbrace &\leq \sum_{m=0}^{m_{i,c_j}}\sum_{n_i=1}^{\ell_{m_{i,c_j}}}\sum_{n_{i*}=1}^{\ell_{m_{i,c_j}}}\Pb\lbrace r_{i,c_j} + s_i > r_{i*,c_j} + s_{i*} \rbrace\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\leq \dfrac{\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\sum_{m=0}^{m_{i,c_j}}\dfrac{1}{\epsilon_{m_i}^{2\alpha +1}}.
 \end{align*}
 
 
 Combining the above four cases we can bound the probability that a sub-optimal arm $i$ will no longer be pulled on or after the $m_{i,c_j}$-th phase by,
 
 \begin{align*}
-\dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\sum_{m=0}^{m_{i,c_j}}\dfrac{1}{\epsilon_{m_{i,c_j}}^{2\alpha +1}} &\leq \dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\sum_{m=0}^{M}\left(\dfrac{1}{\epsilon_{m}}\right)^{2\alpha +1} \overset{(a)}{\leq} \dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\left(\dfrac{2(2^M - 1)}{2 - 1}\right)^{2\alpha +1} \\
+\dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\sum_{m=0}^{m_{i,c_j}}\dfrac{1}{\epsilon_{m_{i,c_j}}^{2\alpha +1}} &\leq \dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\sum_{m=0}^{M}\left(\dfrac{1}{\epsilon_{m}}\right)^{2\alpha +1}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+& \overset{(a)}{\leq} \dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\left(\dfrac{(1+\gamma)((1+\gamma)^M - 1)}{(1+\gamma) - 1}\right)^{2\alpha +1} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\overset{(b)}{\leq} \dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\left(\sqrt{T}\right)^{2\alpha +1} = \dfrac{4\sqrt{T}\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi)^{\alpha}}.
+&\overset{(b)}{\leq} \dfrac{4\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi T)^{\alpha}}\left( \left( \dfrac{1+\gamma}{\gamma}\right) \sqrt{T}\right)^{2\alpha +1} \overset{(c)}{=} \dfrac{4\sqrt{T}\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi)^{\alpha}}.
 \end{align*}
 
-Here, in $(a)$ we use the standard geometric progression formula and in $(b)$ we substitute the value of $M=\dfrac{1}{2}\log_{2}\dfrac{T}{e}$. Bounding this trivially by $T\Delta^{opt}_{i,c_j}$ for each arm $i\in\A$ we get the regret suffered for arm $i$ after the $m_{i,c_j}$-th phase  as,
+Here, in $(a)$ we use the standard geometric progression formula, in $(b)$ we substitute the value of $M=\dfrac{1}{2}\log_{1+\gamma}\dfrac{T}{e}$ and in $(c)$ we substitute $C_{\gamma}= \left( \dfrac{1+\gamma}{\gamma}\right)$ . Bounding this trivially by $T\Delta^{opt}_{i,c_j}$ for each arm $i\in\A$ we get the regret suffered for arm $i$ after the $m_{i,c_j}$-th phase  as,
 
 \begin{align*}
-\sum_{i\in\A}\left( \dfrac{4T\Delta^{opt}_{i,c_j}\sqrt{T}\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi)^{\alpha}} \right) \leq \sum_{i\in\A}\left( \dfrac{4T^{\frac{3}{2}}\Delta^{opt}_{i,c_j}\log(\psi T (\Delta^{opt}_{i,c_j})^4)}{(\psi)^{\alpha}} \right).
+\sum_{i\in\A}\left( \dfrac{4T\Delta^{opt}_{i,c_j}\sqrt{T}C_{\gamma}\log(\psi T \epsilon_{m_{i,c_j}}^2)}{(\psi)^{\alpha}} \right) \leq \sum_{i\in\A}\left( \dfrac{4T^{\frac{3}{2}}C_{\gamma}\Delta^{opt}_{i,c_j}\log(\psi T (\Delta^{opt}_{i,c_j})^4)}{(\psi)^{\alpha}} \right).
 \end{align*}
 
 
@@ -133,7 +145,7 @@ Hence, considering each arm $i\in\A$ the total regret is bounded by,
 \textbf{Step 6.(Regret for not detecting changepoint $c_{j}$ for arm $i$ after the $p_{i,c_j}$-th phase):} Proceeding similarly as in \textbf{step 4} we can show that in the $p_{i,c_j}$-th phase for an arm $i$ if $n_{i}\geq\ell_{p_{i,c_j}}$ then,
 
 \begin{align*}
-s_i = \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{p_{i,c_j}}^2)}{2n_{i}}} \leq \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{p_{i,c_j}}^2)}{2\ell_{p_{i,c_j}}}} \leq \sqrt{\alpha\epsilon_{p_{i,c_j}}\dfrac{\log(\psi T\epsilon_{p_{i,c_j}}^2)}{\log(\psi T\epsilon_{p_{i,c_j}}^2)}} \leq \dfrac{\Delta^{chg}_{i,c_j}}{4}.
+s_i = \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{p_{i,c_j}}^2)}{2n_{i}}} \leq \sqrt{\dfrac{\alpha\log(\psi T\epsilon_{p_{i,c_j}}^2)}{2\ell_{p_{i,c_j}}}} \leq \sqrt{\alpha\epsilon_{p_{i,c_j}}\dfrac{\log(\psi T\epsilon_{p_{i,c_j}}^2)}{\log(\psi T\epsilon_{p_{i,c_j}}^2)}} \leq \dfrac{\Delta^{chg}_{i,c_j}}{(1+\gamma)^2}.
 \end{align*}
 
 Furthermore, we can show that if the following two conditions hold for an arm $i$ then the changepoint will definitely get detected, that is,
@@ -145,7 +157,7 @@ Furthermore, we can show that if the following two conditions hold for an arm $i
 Indeed, we can show that if there is a changepoint at $c_j$ such that $r_{i,c_{j-1}} < r_{i,c_j}$ and if the first conditions in equation \ref{eq:arm-pull-chg} hold  in the $p_{i,c_j}$-th phase then,
 
 \begin{align*}
-\hat{r}_{i,c_{j-1}} + s_{i} \leq {r}_{i,c_{j-1}} + 4s_{i} - 2s_{i} \leq {r}_{i,c_{j-1}} + \Delta^{chg}_{i,c_j} -2s_{i} \leq {r}_{i,c_{j}} - 2s_i \leq \hat{r}_{i,c_{j}} - s_i.
+\hat{r}_{i,c_{j-1}} + s_{i} \leq {r}_{i,c_{j-1}} + (1+\gamma)^2 s_{i} - (1+\gamma)s_{i} \leq {r}_{i,c_{j-1}} + \Delta^{chg}_{i,c_j} - (1+\gamma)s_{i} \leq {r}_{i,c_{j}} - (1+\gamma)s_i \leq \hat{r}_{i,c_{j}} - s_i.
 \end{align*}
 
 Conversely, for the case $r_{i,c_{j-1}} > r_{i,c_j}$ the second condition will hold for the $p_{i,c_j}$-th phase. Now, to bound the regret we need to bound the probability of the complementary of these two events. For the complementary of the first event in equation \ref{eq:arm-pull-chg} by using Chernoff-Hoeffding bound we can show that,
@@ -183,14 +195,14 @@ Similarly, we can bound the probability of the complementary of the second event
 Combining the contribution from these two events, we can show that the probability of not detecting the changepoint $c_j$ for the $i$-th arm after the $p_{i,c_j}$-th phase is upper bounded by,
 
 \begin{align*}
-\dfrac{2\log(\psi T)}{(\psi T\epsilon_{p_{i,c_j}}^2)^{\alpha}}\sum_{m=0}^{p_{i,c_j}}\dfrac{1}{\epsilon_{p_{i,c_j}}^{2\alpha + 1}} \overset{(a)}{\leq} \dfrac{2\sqrt{T}\log(\psi T \epsilon_{p_{i,c_j}}^2)}{(\psi)^{\alpha}} .
+\dfrac{2\log(\psi T)}{(\psi T\epsilon_{p_{i,c_j}}^2)^{\alpha}}\sum_{m=0}^{p_{i,c_j}}\dfrac{1}{\epsilon_{p_{i,c_j}}^{2\alpha + 1}} \overset{(a)}{\leq} \dfrac{2C_{\gamma}\sqrt{T}\log(\psi T \epsilon_{p_{i,c_j}}^2)}{(\psi)^{\alpha}} .
 \end{align*}
 
-Here, in $(a)$ we follow the same steps as in \textbf{step 4} to reduce the expression to the above form. Furthermore, bounding the regret trivially (after the changepoint $c_j$) by $\Delta^{opt}_{i,c_{j+1}}$ for each arm $i\in\A$, we get 
+Here, in $(a)$ we substitute $C_{\gamma}=\left( \dfrac{1+\gamma}{\gamma}\right)$ and we follow the same steps as in \textbf{step 4} to reduce the expression to the above form. Furthermore, bounding the regret trivially (after the changepoint $c_j$) by $\Delta^{opt}_{i,c_{j+1}}$ for each arm $i\in\A$, we get 
 
 
 \begin{align*}
-\sum_{i\in\A}\left( \dfrac{2T\Delta^{opt}_{i,c_{j+1}}\sqrt{T}\log(\psi T \epsilon_{p_{i,c_j}}^2)}{(\psi)^{\alpha}} \right) \leq \sum_{i\in\A}\left( \dfrac{2T^{\frac{3}{2}}\Delta^{opt}_{i,c_{j+1}}\log(\psi T (\Delta^{chg}_{i,c_j})^4)}{(\psi)^{\alpha}} \right).
+\sum_{i\in\A}\left( \dfrac{2T\Delta^{opt}_{i,c_{j+1}}\sqrt{T}C_{\gamma}\log(\psi T \epsilon_{p_{i,c_j}}^2)}{(\psi)^{\alpha}} \right) \leq \sum_{i\in\A}\left( \dfrac{2T^{\frac{3}{2}}C_{\gamma}\Delta^{opt}_{i,c_{j+1}}\log(\psi T (\Delta^{chg}_{i,c_j})^4)}{(\psi)^{\alpha}} \right).
 \end{align*}
 
 
@@ -225,11 +237,11 @@ Therefore, combining these two parts (a) and (b) we can show that the total regr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 & \leq \sum_{i = 1}^K\sum_{j=1}^{G}\bigg[ 1 
 %%%%%%%%%%
-+ \underbrace{ \dfrac{4T^{\frac{3}{2}}\Delta^{opt}_{i,c_j}\log(\psi T (\Delta^{opt}_{i,c_j})^4)}{(\psi)^{\alpha}} }_{\textbf{from Step 4}}
++ \underbrace{ \dfrac{4T^{\frac{3}{2}}C_{\gamma}\Delta^{opt}_{i,c_j}\log(\psi T (\Delta^{opt}_{i,c_j})^4)}{(\psi)^{\alpha}} }_{\textbf{from Step 4}}
 %%%%%%%%%%
 + \underbrace{\Delta^{opt}_{i,c_j} + \dfrac{4\log(\psi T(\Delta^{opt}_{i,c_j})^4)}{2(\Delta^{opt}_{i,c_j})}}_{\textbf{from Step 5}}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-& + \underbrace{ \dfrac{2T^{\frac{3}{2}}\Delta^{opt}_{i,c_{j+1}}\log(\psi T (\Delta^{chg}_{i,c_j})^4)}{(\psi)^{\alpha}} }_{\textbf{from Step 6}}\\
+& + \underbrace{ \dfrac{2T^{\frac{3}{2}}C_{\gamma}\Delta^{opt}_{i,c_{j+1}}\log(\psi T (\Delta^{chg}_{i,c_j})^4)}{(\psi)^{\alpha}} }_{\textbf{from Step 6}}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 &+ \underbrace{ \Delta^{opt}_{\max,c_{j+1}} + \dfrac{\Delta^{opt}_{\max,c_{j+1}}\log(\psi T(\Delta^{chg}_{i,c_j})^4)}{2(\Delta^{chg}_{\epsilon_0,c_j})^2} + \Delta^{opt}_{i,c_{j+1}} + \dfrac{\Delta^{opt}_{i,c_{j+1}}\log(\psi T(\Delta^{chg}_{i,c_j})^4)}{2(\Delta^{chg}_{i,c_j})^2}}_{\textbf{from Step 7}}
 \bigg]
