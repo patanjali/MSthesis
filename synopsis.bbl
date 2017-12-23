@@ -46,12 +46,6 @@
   bandit problem.
 \newblock {\em Periodica Mathematica Hungarica\/}, {\bf 61}(1-2), 55--65.
 
-\bibitem[{Bertsekas and Tsitsiklis(1996)}]{bertsekas1996neuro}
-{\bf Bertsekas, D.~P.} and {\bf J.~N. Tsitsiklis} (1996).
-\newblock Neuro-dynamic programming (optimization and neural computation
-  series, 3).
-\newblock {\em Athena Scientific\/}, {\bf 7}, 15--23.
-
 \bibitem[{Bubeck {\em et~al.\/}(2011)Bubeck, Munos, and
   Stoltz}]{bubeck2011pure}
 {\bf Bubeck, S.}, {\bf R.~Munos}, and {\bf G.~Stoltz} (2011).
@@ -119,6 +113,17 @@
 \newblock An optimal algorithm for the thresholding bandit problem.
 \newblock {\em arXiv preprint arXiv:1605.08671\/}.
 
+\bibitem[{Maillard(2011)}]{maillard2011apprentissage}
+{\bf Maillard, O.-A.} (2011).
+\newblock {\em LEARNING S {\ 'E} QUENTIAL: Bandits, Statistics and
+  Reinforcement.\/}.
+\newblock Ph.D. thesis, University of Science and Technology of Lille-Lille I.
+
+\bibitem[{Robbins(1952)}]{robbins1952some}
+{\bf Robbins, H.}, Some aspects of the sequential design of experiments.
+\newblock {\em In\/} {\em Herbert Robbins Selected Papers\/}. Springer, 1952,
+  169--177.
+
 \bibitem[{Steinwart {\em et~al.\/}(2005)Steinwart, Hush, and
   Scovel}]{steinwart2005classification}
 {\bf Steinwart, I.}, {\bf D.~Hush}, and {\bf C.~Scovel} (2005).
@@ -130,11 +135,6 @@
 \newblock Selecting among heuristics by solving thresholded k-armed bandit
   problems.
 \newblock {\em ICAPS 2006\/}, 123.
-
-\bibitem[{Sutton and Barto(1998)}]{sutton1998reinforcement}
-{\bf Sutton, R.~S.} and {\bf A.~G. Barto}, {\em Reinforcement learning: An
-  introduction\/}.
-\newblock MIT press, 1998.
 
 \bibitem[{Thompson(1933)}]{thompson1933likelihood}
 {\bf Thompson, W.~R.} (1933).

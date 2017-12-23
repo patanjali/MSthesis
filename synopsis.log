@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 DEC 2017 12:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  23 DEC 2017 11:33
 entering extended mode
 **synopsis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.tex
@@ -1322,36 +1322,28 @@ Package pdftex.def Info: iitm-eps-converted-to.pdf used on input line 26.
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Subhojyoti/Deskt
 op/github/MSThesis/iitm-eps-converted-to.pdf>] [1] (C:\Users\Subhojyoti\Desktop
-\github\MSThesis\synopsis/intro.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+\github\MSThesis\synopsis/intro1.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+))
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/motivation.tex [1
 
 ]
-<synopsis/img/RL1.png, id=99, 860.21375pt x 356.33125pt>
-File: synopsis/img/RL1.png Graphic file (type png)
-
-<use synopsis/img/RL1.png>
-Package pdftex.def Info: synopsis/img/RL1.png used on input line 8.
-(pdftex.def)             Requested size: 258.06612pt x 106.90019pt.
-)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/motivation.tex [2 <C:/Use
-rs/Subhojyoti/Desktop/github/MSThesis/synopsis/img/RL1.png (PNG copy)>]
-[3]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/objective.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/contribution.tex [4])
+[2]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/objective.tex
+[3]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/contribution.tex)
 Overfull \hbox (11.80708pt too wide) in paragraph at lines 67--67
 []\T1/ptm/b/n/14.4 Efficient UCB Vari-ance: An al-most op-ti-mal al-go-rithm in
  Stochas-
  []
 
-[5] [6] [7]
+[4] [5] [6]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 162.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
@@ -1361,10 +1353,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--202
 
  []
 
-[8] [9] [10] [11]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/ThesisConc.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.bbl [12] [13]) [14]
-[15] [16]
+[7] [8] [9] [10] [11]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis/ThesisConc.tex [12])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.bbl [13]) [14] [15]
+[16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
  (C:\Users\Subhojyoti\Desktop\github\MSThesis\synopsis.aux)
@@ -1375,10 +1367,10 @@ Package rerunfilecheck Info: File `synopsis.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
  ) 
 Here is how much of TeX's memory you used:
- 31270 strings out of 493921
- 732773 string characters out of 3144861
- 913347 words of memory out of 3000000
- 33871 multiletter control sequences out of 15000+200000
+ 31257 strings out of 493921
+ 732553 string characters out of 3144861
+ 918269 words of memory out of 3000000
+ 33861 multiletter control sequences out of 15000+200000
  35799 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,16n,79p,1948b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1398,9 +1390,9 @@ type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
 w/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on synopsis.pdf (18 pages, 362357 bytes).
+Output written on synopsis.pdf (18 pages, 322787 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
