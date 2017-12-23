@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{26}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -45,6 +45,12 @@
 \newblock Ucb revisited: Improved regret bounds for the stochastic multi-armed
   bandit problem.
 \newblock {\em Periodica Mathematica Hungarica\/}, {\bf 61}(1-2), 55--65.
+
+\bibitem[{Bertsekas and Tsitsiklis(1996)}]{bertsekas1996neuro}
+{\bf Bertsekas, D.~P.} and {\bf J.~N. Tsitsiklis} (1996).
+\newblock Neuro-dynamic programming (optimization and neural computation
+  series, 3).
+\newblock {\em Athena Scientific\/}, {\bf 7}, 15--23.
 
 \bibitem[{Bubeck {\em et~al.\/}(2011)Bubeck, Munos, and
   Stoltz}]{bubeck2011pure}
@@ -135,6 +141,11 @@
 \newblock Selecting among heuristics by solving thresholded k-armed bandit
   problems.
 \newblock {\em ICAPS 2006\/}, 123.
+
+\bibitem[{Sutton and Barto(1998)}]{sutton1998reinforcement}
+{\bf Sutton, R.~S.} and {\bf A.~G. Barto}, {\em Reinforcement learning: An
+  introduction\/}.
+\newblock MIT press, 1998.
 
 \bibitem[{Thompson(1933)}]{thompson1933likelihood}
 {\bf Thompson, W.~R.} (1933).
