@@ -177,8 +177,7 @@ Empirically, we show that EUCBV, owing to its estimating the variance of the arm
 \EndArmElim
 \If{$t\geq N_{m}$ and $m\leq M$}
 \ResParam
-\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$; $B_{m+1}:=B_{m}$
-\State $n_{m+1}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m+1}^{2})}}{2\epsilon_{m+1}}\bigg\rceil$
+\State $\epsilon_{m+1}:=\frac{\epsilon_{m}}{2}$; $B_{m+1}:=B_{m}$; $n_{m+1}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m+1}^{2})}}{2\epsilon_{m+1}}\bigg\rceil$
 \State $N_{m+1}:=t+|B_{m+1}| n_{m+1}$; $m:=m+1$
 \EndResParam
 \EndIf
@@ -198,7 +197,7 @@ where the quantity $\epsilon_{m}$ is initialized to $1$ and halved after every r
 \end{inparaenum}
 %For any round $m$ UCB-Improved pulls all arms $n_{m}=\left\lceil \frac{ 2\log(T\epsilon_{m})}{\epsilon_{m}} \right\rceil$ number of times. The quantity $\epsilon_{m}$ is initialized to $1$ and halved after every round.
 \\
-	The EUCBV algorithm, which is mainly based on the arm elimination technique of the UCB-Improved algorithm,  remedies these by employing exploration regulatory factor $\psi$ and arm elimination parameter $\rho$ for aggressive elimination of sub-optimal arms. Along with these, similar to CCB \citep{liu2016modification} algorithm, EUCBV uses optimistic greedy sampling whereby at every timestep it only pulls the arm with the highest upper confidence bound rather than pulling all the arms equal number of times in each round. Also, unlike the UCB-Improved, UCB1, MOSS and OCUCB algorithms (which are based on mean estimation) EUCBV employs mean and variance estimates (as in \citet{audibert2009exploration}) for arm elimination. Further, we allow for arm-elimination at every time-step, which is in contrast to the earlier work (e.g., \citet{auer2010ucb}; \citet{even2006action}) where the arm elimination takes place only at the end of the respective exploration rounds. 
+	The EUCBV algorithm, which is based on the arm elimination technique of the UCB-Improved algorithm,  remedies these by employing exploration regulatory factor $\psi$ and arm elimination parameter $\rho$ for aggressive elimination of sub-optimal arms. Along with these, similar to CCB \citep{liu2016modification} algorithm, EUCBV uses optimistic greedy sampling whereby at every timestep it only pulls the arm with the highest upper confidence bound rather than pulling all the arms equal number of times in each round. Also, unlike the UCB-Improved, UCB1, MOSS and OCUCB algorithms (which are based on mean estimation) EUCBV employs mean and variance estimates (as in \citet{audibert2009exploration}) for arm elimination. Further, we allow for arm-elimination at every time-step, which is in contrast to the earlier work (e.g., \citet{auer2010ucb}; \citet{even2006action}) where the arm elimination takes place at the end of the exploration rounds. 
 	
 %	An illustrative flowchart depicting the main steps is shown in Figure \ref{fig:eucbv}.
 %	
@@ -220,9 +219,7 @@ where the quantity $\epsilon_{m}$ is initialized to $1$ and halved after every r
 In this part we study another setting called pure-exploration thresholding multi-armed bandits which are unlike their traditional (exploration vs.\ exploitation)  counterparts, the SMABs, where the  objective is to minimize the cumulative regret. 
 %The cumulative regret is the total loss incurred by the learner for not playing the optimal arm throughout the time horizon $T$. 
 In pure-exploration problems a learning algorithm, until time $T$, can invest entirely on exploring the arms without being concerned about the loss incurred while exploring; the objective is to minimize the probability that the arm recommended at time $T$ is not the best arm.  In this chapter, we further consider a combinatorial version of the pure-exploration MAB, called the thresholding bandit problem (TBP).  Here, the learning algorithm is provided with a threshold $\tau$, and the objective, after exploring for $T$ rounds, is to  output all arms $i$ whose $r_{i}$ is above $\tau$. 
-It is important to emphasize that the \emph{thresholding} bandit problem is different from the \emph{threshold} bandit setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. 
-
-Formally, the problem we consider is the following. First, we define the set $S_{\tau}=\lbrace i\in \mathcal{A}: r_{i}\geq \tau \rbrace$. Note that, $S_\tau$ is the set of all arms whose reward mean is greater than threshold $\tau$. Let 
+It is important to emphasize that the \emph{thresholding} bandit problem is different from the \emph{threshold} bandit setup studied in \cite{abernethy2016threshold}, where the learner receives an unit reward whenever the value of an observation is above a threshold. Formally, the problem we consider is the following. First, we define the set $S_{\tau}=\lbrace i\in \mathcal{A}: r_{i}\geq \tau \rbrace$. Note that, $S_\tau$ is the set of all arms whose reward mean is greater than threshold $\tau$. Let 
 $S_\tau^c$ denote the complement of $S_\tau$, i.e.,  $S_{\tau}^{c}=\lbrace i\in \mathcal{A}: r_{i} < \tau \rbrace$. Next, let $\hat{S}_{\tau}=\hat{S}_{\tau}(T)\subseteq \mathcal{A}$ denote the recommendation of a learning algorithm (under consideration) after $T$ time units of exploration, while $\hat{S}_{\tau}^c$ denotes its complement. The performance of the learning agent is measured by the accuracy with which it can classify the arms into $S_{\tau}$ and $S_{\tau}^{c}$ after time horizon $T$. Equivalently, using $\mathbb{I}(E)$ to denote the indicator of an event $E$, the \emph{loss} $\mathcal{L}(T)$ is defined as
 \begin{align*}
 \Ls (T) = \mathbb{I}\big(\lbrace S_{\tau}\cap \hat{S}_{\tau}^{c}\neq \emptyset\rbrace    \cup    \lbrace\hat{S}_{\tau}\cap S_{\tau}^{c}\neq \emptyset\rbrace\big).
@@ -278,9 +275,7 @@ Thus, it follows that the upper bound for UCBEV \citep{gabillon2011multi} is bet
 \subsubsection{The Augmented UCB algorithm}
 
 \textbf{The algorithm:} The Augmented-UCB (AugUCB) algorithm is presented in Algorithm~\ref{alg:augucb}.
-AugUCB is essentially based on the arm elimination method of the UCB-Improved \citep{auer2010ucb}, but adapted to the thresholding bandit setting proposed in \cite{locatelli2016optimal}. However, unlike the UCB-Improved (which is based on mean estimation) our algorithm employs \emph{variance estimates} (as in \cite{audibert2009exploration}) for arm elimination; to the best of our knowledge this is the first variance-aware  algorithm for the thresholding bandit problem. Further, we allow for arm-elimination at each time-step, which is in contrast to the earlier work (e.g., \cite{auer2010ucb,chen2014combinatorial}) where the arm elimination task is deferred to the end of the respective exploration rounds. The details are presented below.
-
-The active set $B_{0}$ is initialized with all the arms from $\mathcal{A}$. We divide the entire budget $T$ into rounds/phases like in UCB-Improved, CCB, SAR and CSAR. At every time-step AugUCB checks for arm elimination conditions, while updating parameters at the end of each round. As suggested by \cite{liu2016modification} to make AugUCB to overcome too much early exploration, we no longer pull all the arms equal number of times in each round. Instead, we choose an arm in the active set $B_m$ that minimizes $(|\hat{r}_{i} - \tau |-2s_i)$ where $s_i  = \sqrt{\frac{\rho\psi_m (\hat{v}_{i}+1) \log ( T \epsilon_{m})}{4 n_{i}}}$ with $\rho$ being the arm elimination parameter and $\psi_{m}$ being the exploration regulatory factor.
+AugUCB is essentially based on the arm elimination method of the UCB-Improved \citep{auer2010ucb}, but adapted to the thresholding bandit setting proposed in \cite{locatelli2016optimal}. However, unlike the UCB-Improved (which is based on mean estimation) our algorithm employs \emph{variance estimates} (as in \cite{audibert2009exploration}) for arm elimination; to the best of our knowledge this is the first variance-aware  algorithm for the thresholding bandit problem. Further, we allow for arm-elimination at each time-step, which is in contrast to the earlier work (e.g., \cite{auer2010ucb,chen2014combinatorial}) where the arm elimination task is deferred to the end of the respective exploration rounds. The details are presented below. The active set $B_{0}$ is initialized with all the arms from $\mathcal{A}$. We divide the entire budget $T$ into rounds/phases like in UCB-Improved, CCB, SAR and CSAR. At every time-step AugUCB checks for arm elimination conditions, while updating parameters at the end of each round. As suggested by \cite{liu2016modification} to make AugUCB to overcome too much early exploration, we no longer pull all the arms equal number of times in each round. Instead, we choose an arm in the active set $B_m$ that minimizes $(|\hat{r}_{i} - \tau |-2s_i)$ where $s_i  = \sqrt{\frac{\rho\psi_m (\hat{v}_{i}+1) \log ( T \epsilon_{m})}{4 n_{i}}}$ with $\rho$ being the arm elimination parameter and $\psi_{m}$ being the exploration regulatory factor.
 %  in the active set $B_{m}$. 
 The above condition ensures that an arm closer to the threshold $\tau$ is pulled; 
 %and with suitable choice of $\rho_{\mu}$ and $\rho_v$ we can fine tune the exploration. 
@@ -381,91 +376,98 @@ M=\left\lfloor \frac{1}{2}\log_{2} \frac{T}{e}\right\rfloor;
 %%%%%%
 
 \section{Proposed Contents of the Thesis}
-
-In chapter 1 (table \ref{tab:chap1}), we discuss on Reinforcement Learning and its connection to bandits, we give an overview of the various types of bandits available in the literature and also discuss about the main objectives of the thesis and our contributions. Appendix A provides some useful results on Concentration inequalities. 
-
-
+\input{synopsis/contents}
+%The proposed contents of the thesis from chapter 1 to chapter 6 are mentioned below.
+%
+%%In chapter 1, we discuss on Reinforcement Learning and its connection to bandits, we give an overview of the various types of bandits available in the literature and also discuss about the main objectives of the thesis and our contributions. Appendix A provides some useful results on Concentration inequalities. 
+%
+%%(table \ref{tab:chap1})
+%
+%%\begin{center}
+%\begin{table}[!th]
 %\begin{center}
-\begin{table}[!th]
-\begin{center}
-\begin{tabular}{|p{26em}|}
-\hline\\
-\textbf{1. Introduction to Bandits} \\\hline
-1.1 Reinforcement Learning \\
-1.2 Connection between Reinforcement Learning and Bandits \\
-1.3 Why study Bandits?\\
-1.4 Motivation \\
-1.5 Types of Information Feedback\\
-1.6 Different types of Bandits\\
-1.7 Objectives of Thesis\\
-1.8 Contributions of Thesis\\
-1.9 Outline of the Thesis\\
-1.A Appendix A\\
-\hline
-\end{tabular}
-\end{center}
-\caption{Introduction to thesis}
-\label{tab:chap1}
-\end{table}
+%\begin{tabular}{|p{26em}|}
+%\hline\\
+%\textbf{1. Introduction to Bandits} \\\hline
+%1.1 Reinforcement Learning \\
+%1.2 Connection between Reinforcement Learning and Bandits \\
+%1.3 Why study Bandits?\\
+%1.4 Motivation \\
+%1.5 Types of Information Feedback\\
+%1.6 Different types of Bandits\\
+%1.7 Objectives of Thesis\\
+%1.8 Contributions of Thesis\\
+%1.9 Outline of the Thesis\\
+%1.A Appendix A\\
+%\hline
+%\end{tabular}
 %\end{center}
-
-
-In chapter 2 (table \ref{tab:chap2-3}) we give a detailed overview of the stochastic multi-armed bandit setting and the latest available algorithms in this setting. In the next chapter 3 (table \ref{tab:chap2-3}) we introduce our algorithm Efficient UCB Variance (EUCBV) for the stochastic multi-armed bandit setting. We give theoretical guarantees on the performance of EUCBV and also show in numerical simulations that it indeed performs very well as compared to the state-of-the-art algorithms. 
-
-
-\begin{table}[!th]
-\begin{tabular}{p{16em}|p{16em}}
-\hline\\
-\textbf{2. Stochastic Multi-armed Bandits} & \textbf{3. Efficient UCB Variance: An almost optimal algorithm in SMAB setting}\\\hline
-2.1 Introduction to SMAB & 3.1 Introduction\\
-2.2 Notations and assumptions & 3.2 Our Contributions\\
-2.3 Problem Definition & 3.3 Algorithm: Efficient UCB Variance\\
-2.4 Motivation & 3.4 Main Results\\
-2.5 Related Work in SMAB & 3.5 Proofs\\
-2.6 Summary & 3.6 Experiments\\
-& 3.7 Summary\\
-& 3.B Appendix B\\
-\hline
-\end{tabular}
-\caption{Part 1. Stochastic MAB problem}
-\label{tab:chap2-3}
-\end{table}
-
-
-In the subsequent chapter 4 (table \ref{tab:chap4-5})  we introduce a new variant of pure exploration multi-armed stochastic bandit called the thresholding bandit problem. We analyze the connections between thresholding bandit problem and pure exploration problem and also discuss several existing algorithms in both the settings that are relevant to carefully analyze the thresholding bandit problem. Then in chapter 5 (table \ref{tab:chap4-5}) we introduce our solution for the thresholding bandit problem, called the Augemented UCB (AugUCB) algorithm. We analyze our algorithm AugUCB and derive theoretical guarantees for it as well as show in numerical experiments that it indeed outperforms several state-of-the-art algorithms in the thresholding bandit setting. 
-
-
-\begin{table}[!th]
-\begin{tabular}{p{16em}|p{16em}}
-\hline\\
-\textbf{4. Thresholding Bandits} & \textbf{5. Augmented UCB for Thresholding Bandit Problem}\\\hline
-4.1 Introduction to TBP & 5.1 Introduction\\
-4.2 Notations and assumptions & 5.2 Our Contributions\\
-4.3 Problem Definition & 5.3 Augmented-UCB Algorithm\\
-4.4 Motivation & 5.4 Theoretical Results\\
-4.5 Related Work in Pure Exploration & 5.5 Numerical Experiments\\
-4.6 TBP connection to Pure Exploration & 5.6 Summary\\
-4.7 Related Work in TBP &\\
-4.8 Summary & \\
-\hline
-\end{tabular}
-\caption{Part 2. Thresholding Bandit Problem}
-\label{tab:chap4-5}
-\end{table}
-
-Finally, in chapter 6, we conclude with a brief summarization on the work done in the thesis and discuss future directions. 
-
-%(table \ref{tab:chap6})
+%%\caption{Chapter 1}
+%\label{tab:chap1}
+%\end{table}
+%%\end{center}
+%
+%
+%%In chapter 2 we give a detailed overview of the stochastic multi-armed bandit setting and the latest available algorithms in this setting. In the next chapter 3 we introduce our algorithm Efficient UCB Variance (EUCBV) for the stochastic multi-armed bandit setting. We give theoretical guarantees on the performance of EUCBV and also show in numerical simulations that it indeed performs very well as compared to the state-of-the-art algorithms. 
+%
+%%(table \ref{tab:chap2-3})
+%
+%\begin{table}[!th]
+%\begin{tabular}{p{16em}|p{16em}}
+%\hline\\
+%\textbf{2. Stochastic Multi-armed Bandits} & \textbf{3. Efficient UCB Variance: An almost optimal algorithm in SMAB setting}\\\hline
+%2.1 Introduction to SMAB & 3.1 Introduction\\
+%2.2 Notations and assumptions & 3.2 Our Contributions\\
+%2.3 Problem Definition & 3.3 Algorithm: Efficient UCB Variance\\
+%2.4 Motivation & 3.4 Main Results\\
+%2.5 Related Work in SMAB & 3.5 Proofs\\
+%2.6 Summary & 3.6 Experiments\\
+%& 3.7 Summary\\
+%& 3.B Appendix B\\
+%\hline
+%\end{tabular}
+%%\caption{Chapter 2 and Chapter 3}
+%\label{tab:chap2-3}
+%\end{table}
+%
+%
+%%In the subsequent chapter 4, we introduce a new variant of pure exploration multi-armed stochastic bandit called the thresholding bandit problem. We analyze the connections between thresholding bandit problem and pure exploration problem and also discuss several existing algorithms in both the settings that are relevant to carefully analyze the thresholding bandit problem. Then in chapter 5 we introduce our solution for the thresholding bandit problem, called the Augemented UCB (AugUCB) algorithm. We analyze our algorithm AugUCB and derive theoretical guarantees for it as well as show in numerical experiments that it indeed outperforms several state-of-the-art algorithms in the thresholding bandit setting. 
+%
+%%(table \ref{tab:chap4-5})
+%
+%\begin{table}[!th]
+%\begin{tabular}{p{16em}|p{16em}}
+%\hline\\
+%\textbf{4. Thresholding Bandits} & \textbf{5. Augmented UCB for Thresholding Bandit Problem}\\\hline
+%4.1 Introduction to TBP & 5.1 Introduction\\
+%4.2 Notations and assumptions & 5.2 Our Contributions\\
+%4.3 Problem Definition & 5.3 Augmented-UCB Algorithm\\
+%4.4 Motivation & 5.4 Theoretical Results\\
+%4.5 Related Work in Pure Exploration & 5.5 Numerical Experiments\\
+%4.6 TBP connection to Pure Exploration & 5.6 Summary\\
+%4.7 Related Work in TBP &\\
+%4.8 Summary & \\
+%\hline
+%\end{tabular}
+%%\caption{Chapter 4 and Chapter 5}
+%\label{tab:chap4-5}
+%\end{table}
+%
+%%Finally, in chapter 6, we conclude with a brief summarization on the work done in the thesis and discuss future directions. 
+%
+%
+%
+%%(table \ref{tab:chap6})
 %\begin{table}[!th]
 %\begin{center}
 %\begin{tabular}{|p{16em}|}
 %\hline\\
-%\textbf{6. Conclusion and Future Direction} \\\hline
-%6.1 Conclusion and Future Direction \\
+%\textbf{6. Conclusions} \\\hline
+%6.1 Conclusions and Future Directions \\
 %\hline
 %\end{tabular}
 %\end{center}
-%\caption{Conclusion and Future Direction of thesis}
+%%\caption{Conclusion and Future Direction of thesis}
 %\label{tab:chap6}
 %\end{table}
 
@@ -473,51 +475,32 @@ Finally, in chapter 6, we conclude with a brief summarization on the work done i
 %Finally, in chapter \ref{chap:psbandit} we introduce the piecewise-stochastic bandit model which is a new variant that strides between the stochastic and adversarial setting. We discuss extensively on this setting and also provide our solution to this setting and show in numerical simulations that our solution is very close to the optimal solution. 
 
 
-%\framebox{
-%      \vbox{\vspace{2mm}
-%%    \hbox to 6.28in { {\bf Improved Changepoint Detection for Piece-wise Stochastic Bandits
-%%		\hfill Winter 2017} }
-%       \vspace{4mm}
-%       \hbox to 6.28in { {\Large \hfill Improved Changepoint Detection for Piece-wise Stochastic Bandits  \hfill} }
-%       \vspace{2mm}
-%       \hbox to 6.28in { {\it \hfill Subhojyoti Mukherjee, Odalric-Ambrym Maillard \hfill} }
-%      \vspace{2mm}}
-%   }
 
-
-%The outline of the thesis is as follows:
-%\begin{enumerate}
-%\item Introduction to Bandits
-%\item Stochastic Multi-armed Bandits
-%\item Efficient UCB Variance: An almost optimal algorithm in Stochastic Multi-armed Bandit setting
-%\item Thresholding Bandits
-%\item Augmented UCB for Thresholding Bandits Problem
-%%\item Improved Changepoint Detection for Piecewise Stationary Distributions
-%\item Conclusion and Future Direction
-%\end{enumerate}
 
 
 %\vskip 4cm
 %%%%%%
-\section{Publications}
-\subsection{Papers in Refereed Journals}
+\vspace*{-10mm}
+%\newpage
+\section{Publications from the thesis}
+%\subsection{Papers in Refereed Journals}
 %\begin{enumerate}
 %\item Title \\
 %	{\bf Author 1}, Author 2...\\
 %	{\it Journal title.}, {\bf Volume}, Page (Year)
 %\end{enumerate}
-%\begin{enumerate}
-%\item Subhojyoti Mukherjee, K.P.~Naveen, Nandan Sudarsanam, and Balaraman Ravindran, ``\textit{Thresholding Bandit with Augmented UCB}'', \newblock{\em Proceedings of the Twenty-Sixth International Joint Conference on
-%               Artificial Intelligence, {IJCAI} 2017, Melbourne, Australia, August
-%               19-25, 2017,2515-2521}, main conference track.
-%\item Subhojyoti Mukherjee, K.P.~Naveen, Nandan Sudarsanam, and Balaraman Ravindran, ``\textit{Efficient UCBV: An Almost Optimal Algorithm using Variance Estimates}'', \newblock{\em To appear in Proceedings of the Thirty-Second Association for the Advancement of Artificial Intelligence, {AAAI} 2018, New Orleans, Louisiana, USA, February 2-7}, main conference track.
-%\end{enumerate}
-
-
-\subsection{Presentations in Conferences}
 \begin{enumerate}
-\item Presented {\em Thresholding Bandit with Augmented UCB} at the {\bf Twenty-Sixth International Joint Conference on Artificial Intelligence, {IJCAI} 2017}, Melbourne, Australia, August 19-25.
-\item To present {\em Efficient UCBV: An Almost Optimal Algorithm using Variance Estimates} at the {\bf Thirty-Second Association for the Advancement of Artificial Intelligence, {AAAI} 2018}, New Orleans, Louisiana, USA, February 2-7.
-\end{enumerate} 
+\item Subhojyoti Mukherjee, K.P.~Naveen, Nandan Sudarsanam, and Balaraman Ravindran, ``\textit{Thresholding Bandit with Augmented UCB}'', \newblock{\em Proceedings of the Twenty-Sixth International Joint Conference on
+               Artificial Intelligence, {IJCAI} 2017, Melbourne, Australia, August
+               19-25, 2017,2515-2521}.
+\item Subhojyoti Mukherjee, K.P.~Naveen, Nandan Sudarsanam, and Balaraman Ravindran, ``\textit{Efficient UCBV: An Almost Optimal Algorithm using Variance Estimates}'', \newblock{\em To appear in Proceedings of the Thirty-Second Association for the Advancement of Artificial Intelligence, {AAAI} 2018, New Orleans, Louisiana, USA, February 2-7}.
+\end{enumerate}
+
+
+%\subsection{Presentations in Conferences}
+%\begin{enumerate}
+%\item Presented {\em Thresholding Bandit with Augmented UCB} at the {\bf Twenty-Sixth International Joint Conference on Artificial Intelligence, {IJCAI} 2017}, Melbourne, Australia, August 19-25.
+%\item To present {\em Efficient UCBV: An Almost Optimal Algorithm using Variance Estimates} at the {\bf Thirty-Second Association for the Advancement of Artificial Intelligence, {AAAI} 2018}, New Orleans, Louisiana, USA, February 2-7.
+%\end{enumerate} 
 \end{document}
 
