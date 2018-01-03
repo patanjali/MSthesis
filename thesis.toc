@@ -1,33 +1,33 @@
 \select@language {english}
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}
 \contentsline {chapter}{ABSTRACT}{ii}{chapter*.2}
-\contentsline {chapter}{LIST OF TABLES}{vii}{chapter*.4}
-\contentsline {chapter}{LIST OF FIGURES}{viii}{chapter*.5}
-\contentsline {chapter}{ABBREVIATIONS}{ix}{chapter*.6}
-\contentsline {chapter}{NOTATION}{x}{chapter*.7}
+\contentsline {chapter}{LIST OF TABLES}{vi}{chapter*.4}
+\contentsline {chapter}{LIST OF FIGURES}{vii}{chapter*.5}
+\contentsline {chapter}{ABBREVIATIONS}{viii}{chapter*.6}
+\contentsline {chapter}{NOTATION}{ix}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introduction to Bandits}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Reinforcement Learning}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Connection between Reinforcement Learning and Bandits}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Why study Bandits?}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Motivation}{3}{section.1.4}
 \contentsline {section}{\numberline {1.5}Types of Information Feedback}{5}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Full information feedback}{6}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.1}Full information feedback}{5}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}Partial information feedback}{6}{subsection.1.5.2}
 \contentsline {subsection}{\numberline {1.5.3}Bandit feedback}{6}{subsection.1.5.3}
 \contentsline {section}{\numberline {1.6}Different types of Bandits}{6}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}Types of Bandits based on Environment}{7}{subsection.1.6.1}
 \contentsline {subsubsection}{Stochastic Bandits}{7}{section*.9}
 \contentsline {subsubsection}{Non-stochastic Bandits}{7}{section*.10}
-\contentsline {subsection}{\numberline {1.6.2}Types of Bandits based on goal}{7}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.2}Types of Bandits based on goal}{8}{subsection.1.6.2}
 \contentsline {subsubsection}{Cumulative regret minimization}{8}{section*.11}
-\contentsline {subsubsection}{Simple regret minimization}{8}{section*.12}
+\contentsline {subsubsection}{Simple regret minimization}{9}{section*.12}
 \contentsline {subsubsection}{Weak Regret minimization}{9}{section*.13}
-\contentsline {subsection}{\numberline {1.6.3}Contextual Bandits}{9}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.3}Contextual Bandits}{10}{subsection.1.6.3}
 \contentsline {subsection}{\numberline {1.6.4}Collaborative Bandits}{10}{subsection.1.6.4}
-\contentsline {subsection}{\numberline {1.6.5}Bandits with Corrupt Feedback}{10}{subsection.1.6.5}
-\contentsline {subsection}{\numberline {1.6.6}Conservative Bandits}{10}{subsection.1.6.6}
+\contentsline {subsection}{\numberline {1.6.5}Bandits with Corrupt Feedback}{11}{subsection.1.6.5}
+\contentsline {subsection}{\numberline {1.6.6}Conservative Bandits}{11}{subsection.1.6.6}
 \contentsline {section}{\numberline {1.7}Objectives of Thesis}{11}{section.1.7}
-\contentsline {section}{\numberline {1.8}Contributions of Thesis}{11}{section.1.8}
+\contentsline {section}{\numberline {1.8}Contributions of Thesis}{12}{section.1.8}
 \contentsline {section}{\numberline {1.9}Outline of the Thesis}{12}{section.1.9}
 \contentsline {chapter}{\numberline {2}Stochastic Multi-armed Bandits}{14}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introduction to SMAB}{14}{section.2.1}
@@ -81,30 +81,19 @@
 \contentsline {subsubsection}{Proof of expected loss of AugUCB}{55}{section*.36}
 \contentsline {section}{\numberline {5.5}Numerical Experiments}{59}{section.5.5}
 \contentsline {section}{\numberline {5.6}Summary}{63}{section.5.6}
-\contentsline {chapter}{\numberline {6}Improved Changepoint Detection for Piecewise Stationary Distributions}{64}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{64}{section.6.1}
-\contentsline {section}{\numberline {6.2}Notations, Assumptions and Definitions}{65}{section.6.2}
-\contentsline {section}{\numberline {6.3}Problem Definitions}{67}{section.6.3}
-\contentsline {section}{\numberline {6.4}Related Works}{68}{section.6.4}
-\contentsline {section}{\numberline {6.5}Our Contribution}{69}{section.6.5}
-\contentsline {section}{\numberline {6.6}Changepoint Detection Algorithms}{70}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Proposed Algorithms}{70}{subsection.6.6.1}
-\contentsline {section}{\numberline {6.7}Theoretical Results}{71}{section.6.7}
-\contentsline {section}{\numberline {6.8}Numerical Experiments}{82}{section.6.8}
-\contentsline {section}{\numberline {6.9}Summary}{82}{section.6.9}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Direction}{83}{chapter.7}
-\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{85}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{85}{section.A.1}
-\contentsline {section}{\numberline {A.2}Concentration Inequalities}{85}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{86}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{86}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{87}{subsection.A.2.3}
-\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{88}{appendix.B}
-\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{88}{subsection.B.0.4}
-\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{88}{subsection.B.0.5}
-\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{89}{subsection.B.0.6}
-\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{91}{subsection.B.0.7}
-\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{92}{subsection.B.0.8}
-\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{93}{subsection.B.0.9}
-\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{94}{subsection.B.0.10}
-\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{100}{appendix*.41}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{64}{chapter.6}
+\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{66}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{66}{section.A.1}
+\contentsline {section}{\numberline {A.2}Concentration Inequalities}{66}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{67}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{67}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{68}{subsection.A.2.3}
+\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{69}{appendix.B}
+\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{69}{subsection.B.0.4}
+\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{69}{subsection.B.0.5}
+\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{70}{subsection.B.0.6}
+\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{72}{subsection.B.0.7}
+\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{73}{subsection.B.0.8}
+\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{74}{subsection.B.0.9}
+\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{75}{subsection.B.0.10}
+\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{81}{appendix*.41}

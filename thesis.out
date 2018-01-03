@@ -63,30 +63,19 @@
 \BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 63
 \BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 64
 \BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 65
-\BOOKMARK [0][-]{chapter.6}{Improved Changepoint Detection for Piecewise Stationary Distributions}{}% 66
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 67
-\BOOKMARK [1][-]{section.6.2}{Notations, Assumptions and Definitions}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.3}{Problem Definitions}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.4}{Related Works}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.5}{Our Contribution}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.6}{Changepoint Detection Algorithms}{chapter.6}% 72
-\BOOKMARK [2][-]{subsection.6.6.1}{Proposed Algorithms}{section.6.6}% 73
-\BOOKMARK [1][-]{section.6.7}{Theoretical Results}{chapter.6}% 74
-\BOOKMARK [1][-]{section.6.8}{Numerical Experiments}{chapter.6}% 75
-\BOOKMARK [1][-]{section.6.9}{Summary}{chapter.6}% 76
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Direction}{}% 77
-\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 78
-\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 79
-\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 80
-\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 81
-\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 82
-\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 83
-\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 84
-\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 85
-\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 86
-\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 87
-\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 88
-\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 89
-\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 90
-\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 91
-\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}% 92
+\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Direction}{}% 66
+\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 67
+\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 68
+\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 69
+\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 70
+\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 71
+\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 72
+\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 73
+\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 74
+\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 75
+\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 76
+\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 77
+\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 78
+\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 79
+\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 80
+\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}% 81

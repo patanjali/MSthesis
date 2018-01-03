@@ -25,7 +25,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page
 
-\title{A Study on Online Sequential Learning using Bandits}
+\title{Finite-time Analysis of Frequentist Strategies for Multi-armed Bandits}
 
 \author{Subhojyoti Mukherjee}
 
@@ -91,11 +91,17 @@ To be written.
 
 \abstract
 
-\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Bandits, UCB, EUCBV, Thresholding Bandits,  AugUCB, changepoint detection, SECPD.}
+%\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Bandits, UCB, EUCBV, Thresholding Bandits,  AugUCB, changepoint detection, SECPD.}
+
+\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Stochastic Bandits, UCB, UCBV, EUCBV, Thresholding Bandits, AugUCB}
 
 \vspace*{24pt}
 
-\noindent The thesis studies the following topics in the area of Reinforcement Learning: Multi-armed Bandits, Multi-armed bandits in stationary distribution with the goal of cumulative regret minimization, Thresholding bandits in pure exploration setting, and analysis of bandit theory in piece-wise stationary distributions. The common underlying theme is the study of bandit theory and its application in various types of environments. We start with a general introduction to Multi-armed bandits, its connection to the wider reinforcement learning theory and then we discuss the various types of bandits available in the literature. Then we delve deep into the classic multi-armed bandit problem in stationary distribution, one of the first setting studied by the bandit community and which successively gave rise to several new directions in bandit theory. We propose a novel algorithm in this setting and compare both theoretically and empirically its performance against the available algorithms in this setting. Subsequently, we study a very specific type of bandit setup called the thresholding bandit problem and discuss extensively on its usage, available state-of-the-art algorithms on this setting and our solution to this problem. We give theoretical guarantees on the expected loss of our algorithm and also analyze its performance against state-of-the-art algorithms in numerical simulations in multiple synthetic environments. Finally, we study the notion of piece-wise stationary distribution and how available bandit algorithms can be modified to perform well in this setting. We propose a set of algorithms for this setting with the goal of minimizing cumulative regret which uses various techniques ranging from changepoint detection mechanism to aggregation of experts.
+\noindent The thesis studies the following topics in the area of Reinforcement Learning: Multi-armed Bandits, Multi-armed bandits in stationary distribution with the goal of cumulative regret minimization and Thresholding bandits in pure exploration setting. The common underlying theme is the study of bandit theory and its application in various types of environments. We start with a general introduction to Multi-armed bandits, its connection to the wider reinforcement learning theory and then we discuss the various types of bandits available in the literature. Then we delve deep into the classic multi-armed bandit problem in stationary distribution, one of the first setting studied by the bandit community and which successively gave rise to several new directions in bandit theory. We propose a novel algorithm in this setting and compare both theoretically and empirically its performance against the available algorithms in this setting. Subsequently, we study a very specific type of bandit setup called the thresholding bandit problem and discuss extensively on its usage, available state-of-the-art algorithms on this setting and our solution to this problem. We give theoretical guarantees on the expected loss of our algorithm and also analyze its performance against state-of-the-art algorithms in numerical simulations in multiple synthetic environments. 
+
+%, and analysis of bandit theory in piece-wise stationary distributions
+
+%Finally, we study the notion of piece-wise stationary distribution and how available bandit algorithms can be modified to perform well in this setting. We propose a set of algorithms for this setting with the goal of minimizing cumulative regret which uses various techniques ranging from changepoint detection mechanism to aggregation of experts.
 
 \pagebreak
 
@@ -391,48 +397,48 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Improved Changepoint Detection for Piecewise Stationary Distributions}
-\label{chap:psbandit}
-
-\section{Introduction}
-\label{psbandit:intro}
-\input{Chapter6/intro}
-
-\section{Notations, Assumptions and Definitions}
-\label{psbandit:notations}
-\input{Chapter6/notations}
-
-\section{Problem Definitions}
-\label{psbandit:probDef}
-\input{Chapter6/probDef}
-
-\section{Related Works}
-\label{psbandit:related}
-\input{Chapter6/related}
-
-\section{Our Contribution}
-\label{psbandit:contribution}
-\input{Chapter6/contribution}
-
-\section{Changepoint Detection Algorithms}
-\label{psbandit:algorithm}
-\input{Chapter6/algo1}
-
-
-\section{Theoretical Results}
-\label{psbandit:results}
-\input{Chapter6/mainresult}
-
-
-\section{Numerical Experiments}
-\label{psbandit:expt}
-To be written
-%\input{Chapter6/expt}
-
-
-\section{Summary}
-\label{psbandit:conclusion}
-\input{Chapter6/conclusion}
+%\chapter{Improved Changepoint Detection for Piecewise Stationary Distributions}
+%\label{chap:psbandit}
+%
+%\section{Introduction}
+%\label{psbandit:intro}
+%\input{Chapter6/intro}
+%
+%\section{Notations, Assumptions and Definitions}
+%\label{psbandit:notations}
+%\input{Chapter6/notations}
+%
+%\section{Problem Definitions}
+%\label{psbandit:probDef}
+%\input{Chapter6/probDef}
+%
+%\section{Related Works}
+%\label{psbandit:related}
+%\input{Chapter6/related}
+%
+%\section{Our Contribution}
+%\label{psbandit:contribution}
+%\input{Chapter6/contribution}
+%
+%\section{Changepoint Detection Algorithms}
+%\label{psbandit:algorithm}
+%\input{Chapter6/algo1}
+%
+%
+%\section{Theoretical Results}
+%\label{psbandit:results}
+%\input{Chapter6/mainresult}
+%
+%
+%\section{Numerical Experiments}
+%\label{psbandit:expt}
+%To be written
+%%\input{Chapter6/expt}
+%
+%
+%\section{Summary}
+%\label{psbandit:conclusion}
+%\input{Chapter6/conclusion}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

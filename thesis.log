@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  25 DEC 2017 13:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  4 JAN 2018 03:23
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1343,7 +1343,7 @@ Package epstopdf Info: Source file: <iitm.eps>
 itm.eps>
 (epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
-<iitm-eps-converted-to.pdf, id=374, 109.40875pt x 109.40875pt>
+<iitm-eps-converted-to.pdf, id=330, 109.40875pt x 109.40875pt>
 File: iitm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use iitm-eps-converted-to.pdf>
@@ -1399,16 +1399,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.toc [3
 
-] [4] [5])
+] [4])
 \tf@toc=\write5
- [6]
+ [5]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lot)
 \tf@lot=\write6
- [7
+ [6
 
 ]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lof)
 \tf@lof=\write7
+ [7
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [8
 
 ]
@@ -1417,17 +1422,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [9
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10
-
-]
 Chapter 1.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/intro.tex [1
 
 
 ]
-<Chapter1/img/RL1.png, id=586, 860.21375pt x 356.33125pt>
+<Chapter1/img/RL1.png, id=526, 860.21375pt x 356.33125pt>
 File: Chapter1/img/RL1.png Graphic file (type png)
 
 <use Chapter1/img/RL1.png>
@@ -1442,20 +1442,17 @@ sers/Subhojyoti/Desktop/github/MSThesis/Chapter1/img/RL1.png (PNG copy)>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 7.
 
+[5]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/types.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/types.tex
-Underfull \vbox (badness 7099) has occurred while \output is active []
-
  [6]
-[7]
-Underfull \vbox (badness 6944) has occurred while \output is active []
+[7] [8]
+Underfull \vbox (badness 2662) has occurred while \output is active []
 
- [8]
-[9]) [10] (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/objective.tex)
+ [9]
+[10]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/objective.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/contribution.tex [11])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/outline.tex) [12]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/outline.tex [12])
 [13]
 Chapter 2.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/intro.tex)
@@ -1476,7 +1473,7 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[18] <Chapter2/img/Ucb-Imp.png, id=875, 759.83875pt x 906.38625pt>
+[18] <Chapter2/img/Ucb-Imp.png, id=841, 759.83875pt x 906.38625pt>
 File: Chapter2/img/Ucb-Imp.png Graphic file (type png)
 
 <use Chapter2/img/Ucb-Imp.png>
@@ -1532,7 +1529,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[27] <Chapter3/img/EUCBV_flow.png, id=1004, 1032.85875pt x 947.54pt>
+[27] <Chapter3/img/EUCBV_flow.png, id=970, 1032.85875pt x 947.54pt>
 File: Chapter3/img/EUCBV_flow.png Graphic file (type png)
 
 <use Chapter3/img/EUCBV_flow.png>
@@ -1675,7 +1672,7 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
 
 [44] [45] [46])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1272, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1238, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png>
@@ -1694,7 +1691,7 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [51])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [52]
-<Chapter5/img/AugUCB_flow.png, id=1348, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1314, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1773,147 +1770,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [62])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex) [63]
 Chapter 6.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/intro.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/notations.tex [64
-
-]
-Overfull \hbox (21.93855pt too wide) in paragraph at lines 52--53
-[]\T1/ptm/m/it/12 We as-sume that for ev-ery two con-sec-u-tive seg-ments $\OML
-/cmm/m/it/12 []$ \T1/ptm/m/it/12 and $\OML/cmm/m/it/12 []; \OMS/cmsy/m/n/12 8
-\OML/cmm/m/it/12 j \OT1/cmr/m/n/12 =$
- []
-
-[65]
-Overfull \hbox (17.73407pt too wide) in paragraph at lines 69--70
-[]\T1/ptm/m/it/12 Thus, as-sump-tion []4[] makes sure that all the change-point
-s $\OML/cmm/m/it/12 t[]; \OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 j \OT1/cmr/m/n/12 =
- 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; G$
- []
-
-[66]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/probDef.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/related.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [67])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [68]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/contribution.tex [69])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/algo1.tex [70])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/mainresult.tex [71]
-Underfull \vbox (badness 3179) has occurred while \output is active []
-
- [72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73]
-Overfull \hbox (85.89558pt too wide) in paragraph at lines 59--59
-[] 
- []
-
-
-Overfull \hbox (65.4604pt too wide) in paragraph at lines 71--71
-[] 
- []
-
-
-Overfull \hbox (29.67905pt too wide) in paragraph at lines 77--77
-[] 
- []
-
-
-Overfull \hbox (81.8963pt too wide) in paragraph at lines 84--84
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [74]
-Overfull \hbox (29.6932pt too wide) in paragraph at lines 120--120
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [75]
-Overfull \hbox (24.82758pt too wide) in paragraph at lines 143--143
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [76]
-Overfull \hbox (100.54991pt too wide) in paragraph at lines 161--161
-[] 
- []
-
-
-Overfull \hbox (67.39925pt too wide) in paragraph at lines 171--171
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78]
-Overfull \hbox (1.58617pt too wide) in paragraph at lines 231--231
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [79]
-Overfull \hbox (89.64941pt too wide) in paragraph at lines 260--260
-[] 
- []
-
-[80]
-Overfull \hbox (79.89667pt too wide) in paragraph at lines 295--295
-[] 
- []
-
-
-Overfull \hbox (43.51375pt too wide) in paragraph at lines 311--311
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [81])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter6/conclusion.tex) [82]
-Chapter 7.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter7/ThesisConc.tex
 Overfull \hbox (9.83426pt too wide) in paragraph at lines 1--2
 \T1/ptm/m/n/12 ban-dit (SMAB) with the goal of cu-mu-la-tive re-gret min-i-miza
 -tion, pure ex-plo-ration stochas-
  []
 
-[83
+[64
 
-]) [84]
+]) [65]
 Appendix A.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [85
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [66
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86])
-[87]
+ [67])
+[68]
 Appendix B.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixEUCBV.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[88
+[69
 
 ]
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 72--73
@@ -1926,10 +1806,10 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89]
+ [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90]
+ [71]
 Overfull \hbox (8.47412pt too wide) in paragraph at lines 152--156
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
 in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
@@ -1938,11 +1818,11 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 OML/cmm/m/it/12 c[] \OT1/cmr/m/n/12 = []$
  []
 
-[91] [92]
+[72] [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93]
-Overfull \hbox (8.82367pt too wide) in paragraph at lines 438--439
+ [74]
+Overfull \hbox (2.82367pt too wide) in paragraph at lines 438--439
 []\T1/ptm/m/it/12 From []Bubeck \T1/ptm/m/n/12 et al.[] \T1/ptm/m/it/12 ([]2011
 []) we know that the func-tion $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OT1/cmr/
 m/n/12 [0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1] \OMS/cmsy/m/n/12 7! \OML/cmm/m/i
@@ -1950,38 +1830,34 @@ t/12 x []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12  \OML/cmm/m/it/12 Cx[]\OT1/cmr/m/n/1
 2 )$
  []
 
-) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [94] [95
+) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [75] [76
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 122.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 109.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [96] [97]
-[98]) [99] [100
+) [77] [78]
+[79]) [80] [81
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 491.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 491.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
  (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 491.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 491.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5E97DE9761F3569C284899434D4CF552;6577.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 491.
+(rerunfilecheck)             Checksum: 78BDC1677C745ACFBC2628E514C1E1D8;5788.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 33093 strings out of 493921
- 777992 string characters out of 3144861
- 1091348 words of memory out of 3000000
- 35105 multiletter control sequences out of 15000+200000
- 59265 words of font info for 95 fonts, out of 3000000 for 9000
+ 32965 strings out of 493921
+ 775449 string characters out of 3144861
+ 1089877 words of memory out of 3000000
+ 35052 multiletter control sequences out of 15000+200000
+ 54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,27n,108p,1884b,2489s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,27n,108p,1874b,2489s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
@@ -2002,9 +1878,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (112 pages, 1126100 bytes).
+Output written on thesis.pdf (92 pages, 1031082 bytes).
 PDF statistics:
- 1976 PDF objects out of 2073 (max. 8388607)
- 432 named destinations out of 1000 (max. 500000)
- 779 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1722 PDF objects out of 1728 (max. 8388607)
+ 379 named destinations out of 1000 (max. 500000)
+ 691 words of extra memory for PDF output out of 10000 (max. 10000000)
 
