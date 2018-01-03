@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  4 JAN 2018 03:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  4 JAN 2018 03:55
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1770,15 +1770,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [62])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex) [63]
 Chapter 6.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter7/ThesisConc.tex
-Overfull \hbox (9.83426pt too wide) in paragraph at lines 1--2
-\T1/ptm/m/n/12 ban-dit (SMAB) with the goal of cu-mu-la-tive re-gret min-i-miza
--tion, pure ex-plo-ration stochas-
- []
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter7/ThesisConc.tex [64
 
-[64
-
-]) [65]
+])
+[65]
 Appendix A.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [66
 
@@ -1878,7 +1873,7 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (92 pages, 1031082 bytes).
+Output written on thesis.pdf (92 pages, 1030882 bytes).
 PDF statistics:
  1722 PDF objects out of 1728 (max. 8388607)
  379 named destinations out of 1000 (max. 500000)
