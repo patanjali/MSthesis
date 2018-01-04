@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  4 JAN 2018 13:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  4 JAN 2018 15:01
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -1204,7 +1204,7 @@ itm.eps>
 (epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 
-<iitm-eps-converted-to.pdf, id=330, 109.40875pt x 109.40875pt>
+<iitm-eps-converted-to.pdf, id=334, 109.40875pt x 109.40875pt>
 File: iitm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use iitm-eps-converted-to.pdf> [0
@@ -1264,24 +1264,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 (./thesis.toc [5
 
-] [6])
+] [6]
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
+ [7])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [7] (./thesis.lot)
+
+[8] (./thesis.lot)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [8
+ [9
 
 ] (./thesis.lof)
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
-
- [9
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10
 
@@ -1291,12 +1290,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [11
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12
+
+]
 Chapter 1.
 (./Chapter1/intro.tex [1
 
 
 ]
-<Chapter1/img/RL1.png, id=535, 860.21375pt x 356.33125pt>
+<Chapter1/img/RL1.png, id=544, 860.21375pt x 356.33125pt>
 File: Chapter1/img/RL1.png Graphic file (type png)
 
 <use Chapter1/img/RL1.png>) (./Chapter1/connBandits.tex) [2 <./Chapter1/img/RL1
@@ -1331,7 +1335,7 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12 ^^A = [][] ^^A[]$\T1/ptm/m/n/
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[18] <Chapter2/img/Ucb-Imp.png, id=850, 759.83875pt x 906.38625pt>
+[18] <Chapter2/img/Ucb-Imp.png, id=862, 759.83875pt x 906.38625pt>
 File: Chapter2/img/Ucb-Imp.png Graphic file (type png)
 
 <use Chapter2/img/Ucb-Imp.png> [19]
@@ -1382,16 +1386,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[27] <Chapter3/img/EUCBV_flow.png, id=978, 1032.85875pt x 947.54pt>
+[27] <Chapter3/img/EUCBV_flow.png, id=990, 1032.85875pt x 947.54pt>
 File: Chapter3/img/EUCBV_flow.png Graphic file (type png)
 
 <use Chapter3/img/EUCBV_flow.png>
-Overfull \hbox (16.96483pt too wide) in paragraph at lines 51--52
+Overfull \hbox (6.64194pt too wide) in paragraph at lines 51--52
 [][] 
  []
 
 ) (./Chapter3/results.tex [28]
-Underfull \vbox (badness 1117) has occurred while \output is active []
+Underfull \vbox (badness 3354) has occurred while \output is active []
 
  [29 <./Chapter3/img/EUCBV_flow.png>] [30]) (./Chapter3/proofTheorem.tex [31]
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 27--28
@@ -1515,7 +1519,7 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
  []
 
 [44] [45] [46]) (./Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1245, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1257, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png> [47]) (./Chapter4/prevResAPT.tex [48 <./C
@@ -1528,7 +1532,7 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [51])
 (./Chapter5/algo.tex [52]
-<Chapter5/img/AugUCB_flow.png, id=1321, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1333, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1668,10 +1672,10 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 24223 strings out of 493848
- 490832 string characters out of 1152823
- 752389 words of memory out of 3000000
- 26352 multiletter control sequences out of 15000+50000
+ 24226 strings out of 493848
+ 490864 string characters out of 1152823
+ 752382 words of memory out of 3000000
+ 26353 multiletter control sequences out of 15000+50000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  63i,27n,76p,1874b,1779s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1732,9 +1736,9 @@ ype1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (94 pages, 1042276 bytes).
+Output written on thesis.pdf (95 pages, 1044340 bytes).
 PDF statistics:
- 1729 PDF objects out of 2073 (max. 8388607)
- 380 named destinations out of 1000 (max. 500000)
- 691 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1741 PDF objects out of 2073 (max. 8388607)
+ 382 named destinations out of 1000 (max. 500000)
+ 699 words of extra memory for PDF output out of 10000 (max. 10000000)
 
