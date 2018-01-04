@@ -1,10 +1,10 @@
 \select@language {english}
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}
 \contentsline {chapter}{ABSTRACT}{iv}{chapter*.2}
-\contentsline {chapter}{LIST OF TABLES}{ix}{chapter*.4}
-\contentsline {chapter}{LIST OF FIGURES}{x}{chapter*.5}
-\contentsline {chapter}{ABBREVIATIONS}{xi}{chapter*.6}
-\contentsline {chapter}{NOTATION}{xii}{chapter*.7}
+\contentsline {chapter}{LIST OF TABLES}{viii}{chapter*.4}
+\contentsline {chapter}{LIST OF FIGURES}{ix}{chapter*.5}
+\contentsline {chapter}{ABBREVIATIONS}{x}{chapter*.6}
+\contentsline {chapter}{NOTATION}{xi}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introduction to Bandits}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Reinforcement Learning}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Connection between Reinforcement Learning and Bandits}{2}{section.1.2}
@@ -53,48 +53,40 @@
 \contentsline {section}{\numberline {3.4}Main Results}{29}{section.3.4}
 \contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{29}{section*.23}
 \contentsline {subsubsection}{Gap-Independent bound of EUCBV}{31}{section*.24}
-\contentsline {section}{\numberline {3.5}Proofs}{31}{section.3.5}
-\contentsline {section}{\numberline {3.6}Experiments}{37}{section.3.6}
-\contentsline {section}{\numberline {3.7}Summary}{40}{section.3.7}
-\contentsline {chapter}{\numberline {4}Thresholding Bandits}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction to Thresholding Bandits}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Notations and Assumptions}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Problem Definition}{42}{section.4.3}
-\contentsline {section}{\numberline {4.4}Motivation}{43}{section.4.4}
-\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration problem}{43}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{44}{subsection.4.5.1}
-\contentsline {subsubsection}{UCB-Exploration Algorithm}{44}{section*.28}
-\contentsline {subsubsection}{Successive Reject Algorithm}{44}{section*.30}
-\contentsline {subsection}{\numberline {4.5.2}Successive Accept Reject Algorithm for best-p arms setting}{46}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Fixed Confidence setting}{47}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Unified Setting}{47}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration problem}{47}{section.4.6}
-\contentsline {subsubsection}{Challenges in the TBP seeting}{48}{section*.32}
-\contentsline {section}{\numberline {4.7}Related Work in Thresholding Bandits}{49}{section.4.7}
-\contentsline {section}{\numberline {4.8}Summary}{49}{section.4.8}
-\contentsline {chapter}{\numberline {5}Augmented UCB for Thresholding Bandit Problem}{50}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{50}{section.5.1}
-\contentsline {section}{\numberline {5.2}Our Contribution}{50}{section.5.2}
-\contentsline {section}{\numberline {5.3}Augmented-UCB Algorithm}{52}{section.5.3}
-\contentsline {section}{\numberline {5.4}Theoretical Results}{54}{section.5.4}
-\contentsline {subsubsection}{Problem Complexity}{54}{section*.35}
-\contentsline {subsubsection}{Proof of expected loss of AugUCB}{55}{section*.36}
-\contentsline {section}{\numberline {5.5}Numerical Experiments}{59}{section.5.5}
-\contentsline {section}{\numberline {5.6}Summary}{63}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusions}{64}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusions and Future Directions}{64}{section.6.1}
-\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{66}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{66}{section.A.1}
-\contentsline {section}{\numberline {A.2}Concentration Inequalities}{66}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{67}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{67}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{68}{subsection.A.2.3}
-\contentsline {chapter}{\numberline {B}Appendix for EUCBV}{69}{appendix.B}
-\contentsline {subsection}{\numberline {B.0.4}Proof of Lemma \ref {proofTheorem:Lemma:1}}{69}{subsection.B.0.4}
-\contentsline {subsection}{\numberline {B.0.5}Proof of Lemma \ref {proofTheorem:Lemma:2}}{69}{subsection.B.0.5}
-\contentsline {subsection}{\numberline {B.0.6}Proof of Lemma \ref {proofTheorem:Lemma:3}}{70}{subsection.B.0.6}
-\contentsline {subsection}{\numberline {B.0.7}Proof of Lemma \ref {proofTheorem:Lemma:4}}{72}{subsection.B.0.7}
-\contentsline {subsection}{\numberline {B.0.8}Proof of Lemma \ref {proofTheorem:Lemma:5}}{73}{subsection.B.0.8}
-\contentsline {subsection}{\numberline {B.0.9}Proof of Lemma \ref {proofTheorem:Lemma:6}}{74}{subsection.B.0.9}
-\contentsline {subsection}{\numberline {B.0.10}Proof of Corollary \ref {Result:Corollary:1}}{75}{subsection.B.0.10}
-\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{81}{appendix*.41}
+\contentsline {section}{\numberline {3.5}Proofs}{32}{section.3.5}
+\contentsline {section}{\numberline {3.6}Experiments}{42}{section.3.6}
+\contentsline {section}{\numberline {3.7}Summary}{45}{section.3.7}
+\contentsline {chapter}{\numberline {4}Thresholding Bandits}{46}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction to Thresholding Bandits}{46}{section.4.1}
+\contentsline {section}{\numberline {4.2}Notations and Assumptions}{47}{section.4.2}
+\contentsline {section}{\numberline {4.3}Problem Definition}{47}{section.4.3}
+\contentsline {section}{\numberline {4.4}Motivation}{48}{section.4.4}
+\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration problem}{48}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{49}{subsection.4.5.1}
+\contentsline {subsubsection}{UCB-Exploration Algorithm}{49}{section*.28}
+\contentsline {subsubsection}{Successive Reject Algorithm}{49}{section*.30}
+\contentsline {subsection}{\numberline {4.5.2}Successive Accept Reject Algorithm for best-p arms setting}{51}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Fixed Confidence setting}{52}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Unified Setting}{52}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration problem}{52}{section.4.6}
+\contentsline {subsubsection}{Challenges in the TBP seeting}{53}{section*.32}
+\contentsline {section}{\numberline {4.7}Related Work in Thresholding Bandits}{54}{section.4.7}
+\contentsline {section}{\numberline {4.8}Summary}{54}{section.4.8}
+\contentsline {chapter}{\numberline {5}Augmented UCB for Thresholding Bandit Problem}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}Our Contribution}{55}{section.5.2}
+\contentsline {section}{\numberline {5.3}Augmented-UCB Algorithm}{57}{section.5.3}
+\contentsline {section}{\numberline {5.4}Theoretical Results}{59}{section.5.4}
+\contentsline {subsubsection}{Problem Complexity}{59}{section*.35}
+\contentsline {subsubsection}{Proof of expected loss of AugUCB}{60}{section*.36}
+\contentsline {section}{\numberline {5.5}Numerical Experiments}{64}{section.5.5}
+\contentsline {section}{\numberline {5.6}Summary}{68}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusions}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusions and Future Directions}{69}{section.6.1}
+\contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{71}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{71}{section.A.1}
+\contentsline {section}{\numberline {A.2}Concentration Inequalities}{71}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{72}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{72}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{73}{subsection.A.2.3}
+\contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{79}{appendix*.41}

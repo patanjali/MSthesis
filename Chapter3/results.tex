@@ -43,8 +43,48 @@ regret of EUCBV is upper bounded by the following gap-independent expression:
 \end{corollary}
 	
 %\begin{proof}
-The proof is given in Appendix \ref{App:Corollary:1}.
+%The proof is given in Appendix \ref{App:Corollary:1}.
 %\end{proof}
+
+\begin{proof}
+\label{Proof:Corollary:1}
+From \cite{bubeck2011pure}  we know that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\frac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. Thus, we take $C=\left\lfloor \frac{T}{e}\right\rfloor$ and choose  $\Delta_{i}=\Delta=\sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ for all $i$.
+
+First, let us recall the result in Theorem \ref{Result:Theorem:1} below:
+\begin{align*}
+\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
+  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
+\end{align*}
+
+Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we obtain,
+	\begin{align*}
+	&\sum_{i\in \A :\Delta_{i} > b}\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} \leq  \dfrac{320\sigma_{\max}^2 K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}}\\ 
+	&\leq  \dfrac{320\sigma_{\max}^2\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}
+	\overset{(a)}{\leq} 320\sigma_{\max}^2\sqrt{KT} 
+	\end{align*}		
+	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. 	
+%For the term $\sum\limits_{i\in \A :\Delta_{i} > b}\dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ by substituting the value of $\Delta_i=\Delta=\sqrt{\dfrac{K\log K}{T}}$ we get,
+%\begin{align*}
+%\dfrac{C_0 K^{\frac{5}{2}+1}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\sqrt{\dfrac{K\log K}{T}}}} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\leq \dfrac{C_0 K^{\frac{5}{2}+1}}{(KT\log K)^{\frac{1}{4}}} \leq \dfrac{C_0 K^3}{T^{\frac{1}{4}}}
+%\end{align*}	
+%	
+%Similarly for the term $\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ we can show that,
+%\begin{align*}
+%\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_2^{'} K^{\frac{5}{2}+1}}{\sqrt{T\sqrt{\dfrac{e}{T}}}} \leq \dfrac{C_2^{'} K^3}{T^{\frac{1}{4}}} 
+%\end{align*}
+Thus, the total worst case gap-independent bound is given by
+	\begin{align*}
+	\E[R_{T}] &\overset{(a)}{\leq}  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sigma_{\max}^2\sqrt{KT}
+	\overset{(b)}{\leq} \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 80\sqrt{KT}
+	\end{align*}	
+	
+where, in$(a)$, $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $ and $(b)$ occurs because $\sigma_i^2 \in [0,\frac{1}{4}], \forall i\in \A$.
+
+\hfill $\blacksquare$	
+\end{proof}
+
 
 \begin{discussion}
 \label{Result:discussion2}
