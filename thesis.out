@@ -1,81 +1,81 @@
-\BOOKMARK [0][-]{chapter*.1}{ACKNOWLEDGEMENTS}{}% 1
-\BOOKMARK [0][-]{chapter*.2}{ABSTRACT}{}% 2
-\BOOKMARK [0][-]{chapter*.4}{LIST OF TABLES}{}% 3
-\BOOKMARK [0][-]{chapter*.5}{LIST OF FIGURES}{}% 4
-\BOOKMARK [0][-]{chapter*.6}{ABBREVIATIONS}{}% 5
-\BOOKMARK [0][-]{chapter*.7}{NOTATION}{}% 6
-\BOOKMARK [0][-]{chapter.1}{Introduction to Bandits}{}% 7
-\BOOKMARK [1][-]{section.1.1}{Reinforcement Learning}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.2}{Connection between Reinforcement Learning and Bandits}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.3}{Why study Bandits?}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.4}{Motivation}{chapter.1}% 11
-\BOOKMARK [1][-]{section.1.5}{Types of Information Feedback}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.5.1}{Full information feedback}{section.1.5}% 13
-\BOOKMARK [2][-]{subsection.1.5.2}{Partial information feedback}{section.1.5}% 14
-\BOOKMARK [2][-]{subsection.1.5.3}{Bandit feedback}{section.1.5}% 15
-\BOOKMARK [1][-]{section.1.6}{Different types of Bandits}{chapter.1}% 16
-\BOOKMARK [2][-]{subsection.1.6.1}{Types of Bandits based on Environment}{section.1.6}% 17
-\BOOKMARK [2][-]{subsection.1.6.2}{Types of Bandits based on goal}{section.1.6}% 18
-\BOOKMARK [2][-]{subsection.1.6.3}{Contextual Bandits}{section.1.6}% 19
-\BOOKMARK [2][-]{subsection.1.6.4}{Collaborative Bandits}{section.1.6}% 20
-\BOOKMARK [2][-]{subsection.1.6.5}{Bandits with Corrupt Feedback}{section.1.6}% 21
-\BOOKMARK [2][-]{subsection.1.6.6}{Conservative Bandits}{section.1.6}% 22
-\BOOKMARK [1][-]{section.1.7}{Objectives of Thesis}{chapter.1}% 23
-\BOOKMARK [1][-]{section.1.8}{Contributions of Thesis}{chapter.1}% 24
-\BOOKMARK [1][-]{section.1.9}{Outline of the Thesis}{chapter.1}% 25
-\BOOKMARK [0][-]{chapter.2}{Stochastic Multi-armed Bandits}{}% 26
-\BOOKMARK [1][-]{section.2.1}{Introduction to SMAB}{chapter.2}% 27
-\BOOKMARK [1][-]{section.2.2}{Notations and assumptions}{chapter.2}% 28
-\BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}% 29
-\BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}% 30
-\BOOKMARK [1][-]{section.2.5}{Related Work in SMAB}{chapter.2}% 31
-\BOOKMARK [2][-]{subsection.2.5.1}{Lower bound in SMAB}{section.2.5}% 32
-\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound approach}{section.2.5}% 33
-\BOOKMARK [2][-]{subsection.2.5.3}{Bayesian Approach}{section.2.5}% 34
-\BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}% 35
-\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}% 36
-\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 37
-\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{}% 38
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 39
-\BOOKMARK [1][-]{section.3.2}{Our Contributions}{chapter.3}% 40
-\BOOKMARK [1][-]{section.3.3}{Algorithm: Efficient UCB Variance}{chapter.3}% 41
-\BOOKMARK [1][-]{section.3.4}{Main Results}{chapter.3}% 42
-\BOOKMARK [1][-]{section.3.5}{Proofs}{chapter.3}% 43
-\BOOKMARK [1][-]{section.3.6}{Experiments}{chapter.3}% 44
-\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 45
-\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}% 46
-\BOOKMARK [1][-]{section.4.1}{Introduction to Thresholding Bandits}{chapter.4}% 47
-\BOOKMARK [1][-]{section.4.2}{Notations and Assumptions}{chapter.4}% 48
-\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 49
-\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration problem}{chapter.4}% 51
-\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 52
-\BOOKMARK [2][-]{subsection.4.5.2}{Successive Accept Reject Algorithm for best-p arms setting}{section.4.5}% 53
-\BOOKMARK [2][-]{subsection.4.5.3}{Fixed Confidence setting}{section.4.5}% 54
-\BOOKMARK [2][-]{subsection.4.5.4}{Unified Setting}{section.4.5}% 55
-\BOOKMARK [1][-]{section.4.6}{TBP connection to Pure Exploration problem}{chapter.4}% 56
-\BOOKMARK [1][-]{section.4.7}{Related Work in Thresholding Bandits}{chapter.4}% 57
-\BOOKMARK [1][-]{section.4.8}{Summary}{chapter.4}% 58
-\BOOKMARK [0][-]{chapter.5}{Augmented UCB for Thresholding Bandit Problem}{}% 59
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 60
-\BOOKMARK [1][-]{section.5.2}{Our Contribution}{chapter.5}% 61
-\BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}% 62
-\BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 63
-\BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 64
-\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 65
-\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Direction}{}% 66
-\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 67
-\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 68
-\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 69
-\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 70
-\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 71
-\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 72
-\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}% 73
-\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}% 74
-\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}% 75
-\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}% 76
-\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}% 77
-\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}% 78
-\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}% 79
-\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}% 80
-\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}% 81
+\BOOKMARK [0][-]{chapter*.1}{ACKNOWLEDGEMENTS}{}
+\BOOKMARK [0][-]{chapter*.2}{ABSTRACT}{}
+\BOOKMARK [0][-]{chapter*.4}{LIST OF TABLES}{}
+\BOOKMARK [0][-]{chapter*.5}{LIST OF FIGURES}{}
+\BOOKMARK [0][-]{chapter*.6}{ABBREVIATIONS}{}
+\BOOKMARK [0][-]{chapter*.7}{NOTATION}{}
+\BOOKMARK [0][-]{chapter.1}{Introduction to Bandits}{}
+\BOOKMARK [1][-]{section.1.1}{Reinforcement Learning}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Connection between Reinforcement Learning and Bandits}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Why study Bandits?}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{Motivation}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{Types of Information Feedback}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.5.1}{Full information feedback}{section.1.5}
+\BOOKMARK [2][-]{subsection.1.5.2}{Partial information feedback}{section.1.5}
+\BOOKMARK [2][-]{subsection.1.5.3}{Bandit feedback}{section.1.5}
+\BOOKMARK [1][-]{section.1.6}{Different types of Bandits}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.6.1}{Types of Bandits based on Environment}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.2}{Types of Bandits based on goal}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.3}{Contextual Bandits}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.4}{Collaborative Bandits}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.5}{Bandits with Corrupt Feedback}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.6}{Conservative Bandits}{section.1.6}
+\BOOKMARK [1][-]{section.1.7}{Objectives of Thesis}{chapter.1}
+\BOOKMARK [1][-]{section.1.8}{Contributions of Thesis}{chapter.1}
+\BOOKMARK [1][-]{section.1.9}{Outline of the Thesis}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Stochastic Multi-armed Bandits}{}
+\BOOKMARK [1][-]{section.2.1}{Introduction to SMAB}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Notations and assumptions}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Related Work in SMAB}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.5.1}{Lower bound in SMAB}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound approach}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.3}{Bayesian Approach}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}
+\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{}
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Our Contributions}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Algorithm: Efficient UCB Variance}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{Main Results}{chapter.3}
+\BOOKMARK [1][-]{section.3.5}{Proofs}{chapter.3}
+\BOOKMARK [1][-]{section.3.6}{Experiments}{chapter.3}
+\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Thresholding Bandits}{}
+\BOOKMARK [1][-]{section.4.1}{Introduction to Thresholding Bandits}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Notations and Assumptions}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration problem}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.2}{Successive Accept Reject Algorithm for best-p arms setting}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.3}{Fixed Confidence setting}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.4}{Unified Setting}{section.4.5}
+\BOOKMARK [1][-]{section.4.6}{TBP connection to Pure Exploration problem}{chapter.4}
+\BOOKMARK [1][-]{section.4.7}{Related Work in Thresholding Bandits}{chapter.4}
+\BOOKMARK [1][-]{section.4.8}{Summary}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Augmented UCB for Thresholding Bandit Problem}{}
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Our Contribution}{chapter.5}
+\BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}
+\BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}
+\BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}
+\BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Direction}{}
+\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}
+\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}
+\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}
+\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}
+\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}
+\BOOKMARK [0][-]{appendix.B}{Appendix for EUCBV}{}
+\BOOKMARK [1][-]{subsection.B.0.4}{Proof of Lemma 1}{appendix.B}
+\BOOKMARK [2][-]{subsection.B.0.5}{Proof of Lemma 2}{subsection.B.0.4}
+\BOOKMARK [2][-]{subsection.B.0.6}{Proof of Lemma 3}{subsection.B.0.4}
+\BOOKMARK [2][-]{subsection.B.0.7}{Proof of Lemma 4}{subsection.B.0.4}
+\BOOKMARK [2][-]{subsection.B.0.8}{Proof of Lemma 5}{subsection.B.0.4}
+\BOOKMARK [2][-]{subsection.B.0.9}{Proof of Lemma 6}{subsection.B.0.4}
+\BOOKMARK [2][-]{subsection.B.0.10}{Proof of Corollary 1}{subsection.B.0.4}
+\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}
