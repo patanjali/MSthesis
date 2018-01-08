@@ -63,12 +63,13 @@
 \BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 63
 \BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 64
 \BOOKMARK [1][-]{section.5.6}{Summary}{chapter.5}% 65
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 66
-\BOOKMARK [1][-]{section.6.1}{Conclusions and Future Directions}{chapter.6}% 67
-\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 68
-\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 69
-\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 70
-\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 71
-\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 72
-\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 73
-\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}% 74
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Directions}{}% 66
+\BOOKMARK [1][-]{section.6.1}{Conclusions}{chapter.6}% 67
+\BOOKMARK [1][-]{section.6.2}{Future Directions}{chapter.6}% 68
+\BOOKMARK [0][-]{appendix.A}{Appendix on Concentration Inequalities}{}% 69
+\BOOKMARK [1][-]{section.A.1}{Sub-Gaussian distribution}{appendix.A}% 70
+\BOOKMARK [1][-]{section.A.2}{Concentration Inequalities}{appendix.A}% 71
+\BOOKMARK [2][-]{subsection.A.2.1}{Markov's inequality}{section.A.2}% 72
+\BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 73
+\BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein inequality}{section.A.2}% 74
+\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}% 75
