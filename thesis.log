@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  8 JAN 2018 12:26
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.9.30)  8 JAN 2018 12:51
 entering extended mode
  %&-line parsing enabled.
 **thesis.tex
@@ -1504,7 +1504,7 @@ Chapter 4.
 
 ]) (./Chapter4/notation.tex) (./Chapter4/probDef.tex
 [47]) (./Chapter4/motivation.tex) (./Chapter4/prevRes.tex
-Underfull \vbox (badness 1983) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
 Underfull \hbox (badness 10000) in paragraph at lines 34--34
@@ -1545,7 +1545,7 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [56])
 (./Chapter5/algo.tex [57]
-<Chapter5/img/AugUCB_flow.png, id=1315, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1314, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1643,7 +1643,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 Here is how much of TeX's memory you used:
  24182 strings out of 493848
  490128 string characters out of 1152823
- 751684 words of memory out of 3000000
+ 751676 words of memory out of 3000000
  26329 multiletter control sequences out of 15000+50000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1705,9 +1705,9 @@ ype1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share
 /texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (93 pages, 1029656 bytes).
+Output written on thesis.pdf (93 pages, 1029511 bytes).
 PDF statistics:
- 1655 PDF objects out of 1728 (max. 8388607)
+ 1654 PDF objects out of 1728 (max. 8388607)
  365 named destinations out of 1000 (max. 500000)
  635 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-In the latest work of \citet{locatelli2016optimal} Anytime Parameter-Free Thresholding (APT) algorithm comes up with an improved anytime guarantee than CSAR for the thresholding bandit problem. APT is stated in algorithm \ref{alg:apt}. 
+In the latest work of \citet{locatelli2016optimal}, Anytime Parameter-Free Thresholding (APT) algorithm comes up with an improved anytime guarantee than CSAR for the thresholding bandit problem. APT is stated in algorithm \ref{alg:apt}. 
 
 \begin{algorithm}[!th]
 \caption{APT}
@@ -13,4 +13,4 @@ In the latest work of \citet{locatelli2016optimal} Anytime Parameter-Free Thresh
 \end{algorithmic}
 \end{algorithm}
 
-The APT algorithm is very simple to implement and the logic behind the arm pull directly follows from the challenges in the TBP setting discussed before. Note, that the most difficult arms to discriminate are the arms whose expected means are lying close to the threshold $\tau$, hence APT pulls those arms whose sample means $\hat{r}_i$ are lying close to the threshold and the arms which has not been pulled often. The second condition is satisfied by the $\sqrt{n_i}$ term which acts very similar to the confidence interval term discussed for UCBE (see algorithm \ref{alg:ucbe}). The tolerance level $\epsilon\geq 0$ gives the algorithm a degree of flexibility in pulling the arms close to the threshold.
+The APT algorithm is very simple to implement and the logic behind the arm pull directly follows from the challenges in the TBP setting discussed before. Note, that the most difficult arms to discriminate are the arms whose expected means are lying close to the threshold $\tau$, hence APT pulls those arms whose sample means $\hat{r}_i$ are lying close to the threshold and the arms which have not been pulled often. The second condition is satisfied by the $\sqrt{n_i}$ term which acts very similar to the confidence interval term discussed for UCBE (see algorithm \ref{alg:ucbe}). The tolerance level $\epsilon\geq 0$ gives the algorithm a degree of flexibility in pulling the arms close to the threshold.
