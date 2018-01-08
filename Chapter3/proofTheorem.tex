@@ -1,6 +1,8 @@
 %\subsection{Lemma 1}
 %\label{sec:proofTheorem:Lemma1}
-We first present a few technical lemmas that are required  to prove the result in Theorem \ref{Result:Theorem:1}.
+We first present a few technical lemmas that are required to prove the result in Theorem \ref{Result:Theorem:1}. 
+
+In Lemma \ref{proofTheorem:Lemma:1} we use the constraint on the horizon, that is $T\geq K^{2.4}$ to derive an inequality which we re-use in Lemma \ref{proofTheorem:Lemma:2} to bound the length of the confidence interval $c_i$ of the $i$-th sub-optimal arm till the $m_i$-th round.
 
 \begin{lemma}
 \label{proofTheorem:Lemma:1}
@@ -10,7 +12,7 @@ If $T\geq K^{2.4}$, $\psi=\frac{T}{ K^2}$, $\rho=\frac{1}{2}$ and $m\leq \frac{1
 \end{align*}
 \end{lemma}
 
-\begin{proof}
+\begin{customproof}{}
 The proof is based on contradiction. Suppose
 \begin{eqnarray*}
 \dfrac{\rho m \log(2)}{\log(\psi T) - 2m\log( 2)} > \frac{3}{2}.
@@ -25,8 +27,10 @@ Then, with $\psi=\dfrac{T}{ K^2}$ and $\rho=\dfrac{1}{2}$, we obtain
 \end{eqnarray*}
 where $(a)$ is obtained using $m\leq \dfrac{1}{2} \log_2\left(\dfrac{T}{e}\right)$, while $(b)$ follows from the identity $\log_2(e)\log(2) =1$. Finally, for $T\ge K^{2.4}$ we obtain, $6\log(K)>6\log(K)+3.5$, which is a contradiction.
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
 
+
+In Lemma \ref{proofTheorem:Lemma:2} we bound the length of the confidence interval $c_i$ for the $i$-th arm till the $m_i$-th round.
 
 \begin{lemma}
 \label{proofTheorem:Lemma:2}
@@ -36,7 +40,7 @@ If $T\geq K^{2.4}$, $\psi=\frac{T}{ K^2}$, $\rho =\frac{1}{2}$, $m_i = min\lbrac
 \end{align*}
 \end{lemma}
 
-\begin{proof}
+\begin{customproof}{}
 
 	In the $m_i$-th round since $z_i\geq n_{m_i}$, by substituting $z_i$ with $n_{m_i}$ we can show that, 
 
@@ -61,8 +65,10 @@ In the above simplification, $(a)$ is due to $\hat{v}_i \in [0,1]$, while $(b)$ 
 % and $(c)$ happens because $\sigma_i \in (0,1]$. 
 %Similarly, it can be shown that $c^* < \frac{\Delta_i}{4}$ in round $m_i$.
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
 
+
+In Lemma \ref{proofTheorem:Lemma:3} we bound the probability of the deviation of the sample mean $\hat{r}_i$ from its expectation $r_i$ till the $m_i$-th round.
 
 \begin{lemma}
 \label{proofTheorem:Lemma:3}
@@ -72,7 +78,7 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,  $c
 \end{align*}
 \end{lemma}
 
-\begin{proof}
+\begin{customproof}{}
 
 We start by recalling from equation (\ref{eq:prob_eq2}) that,
 
@@ -131,7 +137,7 @@ where inequality $(a)$ is obtained using (\ref{si_bar_equn}), while $(b)$ follow
 
 Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq3}) we obtain $\mathbb{P}(\hat{r}_{i}> r_{i} + c_{i})\le \dfrac{2}{(\psi  T\epsilon_{m_{i}})^{\frac{3\rho}{2}}}$.
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
 
 
 %\begin{lemma}
@@ -143,7 +149,7 @@ Thus, using (\ref{lhs1_equn}) and (\ref{lhs2_equn}) in (\ref{eq:prob_eq3}) we ob
 %\end{align*}
 %\end{lemma}
 
-
+In Lemma \ref{proofTheorem:Lemma:4} we bound the probability of the confidence interval of the optimal arm $c^*$ being greater than the confidence interval $c_i$ of the $i$-th sub-optimal arm till the $m_i$-th round.
 
 \begin{lemma}
 \label{proofTheorem:Lemma:4}
@@ -153,7 +159,7 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $, $\p
 \end{align*}
 \end{lemma}
 
-\begin{proof}
+\begin{customproof}{}
 From the definition of $c_i$ we know that $c_i\propto \frac{1}{z_i}$ as $\psi$ and $T$ are constants. Therefore in the $m_i$-th round,
 \begin{align*}
 &\Pb\lbrace c^{*} > c_i \rbrace
@@ -210,7 +216,10 @@ Hence, summing everything up,
 where, $(a)$ comes from the total pulls allocated for all $i\in B_m$ till the $m$-th round, in $(b)$ the arm count $|B_m|$ can be bounded by using equation $(\ref{eq:arm:elim:c1})$ and then we substitute the value of $n_{m}$, $(c)$ happens by substituting the value of $\psi$ and considering $\epsilon_{m}\in [\sqrt{\frac{e}{T}},1]$, $(d)$ follows as $\frac{1}{\epsilon_{m}}\geq 1,\forall m $, in $(e)$ we use the standard geometric progression formula and then we substitute the values of $\rho$ and $\psi$, $(f)$ follows from the inequality $\log T \leq \sqrt{T}$ and $(g)$ is valid for any $\epsilon_{m_i}\in[\sqrt{\frac{e}{T}},1]$. 
 
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
+
+In Lemma \ref{proofTheorem:Lemma:5} we bound the probability of the number of pulls of the $i$-th sub-optimal arm, $z_i$, of not being greater then the allocated $n_{m_i}$ number of pulls till the $m_i$-th round.
+
 
 \begin{lemma}
 \label{proofTheorem:Lemma:5}
@@ -220,7 +229,7 @@ If $m_i = min\lbrace m|\sqrt{4\epsilon_{m} } < \frac{\Delta_i}{4} \rbrace $,$\ps
 \end{align*}
 \end{lemma}
 
-\begin{proof}
+\begin{customproof}{}
 Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show that in the $m_i$-th round,
 \begin{align*}
 \Pb\lbrace z_i < n_{m_i} \rbrace 
@@ -230,7 +239,7 @@ Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show
 &\leq \dfrac{32K\log T}{(\psi T)^{3\rho}}\sum_{m=0}^{m_i}\dfrac{1}{\epsilon_{m}^{3\rho + 1}}\leq \dfrac{182 K^4}{T^{\frac{5}{4}}\sqrt{\epsilon_{m_i}}}.
 \end{align*}
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
 
 
 %\begin{lemma}
@@ -248,7 +257,7 @@ Following a similar argument as in Lemma \ref{proofTheorem:Lemma:4}, we can show
 %For all bounded rewards in $[0,1]$, $\frac{\Delta_i}{4} \geq \frac{\Delta_i}{4\sigma_i^2 + 4} $.
 %\end{lemma}
 
-
+In Lemma \ref{proofTheorem:Lemma:6} we prove the inequality required to introduce the variance term in the number of pulls of a sub-optimal arm $i$ till the $m_i$-th round.
 
 \begin{lemma}
 \label{proofTheorem:Lemma:6}
@@ -258,7 +267,7 @@ c_1 \frac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \frac{T\Delta_i^2}{K}\bigg) \leq 
 \end{align*}
 \end{lemma}
 
-\begin{proof}
+\begin{customproof}{}
 We again prove this by contradiction. Suppose, 
 \begin{align*}
 c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) > c_2 \dfrac{\sigma_i^2}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg).
@@ -278,7 +287,7 @@ c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \le
 \end{align*}
 
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
 
 
 
@@ -301,7 +310,7 @@ c_1 \dfrac{4\sigma_i^2 + 4}{\Delta_i}\log\bigg( \dfrac{T\Delta_i^2}{K}\bigg) \le
 
 \subsection*{Proof of Theorem 1}
 \label{sec:proofTheorem:Theorem1}
-\begin{customproof}{1}
+\begin{customproof}{}
 For each sub-optimal arm ${i}\in\mathcal{A}$, let $m_{i}=\min{\left\lbrace m|\sqrt{4\epsilon_{m_i}} < \frac{\Delta_{i}}{4}\right\rbrace}$. Also, let $\A^{'}=\lbrace i\in \A: \Delta_{i} > b \rbrace$ and $\A^{''}=\lbrace i\in \A: \Delta_{i} > 0 \rbrace$. Note that as all rewards are bounded in $[0,1]$, it implies that $0\leq \sigma_i^2 \leq \frac{1}{4},\forall i\in \A$. Now, as in \citet{auer2010ucb}, we bound the regret under the following two cases: 
 \begin{itemize}
 \item {Case $(a)$}: some sub-optimal arm ${i}$ is not eliminated in round $m_{i}$ or before and the optimal arm ${*}\in B_{m_{i}}$

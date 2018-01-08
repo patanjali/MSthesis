@@ -54,7 +54,7 @@
 \contentsline {subsubsection}{Gap-Dependent bound of EUCBV}{29}{section*.23}
 \contentsline {subsubsection}{Gap-Independent bound of EUCBV}{31}{section*.24}
 \contentsline {section}{\numberline {3.5}Proofs}{32}{section.3.5}
-\contentsline {section}{\numberline {3.6}Experiments}{42}{section.3.6}
+\contentsline {section}{\numberline {3.6}Experiments}{43}{section.3.6}
 \contentsline {section}{\numberline {3.7}Summary}{46}{section.3.7}
 \contentsline {chapter}{\numberline {4}Thresholding Bandits}{47}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction to Thresholding Bandits}{47}{section.4.1}

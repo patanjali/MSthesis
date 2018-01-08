@@ -66,7 +66,7 @@ the expected loss of the AugUCB algorithm is given by,
 
 \end{theorem}
 
-\begin{proof}\textbf{(Proof Outline)}
+\begin{customproof}{}\textbf{(Proof Outline)}
 %\begin{discussion}
 %\label{tbandit:discussion}
 The proof comprises of two modules. In the first module we investigate the necessary conditions for arm elimination within a specified number of rounds, which is motivated by the technique in \cite{auer2010ucb}. Bounds on the arm-elimination probability is then obtained; however, since we use variance estimates, we invoke the Bernstein inequality (as in \cite{audibert2009exploration}, see \ref{app:bernstein}) rather that the Chernoff-Hoeffding bounds (which is appropriate for the UCB-Improved \citep{auer2010ucb}, see \ref{app:chernoff}). In the second module, as in \cite{locatelli2016optimal}, we first define a favourable event that will yield an upper bound on the expected loss. Using union bound, we then incorporate the result from module-1 (on the arm elimination probability), and finally derive the result through a series of simplifications.
@@ -382,7 +382,7 @@ To obtain $(c)$ we have used the inequality $\Delta_i\le \sqrt{\sigma_{i}^{2} + 
 $\tilde{\Delta}_i^{-2}\le i\tilde{\Delta}_i^{-2} \le \max_{j\in\mathcal{A}}j\Delta_{(j)}^{-2}=H_{\sigma,2}.$
 %\end{align*}
 %\end{itemize}
-\end{proof}
+\end{customproof}
 
 %Again  summing the above expressions, the probability that an arm ${i}$ is not eliminated on or before $g_{i}$-th round based on the (\ref{eq:armelim-var-casea}) and (\ref{eq:armelim-var-caseb}) elimination condition is  $4\exp\left(- \frac{3T\rho_v\epsilon_{g_{i}}}{256 a^2 } \left(\frac{\sigma_{i}^{2}+\sqrt{\rho_{v}\epsilon_{g_{i}}}+1}{3\sigma_{i}^{2}+\sqrt{\rho_v \epsilon_{g_{i}}}}\right) \log( T\epsilon_{g_{i}}) \right)$. 
   

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  8 JAN 2018 20:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  8 JAN 2018 23:50
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1552,40 +1552,29 @@ Underfull \vbox (badness 3354) has occurred while \output is active []
 
  [29 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter3/img/EUCBV_flow.png>]
  [30]
-Overfull \hbox (2.82367pt too wide) in paragraph at lines 51--52
-[]\T1/ptm/m/it/12 From []Bubeck \T1/ptm/m/n/12 et al.[] \T1/ptm/m/it/12 ([]2011
-[]) we know that the func-tion $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OT1/cmr/
-m/n/12 [0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1] \OMS/cmsy/m/n/12 7! \OML/cmm/m/i
-t/12 x []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12  \OML/cmm/m/it/12 Cx[]\OT1/cmr/m/n/1
-2 )$
- []
-
 [31]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/proofTheorem.tex
-Underfull \vbox (badness 1152) has occurred while \output is active []
-
- [32]
-[33]
-Overfull \hbox (1.95825pt too wide) in paragraph at lines 69--70
+[32] [33]
+Overfull \hbox (1.95825pt too wide) in paragraph at lines 75--76
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
 in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 ]\OMS/cmsy/m/n/12 g$\T1/ptm/m/it/12 , $\OML/cmm/m/it/12 c[] \OT1/cmr/m/n/12 = [
 ]$ \T1/ptm/m/it/12 and $\OML/cmm/m/it/12 n[] \OT1/cmr/m/n/12 = []$
  []
 
-[34] [35] [36]
+[34] [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 307.
+ [36]
+[37]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 316.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 307.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 316.
  [38]
-Overfull \hbox (34.85158pt too wide) in paragraph at lines 394--395
+Overfull \hbox (34.85158pt too wide) in paragraph at lines 403--404
 []\T1/ptm/m/it/12 From Lemma []3[] we can show that $\U/msb/m/n/12 P\OT1/cmr/m/
 n/12 ([] \OML/cmm/m/it/12 > r[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c[]\OT1/cmr/
 m/n/12 ) \OMS/cmsy/m/n/12  \U/msb/m/n/12 P [] \OT1/cmr/m/n/12 + \U/msb/m/n/12 
@@ -1596,7 +1585,7 @@ P [] \OMS/cmsy/m/n/12 $
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
@@ -1604,7 +1593,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 438--439
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
@@ -1613,6 +1602,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/expts.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
@@ -1636,7 +1628,7 @@ Overfull \hbox (33.30786pt too wide) in paragraph at lines 5--75
  [][] 
  []
 
-[42] [43]
+[43]
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/MOSS01_comp_subsampled.txt}
@@ -1656,11 +1648,17 @@ Overfull \hbox (1.6655pt too wide) in paragraph at lines 89--151
  [][] 
  []
 
-[44]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
-[46]
+ [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex) [46]
 Chapter 4.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [47
 
@@ -1698,7 +1696,7 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
 
 [50] [51] [52])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1250, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1257, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png>
@@ -1717,7 +1715,7 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [57])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [58]
-<Chapter5/img/AugUCB_flow.png, id=1325, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1332, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1900,8 +1898,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 506.
  ) 
 Here is how much of TeX's memory you used:
  32940 strings out of 493921
- 775097 string characters out of 3144861
- 1086337 words of memory out of 3000000
+ 775185 string characters out of 3144861
+ 1084347 words of memory out of 3000000
  35032 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1926,9 +1924,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (95 pages, 1057415 bytes).
+Output written on thesis.pdf (95 pages, 1059916 bytes).
 PDF statistics:
- 1762 PDF objects out of 2073 (max. 8388607)
+ 1769 PDF objects out of 2073 (max. 8388607)
  369 named destinations out of 1000 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

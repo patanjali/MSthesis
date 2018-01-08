@@ -46,7 +46,7 @@ regret of EUCBV is upper bounded by the following gap-independent expression:
 %The proof is given in Appendix \ref{App:Corollary:1}.
 %\end{proof}
 
-\begin{proof}
+\begin{customproof}{}
 \label{Proof:Corollary:1}
 From \cite{bubeck2011pure}  we know that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\frac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. Thus, we take $C=\left\lfloor \frac{T}{e}\right\rfloor$ and choose  $\Delta_{i}=\Delta=\sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ for all $i$.
 
@@ -83,7 +83,7 @@ Thus, the total worst case gap-independent bound is given by
 where, in$(a)$, $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $ and $(b)$ occurs because $\sigma_i^2 \in [0,\frac{1}{4}], \forall i\in \A$.
 
 \hfill $\blacksquare$	
-\end{proof}
+\end{customproof}
 
 
 \begin{discussion}
