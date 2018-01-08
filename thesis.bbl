@@ -113,7 +113,9 @@
 {\bf Beygelzimer, A.}, {\bf J.~Langford}, {\bf L.~Li}, {\bf L.~Reyzin}, and
   {\bf R.~E. Schapire} (2011).
 \newblock Contextual bandit algorithms with supervised learning guarantees.
-\newblock {\em AISTATS\/}, 19--26.
+\newblock {\em Proceedings of the Fourteenth International Conference on
+  Artificial Intelligence and Statistics, {AISTATS} 2011, Fort Lauderdale, USA,
+  April 11-13, 2011\/}, 19--26.
 
 \bibitem[{Bubeck and Cesa-Bianchi(2012)}]{bubeck2012regret}
 {\bf Bubeck, S.} and {\bf N.~Cesa-Bianchi} (2012).
@@ -152,11 +154,14 @@
   allocation.
 \newblock {\em The Annals of Statistics\/}, {\bf 41}(3), 1516--1541.
 
-\bibitem[{Cesa-Bianchi {\em et~al.\/}(2013)Cesa-Bianchi, Gentile, and
+\bibitem[{Cesa{-}Bianchi {\em et~al.\/}(2013)Cesa{-}Bianchi, Gentile, and
   Zappella}]{cesa2013gang}
-{\bf Cesa-Bianchi, N.}, {\bf C.~Gentile}, and {\bf G.~Zappella} (2013).
+{\bf Cesa{-}Bianchi, N.}, {\bf C.~Gentile}, and {\bf G.~Zappella} (2013).
 \newblock A gang of bandits.
-\newblock {\em Advances in Neural Information Processing Systems\/}, 737--745.
+\newblock {\em Advances in Neural Information Processing Systems 26: 27th
+  Annual Conference on Neural Information Processing Systems 2013. Proceedings
+  of a meeting held December 5-8, 2013, Lake Tahoe, Nevada, United States.\/},
+  737--745.
 
 \bibitem[{Cesa-Bianchi and Lugosi(2006)}]{cesa2006prediction}
 {\bf Cesa-Bianchi, N.} and {\bf G.~Lugosi}, {\em Prediction, learning, and
@@ -264,9 +269,12 @@
 \bibitem[{Hillel {\em et~al.\/}(2013)Hillel, Karnin, Koren, Lempel, and
   Somekh}]{hillel2013distributed}
 {\bf Hillel, E.}, {\bf Z.~S. Karnin}, {\bf T.~Koren}, {\bf R.~Lempel}, and {\bf
-  O.~Somekh}, Distributed exploration in multi-armed bandits.
-\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
-  2013.
+  O.~Somekh} (2013).
+\newblock Distributed exploration in multi-armed bandits.
+\newblock {\em Advances in Neural Information Processing Systems 26: 27th
+  Annual Conference on Neural Information Processing Systems 2013. Proceedings
+  of a meeting held December 5-8, 2013, Lake Tahoe, Nevada, United States.\/},
+  854--862.
 
 \bibitem[{Honda and Takemura(2010)}]{honda2010asymptotically}
 {\bf Honda, J.} and {\bf A.~Takemura} (2010).
@@ -276,10 +284,11 @@
   Israel, June 27-29, 2010\/}, 67--79.
 
 \bibitem[{Jamieson and Nowak(2014)}]{jamieson2014best}
-{\bf Jamieson, K.} and {\bf R.~Nowak}, Best-arm identification algorithms for
-  multi-armed bandits in the fixed confidence setting.
-\newblock {\em In\/} {\em Information Sciences and Systems (CISS), 2014 48th
-  Annual Conference on\/}. IEEE, 2014.
+{\bf Jamieson, K.~G.} and {\bf R.~D. Nowak} (2014).
+\newblock Best-arm identification algorithms for multi-armed bandits in the
+  fixed confidence setting.
+\newblock {\em 48th Annual Conference on Information Sciences and Systems,
+  {CISS} 2014, Princeton, NJ, USA, March 19-21, 2014\/}, 1--6.
 
 \bibitem[{Kalai and Vempala(2005)}]{kalai2005efficient}
 {\bf Kalai, A.} and {\bf S.~Vempala} (2005).
@@ -310,13 +319,14 @@
   Artificial Intelligence and Statistics, {AISTATS} 2012, La Palma, Canary
   Islands, April 21-23, 2012\/}, {\bf 22}, 592--600.
 
-\bibitem[{Koc{\'a}k {\em et~al.\/}(2014)Koc{\'a}k, Neu, Valko, and
+\bibitem[{Koc{\'{a}}k {\em et~al.\/}(2014)Koc{\'{a}}k, Neu, Valko, and
   Munos}]{kocak2014efficient}
-{\bf Koc{\'a}k, T.}, {\bf G.~Neu}, {\bf M.~Valko}, and {\bf R.~Munos},
-  Efficient learning by implicit exploration in bandit problems with side
-  observations.
-\newblock {\em In\/} {\em Advances in Neural Information Processing Systems\/}.
-  2014.
+{\bf Koc{\'{a}}k, T.}, {\bf G.~Neu}, {\bf M.~Valko}, and {\bf R.~Munos} (2014).
+\newblock Efficient learning by implicit exploration in bandit problems with
+  side observations.
+\newblock {\em Advances in Neural Information Processing Systems 27: Annual
+  Conference on Neural Information Processing Systems 2014, December 8-13 2014,
+  Montreal, Quebec, Canada\/}, 613--621.
 
 \bibitem[{Kocsis and Szepesv{\'a}ri(2006)}]{kocsis2006discounted}
 {\bf Kocsis, L.} and {\bf C.~Szepesv{\'a}ri}, Discounted ucb.
@@ -327,11 +337,14 @@
 \newblock Asymptotically efficient adaptive allocation rules.
 \newblock {\em Advances in applied mathematics\/}, {\bf 6}(1), 4--22.
 
-\bibitem[{Langford and Zhang(2008)}]{langford2008epoch}
-{\bf Langford, J.} and {\bf T.~Zhang} (2008).
+\bibitem[{Langford and Zhang(2007)}]{langford2008epoch}
+{\bf Langford, J.} and {\bf T.~Zhang} (2007).
 \newblock The epoch-greedy algorithm for multi-armed bandits with side
   information.
-\newblock {\em Advances in neural information processing systems\/}, 817--824.
+\newblock {\em Advances in Neural Information Processing Systems 20,
+  Proceedings of the Twenty-First Annual Conference on Neural Information
+  Processing Systems, Vancouver, British Columbia, Canada, December 3-6,
+  2007\/}, 817--824.
 
 \bibitem[{Lattimore(2015)}]{lattimore2015optimally}
 {\bf Lattimore, T.} (2015).
@@ -391,13 +404,14 @@
 {\bf McMahan, H.~B.} and {\bf A.~Blum} (2004).
 \newblock Online geometric optimization in the bandit setting against an
   adaptive adversary.
-\newblock {\em COLT\/}, {\bf 3120}, 109--123.
+\newblock {\em Learning Theory, 17th Annual Conference on Learning Theory,
+  {COLT} 2004, Banff, Canada, July 1-4, 2004, Proceedings\/}, 109--123.
 
 \bibitem[{Mellor and Shapiro(2013)}]{mellor2013thompson}
-{\bf Mellor, J.} and {\bf J.~Shapiro} (2013).
+{\bf Mellor, J.~C.} and {\bf J.~Shapiro} (2013).
 \newblock Thompson sampling in switching environments with bayesian online
   change point detection.
-\newblock {\em CoRR, abs/1302.3721\/}.
+\newblock {\em CoRR\/}, {\bf abs/1302.3721}.
 
 \bibitem[{M{\'e}nard and Garivier(2017)}]{menard2017minimax}
 {\bf M{\'e}nard, P.} and {\bf A.~Garivier} (2017).
@@ -432,12 +446,14 @@
   introduction\/}.
 \newblock MIT press, 1998.
 
-\bibitem[{Sz{\"o}r{\'e}nyi {\em et~al.\/}(2013)Sz{\"o}r{\'e}nyi, Busa-Fekete,
-  Heged{\"u}s, Orm{\'a}ndi, Jelasity, and K{\'e}gl}]{szorenyi2013gossip}
-{\bf Sz{\"o}r{\'e}nyi, B.}, {\bf R.~Busa-Fekete}, {\bf I.~Heged{\"u}s}, {\bf
-  R.~Orm{\'a}ndi}, {\bf M.~Jelasity}, and {\bf B.~K{\'e}gl}, Gossip-based
-  distributed stochastic bandit algorithms.
-\newblock {\em In\/} {\em ICML (3)\/}. 2013.
+\bibitem[{Sz{\"{o}}r{\'{e}}nyi {\em et~al.\/}(2013)Sz{\"{o}}r{\'{e}}nyi,
+  Busa{-}Fekete, Heged{\"{u}}s, Orm{\'{a}}ndi, Jelasity, and
+  K{\'{e}}gl}]{szorenyi2013gossip}
+{\bf Sz{\"{o}}r{\'{e}}nyi, B.}, {\bf R.~Busa{-}Fekete}, {\bf I.~Heged{\"{u}}s},
+  {\bf R.~Orm{\'{a}}ndi}, {\bf M.~Jelasity}, and {\bf B.~K{\'{e}}gl} (2013).
+\newblock Gossip-based distributed stochastic bandit algorithms.
+\newblock {\em Proceedings of the 30th International Conference on Machine
+  Learning, {ICML} 2013, Atlanta, GA, USA, 16-21 June 2013\/}, 19--27.
 
 \bibitem[{Takimoto and Warmuth(2003)}]{takimoto2003path}
 {\bf Takimoto, E.} and {\bf M.~K. Warmuth} (2003).
@@ -465,9 +481,10 @@
 \newblock \urlprefix\url{http://jmlr.org/proceedings/papers/v48/wu16.html}.
 
 \bibitem[{Yu and Mannor(2009)}]{yu2009piecewise}
-{\bf Yu, J.~Y.} and {\bf S.~Mannor}, Piecewise-stationary bandit problems with
-  side observations.
-\newblock {\em In\/} {\em Proceedings of the 26th Annual International
-  Conference on Machine Learning\/}. ACM, 2009.
+{\bf Yu, J.~Y.} and {\bf S.~Mannor} (2009).
+\newblock Piecewise-stationary bandit problems with side observations.
+\newblock {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning, {ICML} 2009, Montreal, Quebec, Canada, June 14-18, 2009\/},
+  1177--1184.
 
 \end{thebibliography}
