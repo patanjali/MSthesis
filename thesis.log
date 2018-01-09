@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 00:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 00:46
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1403,77 +1403,72 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [2])
 [3] [4
 
-] (C:\Users\Subhojyoti\Desktop\github\MSThesis\abstract.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] (C:\Users\Subhojyoti\Desktop\github\MSThesis\abstract.tex) [5
 
- [5
+] [6
 
 ]
-[6
-
-] (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.toc [7
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.toc [7
 
 ] [8])
 \tf@toc=\write5
- [9]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lot)
-\tf@lot=\write6
- [10
+ [9] [10
 
 ]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lof)
-\tf@lof=\write7
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lot)
+\tf@lot=\write6
  [11
 
 ] [12
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lof)
+\tf@lof=\write7
  [13
 
-]
-[14
+] [14
+
+] [15
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[16
 
- [15
+] [1
+
+] [2
 
 ]
 Chapter 1.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/intro.tex [1
-
-
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/intro.tex [3
 
 ]
-<Chapter1/img/RL1.png, id=507, 860.21375pt x 356.33125pt>
+<Chapter1/img/RL1.png, id=520, 860.21375pt x 356.33125pt>
 File: Chapter1/img/RL1.png Graphic file (type png)
 
 <use Chapter1/img/RL1.png>
 Package pdftex.def Info: Chapter1/img/RL1.png used on input line 7.
 (pdftex.def)             Requested size: 387.0926pt x 160.34756pt.
 )
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/connBandits.tex) [2 <C:/U
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/connBandits.tex) [4 <C:/U
 sers/Subhojyoti/Desktop/github/MSThesis/Chapter1/img/RL1.png (PNG copy)>]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/studyBandit.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/motivation.tex [3]
-[4]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/feedback.tex
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/motivation.tex [5]
+[6]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/feedback.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 7.
 
-[5]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/types.tex
+[7]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/types.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-[7] [8]
+ [8]
+[9] [10]
 Underfull \vbox (badness 2662) has occurred while \output is active []
 
- [9]
-[10]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/objective.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/contribution.tex [11])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/outline.tex [12])
-[13] [14
+ [11]
+[12]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/objective.tex)
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/contribution.tex [13])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/outline.tex [14])
+[15] [16
 
 ]
 Chapter 2.
@@ -1481,12 +1476,12 @@ Chapter 2.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/notation.tex
 Underfull \vbox (badness 1496) has occurred while \output is active []
 
- [15
+ [17
 
 ])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [16])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [17])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [18]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/probDef.tex [18])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/motivation.tex [19])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/related.tex [20]
 Overfull \hbox (16.37508pt too wide) in paragraph at lines 33--34
 []\T1/ptm/m/n/12 UCB1 has a gap-dependent re-gret up-per bound of $\OML/cmm/m/i
 t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
@@ -1495,17 +1490,17 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[19] <Chapter2/img/Ucb-Imp.png, id=825, 759.83875pt x 906.38625pt>
+[21] <Chapter2/img/Ucb-Imp.png, id=838, 759.83875pt x 906.38625pt>
 File: Chapter2/img/Ucb-Imp.png Graphic file (type png)
 
 <use Chapter2/img/Ucb-Imp.png>
 Package pdftex.def Info: Chapter2/img/Ucb-Imp.png used on input line 63.
 (pdftex.def)             Requested size: 341.92427pt x 407.87004pt.
- [20]
+ [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter2/img/Ucb-Imp.png>] [2
-2] [23]
+ [23 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter2/img/Ucb-Imp.png>] [2
+4] [25]
 Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []|\T1/ptm/m/n/12 Horizon
  []
@@ -1533,8 +1528,8 @@ Overfull \hbox (5.16708pt too wide) in paragraph at lines 167--186
 ) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter2/conclusion.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-[25] [26
+ [26]
+[27] [28
 
 ]
 Chapter 3.
@@ -1542,18 +1537,18 @@ Chapter 3.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/contribution.tex
 Underfull \vbox (badness 5548) has occurred while \output is active []
 
- [27
+ [29
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28])
+ [30])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/ealgo.tex
 Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[29] <Chapter3/img/EUCBV_flow.png, id=957, 1032.85875pt x 947.54pt>
+[31] <Chapter3/img/EUCBV_flow.png, id=970, 1032.85875pt x 947.54pt>
 File: Chapter3/img/EUCBV_flow.png Graphic file (type png)
 
 <use Chapter3/img/EUCBV_flow.png>
@@ -1564,13 +1559,13 @@ Overfull \hbox (6.64194pt too wide) in paragraph at lines 51--52
 [][] 
  []
 
-) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex [30]
+) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/results.tex [32]
 Underfull \vbox (badness 3354) has occurred while \output is active []
 
- [31 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter3/img/EUCBV_flow.png>]
- [32]
-[33]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/proofTheorem.tex
-[34] [35]
+ [33 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter3/img/EUCBV_flow.png>]
+ [34]
+[35]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/proofTheorem.tex
+[36] [37]
 Overfull \hbox (1.95825pt too wide) in paragraph at lines 75--76
 []\T1/ptm/m/it/12 If $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 m
 in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
@@ -1578,11 +1573,11 @@ in\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m\OMS/cmsy/m/n/12 j[] \OML/cmm/m/it/12 < [
 ]$ \T1/ptm/m/it/12 and $\OML/cmm/m/it/12 n[] \OT1/cmr/m/n/12 = []$
  []
 
-[36] [37]
+[38] [39]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]
-[39]
+ [40]
+[41]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 316.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
@@ -1590,7 +1585,7 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 316.
- [40]
+ [42]
 Overfull \hbox (34.85158pt too wide) in paragraph at lines 403--404
 []\T1/ptm/m/it/12 From Lemma []3[] we can show that $\U/msb/m/n/12 P\OT1/cmr/m/
 n/12 ([] \OML/cmm/m/it/12 > r[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 c[]\OT1/cmr/
@@ -1601,7 +1596,7 @@ P [] \OMS/cmsy/m/n/12 $
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [43]
 Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
@@ -1609,7 +1604,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
+ [44]
 Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
@@ -1617,11 +1612,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43])
+ [45])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/expts.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
+ [46]
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt1/KLUCB01_comp_subsampled.txt}
@@ -1645,7 +1640,7 @@ Overfull \hbox (33.30786pt too wide) in paragraph at lines 5--75
  [][] 
  []
 
-[45]
+[47]
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/UCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/EUCBV01_comp_subsampled.txt}
 PGFPlots: reading {Chapter3/results/NewExpt/Expt3/MOSS01_comp_subsampled.txt}
@@ -1671,23 +1666,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex) [48]
+ [49])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter3/Conclusion.tex) [50]
 Chapter 4.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [49
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/intro.tex [51
 
 
 ])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/notation.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/probDef.tex [50])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/probDef.tex [52])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/motivation.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevRes.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [53]
 Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []|\T1/ptm/m/n/12 Exploration
  []
@@ -1712,30 +1707,30 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
  [] 
  []
 
-[52] [53] [54])
+[54] [55] [56])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1282, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1295, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png>
 Package pdftex.def Info: Chapter4/img/connection_TBP.png used on input line 4.
 (pdftex.def)             Requested size: 372.0374pt x 298.26227pt.
- [55])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevResAPT.tex [56 <C:/Us
+ [57])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/prevResAPT.tex [58 <C:/Us
 ers/Subhojyoti/Desktop/github/MSThesis/Chapter4/img/connection_TBP.png>])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/conc.tex) [57] [58
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/conc.tex) [59] [60
 
 ]
 Chapter 5.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/intro.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/contribution.tex [59
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/contribution.tex [61
 
 ]
 Underfull \vbox (badness 4913) has occurred while \output is active []
 
- [60])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [61]
-<Chapter5/img/AugUCB_flow.png, id=1361, 1087.06125pt x 1015.795pt>
+ [62])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [63]
+<Chapter5/img/AugUCB_flow.png, id=1374, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1749,27 +1744,27 @@ Overfull \hbox (39.72972pt too wide) in paragraph at lines 91--92
 ) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/results.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter5/img/AugUCB_flow.png>
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [64]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65]
+ [65 <C:/Users/Subhojyoti/Desktop/github/MSThesis/Chapter5/img/AugUCB_flow.png>
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/expt.tex [68]
+ [67]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
+ [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/expt.tex [70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
 PGFPlots: reading {Chapter5/results/budgetTestAP/APT12_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/AugUCBV1_comp_subsampled.txt}
 PGFPlots: reading {Chapter5/results/budgetTestAP/UCBEM1_comp_subsampled.txt}
@@ -1808,24 +1803,26 @@ PGFPlots: reading {Chapter5/results/budgetTestGR3/testUCBEMV1_256_comp_subsampl
 ed.txt}
 PGFPlots: reading {Chapter5/results/budgetTestGR4/UCBEMV1_comp_subsampled.txt}
 
-[70]
+[72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71])
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex) [72]
+ [73])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/conclusion.tex) [74]
 Chapter 6.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter7/ThesisConc.tex)
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter7/ThesisDir.tex [73
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter7/ThesisDir.tex [75
 
 
 ])
-[74]
+[76]
 Appendix A.
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [75
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Appendix/AppendixConc.tex [77
 
 
 ]
-[76]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl [77]
+[78]) [79] [80
+
+] (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.bbl
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 14.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
@@ -1854,9 +1851,9 @@ Underfull \hbox (badness 3128) in paragraph at lines 9--15
 n/12 http : / / papers . nips . cc / paper /$
  []
 
-[78
+[81
 
-] [79]
+] [82]
 Underfull \hbox (badness 2564) in paragraph at lines 210--217
 \T1/ptm/m/n/12 pure ex-plo-ration of multi-armed ban-dits.  \T1/ptm/m/it/12 27t
 h An-nual Con-fer-ence on Neu-
@@ -1905,23 +1902,25 @@ Underfull \hbox (badness 1067) in paragraph at lines 254--262
 ld 12-14 De-cem-ber
  []
 
-[80] [81] [82] [83]) [84] [85
+[83] [84] [85] [86]) [87] [88
+
+] [89
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 525.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 525.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 530.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 530.
 
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 525.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 525.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 530.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 530.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 5C26C39544B8683FA9399802D39428C4;5327.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 525.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 530.
  ) 
 Here is how much of TeX's memory you used:
- 32946 strings out of 493921
- 775255 string characters out of 3144861
- 1084367 words of memory out of 3000000
+ 32951 strings out of 493921
+ 775291 string characters out of 3144861
+ 1084368 words of memory out of 3000000
  35031 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1946,9 +1945,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (102 pages, 1064200 bytes).
+Output written on thesis.pdf (107 pages, 1067231 bytes).
 PDF statistics:
- 1799 PDF objects out of 2073 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
+ 1821 PDF objects out of 2073 (max. 8388607)
+ 381 named destinations out of 1000 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 
