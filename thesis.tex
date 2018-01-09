@@ -1,5 +1,5 @@
 %\documentclass[PhD]{iitmdiss}
-\documentclass[MS]{iitmdiss}
+\documentclass[MS,twoside]{iitmdiss}
 %\documentclass[MTech]{iitmdiss}
 %\documentclass[BTech]{iitmdiss}
 \usepackage{times}
@@ -18,6 +18,10 @@
 \usepackage{macros}
 
 \usepackage{latexsym} 
+
+
+
+\newcommand{\clearemptydoublepage}{\newpage{\cleardoublepage}}
 
 
 \begin{document}
@@ -190,6 +194,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Introduction.
+\clearemptydoublepage
 \chapter{Introduction to Bandits}
 \label{chap:intro}
 
@@ -236,7 +241,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\clearemptydoublepage
 \chapter{Stochastic Multi-armed Bandits}
 \label{chap:SMAB}
 
@@ -270,6 +275,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearemptydoublepage
 \chapter{Efficient UCB Variance: An Almost Optimal Algorithm in SMAB Setting}
 \label{chap:EUCBV}
 
@@ -313,6 +319,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearemptydoublepage
 \chapter{Thresholding Bandits}
 \label{chap:tbandit1}
 
@@ -357,6 +364,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearemptydoublepage
 \chapter{Augmented UCB for Thresholding Bandit Problem}
 \label{chap:tbandit2}
 
@@ -441,6 +449,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearemptydoublepage
 \chapter{Conclusions and Future Directions}
 \label{ThesisConc}
 
@@ -457,7 +466,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 \appendix
 
 %\chapter{APPENDIX}
-
+\clearemptydoublepage
 \chapter{Appendix on Concentration Inequalities}
 \label{sec:app:Conc}
 \input{Appendix/AppendixConc}
