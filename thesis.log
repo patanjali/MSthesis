@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 00:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 01:09
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1442,7 +1442,7 @@ Chapter 1.
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/intro.tex [1
 
 ]
-<Chapter1/img/RL1.png, id=520, 860.21375pt x 356.33125pt>
+<Chapter1/img/RL1.png, id=521, 860.21375pt x 356.33125pt>
 File: Chapter1/img/RL1.png Graphic file (type png)
 
 <use Chapter1/img/RL1.png>
@@ -1490,7 +1490,7 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[19] <Chapter2/img/Ucb-Imp.png, id=838, 759.83875pt x 906.38625pt>
+[19] <Chapter2/img/Ucb-Imp.png, id=839, 759.83875pt x 906.38625pt>
 File: Chapter2/img/Ucb-Imp.png Graphic file (type png)
 
 <use Chapter2/img/Ucb-Imp.png>
@@ -1548,7 +1548,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[29] <Chapter3/img/EUCBV_flow.png, id=970, 1032.85875pt x 947.54pt>
+[29] <Chapter3/img/EUCBV_flow.png, id=971, 1032.85875pt x 947.54pt>
 File: Chapter3/img/EUCBV_flow.png Graphic file (type png)
 
 <use Chapter3/img/EUCBV_flow.png>
@@ -1709,7 +1709,7 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
 
 [52] [53] [54])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1295, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1296, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png>
@@ -1730,7 +1730,7 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [60])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [61]
-<Chapter5/img/AugUCB_flow.png, id=1374, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1375, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1920,7 +1920,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 531.
 Here is how much of TeX's memory you used:
  32951 strings out of 493921
  775296 string characters out of 3144861
- 1084368 words of memory out of 3000000
+ 1084932 words of memory out of 3000000
  35031 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1945,9 +1945,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (107 pages, 1067239 bytes).
+Output written on thesis.pdf (107 pages, 1067662 bytes).
 PDF statistics:
- 1821 PDF objects out of 2073 (max. 8388607)
+ 1822 PDF objects out of 2073 (max. 8388607)
  381 named destinations out of 1000 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

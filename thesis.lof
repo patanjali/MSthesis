@@ -15,13 +15,13 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Connection between TBP, Pure Exploration and SMAB\relax }}{56}{figure.caption.31}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Flowchart for AugUCB\relax }}{63}{figure.caption.34}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{70}{figure.caption.37}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step in Arithmetic and Geometric Progression Environments.\relax }}{70}{figure.caption.37}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{70}{figure.caption.37}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{70}{figure.caption.37}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{70}{figure.caption.38}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step in three group and two group Gaussian environments.\relax }}{70}{figure.caption.38}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{70}{figure.caption.38}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{70}{figure.caption.38}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step.\relax }}{71}{figure.caption.39}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Performances of the various TBP algorithms in terms of error percentage vs. time-step in Advance setting Gaussian Environment.\relax }}{71}{figure.caption.39}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces 0.32\textwidth }}{71}{figure.caption.39}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces 0.32\textwidth }}{71}{figure.caption.39}
 \addvspace {10\p@ }
