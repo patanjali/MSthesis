@@ -35,7 +35,7 @@
 \BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}% 35
 \BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}% 36
 \BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 37
-\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{}% 38
+\BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An Almost Optimal Algorithm in SMAB Setting}{}% 38
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 39
 \BOOKMARK [1][-]{section.3.2}{Our Contributions}{chapter.3}% 40
 \BOOKMARK [1][-]{section.3.3}{Algorithm: Efficient UCB Variance}{chapter.3}% 41
@@ -48,12 +48,12 @@
 \BOOKMARK [1][-]{section.4.2}{Notations and Assumptions}{chapter.4}% 48
 \BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 49
 \BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration problem}{chapter.4}% 51
+\BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration Problem}{chapter.4}% 51
 \BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 52
 \BOOKMARK [2][-]{subsection.4.5.2}{Successive Accept Reject Algorithm for best-p arms setting}{section.4.5}% 53
 \BOOKMARK [2][-]{subsection.4.5.3}{Fixed Confidence setting}{section.4.5}% 54
 \BOOKMARK [2][-]{subsection.4.5.4}{Unified Setting}{section.4.5}% 55
-\BOOKMARK [1][-]{section.4.6}{TBP connection to Pure Exploration problem}{chapter.4}% 56
+\BOOKMARK [1][-]{section.4.6}{TBP connection to Pure Exploration Problem}{chapter.4}% 56
 \BOOKMARK [1][-]{section.4.7}{Related Work in Thresholding Bandits}{chapter.4}% 57
 \BOOKMARK [1][-]{section.4.8}{Summary}{chapter.4}% 58
 \BOOKMARK [0][-]{chapter.5}{Augmented UCB for Thresholding Bandit Problem}{}% 59

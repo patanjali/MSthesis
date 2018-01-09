@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {2.5.4}Information Theoretic approach}{22}{subsection.2.5.4}
 \contentsline {subsection}{\numberline {2.5.5}Discussion on the various confidence intervals}{23}{subsection.2.5.5}
 \contentsline {section}{\numberline {2.6}Summary}{24}{section.2.6}
-\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An almost optimal algorithm in SMAB setting}{25}{chapter.3}
+\contentsline {chapter}{\numberline {3}Efficient UCB Variance: An Almost Optimal Algorithm in SMAB Setting}{25}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{25}{section.3.1}
 \contentsline {section}{\numberline {3.2}Our Contributions}{26}{section.3.2}
 \contentsline {section}{\numberline {3.3}Algorithm: Efficient UCB Variance}{27}{section.3.3}
@@ -61,14 +61,14 @@
 \contentsline {section}{\numberline {4.2}Notations and Assumptions}{48}{section.4.2}
 \contentsline {section}{\numberline {4.3}Problem Definition}{48}{section.4.3}
 \contentsline {section}{\numberline {4.4}Motivation}{49}{section.4.4}
-\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration problem}{49}{section.4.5}
+\contentsline {section}{\numberline {4.5}Related Work in Pure Exploration Problem}{49}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Fixed Budget setting}{50}{subsection.4.5.1}
 \contentsline {subsubsection}{UCB-Exploration Algorithm}{50}{section*.28}
 \contentsline {subsubsection}{Successive Reject Algorithm}{50}{section*.30}
 \contentsline {subsection}{\numberline {4.5.2}Successive Accept Reject Algorithm for best-p arms setting}{52}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Fixed Confidence setting}{53}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Unified Setting}{53}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration problem}{53}{section.4.6}
+\contentsline {section}{\numberline {4.6}TBP connection to Pure Exploration Problem}{53}{section.4.6}
 \contentsline {subsubsection}{Challenges in the TBP seeting}{54}{section*.32}
 \contentsline {section}{\numberline {4.7}Related Work in Thresholding Bandits}{55}{section.4.7}
 \contentsline {section}{\numberline {4.8}Summary}{55}{section.4.8}
