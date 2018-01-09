@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 00:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 00:27
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1355,30 +1355,30 @@ Package pdftex.def Info: iitm-eps-converted-to.pdf used on input line 41.
 op/github/MSThesis/iitm-eps-converted-to.pdf>]
 Certificate
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
-
- []
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 66.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 66.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 66.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
 Underfull \hbox (badness 10000) in paragraph at lines 74--74
 
  []
 
+LaTeX Font Info:    Try loading font information for U+msa on input line 74.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 74.
 
-Overfull \hbox (23.1845pt too wide) in paragraph at lines 59--79
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 74.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+
+ []
+
+
+Overfull \hbox (23.1845pt too wide) in paragraph at lines 67--87
 []|  $[]$ |  $[]$
  []
 
@@ -1386,47 +1386,59 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \acknowledgements
-                       [0
+l.91 \clearemptydoublepage
+                           [0
 
-] (C:\Users\Subhojyoti\Desktop\github\MSThesis\ack.tex
+
+]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\ack.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
+
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2])
-[3] (C:\Users\Subhojyoti\Desktop\github\MSThesis\abstract.tex)
+[3] [4
+
+] (C:\Users\Subhojyoti\Desktop\github\MSThesis\abstract.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4
+ [5
 
 ]
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.toc [5
+[6
 
-] [6])
+] (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.toc [7
+
+] [8])
 \tf@toc=\write5
- [7]
+ [9]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lot)
 \tf@lot=\write6
- [8
+ [10
 
 ]
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.lof)
 \tf@lof=\write7
- [9
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [11
+
+] [12
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13
+
+]
+[14
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
 
 ]
 Chapter 1.
@@ -1435,7 +1447,7 @@ Chapter 1.
 
 
 ]
-<Chapter1/img/RL1.png, id=491, 860.21375pt x 356.33125pt>
+<Chapter1/img/RL1.png, id=507, 860.21375pt x 356.33125pt>
 File: Chapter1/img/RL1.png Graphic file (type png)
 
 <use Chapter1/img/RL1.png>
@@ -1483,7 +1495,7 @@ t/12 O []$\T1/ptm/m/n/12 , where $\OT1/cmr/m/n/12  = [][] []$\T1/ptm/m/n/12 .
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 47.
-[19] <Chapter2/img/Ucb-Imp.png, id=809, 759.83875pt x 906.38625pt>
+[19] <Chapter2/img/Ucb-Imp.png, id=825, 759.83875pt x 906.38625pt>
 File: Chapter2/img/Ucb-Imp.png Graphic file (type png)
 
 <use Chapter2/img/Ucb-Imp.png>
@@ -1541,7 +1553,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--49
 
  []
 
-[29] <Chapter3/img/EUCBV_flow.png, id=940, 1032.85875pt x 947.54pt>
+[29] <Chapter3/img/EUCBV_flow.png, id=957, 1032.85875pt x 947.54pt>
 File: Chapter3/img/EUCBV_flow.png Graphic file (type png)
 
 <use Chapter3/img/EUCBV_flow.png>
@@ -1702,7 +1714,7 @@ Overfull \hbox (11.04858pt too wide) in paragraph at lines 32--42
 
 [52] [53] [54])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter4/connection.tex
-<Chapter4/img/connection_TBP.png, id=1266, 531.48563pt x 426.09187pt>
+<Chapter4/img/connection_TBP.png, id=1282, 531.48563pt x 426.09187pt>
 File: Chapter4/img/connection_TBP.png Graphic file (type png)
 
 <use Chapter4/img/connection_TBP.png>
@@ -1723,7 +1735,7 @@ Underfull \vbox (badness 4913) has occurred while \output is active []
 
  [60])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter5/algo.tex [61]
-<Chapter5/img/AugUCB_flow.png, id=1345, 1087.06125pt x 1015.795pt>
+<Chapter5/img/AugUCB_flow.png, id=1361, 1087.06125pt x 1015.795pt>
 File: Chapter5/img/AugUCB_flow.png Graphic file (type png)
 
 <use Chapter5/img/AugUCB_flow.png>
@@ -1896,19 +1908,19 @@ ld 12-14 De-cem-ber
 [80] [81] [82] [83]) [84] [85
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 515.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 515.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 525.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 525.
 
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 515.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 515.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 525.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 525.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 5C26C39544B8683FA9399802D39428C4;5327.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 515.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 525.
  ) 
 Here is how much of TeX's memory you used:
- 32942 strings out of 493921
- 775223 string characters out of 3144861
+ 32946 strings out of 493921
+ 775255 string characters out of 3144861
  1084367 words of memory out of 3000000
  35031 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
@@ -1934,9 +1946,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (98 pages, 1061821 bytes).
+Output written on thesis.pdf (102 pages, 1064200 bytes).
 PDF statistics:
- 1782 PDF objects out of 2073 (max. 8388607)
- 372 named destinations out of 1000 (max. 500000)
+ 1799 PDF objects out of 2073 (max. 8388607)
+ 376 named destinations out of 1000 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

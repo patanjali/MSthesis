@@ -1,10 +1,10 @@
 \select@language {english}
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{chapter*.1}
-\contentsline {chapter}{ABSTRACT}{iv}{chapter*.2}
-\contentsline {chapter}{LIST OF TABLES}{viii}{chapter*.4}
-\contentsline {chapter}{LIST OF FIGURES}{ix}{chapter*.5}
-\contentsline {chapter}{ABBREVIATIONS}{x}{chapter*.6}
-\contentsline {chapter}{NOTATION}{xi}{chapter*.7}
+\contentsline {chapter}{ABSTRACT}{v}{chapter*.2}
+\contentsline {chapter}{LIST OF TABLES}{x}{chapter*.4}
+\contentsline {chapter}{LIST OF FIGURES}{xi}{chapter*.5}
+\contentsline {chapter}{ABBREVIATIONS}{xiii}{chapter*.6}
+\contentsline {chapter}{NOTATION}{xv}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introduction to Bandits}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Reinforcement Learning}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Connection between Reinforcement Learning and Bandits}{2}{section.1.2}
