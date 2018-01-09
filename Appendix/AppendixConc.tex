@@ -56,7 +56,7 @@
 
 
 
-\section{Sub-Gaussian distribution}
+\section{Sub-Gaussian Distribution}
 
 Let a random variable $X\in \R$ with variance as $\sigma^2$. Then $X$ is said to be $\sigma$-sub-gaussian for $\sigma\geq 0$ such that $\E[X] = 0$ and its moment generating function satisfies for all $\lambda \in \R $ the following condition,
 
@@ -70,7 +70,7 @@ Also, note that sub-gaussian distribution is a class of distribution rather than
 A random variable $X\in[0,1]$ is said to be $\dfrac{1}{2}-sub-gaussian$ with its moment generating function satisfying the condition,
 
 \begin{align*}
-\E[\exp{\lambda X}]\leq \exp\left( - \dfrac{\lambda^2}{8}\right), \forall \lambda \in \R
+\E[\exp{\lambda X}]\leq \exp\left( - \dfrac{\lambda^2}{8}\right), \forall \lambda \in \R .
 \end{align*}
   
 \end{remark}
@@ -82,12 +82,12 @@ In this section we state some of the concentration inequalities used in the proo
 
 	Let, $X_1,X_2,\ldots,X_n$ be a sequence of independent random variables defined on a probability space $(\omega,\mathcal{F},\Pb)$, is bounded in $[a_i,b_i],\forall i=1,2,\ldots, n$. Let $S_n$ denote the sum of the random variables such that $S_n = X_1 + X_2 + \ldots + X_n$,  $\hat{r} = \dfrac{S_n}{n}$ and $E[S_n]=r$. Let $\mathcal{F}_n$ be an increasing sequence of $\sigma$-fields of $\mathcal{F}$ such that for each $n$, $\sigma(X_{1},\ldots,X_n)\subset \mathcal{F}_t$ and for $q>t$, $X_q$ is independent of $\mathcal{F}_n$.
 
-\subsection{Markov's inequality}
+\subsection{Markov's Inequality}
 
 Markov's inequality states that, for any $\epsilon > 0$, 
 
 \begin{align*}
-\Pb[S_n > \epsilon] \leq \dfrac{\E[S_n]}{\epsilon}
+\Pb[S_n > \epsilon] \leq \dfrac{\E[S_n]}{\epsilon}.
 \end{align*}
 
 The Markov;s inequality gives us a very loose bound which is further tightened by the Chernoff-Hoeffding Bound and Bernstein Inequality.
@@ -98,9 +98,9 @@ The Markov;s inequality gives us a very loose bound which is further tightened b
 Chernoff-Hoeffding gives us the following inequality regarding the sums of independent random variables $S_n$ and their deviation from their expectation $\E[S_n]=r$, for any $\epsilon > 0$,
 
 \begin{align*}
-&\Pb\lbrace S_n - n\E[S_n] \geq \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{n \sum_{i=1}^n(a_i -b_i)}\right) \\
+&\Pb\lbrace S_n - n\E[S_n] \geq \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{n \sum_{i=1}^n(a_i -b_i)}\right), \\
 %%%%%%%%%%%%%%%%%%%%%%
-&\Pb\lbrace S_n - n\E[S_n] \leq - \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{n \sum_{i=1}^n(a_i -b_i)}\right)
+&\Pb\lbrace S_n - n\E[S_n] \leq - \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{n \sum_{i=1}^n(a_i -b_i)}\right).
 \end{align*}
 
 
@@ -108,19 +108,19 @@ Chernoff-Hoeffding gives us the following inequality regarding the sums of indep
 Considering all the random variables bounded in $[0,1]$, then both the right and left tail inequality can be reduced to,
 
 \begin{align*}
-&\Pb\left\lbrace \left|\dfrac{S_n}{n} - \E[S_n]\right| \geq \epsilon \right\rbrace \leq 2\exp\left( - 2\epsilon^2 n \right) \\
+&\Pb\left\lbrace \left|\dfrac{S_n}{n} - \E[S_n]\right| \geq \epsilon \right\rbrace \leq 2\exp\left( - 2\epsilon^2 n \right) .\\
 %%%%%%%%%%%%%%%%%%%%%%
 %&= 2\exp\left( - 2\epsilon^2 n \right)
 \end{align*}
 
 Hence, we obtain that, 
 \begin{align*}
-\Pb\lbrace \left|\hat{r} - r\right| \geq \epsilon \rbrace \leq 2\exp\left( - 2\epsilon^2 n \right)
+\Pb\lbrace \left|\hat{r} - r\right| \geq \epsilon \rbrace \leq 2\exp\left( - 2\epsilon^2 n \right).
 \end{align*}
 
 
 
-\subsection{Empirical Bernstein inequality}
+\subsection{Empirical Bernstein Inequality}
 \label{app:bernstein}
 
 Similar to Chernoff-Hoeffding bound, empirical Bernstein inequality gives us the following inequality regarding the sums of independent random variables $S_n$ and their deviation from their expectation $\E[S_n]=r$, for any $\epsilon > 0$,
@@ -128,7 +128,7 @@ Similar to Chernoff-Hoeffding bound, empirical Bernstein inequality gives us the
 \begin{align*}
 &\Pb\lbrace S_n - n\E[S_n] \geq \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{\left(2\sigma^2 + \frac{2 b_{\max} \epsilon}{3}\right) n \sum_{i=1}^n(a_i -b_i)}\right), \\
 %%%%%%%%%%%%%%%%%%%%%%
-&\Pb\lbrace S_n - n\E[S_n] \leq - \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{\left(2\sigma^2 + \frac{2 b_{\max} \epsilon}{3}\right) n \sum_{i=1}^n(a_i -b_i)}\right)
+&\Pb\lbrace S_n - n\E[S_n] \leq - \epsilon \rbrace \leq \exp\left( -\dfrac{2\epsilon^2}{\left(2\sigma^2 + \frac{2 b_{\max} \epsilon}{3}\right) n \sum_{i=1}^n(a_i -b_i)}\right).
 \end{align*}
 
 
@@ -136,7 +136,7 @@ Similar to Chernoff-Hoeffding bound, empirical Bernstein inequality gives us the
 Considering all the random variables bounded in $[0,1]$, then both the right and left tail inequality can be reduced to,
 
 \begin{align*}
-&\Pb\left\lbrace \left|\dfrac{S_n}{n} - \E[S_n]\right| \geq \epsilon \right\rbrace \leq 2\exp\left( -\dfrac{2\epsilon^2 n}{\left(2\sigma^2 + \frac{2\epsilon}{3}\right)}\right) \\
+&\Pb\left\lbrace \left|\dfrac{S_n}{n} - \E[S_n]\right| \geq \epsilon \right\rbrace \leq 2\exp\left( -\dfrac{2\epsilon^2 n}{\left(2\sigma^2 + \frac{2\epsilon}{3}\right)}\right). \\
 %%%%%%%%%%%%%%%%%%%%%%
 %&=\Pb\lbrace \left|\hat{r} - r\right| \geq \epsilon \rbrace \leq 2\exp\left( -\dfrac{2\epsilon^2 n}{\left(2\sigma^2 + \frac{2\epsilon}{3}\right)}\right)
 \end{align*}
@@ -144,5 +144,5 @@ Considering all the random variables bounded in $[0,1]$, then both the right and
 Hence, we obtain that, 
 
 \begin{align*}
-\Pb\lbrace \left|\hat{r} - r\right| \geq \epsilon \rbrace \leq 2\exp\left( -\dfrac{2\epsilon^2 n}{\left(2\sigma^2 + \frac{2\epsilon}{3}\right)}\right)
+\Pb\lbrace \left|\hat{r} - r\right| \geq \epsilon \rbrace \leq 2\exp\left( -\dfrac{2\epsilon^2 n}{\left(2\sigma^2 + \frac{2\epsilon}{3}\right)}\right).
 \end{align*}

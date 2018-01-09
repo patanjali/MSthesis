@@ -85,9 +85,9 @@
 \contentsline {section}{\numberline {6.1}Conclusions}{73}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future Directions}{73}{section.6.2}
 \contentsline {chapter}{\numberline {A}Appendix on Concentration Inequalities}{75}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sub-Gaussian distribution}{75}{section.A.1}
+\contentsline {section}{\numberline {A.1}Sub-Gaussian Distribution}{75}{section.A.1}
 \contentsline {section}{\numberline {A.2}Concentration Inequalities}{75}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Markov's inequality}{76}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.1}Markov's Inequality}{76}{subsection.A.2.1}
 \contentsline {subsection}{\numberline {A.2.2}Chernoff-Hoeffding Bound}{76}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein inequality}{77}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.3}Empirical Bernstein Inequality}{77}{subsection.A.2.3}
 \contentsline {chapter}{LIST OF PAPERS BASED ON THESIS}{87}{appendix*.41}
