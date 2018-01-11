@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  10 JAN 2018 02:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  11 JAN 2018 14:24
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1448,8 +1448,8 @@ File: Chapter1/img/RL1.png Graphic file (type png)
 Package pdftex.def Info: Chapter1/img/RL1.png used on input line 7.
 (pdftex.def)             Requested size: 387.0926pt x 160.34756pt.
 )
-(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/connBandits.tex) [2 <C:/U
-sers/Subhojyoti/Desktop/github/MSThesis/Chapter1/img/RL1.png (PNG copy)>]
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/connBandits.tex [2 <C:/Us
+ers/Subhojyoti/Desktop/github/MSThesis/Chapter1/img/RL1.png (PNG copy)>])
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/studyBandit.tex)
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/motivation.tex [3]
 [4]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/feedback.tex
@@ -1457,7 +1457,7 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 7.
 
 [5]) (C:\Users\Subhojyoti\Desktop\github\MSThesis\Chapter1/types.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7099) has occurred while \output is active []
 
  [6]
 [7] [8]
@@ -1919,7 +1919,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 582.
 Here is how much of TeX's memory you used:
  32951 strings out of 493921
  775296 string characters out of 3144861
- 1084932 words of memory out of 3000000
+ 1084933 words of memory out of 3000000
  35031 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1944,7 +1944,7 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (107 pages, 1068270 bytes).
+Output written on thesis.pdf (107 pages, 1068018 bytes).
 PDF statistics:
  1822 PDF objects out of 2073 (max. 8388607)
  381 named destinations out of 1000 (max. 500000)
