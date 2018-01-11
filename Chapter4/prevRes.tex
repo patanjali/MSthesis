@@ -17,7 +17,7 @@ One of the first algorithms proposed for the fixed budget setting is the UCB-Exp
 \State \textbf{Input: } The budget $T$, exploration parameter $a$
 \State Pull each arm once
 \For{$t=K+1,..., T$}
-\State Pull the arm such that $\argmax_{i\in \A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{a}{n_i}}\bigg\rbrace$, where $a = \dfrac{25(T-K)}{36 H_1}$ and $H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}$.
+\State Pull the arm such that $\argmax_{i\in \A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{a}{z_i}}\bigg\rbrace$, where $a = \dfrac{25(T-K)}{36 H_1}$ and $H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}$.
 \State $t:=t+1 $
 \EndFor
 \end{algorithmic}
@@ -34,10 +34,10 @@ This algorithm is quite similar to the UCB1 algorithm discussed in \citet{auer20
 Algorithm  &  Confidence interval & Exploration Parameter$(a)$ & Remarks \\
 \hline
 \hline
-UCB1       & $\sqrt{\dfrac{a}{n_i}}$ & \begin{align*}a = 2\log (t)\end{align*} & $a$ is logarithmic in $t$ to minimize cumulative regret. This achieves a balance between exploration and exploitation. Hence, the cumulative regret grows logarithmically with $t$. \\%\midrule
+UCB1       & $\sqrt{\dfrac{a}{z_i}}$ & \begin{align*}a = 2\log (t)\end{align*} & $a$ is logarithmic in $t$ to minimize cumulative regret. This achieves a balance between exploration and exploitation. Hence, the cumulative regret grows logarithmically with $t$. \\%\midrule
 \hline
 \hline
-UCBE       & $\sqrt{\dfrac{a}{n_i}}$ & \begin{align*}a = \dfrac{25(T-K)}{36 H_1},\\ \text{ where }H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}\end{align*} & $a$ is linear in $T$ to minimize simple regret. Here, the main concern is to minimize the probability of error at the end of budget $T$ and conduct as much exploration as possible. Hence, a large $a$ helps to reach exponentially low probability of error.\\\midrule
+UCBE       & $\sqrt{\dfrac{a}{z_i}}$ & \begin{align*}a = \dfrac{25(T-K)}{36 H_1},\\ \text{ where }H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}\end{align*} & $a$ is linear in $T$ to minimize simple regret. Here, the main concern is to minimize the probability of error at the end of budget $T$ and conduct as much exploration as possible. Hence, a large $a$ helps to reach exponentially low probability of error.\\\midrule
 \end{tabular}
 \end{center}
 \end{table}
