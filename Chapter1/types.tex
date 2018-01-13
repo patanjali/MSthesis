@@ -1,7 +1,7 @@
 In this section, we discuss the various types of bandits that are available in the literature. 
 
 
-\subsection{Types of Bandits based on Environment}
+\subsection{Types of Bandits Based on Environment}
 
 
 \subsubsection{Stochastic Bandits}
@@ -40,13 +40,13 @@ In non-stochastic setting, the distribution associated with each arm varies over
 
 
 
-\subsection{Types of Bandits based on goal}
+\subsection{Types of Bandits Based on Goal}
 
 In bandit literature, based on the goal we can divide bandits into several categories. To illustrate this we put forward a simple scenario let us consider a stochastic bandit scenario where there are $K$ arms labeled $i=1,2,\ldots, K$ with their expected means of reward distributions ($D_i$) be denoted by $r_i$. Also let there be single optimal arm $*$ such that $r^* = \max_{i\in\A}r_i$. 
 
 
 
-\subsubsection{Cumulative regret minimization}
+\subsubsection{Cumulative Regret Minimization}
 In cumulative regret minimization the goal of the bandit is to minimize the cumulative regret which is the total loss suffered by the learner throughout the time horizon $T$ for not choosing the optimal arm. Formally, we can define the cumulative regret as,
 
 \begin{eqnarray}
@@ -61,7 +61,7 @@ R_{T} = \sum_{t=1}^{T}r^* - \sum_{i\neq *}r_{i}n_{i,T} = \sum_{i=1}^{K}\Delta_{i
 
 where $\Delta_{i}=r^* - r_i$ is called the gap between the optimal and the sub-optimal arm.
 
-\subsubsection{Simple regret minimization}
+\subsubsection{Simple Regret Minimization}
 In simple regret minimization the goal of the bandit is to minimize the instantaneous regret that is suffered at any  timestep by the learner. Formally, the simple regret at $t$-th timestep where $J_n\in\A$ is the recommendation by the learner at timestep $t$ is defined,
 
 \begin{align*}

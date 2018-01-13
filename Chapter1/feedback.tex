@@ -1,7 +1,7 @@
 In an online sequential setting, the feedback that the learner receives from the environment can be characterized into three broad categories, full information feedback, partial information feedback and bandit feedback. 
 
 
-    To illustrate the different types of feedback we will take help of the following example. Let a learner be given a set of finite actions $i\in\A$ such that $|\A|=K$. Let, the environment be such that each action has a probability distribution $D_i$ attached to it which is fixed throughout the time horizon $T$. The learning proceeds as follows, at every timestep the learner selects $m\in\A$ actions and observes some form of feedback vector $R^{obs}_{t}$ (which will be characterized later). Before the learner selects the set of arms the environment draws the feedback vector $F^{env}_t\in[0,1]^{K}$ of $K$ i.i.d random rewards for all actions $i\in\A$ from $D_i,\forall i\in\A$ which it decides to reveal in particular format depending on the form of feedback chosen for the game, that is full information, partial information or bandit feedback. This game is shown in algorithm \ref{alg:OSeqGame}. 
+    To illustrate the different types of feedback we will take help of the following example. Let a learner be given a set of finite actions $i\in\A$ such that $|\A|=K$. Let, the environment be such that each action has a probability distribution $D_i$ attached to it which is fixed throughout the time horizon $T$. The learning proceeds as follows, at every timestep the learner selects $m\in\A$ actions and observes some form of feedback vector $G^{obs}_{t}$ (which will be characterized later). Before the learner selects the set of arms the environment draws the feedback vector $F^{env}_t\in[0,1]^{K}$ of $K$ i.i.d random rewards for all actions $i\in\A$ from $D_i,\forall i\in\A$ which it decides to reveal in particular format depending on the form of feedback chosen for the game, that is full information, partial information or bandit feedback. This game is shown in algorithm \ref{alg:OSeqGame}. 
 
 \begin{algorithm}[!th]
 \caption{An online sequential game}
@@ -11,7 +11,7 @@ In an online sequential setting, the feedback that the learner receives from the
 \State \For{ each timestep $t=1,2,\ldots, T$}
 \State The environment chooses a reward vector $F^{env}_{t}= \left[r_{i,t}\sim^{i.i.d} D_{i},\forall i\in\A\right]$.
 \State The learner chooses $m$ actions such that $m < K$ following some policy $\pi$, where $\A$ is the set of arms and $|\A|=K$.
-\State The learner observes the reward vector $R^{obs}_{t}\subseteq F^{env}_{t}$.
+\State The learner observes the reward vector $G^{obs}_{t}\subseteq F^{env}_{t}$.
 \State \EndFor
 \end{algorithmic}
 \end{algorithm}
@@ -19,13 +19,13 @@ In an online sequential setting, the feedback that the learner receives from the
 %Let $G(V, E)$ denote a graph where $V$ denotes the set of nodes in the graph and $E$ denotes the set of edges of the graph. Let there be a single starting node, denoted by $\mathcal{s}\in V$ from where the learner must start and try to reach the destination node denoted by $\mathcal{d}\in V$. Each edge has a delay associated with it which is unknown to the learner. This delay is an $i.i.d$ random variable from the distribution $D_{ij}$ associated with the edge $e_{ij}$ between the vertices $v_i$ and $v_j$. Whenever an edge is chosen the environment reveals to the learner  At every timestep the learner chooses a set of edges and receives some form of feedback from the environment. The goal of the learner is to find the path from $s$ to $d$ which has the minimum delay associated with it. 
 
 
-\subsection{Full information feedback}
-In full information feedback, when a learner selects $m$ actions then the environment reveals the rewards of all the actions $i\in \A$. Hence, in this form of feedback  the learner observes $R^{obs}_{t} = F^{env}_{t}=[r_{i,t},\forall i\in\A]$. This has been studied in many forms previously in \citet{takimoto2003path}, \citet{kalai2005efficient} or in online prediction with full information feedback in \citet{cesa2006prediction}.
+\subsection{Full Information Feedback}
+In full information feedback, when a learner selects $m$ actions then the environment reveals the rewards of all the actions $i\in \A$. Hence, in this form of feedback  the learner observes $G^{obs}_{t} = F^{env}_{t}=[r_{i,t},\forall i\in\A]$. This has been studied in many forms previously in \citet{takimoto2003path}, \citet{kalai2005efficient} or in online prediction with full information feedback in \citet{cesa2006prediction}.
 
 
-\subsection{Partial information feedback}
-In partial information feedback, when a learner selects $m$ actions then the environment reveals the rewards of only those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $R^{obs}_{t} = [ r_{m,t},\forall m\in\A ]$. This is also sometimes called the semi-bandit feedback and has been studied in \citet{awerbuch2004adaptive},   \citet{mcmahan2004online} and \citet{gyorgy2007line}.
+\subsection{Partial Information Feedback}
+In partial information feedback, when a learner selects $m$ actions then the environment reveals the rewards of only those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $G^{obs}_{t} = [ r_{m,t},\forall m\in\A ]$. This is also sometimes called the semi-bandit feedback and has been studied in \citet{awerbuch2004adaptive},   \citet{mcmahan2004online} and \citet{gyorgy2007line}.
 
 
-\subsection{Bandit feedback}
-In bandit feedback, when a learner selects $m$ actions then the environment reveals a cumulative reward of those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $R^{obs}_{t} = \sum_{q=1}^{m} r_{q,t}$. Note, that when $m=1$, then the learner observes the reward of only that action that it has chosen out of $K$ actions. Bandit feedback for single action has been extensively studied in literature with many open problems and we focus on its various interpretations in this thesis.
+\subsection{Bandit Feedback}
+In bandit feedback, when a learner selects $m$ actions then the environment reveals a cumulative reward of those $m$ actions for $m\in \A$. Hence, in this form of feedback  the learner observes $G^{obs}_{t} = \sum_{q=1}^{m} r_{q,t}$. Note, that when $m=1$, then the learner observes the reward of only that action that it has chosen out of $K$ actions. Bandit feedback for single action has been extensively studied in literature with many open problems and we focus on its various interpretations in this thesis.

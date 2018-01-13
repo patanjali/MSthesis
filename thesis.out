@@ -10,12 +10,12 @@
 \BOOKMARK [1][-]{section.1.3}{Why study Bandits?}{chapter.1}% 10
 \BOOKMARK [1][-]{section.1.4}{Motivation}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.5}{Types of Information Feedback}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.5.1}{Full information feedback}{section.1.5}% 13
-\BOOKMARK [2][-]{subsection.1.5.2}{Partial information feedback}{section.1.5}% 14
-\BOOKMARK [2][-]{subsection.1.5.3}{Bandit feedback}{section.1.5}% 15
+\BOOKMARK [2][-]{subsection.1.5.1}{Full Information Feedback}{section.1.5}% 13
+\BOOKMARK [2][-]{subsection.1.5.2}{Partial Information Feedback}{section.1.5}% 14
+\BOOKMARK [2][-]{subsection.1.5.3}{Bandit Feedback}{section.1.5}% 15
 \BOOKMARK [1][-]{section.1.6}{Different types of Bandits}{chapter.1}% 16
-\BOOKMARK [2][-]{subsection.1.6.1}{Types of Bandits based on Environment}{section.1.6}% 17
-\BOOKMARK [2][-]{subsection.1.6.2}{Types of Bandits based on goal}{section.1.6}% 18
+\BOOKMARK [2][-]{subsection.1.6.1}{Types of Bandits Based on Environment}{section.1.6}% 17
+\BOOKMARK [2][-]{subsection.1.6.2}{Types of Bandits Based on Goal}{section.1.6}% 18
 \BOOKMARK [2][-]{subsection.1.6.3}{Contextual Bandits}{section.1.6}% 19
 \BOOKMARK [2][-]{subsection.1.6.4}{Collaborative Bandits}{section.1.6}% 20
 \BOOKMARK [2][-]{subsection.1.6.5}{Bandits with Corrupt Feedback}{section.1.6}% 21
@@ -29,11 +29,11 @@
 \BOOKMARK [1][-]{section.2.3}{Problem Definition}{chapter.2}% 29
 \BOOKMARK [1][-]{section.2.4}{Motivation}{chapter.2}% 30
 \BOOKMARK [1][-]{section.2.5}{Related Work in SMAB}{chapter.2}% 31
-\BOOKMARK [2][-]{subsection.2.5.1}{Lower bound in SMAB}{section.2.5}% 32
-\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound approach}{section.2.5}% 33
+\BOOKMARK [2][-]{subsection.2.5.1}{Lower Bound in SMAB}{section.2.5}% 32
+\BOOKMARK [2][-]{subsection.2.5.2}{The Upper Confidence Bound Approach}{section.2.5}% 33
 \BOOKMARK [2][-]{subsection.2.5.3}{Bayesian Approach}{section.2.5}% 34
-\BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic approach}{section.2.5}% 35
-\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on the various confidence intervals}{section.2.5}% 36
+\BOOKMARK [2][-]{subsection.2.5.4}{Information Theoretic Approach}{section.2.5}% 35
+\BOOKMARK [2][-]{subsection.2.5.5}{Discussion on The Various Confidence Intervals}{section.2.5}% 36
 \BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 37
 \BOOKMARK [0][-]{chapter.3}{Efficient UCB Variance: An Almost Optimal Algorithm in SMAB Setting}{}% 38
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 39
@@ -49,16 +49,16 @@
 \BOOKMARK [1][-]{section.4.3}{Problem Definition}{chapter.4}% 49
 \BOOKMARK [1][-]{section.4.4}{Motivation}{chapter.4}% 50
 \BOOKMARK [1][-]{section.4.5}{Related Work in Pure Exploration Problem}{chapter.4}% 51
-\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget setting}{section.4.5}% 52
-\BOOKMARK [2][-]{subsection.4.5.2}{Successive Accept Reject Algorithm for best-p arms setting}{section.4.5}% 53
-\BOOKMARK [2][-]{subsection.4.5.3}{Fixed Confidence setting}{section.4.5}% 54
+\BOOKMARK [2][-]{subsection.4.5.1}{Fixed Budget Setting}{section.4.5}% 52
+\BOOKMARK [2][-]{subsection.4.5.2}{Successive Accept Reject Algorithm for Best-p Arms Setting}{section.4.5}% 53
+\BOOKMARK [2][-]{subsection.4.5.3}{Fixed Confidence Setting}{section.4.5}% 54
 \BOOKMARK [2][-]{subsection.4.5.4}{Unified Setting}{section.4.5}% 55
-\BOOKMARK [1][-]{section.4.6}{TBP connection to Pure Exploration Problem}{chapter.4}% 56
+\BOOKMARK [1][-]{section.4.6}{TBP Connection to Pure Exploration Problem}{chapter.4}% 56
 \BOOKMARK [1][-]{section.4.7}{Related Work in Thresholding Bandits}{chapter.4}% 57
 \BOOKMARK [1][-]{section.4.8}{Summary}{chapter.4}% 58
 \BOOKMARK [0][-]{chapter.5}{Augmented UCB for Thresholding Bandit Problem}{}% 59
 \BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 60
-\BOOKMARK [1][-]{section.5.2}{Our Contribution}{chapter.5}% 61
+\BOOKMARK [1][-]{section.5.2}{Our Contributions}{chapter.5}% 61
 \BOOKMARK [1][-]{section.5.3}{Augmented-UCB Algorithm}{chapter.5}% 62
 \BOOKMARK [1][-]{section.5.4}{Theoretical Results}{chapter.5}% 63
 \BOOKMARK [1][-]{section.5.5}{Numerical Experiments}{chapter.5}% 64
@@ -72,4 +72,4 @@
 \BOOKMARK [2][-]{subsection.A.2.1}{Markov's Inequality}{section.A.2}% 72
 \BOOKMARK [2][-]{subsection.A.2.2}{Chernoff-Hoeffding Bound}{section.A.2}% 73
 \BOOKMARK [2][-]{subsection.A.2.3}{Empirical Bernstein Inequality}{section.A.2}% 74
-\BOOKMARK [0][-]{appendix*.41}{LIST OF PAPERS BASED ON THESIS}{}% 75
+\BOOKMARK [0][-]{appendix*.43}{LIST OF PAPERS BASED ON THESIS}{}% 75

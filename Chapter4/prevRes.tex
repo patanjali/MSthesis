@@ -1,7 +1,7 @@
 A significant amount of literature is available on the stochastic MAB setting with respect to minimizing the cumulative regret. Chapter \ref{chap:SMAB} and \ref{chap:EUCBV} deals with that. In this work, we are particularly interested in \emph{pure-exploration MABs},  where the focus is primarily on simple regret rather than the cumulative regret. The relationship between cumulative regret and simple regret is proved in \citet{bubeck2011pure} where the authors prove that minimizing the simple regret necessarily results in maximizing the cumulative regret.
 The pure exploration problem has been explored  mainly in the following two settings:
     
-\subsection{Fixed Budget setting} 
+\subsection{Fixed Budget Setting} 
 
 Here the learning algorithm has to suggest the best arm(s) within a fixed budget or time-horizon $T$, that is given as an input. The objective is to maximize the probability of returning the best arm(s).  This is the scenario we consider in this chapter. Some of the important algorithms used in pure exploration setting are discussed in the next part.
 
@@ -23,13 +23,35 @@ One of the first algorithms proposed for the fixed budget setting is the UCB-Exp
 \end{algorithmic}
 \end{algorithm}
 
-This algorithm is quite similar to the UCB1 algorithm discussed in \citet{auer2002finite} (see algorithm \ref{alg:ucb1}). The major difference between the two algorithms is the confidence interval such that for UCB1 it is designed for minimizing the cumulative regret but for UCBE it is designed for minimizing simple regret. An illustrative table comparing the two is provided in table \ref{table:comp-exp}.
+This algorithm is quite similar to the UCB1 algorithm discussed in \citet{auer2002finite} (see algorithm \ref{alg:ucb1}). The major difference between the two algorithms is the confidence interval such that for UCB1 it is designed for minimizing the cumulative regret but for UCBE it is designed for minimizing simple regret. The confidence interval of UCBE is of the order $O\left( T\right)$ instead of $O\left(\log T\right)$ which helps UCBE to conduct sufficient exploration to reach an exponentially low probability of error in suggesting the best arm at the end of budget $T$. Note, that the problem complexity factor $H_1$ needs to be provided as input for the initialization of UCBE.
+
+\subsubsection{UCB-Exploration with Variance Algorithm}
+
+The idea of UCBE can be extended to incorporate the estimation of variance while conducting exploration. This idea was first proposed in \citet{audibert2010best} and later studied in a different context in \citet{gabillon2011multi} for identifying the $p$-best arms in a fixed-budget setting. We present UCB-Exploration-Variance (UCBEV) in Algorithm  \ref{alg:ucbev}. Again, as like UCBE, the choice of the confidence interval scales with $T$ rather than $\log (T)$ so that the probability of error in suggesting the best arm at the end of the budget $T$ is exponentially low. Again, like UCBE, the problem complexity factor $H_{\sigma,1}$ (see \citet{gabillon2011multi}) needs to be provided as input for the initialization of UCBEV and furthermore incorporates variance estimates in the complexity factor to conduct better exploration.
+
+
+\begin{algorithm}[!ht]
+\caption{UCBEV}
+\label{alg:ucbev}
+\begin{algorithmic}[1]
+\State \textbf{Input: } The budget $T$, exploration parameter $a$
+\State Pull each arm once
+\For{$t=K+1,..., T$}
+\State Pull the arm such that $\argmax_{i\in \A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{a}{z_i}}\bigg\rbrace$, where $a = \dfrac{(T-2K)}{H_{\sigma,1}}$ and $H_{\sigma,1}=\sum_{i=1}^{K}\frac{\sigma_{i}+\sqrt{\sigma_{i}^{2}+(16/3)\Delta_{i}}}{\Delta_{i}^{2}}$.
+\State $t:=t+1 $
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Comparison between UCB1, UCBE, and UCBEV}
+
+An illustrative table comparing the UCB1 for SMAB setting, UCBE, and UCBEV for the pure exploration setting is provided in table \ref{table:comp-exp}.
 
 \begin{table}
 \caption{Confidence interval and exploration parameters of different algorithms}
 \label{table:comp-exp}
 \begin{center}
-\begin{tabular}{|p{5em}|p{6em}|p{8em}|p{12em}|}
+\begin{tabular}{|p{5em}|p{4em}|p{11em}|p{11em}|}
 \hline
 Algorithm  &  Confidence interval & Exploration Parameter$(a)$ & Remarks \\
 \hline
@@ -37,7 +59,14 @@ Algorithm  &  Confidence interval & Exploration Parameter$(a)$ & Remarks \\
 UCB1       & $\sqrt{\dfrac{a}{z_i}}$ & \begin{align*}a = 2\log (t)\end{align*} & $a$ is logarithmic in $t$ to minimize cumulative regret. This achieves a balance between exploration and exploitation. Hence, the cumulative regret grows logarithmically with $t$. \\%\midrule
 \hline
 \hline
-UCBE       & $\sqrt{\dfrac{a}{z_i}}$ & \begin{align*}a = \dfrac{25(T-K)}{36 H_1},\\ \text{ where }H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2}\end{align*} & $a$ is linear in $T$ to minimize simple regret. Here, the main concern is to minimize the probability of error at the end of budget $T$ and conduct as much exploration as possible. Hence, a large $a$ helps to reach exponentially low probability of error.\\\midrule
+UCBE       & $\sqrt{\dfrac{a}{z_i}}$ & {\begin{align*}& a = \dfrac{25(T-K)}{36 H_1},\\& \text{ where }H_1 = \sum_{i=1}^{K}\dfrac{1}{\Delta_i^2} 
+\end{align*} }
+& $a$ is linear in $T$ to minimize simple regret. Here, the main concern is to minimize the probability of error at the end of budget $T$ and conduct as much exploration as possible. Hence, a large $a$ helps to reach exponentially low probability of error.\\
+\hline
+\hline
+UCBEV      & $\sqrt{\dfrac{a}{z_i}}$ & {\begin{align*} & a = \dfrac{(T-2K)}{H_{\sigma,1}},\\ &\text{ where } \\  & H_{\sigma,1}=\sum_{i=1}^{K}\frac{\sigma_{i}+\sqrt{\sigma_{i}^{2}+(16/3)\Delta_{i}}}{\Delta_{i}^{2}} 
+\end{align*}}
+& Like UCBE, $a$ is linear in $T$ to minimize simple regret. Also, incorporates variance estimates to conduct better exploration.\\\midrule
 \end{tabular}
 \end{center}
 \end{table}
@@ -71,7 +100,7 @@ From algorithm \ref{alg:sr} we see that SR is a round based algorithm quite simi
 
 %In the combinatorial fixed budget setup \citet{gabillon2011multi} propose the GapE and GapE-V algorithms that suggest, with high probability, the best-$p$ arms at the end of the time budget. 
 
-\subsection{Successive Accept Reject Algorithm for best-p arms setting}
+\subsection{Successive Accept Reject Algorithm for Best-p Arms Setting}
 
 The goal in the best p-arms setting is to identify the top $p$ arms out of $K$ given arms where $p$ is supplied as an input. Several algorithms have been proposed for this setup starting with \citet{gabillon2011multi} where the authors proposed the GapE and GapE-V algorithms that suggest, with high probability, the best-$p$ arms at the end of the time budget. These algorithms are similar to the UCBE type algorithm discussed in the previous section. In this section, we will discuss the Successive Accept Reject strategy shown in algorithm \ref{alg:sar}.
 
@@ -108,12 +137,12 @@ The goal in the best p-arms setting is to identify the top $p$ arms out of $K$ g
     A similar combinatorial setup was explored in \citet{chen2014combinatorial} where the authors propose the Combinatorial Successive Accept Reject (CSAR) algorithm, which is similar in concept to SAR but with a more general setup. 
 
  
-\subsection{Fixed Confidence setting} 
+\subsection{Fixed Confidence Setting} 
 
-In this setting, the learning algorithm has to suggest the best arm(s) with a fixed confidence (given as input) with as fewer number of attempts as possible. The single best arm identification has been studied in \citet{even2006action}, while for the combinatorial setup \citet{kalyanakrishnan2012pac} have proposed the LUCB algorithm which, on termination, returns  $m$ arms which are at least $\epsilon$ close to the true top-$m$ arms with probability at least $1-\delta$. For a detailed survey of this setup, we refer the reader to \citet{jamieson2014best}. 
+In this setting, the learning algorithm has to suggest the best arm(s) with a fixed confidence (given as input) with a fewer number of attempts as possible. The single best arm identification has been studied in \citet{even2006action}, while for the combinatorial setup \citet{kalyanakrishnan2012pac} have proposed the LUCB algorithm which, on termination, returns  $m$ arms which are at least $\epsilon$ close to the true top-$m$ arms with probability at least $1-\delta$. For a detailed survey of this setup, we refer the reader to \citet{jamieson2014best}. 
 
 \subsection{Unified Setting}
-Apart from these two settings some unified approaches has also been suggested in \citet{gabillon2012best} which proposes the algorithms UGapEb and UGapEc which can work in both the fixed budget setting and fixed confidence  setting. 
+Apart from these two settings some unified approaches has also been suggested in \citet{gabillon2012best} which proposes the algorithms UGapEb and UGapEc which can work in both the fixed budget setting and fixed confidence setting. 
 
 
 
