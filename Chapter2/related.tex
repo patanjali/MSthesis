@@ -171,7 +171,7 @@ Algorithm  &  Confidence interval & Horizon as input & Remarks \\
 UCB1        & $\sqrt{\dfrac{2\log (t)}{z_i}}$ & No & Loose confidence interval leading to high regret upper bounds.\\%\midrule
 \hline
 \hline
-UCBV        & $\sqrt{\dfrac{2\hat{v}_i\log (t)}{s_i}} + \dfrac{3\log (t)}{2}$ & No & Confidence interval uses variance estimation.\\
+UCBV        & $\sqrt{\dfrac{2\hat{v}_i\log (t)}{z_i}} + \dfrac{3\log (t)}{2}$ & No & Confidence interval uses variance estimation.\\
 \hline
 \hline
 UCB-Imp 		& $\sqrt{\dfrac{\log{( T\epsilon_{m}^{2})}}{2 n_{m}}}$ & Yes & Same confidence interval for all arms in a particular round.\\%\midrule
