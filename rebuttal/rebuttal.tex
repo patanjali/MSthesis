@@ -1,0 +1,220 @@
+
+
+\documentclass[twoside]{article}
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{-0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+%
+% ADD PACKAGES here:
+%
+
+\usepackage{amsfonts,graphicx}
+%\usepackage{amsmath}
+\usepackage{algorithm}
+%\usepackage[noend]{algpseudocode}
+\usepackage{verbatim}
+\usepackage{datetime}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+%\setcitestyle{nocompress}
+%\bibpunct{(}{)}{;}{a}{}{,}
+
+% \usepackage[nocompress]{cite}
+%\usepackage{graphicx}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{authblk}
+% \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage{macros}
+\usepackage{times}
+
+
+%
+% The following commands set up the lecnum (lecture number)
+% counter and make various numbering schemes work relative
+% to the lecture number.
+%
+\newcounter{lecnum}
+\renewcommand{\thepage}{\arabic{page}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+
+%
+% The following macro is used to generate the header.
+%
+\newcommand{\lecture}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{lecnum}{#1}
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    %\hbox to 6.28in { {\bf Report on my work with Adobe
+		%\hfill Spring 2018} }
+       \vspace{4mm}
+       \hbox to 6.28in { {\Large \hfill Response to Reviewer Comments on M.S. Thesis \hfill} }
+       \vspace{2mm}
+       \hbox to 6.28in { \hfill \it{\today} \hfill}
+       \vspace{2mm}
+       \hbox to 6.28in { \hfill {Name: Subhojyoti Mukherjee} \hfill}
+       \vspace{2mm}
+       \hbox to 6.28in { \hfill {Roll Number: CS15S300} \hfill}
+       \vspace{2mm}
+       \hbox to 6.28in { \hfill {Registered for: Master of Science (by Research)} \hfill}
+       \vspace{2mm}
+       \hbox to 6.28in { \hfill {Guide : Dr. B. Ravindran, Co-Guide : Dr. N. Sudarsanam} \hfill}
+       \vspace{2mm}
+       }
+   }
+   \end{center}
+   %\markboth{Lecture #1: #2}{Lecture #1: #2}
+
+   
+   \vspace*{4mm}
+}
+
+\renewcommand{\cite}[1]{[#1]}
+\def\beginrefs{\begin{list}%
+        {[\arabic{equation}]}{\usecounter{equation}
+         \setlength{\leftmargin}{2.0truecm}\setlength{\labelsep}{0.4truecm}%
+         \setlength{\labelwidth}{1.6truecm}}}
+\def\endrefs{\end{list}}
+\def\bibentry#1{\item[\hbox{[#1]}]}
+
+%Use this command for a figure; it puts a figure in wherever you want it.
+%usage: \fig{NUMBER}{SPACE-IN-INCHES}{CAPTION}
+\newcommand{\fig}[3]{
+			\vspace{#2}
+			\begin{center}
+			Figure #1:~#3
+			\end{center}
+	}
+% Use these for theorems, lemmas, proofs, etc.
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{claim}[theorem]{Claim}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{definition}[theorem]{Definition}
+%\newenvironment{proof}{{\bf Proof:}}{\hfill\rule{2mm}{2mm}}
+
+% **** IF YOU WANT TO DEFINE ADDITIONAL MACROS FOR YOURSELF, PUT THEM HERE:
+
+%\newcommand\E{\mathbb{E}}
+
+
+\begin{document}
+\lecture{1}{A - Title}{Lecturer Name}{scribe-name}
+
+\section{Response to Reviewer 1}
+
+We thank the reviewer for his cogent comments and have made a few necessary changes as suggested by the reviewer.
+
+\begin{enumerate}
+
+\item \textbf{Abstract:} 
+
+\textit{Correction Suggested:} Start with a transparent sentence.
+
+\textit{Correction Done:} Wrote a more specific sentence outlying the main theme of the thesis.
+
+This thesis studies the following topics in the area of Reinforcement Learning: classic Multi-armed bandits in stationary distribution with the goal of cumulative regret minimization using variance estimates and Thresholding bandits in pure exploration fixed-budget setting with the goal of instantaneous regret minimization also using variance estimates.
+
+
+\item \textbf{Chapter 1, subsection 1.1 (Introduction to Bandits):} 
+
+\textit{Correction Suggested:} "In pursuit of these, the agent can be thought of as making a series of \textit{sequential decisions}" to  "series of tautological decisions".
+
+\textit{Correction Done:} Kept the sentence in original form. It should be a "series of sequential decisions" in the setting considered.
+
+In pursuit of these, the agent can be thought of as making a series of \textit{sequential decisions}...
+
+
+\item \textbf{Chapter 2, subsection 2.5.2(The Upper Confidence Bound Approach)} 
+
+
+\textit{Correction Suggested:} Break the paragraph, starting from "Empirically...".
+
+\textit{Correction Done:} Wrote it into two paragraphs now.
+
+	UCB-Improved incurs a gap-dependent regret bound of $O\left(\frac{K\log (T\Delta^{2})}{\Delta}\right)$, which is better than that of UCB1. On the other hand, the worst case gap-independent regret bound of UCB-Improved is $O\left(\sqrt{KT\log K}\right)$. 
+    
+    Empirically, UCB-Improved is out-performed by UCB1 in almost all environments. This stems from the fact that UCB-Improved is pulling all arms equal number of times in each round and hence spends a significant number of pulls in initial exploration as opposed to UCB1 thereby incurring higher regret.
+
+
+
+\item \textbf{Chapter 4, subsection 4.1 (Introduction to Thresholding Bandits):} 
+
+\textit{Correction Suggested:} Can go to section 1.9.
+
+\textit{Correction Done:} Removed the line that "An interested reader can
+read through the previous chapters or can continue from here."
+
+
+\item \textbf{Chapter 4, subsection 4.2 (Notations and Assumptions):} 
+
+\textit{Correction Suggested:} In the sentence "Whenever there is no ambiguity about the underlaying...." correct "underlaying"
+
+\textit{Correction Done:} Corrected the spelling to, "Whenever there is no ambiguity about the underlying...."
+
+
+\item \textbf{Chapter 4, subsection 4.6 (Challenges in the TBP seeting):}
+
+\textit{Correction Suggested:} Write more succinctly.
+
+\textit{Correction Done:} Rewrote the paragraph.
+
+Further, if we look closely into the TBP setting we will see that there are several similarities between the challenges in SMAB setting and the TBP setting. These challenges are as follows:-
+
+\begin{enumerate}
+\item The more closer an arm’s expected reward mean ($r_i$) is  to $\tau$, the more harder is the problem. This stems from the fact that it becomes increasingly difficult to discriminate between the arms lying above and below $\tau$.
+\item Lesser the budget $T$, the more harder is the problem. This is because there are lesser number of pulls available and so the number of samples collected tends to be low.
+\item The higher the variance of an arm’s reward distribution $D_i$, the more harder is the problem. This is similar to the first case as it becomes harder to discriminate between the arms lying close to the threshold.
+\end{enumerate}
+
+
+\item  \textbf{Chapter 5, subsection 5.1 (Introduction):} 
+
+\textit{Correction Suggested:} Capitalize proper nouns such as "section 1"  to "Section 1", "chapter 1" to "Chapter 1", "table 1" to "Table 1" and "figure 1" to "Figure 1".
+
+\textit{Correction Done:} Rewrote all such usages in the thesis.
+
+The rest of the chapter is organized as follows. We elaborate our contributions in Section~5.2 and  we present the AugUCB algorithm in Section~5.3. Our main theoretical result on expected loss is stated in Section~5.4. Section~5.5 contains numerical simulations on various testbeds to show the performance of AugUCB against state-of-the-art algorithms and finally, we summarize in Section~5.6.
+
+\item \textbf{Chapter 5, subsection 5.4 (Proofs):}
+
+\textit{Correction Suggested:} Proofs can be non-italics format style.
+
+\textit{Correction Done:} I did not tamper with the format specified for MS Thesis, so kept the proof format style unchanged.
+
+
+\item \textbf{Chapter 6, subsection 6.1 (Conclusions):} 
+
+\textit{Correction Suggested:} Some word changes.
+
+\textit{Correction Done:} Rewrote the paragraph with the changes..
+
+In this thesis, we studied two different bandit problems, the stochastic multi-armed bandit (SMAB) with the goal of cumulative regret minimization and pure exploration stochastic thresholding bandit problem (TBP) with the goal of expected loss minimization. For the first problem, we devised a novel algorithm called Efficient UCB Variance (EUCBV) which enjoys an order optimal regret bound and performs very well in diverse stochastic environments. In the second part, the thresholding bandit problem, we came up with the novel algorithm called Augmented UCB (AugUCB) which is the first algorithm to use variance estimation for the considered TBP setting and also empirically outperforms most of the other algorithms. 
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
