@@ -115,14 +115,14 @@ Recently in \citet{lattimore2015optimally}, the authors proposed the Optimally C
 \State \textbf{Input:} $K$ number of arms with unknown parameters of reward distribution
 \State Pull each arm once
  \For{$t=K+1,..., T$}
-\State Pull the arm such that $\max_{i\in A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{2\hat{v}_i\log (t)}{s_i}} + \dfrac{3\log (t)}{2}\bigg\rbrace$
+\State Pull the arm such that $\max_{i\in A}\bigg\lbrace\hat{r}_{i} + \sqrt{\dfrac{2\hat{v}_i\log (t)}{z_i}} + \dfrac{3\log (t)}{2}\bigg\rbrace$
 \State $t:=t+1 $
  \EndFor
 \end{algorithmic}
 \end{algorithm}
 
 
-    In contrast to the above work, the UCB-Variance (UCBV) algorithm in \citet{audibert2009exploration} utilizes variance estimates to compute the confidence intervals for each arm. In UCBV (see Algorithm \ref{alg:ucbv}) the confidence interval term is given by $\sqrt{\dfrac{2\hat{v}_i\log (t)}{s_i}} + \dfrac{3\log (t)}{3}$ where $\hat{v}_i$ denotes the empirical variance of the arm $i$. Hence, the confidence interval makes sure that the arms whose variances are high are pulled more often to get a better estimates of their $\hat{r}_i$.
+    In contrast to the above work, the UCB-Variance (UCBV) algorithm in \citet{audibert2009exploration} utilizes variance estimates to compute the confidence intervals for each arm. In UCBV (see Algorithm \ref{alg:ucbv}) the confidence interval term is given by $\sqrt{\dfrac{2\hat{v}_i\log (t)}{z_i}} + \dfrac{3\log (t)}{3}$ where $\hat{v}_i$ denotes the empirical variance of the arm $i$. Hence, the confidence interval makes sure that the arms whose variances are high are pulled more often to get a better estimates of their $\hat{r}_i$.
     
     UCBV has a gap-dependent regret bound of $O\left(\frac{K\sigma_{\max}^{2}\log T}{\Delta}\right)$, where $\sigma_{\max}^{2}$ denotes the maximum variance among all the arms $i\in \A$. Its gap-independent regret bound can be inferred to be same as that of UCB1 i.e $O \left(\sqrt{KT\log T}\right)$. Empirically, \citet{audibert2009exploration} showed that UCBV outperforms UCB1 in several scenarios. 
 
