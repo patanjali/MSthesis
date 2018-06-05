@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  19 MAY 2018 01:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.18)  5 JUN 2018 12:36
 entering extended mode
 **thesis.tex
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.tex
@@ -1909,24 +1909,28 @@ ld 12-14 De-cem-ber
 
 [83] [84] [85] [86]) [87] [88
 
-] [89
-
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 583.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 583.
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\committee.tex [89
+
+])
+(C:\Users\Subhojyoti\Desktop\github\MSThesis\cv.tex [90
+
+]) [91]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 592.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 592.
 
 (C:\Users\Subhojyoti\Desktop\github\MSThesis\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 583.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 583.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 592.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 592.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D32BDBF6DBE53A86BEF0CCF0FCE6E78F;5328.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 583.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 592.
  ) 
 Here is how much of TeX's memory you used:
- 32957 strings out of 493921
- 775355 string characters out of 3144861
- 1084970 words of memory out of 3000000
- 35032 multiletter control sequences out of 15000+200000
+ 32971 strings out of 493921
+ 775695 string characters out of 3144861
+ 1084968 words of memory out of 3000000
+ 35037 multiletter control sequences out of 15000+200000
  54825 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,27n,108p,1874b,2489s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1950,9 +1954,9 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (109 pages, 1076475 bytes).
+Output written on thesis.pdf (111 pages, 1079752 bytes).
 PDF statistics:
- 1847 PDF objects out of 2073 (max. 8388607)
- 386 named destinations out of 1000 (max. 500000)
+ 1857 PDF objects out of 2073 (max. 8388607)
+ 390 named destinations out of 1000 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -323,7 +323,7 @@
        \def\committee{\chapter*{\centerline{DOCTORAL COMMITTEE}}}
    \else
        \if@MS
-          \def\committee{\chapter*{\centerline{GENERAL TEST COMITTEE}}}
+          \def\committee{\chapter*{\centerline{GENERAL TEST COMMITTEE}}}
         \fi
    \fi
 
