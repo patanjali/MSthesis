@@ -1,0 +1,123 @@
+\section{Related Work}
+%\label{sec:related}
+\label{sec:related-work}
+\noindent The TC-DSP problem being NP-complete~\cite{feng:09}, brute force search cannot find an optimal solution. Several heuristics have been proposed in the past to address this problem~\cite{feng:09,wu:08,fishburn:85,sundarajan:99,liu:10,hu:12, mok:12,coudert:97}. 
+In~\cite{fishburn:85} it was shown that the continuous sizing problem 
+with area minimization objective is convex, and a greedy sensitivity-based 
+heuristic was proposed to solve the same. Similarly, in~\cite{sundarajan:99}, 
+a continuous optimization is performed, following which the solutions are 
+discretized. However, this type of discretization is known to produce 
+suboptimal solutions due to significant round-off errors. In~\cite{feng:09}, 
+a polynomial time approximation scheme was proposed, but this scheme does not 
+scale well for circuits with large number of gates as the run time runs into minutes even for circuits with less than 5000 gates. Another analytical algorithm was provided for the same 
+in~\cite{liu:10}, but this algorithm also takes several minutes even for 
+circuits whose gate-count is less than 20,000. Nothing is mentioned in~\cite{liu:10} about the scalability of the running time of the algorithm with respect to large circuits. In~\cite{mok:12}, a survey 
+of all the existing algorithms for the sizing problem is provided and is concluded 
+that {\em no algorithm exists that consistently provides good results for all circuits}. The ISPD 2012~\cite{ispdcontest1} and ISPD 2013~\cite{ispdcontest2} contests provided a set of benchmark circuits that were targeted at evaluating the quality of any sizing technique. 
+However, it was shown in both~\cite{hu:12} and~\cite{mok:12} that iterative 
+greedy heuristics are fastest and most effective in solving the TC-DSP. 
+
+The TC-DSP is presented as an instance of Lagrangian Relaxation (LR) problem in~\cite{Hu:11}. The objective is to minimize leakage and the algorithm places a penalty for any delay violations. The timing constraints are introduced in the LR formulation.  The netlist is modeled as a directed acyclic graph and the discrete gate version characteristics are based
+on timing tables provided by the gate library. A Dynamic Programming algorithm
+based on critical tree extraction is proposed to solve the LR optimization problem for discrete gates. An accurate timer is used for sign-off and slack computation.
+ 
+%~\cite{li:12}, ~\cite{livramento:13}, ~\cite{hu:12} and ~\cite{flach:13} use the ISPD2012 framework. 
+ Empirically it is observed in this paper that some commercial synthesis tools consume less time for the design optimization time but the solution quality is far from desirable. To avoid compromise on the solution quality, there are a few heuristics like those proposed in \cite{wu:08} and \cite{hu:12}, which focus on employing parallel and concurrent techniques to reduce the run-time of the optimizer. The speed-up achieved through this parallelization is not significant though the effort involved in parallelizing the code could be significant. A common scalable solution to the TC-DSP problem is to iteratively replace gates with their different  versions and perform a static timing analysis (STA) at the end of every iteration to check for timing violations due to the gate replacements.
+ As the optimization process proceeds, the algorithm experiences high rejection rates, making the performance of the STA 
+engine very crucial for scalability~\cite{papa:10}. Next, we describe the existing STA techniques reported
+in literature. 
+%
+Initial Static Timing Analysis (STA) engines always processed an entire design, which is impractically expensive for evaluating every 
+replacement~\cite{papa:10}. It is to be noted that replacing the $V_t$/gate-size of a gate $g_i$, changes the arrival times of gates only in the fan-in and fan-out cones\footnote{Fan-in/Fan-out cone of a gate $g$ is defined as the sub-circuit that drives/is driven by the gate $g$.} of $g_i$, while the arrival times of other gates remain unaffected. By performing STA for the entire design, we may end up computing known values repeatedly. 
+To improve the efficiency of the STA engine, several {\em incremental} STA techniques have been proposed in the past~\cite{lee:95,abato:96,sapatnekar:96,mondal:04,das:06,papa:08}. In~\cite{lee:95}, {\em incremental} STA is performed by solving 
+the {\em incremental longest path problem}, with a novel algorithm which is linear in the number of edges in the {\em dominance fan-out cone}. In~\cite{abato:96}, a frontier is established by recording the leftmost and rightmost gates in the fan-in and fan-out cone of each gate that get affected by the change in relative timing values are recorded.
+Based on a request, incremental timing analysis is performed on the modified design
+employing the recorded frontiers of change to limit the timing analysis to 
+the {\em affected} regions of the circuit alone. An input based path sensitization approach 
+was used for incremental STA in~\cite{sapatnekar:96}.
+On a similar note, in~\cite{coudert:97}, the incremental timer is accelerated by only updating a 
+set of gates that are in the neighborhood of the gate whose timing value has been updated. 
+In~\cite{mondal:04}, timing queries were modeled using temporal logic and an efficient 
+algorithm was proposed to answer those queries. Similarly, in~\cite{das:06}, a more 
+efficient incremental STA algorithm which exploits the circuit structure was proposed. 
+In all these works, path based algorithms were proposed to 
+increase the performance of incremental STA, but none of them except~\cite{abato:96} looked 
+at reducing the number of times the incremental STA needs to be performed. 
+Even in~\cite{abato:96}, although incremental STA is not performed in every iteration, 
+nonetheless some computation is performed in every iteration relating to the signal propagation. 
+As a result, the running time complexity does not decrease significantly compared to the use of a normal STA. 
+For e.g., in~\cite{hu:12}, in spite of using a state-of-art incremental timer, the optimization 
+took greater than 20 hours. It can be seen from the above works that the STA engines reported so far consume a significant time. The number of times the STA needs to be performed (timing updates) grows linearly with the size of the circuit. Reducing the number of times such updates are performed results in a reduction in the overall running time of the algorithm. This reduction without compromising on the solution quality is the challenge that forms one of the central themes of this paper.
+
+
+%
+%This paper uses the {\em lazy timing evaluation} to arrive at a fast algorithm for the TC-DVSP. 
+%The {\em laziness} is to avoid performing the STA after every iteration but to perform the same 
+%once in several iterations. To sum up, the main contributions of the work are as follows:
+%\begin{enumerate}
+%\item We observe that iterative {\em slack-based} greedy discrete $V_t$ sizing exhibits %significant 
+%speed-up while retaining/improving the solution quality over iterative  {\em sensitivity-based} 
+%greedy discrete  sizing~\cite{hu:12,chinnery:05}. 
+%\item We show that in iterative slack-based discrete $V_t$ sizing, there is a significant correlation 
+%between the ordering of gates based on slack in the current iteration and the ordering of gates that 
+%are replaced in successive iterations.
+%\item Exploiting this high correlation, this paper proposes a {\em lazy timing analysis} coupled with an {\em Adaptive Window sizing (AWS) scheme for decision making} to perform {\em multiple $V_t$ replacements} between successive timing updates, thereby producing solutions that are at least {\em an order of magnitude} faster and consume lesser leakage power, 
+%when compared to an existing commercial multi-$V_t$ synthesis tool.
+%\end{enumerate}
+{\em Lazy evaluation} is a popular paradigm in improving the computational efficiency of iterative algorithms.
+The line sweep algorithm used in the VLSI routing checkers is based on this technique.
+In \cite{papa:10}, it was shown that lazy STA when employed for {\em timing optimization} can result in more
+than 2$\times$ speed-up, when combined with transactional timing analysis.
+{\em It should be noted that lazy updates may not be acceptable for all optimization problems}. 
+An {\em optimistic} approach with {\em lazy timing updates},
+may lead to unnoticed timing violations that might have occurred on the gates
+that have been marked for timing updates. This demands backtracking that actually ends up
+increasing the running time of the algorithm, defeating the whole purpose. 
+Interestingly, {\em lazy updates} combined with an efficient backtracking procedure can speed 
+up the iterative algorithms that solve the {\em timing optimization} problem.
+
+
+
+%The leakage power minimization problem has been studied over the last 30 years and there has been a considerable amount of work done in this regard. The work can be primarily divided into two classes: heuristic based approach and analytical approach. 
+%Since the leakage power minimization problem is NP-Hard, heuristic based approaches have focussed on  effective search space exploration. Works like %inser references here 
+%have focussed on developing metrics that help in identifying the right candidate cells and works like % insert references
+%have focussed on novel search space exploration heuristics. However the growing circuit complexity has necessitated the need for  robust heuristics which can both handle placement-aware, routing-aware solutions and the need for faster turn around times has necessitated the need for faster solutions. This is highlighted by the ISPD2012 contest which had weightage for runtime constraints. This has motivated researchers to develop runtime aware heuristics. %insert references 
+%have adopted a multi-threaded approach to reduce the run-time overheads. 
+%Initial analytical methods focussed on posing the leakage optimization problem as a continous sizing problem. However the degradation in solution qualty incurred due to converting the final solution into a discrete value led researchers to pose the leakage optimization problem as a discrete sizing problem. Recent works like %insert references here
+%have focussed on modelling the leakage opitmization problem as a  lagrangian relaxation problem. %insert refeerences 
+%have also used multi threading to speed up the optimization process.
+
+%Initial Static Timing Analysis (STA) engines always processed an entire design, 
+%which is impractically expensive for evaluating every $V_t$ 
+%replacement~\cite{papa:10}. It is to be noted that replacing $V_t$ of a 
+%gate $g_i$, changes the arrival times of gates only in the fan-in and 
+%fan-out cones of $g_i$, while the arrival times of other gates remain unaffected. By performing STA for the entire design, we may end up computing known values repeatedly. 
+%To improve the efficiency of the STA engine, several {\em incremental} STA techniques 
+%have been proposed in the past~\cite{lee:95,abato:96,sapatnekar:96,mondal:04,das:06,papa:08}.
+%In~\cite{lee:95}, {\em incremental} STA is performed by solving 
+%the {\em incremental longest path problem}, with a novel algorithm which is linear in 
+%the number of edges in the {\em dominance fan-out cone}. In~\cite{abato:96}, the leftmost 
+%and rightmost frontiers of change in relative timing values are %recorded.
+%Based on a request, incremental timing analysis is performed on the modified design
+%employing the recorded frontiers of change to limit the timing analysis to 
+%the {\em affected} regions of the circuit alone. An input based path sensitization approach 
+%was used for incremental STA in~\cite{sapatnekar:96}.
+%On a similar note, in~\cite{coudert:97}, the incremental timer is accelerated by only updating a 
+%neighborhood set of gates. 
+%In~\cite{mondal:04}, timing queries were modeled using temporal logic and an efficient 
+%algorithm was proposed to answer those queries. Similarly, in~\cite{das:06}, a more 
+%efficient incremental STA algorithm which exploits the circuit structure was proposed. 
+%In all these works, path based algorithms were proposed to 
+%increase the performance of incremental STA, but none of them except~\cite{abato:96} looked 
+%at reducing the number of times the incremental STA needs to be performed. 
+%Even in~\cite{abato:96}, although incremental STA is not performed in every iteration, 
+%nonetheless some computation is performed in every iteration relating to the signal propagation. 
+%As a result, the running time complexity does not decrease significantly. 
+%For e.g., in~\cite{hu:12}, in spite of using a state-of-art incremental timer, the optimization 
+%took $>20$ hours. It can be seen from the above works that the STA engines reported so far consume a significant time. The number of times the STA needs to be performed (timing updates) grows linearly with the size of the circuit. Reducing the number of times such updates are performed results in a reduction in the overall running time of the algorithm. This observation forms the central theme of this paper.
+
+%~\cite{hu:12} ~\cite{mustafa:11} ~\cite{chinnery:05} ~\cite{li:93} ~\cite{dennard:74} ~\cite{borkar:99} ~\cite{baauw:03} ~\cite{hu:09} ~\cite{davoodi:08} ~\cite{boyd:08} ~\cite{flach:14} ~\cite{parhi:99} ~\cite{papa:10} ~\cite{lee:95} ~\cite{sapatnekar:96} ~\cite{papa:08} ~\cite{hu:10}
+%~\cite{coudert:97} ~\cite{kahng:16} ~\cite{ketkar:00} ~\cite{Han:2014} ~\cite{Kahng:13} ~\cite{kang:13} ~\cite{chu:15} ~\cite{sharma:15} ~\cite{6513816} ~\cite{reimann:2016} ~\cite{li:2012} ~\cite{Davoodi}
+
+
+%include ISPD 2012, 2013 opentimer references.

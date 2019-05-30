@@ -1,0 +1,48 @@
+\section{Related Work}
+\label{sec:related}
+% \todo[inline]{
+% Organize related work as follows:
+
+% Side-channel countermeasures can be applied at either the algorithm level, system level, or device level.
+
+% Algorithm level countermeasures include masking, threshold implementations, rekeying.
+
+% System level countermeasures include all the power noise aspects.
+
+% Ours is most close to 
+% Device level include WDDL, SABL, etc.
+% }
+%\subsection{Related Work:}
+Side-channel attack countermeasures can be categorized as algorithmic, physical, or system-level. Algorithmic countermeasures insert additional operations that mask~\cite{akkar:2001} or split~\cite{Bilgin:2014} the sensitive computation. System-level countermeasures, such as~\cite{Wang:2013,tokunaga:2009,singh:2015,mathew:2018}, use the device's power supply to  normalize or randomize the overall power consumption. Physical countermeasures like ~\cite{Kim2017,Tiri:2004} use custom gates that consume power independent of the gate's switching. While  algorithmic and system-level countermeasures require additional circuitry, {physical countermeasures} use custom logic design methodologies to tackle the leakage. {\sf Karna} on the other hand requires no additional circuitry nor custom logic therefore has much lower overheads.  
+{\sf Karna} in principle, is similar to ~\cite{Tiri:2004}, where side-channel resistant gates are realized by combining multiple standard cell gates. However, the size of each compound gate is considerably larger, resulting in a 4$\times$ increase in area. {\sf Karna} on the other hand, simply reconfigures gates in the design. Thus the area is not affected. Gate reconfigurations during the EDA flow have been used in the past to ensure low-power design~\cite{hu:12,flach:2014} and high-performance~\cite{ozdal:2012}. To the best of our knowledge, {\sf Karna} is the first to use gate reconfiguration to address side-channel leakage.
+
+%The EDA flow is responsible for translating the design specified in a high level language like Verilog into actual hardware. Gate sizing algorithms attempt to select the best possible configuration of the gate such that the objectives at the corresponding stage are achieved. Works like~\cite{hu:12, ozdal:2012,reimann:13,li:2012,flach:2014} propose a sizing algorithm that focuses on varying the threshold voltage $V_t$ and the size of the gate in order to reduce the power consumption of the design.  While~\cite{hu:12,reimann:13} use heuristics like simulated annealing to reconfigure the gates, \cite{ozdal:2012,li:2012,flach:2014} use analytical techniques to solve the problem. However, none of the prior works attempt to leverage the EDA flow in order to counter the power side-channel. To the best of our knowledge ours is the first work try and use the gate sizing techniques to mitigate power side-channels.
+%\vspace{-3pt}
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+{\sf Karna} demonstrates that side-channel security of a device can be improved by reconfiguring the vulnerable gates in the design. This allows security constraints to be elegantly integrated into any EDA flow permitting designers to achieve design security with minimal overheads. {\sf Karna} works on a post placed netlist and is tested successfully on three popular cipher implementations and meets the desired security level (4.5) with minimal impact on area,power and delay. Our current results show drastic increase in EDA design time, mainly due to power trace collection needed for TVLA computation. In the future we plan to optimize this step by parallelization and with better side-channel metrics. Another direction of work is to evaluate {\sf Karna} to address other side-channel attacks like fault injection and timing. 
+
+
+%In our proposed flow, we investigate the impact of various design optimizations on the security of the device using the metric proposed in~\cite{becker:2013}. We identify potential regions in the netlist that are vulnerable and use a gate sizing scheme to reconfigure the $V_{dd}$, $V_t$ and $size$ values in the netlist such that the overall t-score of the netlist falls under the prescribed limits. 
+
+
+
+% \begin{itemize}
+% \item \textbf{Prior Survey}: \cite{Yang2017}:Hardware Designs for Security in Ultra-Low-Power IoT Systems: An Overview and Survey; \cite{Duarte2009}: A note on the security of M ST 3; \cite{Diehl2018}: Comparing the cost of protecting selected lightweight block ciphers against differential power analysis in low-cost FPGAs; 
+
+% \item \textbf{Attacks}: \cite{Moradi2014}:Side channel attack using static power;\cite{Alioto2010}: Leakage Power attacks; \cite{Wei2018}: I Know What You See: Power Side-Channel Attack on Convolutional Neural Network Accelerators
+% \cite{Singh2017}: Improved power side channel attack resistance of a 128-bit AES engine with random fast voltage dithering.
+% \item \textbf{Analysis on SideChannel Attacks}: \cite{Moos}:Static Power Side-Channel Analysis of a Threshold Implementation Prototype Chip;  \cite{Reparaz2017}: Dude, is my code constant time?; \cite{Goodwill2011}: A Testing Methodology for Side-Channel Resistance Validation;  \cite{Roy2015}:From theory to practice of private circuit: A cautionary note (This paper talks about leakage detection tests, more of an analysis than a metric, could be a section after discussing attacks); \cite{Moosa}: Glitch-Resistant Masking Revisited or Why Proofs in the Robust Probing Model are Needed; \cite{Zoni2018}: A Comprehensive Side-Channel Information Leakage Analysis of an In-Order RISC CPU Microarchitecture; \cite{Brier2004}: Correlation Power Analysis with a Leakage Model; \cite{Bache2018}: Confident Leakage Assessment -A Side-Channel Evaluation Framework based on Confidence Intervals
+
+% \item \textbf{Metric}: \cite{Veyrat-charvillon2013}: Certify leakage of a chip; \cite{Schneider2016}:Leakage assessment methodology; \cite{Federal2017}: A Platform to Evaluate the Fault Sensitivity of Superscalar Processors; \cite{Standaert2017}: How (not) to Use Welch's T-test in Side-Channel Security Evaluations; \cite{Corre}: Micro-Architectural Power Simulator for Leakage Assessment of Cryptographic Software on ARM Cortex-M3 Processors
+% \cite{Mather}: Does My Device Leak Information? An a priori Statistical Power Analysis of Leakage Detection Tests; \cite{Zhang}: Towards Sound and Optimal Leakage Detection Procedure; \cite{Reparaz}:Fast Leakage Assessment; \cite{Sadhukhan2017}: An Evaluation of Lightweight Block Ciphers for Resource-Constrained Applications: Area, Performance, and Security; \cite{Barenghi2018}: Side-channel security of superscalar CPUs Evaluating the Impact of Micro-architectural Features;
+
+% \item \textbf{Model Using some metric to avoid attacks}: \cite{Leiserson2014}: Gate-Level Masking under a Path-Based Leakage Metric; 
+
+% \item \textbf{Models to provide security against attacks}: \cite{DeCnudde2016}: Masking AES with $d + 1$ shares in hardware; \cite{Ghoshal2017}: Several masked implementations of the boyar-peralta AES S-Box; \cite{DeCnudde2017}: Securing the PRESENT Block Cipher Against Combined Side-Channel Analysis and Fault Attacks; \cite{Kar2018}: Reducing Power Side-Channel Information Leakage of AES Engines Using Fully Integrated Inductive Voltage Regulator; \cite{Wegener}: A First-Order SCA Resistant AES without Fresh Randomness; \cite{DeCnudde2017}: Securing the PRESENT Block Cipher Against Combined Side-Channel Analysis and Fault Attacks; \cite{Seuschek2017}: Side-channel leakage aware instruction scheduling;  \cite{Kim2017}: STBC: Side Channel Attack Tolerant Balanced Circuit with Reduced Propagation Delay; \cite{Patranabis2016}: Shuffling across rounds: A lightweight strategy to counter side-channel attacks ; \cite{Judd2016}: Proteus; \cite{Gross2018}: Generic Low-Latency Masking in Hardware;\cite{Ghoshal2018}: Lightweight and Side-channel Secure 4 × 4 S-Boxes from 
+% Cellular Automata Rules; \cite{Agosta2015}:The MEET Approach: Securing Cryptographic Embedded Software Against Side Channel Attacks; 
+
+% \item \textbf{Miscellaneous}: \cite{Levi2017}CPA Secured Data-Dependent Delay- Assignment Methodology;  \cite{Profile2014}: Optimum Leakage Recovery using Synopsys Primetime ECO Leakage Recovery Flow; \cite{Gross2018a}: Generic Low-Latency Masking in Hardware; \cite{Gierlichs2008}: Mutual Information Analysis; \cite{Peng2018}: Framework for efficient SCA resistance verification of IoT devices
+
+% \end{itemize}
+

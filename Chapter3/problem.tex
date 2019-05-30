@@ -1,0 +1,45 @@
+\section{Problem}
+
+\label{sec:problem}
+
+\noindent Consider a circuit $C$ formed using  $N$ gates. Let each of the gate be realizable using $m$ choices made available in the foundry provided standard cell library.\\
+Let $p_{i}$ denote the power of the $i^{th}$ cell in the netlist.\\
+Let $d_{i}$ denote the delay of the $i^{th}$ cell in the netlist.\\
+Let $A_{i}$ denote the input arrival time at the $i^{th}$ cell in the netlist.\\
+
+
+
+
+
+%Let each of the gate $g_i$ be realizable using several choices of $V_t$ made available in the foundry provided standard-cell library.
+ Let $x_{i}^{j}$ denote a discrete variable defined as follows:\\
+  \begin{equation}
+   {x_{i}^{j}} =
+   \left\{
+           \begin{array}{lllll}
+                  1, \ {\bf if}\ i^{th} gate\  in\ the\ given\ circuit\ is\ realized\\
+                  \  \  \ \ with\ j^{th}\ choice\ of\ cell\ in\ the\ standard\ cell\  library\\
+                  0, \ {\bf otherwise}\\
+          \end{array}
+  \right.
+  \end{equation}
+ 
+ 
+ 
+%
+The optimization problem is to find $x_{i}^{j}$ for lowest leakage power, without violating the critical path timing. Let $fanin(i)$ be the set of all gates driving the $i^{th}$ gate.\\
+$PO(C)$ and $PI(C)$ denote the set of  primary outputs and  primary inputs respectively of the given circuit $C$; and, $T$ denote the timing budget assigned to $C$.\\
+The leakage minimization problem for C can be formally stated as follows:
+\begin{equation}\label{opt_eqn_1} {\Large{\underset{}{\operatorname{Minimize}}\sum_{i=1}^{N_{gate}} \sum_{j=1}^{m} x_{i}^{j} p_{i}}}  \end{equation}
+\indent \indent \indent \indent \indent such that
+\begin{equation}\label{opt_eqn_2} \sum_{j=1}^{m} x_{i}^{j} = 1, \forall i, 1 \leq i \leq N\end{equation}
+%\begin{equation}\label{opt_eqn_3}  x_{g_{i,j}} \in \{0,1\}, \forall i, 1 \leq i \leq N_{gate}; \forall j, 1 \leq j \leq m \end{equation}
+\begin{equation}\label{opt_eqn_4} A(i) + \sum_{j=1}^{m} d_{i} x_{i}^{j} \le A(k), \forall k \in fanin(i)\end{equation}
+\begin{equation}\label{opt_eqn_5} A(O) \le T, \forall O \in PO(C) \end{equation}
+\begin{equation}\label{opt_eqn_6} A(I) \ge 0, \forall I \in PI(C)\end{equation}\\
+
+
+
+\noindent In the above equations~\ref{opt_eqn_5} and \ref{opt_eqn_6}, $A(O)$ and $A(I)$ denote the arrival-times at primary output wires and primary input wires of C respectively. Equation~\ref{opt_eqn_1} presents the objective function that minimizes the leakage power of the given circuit.
+Equation~\ref{opt_eqn_2} ensures that exactly one version of gate $i$ is used among its available $m$ choices.
+Equations~\ref{opt_eqn_4}, \ref{opt_eqn_5} and \ref{opt_eqn_6} ensure that the arrival-time constraints are met for all the gates, primary inputs and primary outputs of C respectively. In the next section, we give a detailed account of the related work on the leakage power minimization problem.

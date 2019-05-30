@@ -1,0 +1,91 @@
+\section{Background}
+\label{sec:background}
+In this section we first describe the metric we use to quantify side-channel leakage. We then give an overview of the power consumption of a gate and a typical EDA flow.
+
+{\flushleft \bf Leakage Assessment:}
+We use the TVLA metric as a tool to estimate side-channel leakage in {\sf Karna}. TVLA computation involves collecting two sets of power traces; one  with a fixed input and another with random inputs~\cite{becker:2013}. The statistical distance between the distributions of these two sets provides an indication of the leakage. The TVLA metric uses the Welsh t-score to compute this distance. A large magnitude of the TVLA score indicates significant side-channel leakage compared to a small magnitude of TVLA. While the prior works perform TVLA on a manufactured design, our proposed scheme integrates the TVLA methodology during the EDA flow. This enables us to perform a "white-box analysis" of the design. A device is said to pass the TVLA test if the TVLA score is less than 4.5. 
+
+
+
+%we divide the floorplan into a $N\times N$ grid and compute the t-score for each grid. We then analyze the t-score for each grid and declare the design to be safe iff the t-scores for all the grids have an absolute value of $< 4.5$. We perform specific optimizations for the gates in the grids whose t-score is greater than 4.5.
+
+
+ %However, this choice is made without taking into account the impact on the security of the design. 
+%available particular configuration , at his disposal, a wide variety of configurations for the same gate. The designer chooses a particular configuration in order to meet one or more of area, performance and power requirements. The various choices for a particular gate are typically obtained by varying one of the gate parameters namely $V_t$, $V_{dd}$, load capacitance and the size of the gate. We list the impact of each parameter on the gate's power and delay consumption in Table~\ref{tab1}.
+
+
+
+
+{\flushleft \bf Power Consumption of a Gate.} The  power consumption of a gate is the sum of its dynamic power $P_{dynamic}$ and static power $P_{static}$ consumption. These components are given by the following equations:
+\begin{equation*}
+P_{dynamic} = \alpha C_{load} V_{dd}^{2} F 
+\hspace{15pt}
+P_{static} =  V_{dd}\bigg( k e^{-q\frac{V_{t}}{ak_{a}T}}\bigg)\enspace. 
+\end{equation*}
+
+The dynamic power consumption of the gate is dependent on the activity factor $\alpha$, the supply voltage $V_{dd}$, the load capacitance $C_{load}$, and the operating frequency $F$. The static power consumption of the gate is dependent on the threshold voltage $V_{t}$, temperature $T$ and constants $k,q$, and $k_{a}$. The operating frequency $F$ is a parameter specified by the user in the EDA flow as a constraint, while $T$, $k,q$, and $k_{a}$ are constants. These parameters cannot be modified by the tool. On the contrary, the tool can modify $V_{dd}$, $V_{t}$, $C_{load}$, and gate size which will have an impact on the area, power, and delay of a design. 
+
+
+%Modifying the other parameters will have an impact on the overall power consumption of the gate and consequently its impact on the side-channel leakage. In {\sf Karna}, for each gate we select a $V_{dd}$, $V_t$ and size value such that the TVLA is within a specified threshold. We perform this optimization while ensuring that the other design constraints like power, area and delay are not violated. \\
+
+
+
+
+{\flushleft \bf Electronic Design Automation (EDA) Flow.}
+A typical EDA flow consists of several stages as seen in Figure~\ref{fig:vlsiflow}. Each stage has a specific objective to optimize one or more of the delay, power or area of the design. The modules at each stage rely on timing and power models of the gates to achieve their objective. %This choice can affect the  area, delay, and power of the design. 
+Current EDA flows, however, do not account for the impact of these optimizations on the security of the design. 
+
+
+ In a typical EDA flow, the tool chooses a configuration for each gate from several choices that are made available by the foundry in the standard cell library. The choice is made such that the selected gate configurations meet the design requirements of area, power, and delay. Each gate configuration can be obtained by varying one or more of the supply voltage $V_{dd}$, threshold voltage $V_{t}$ and the gate $size$. For example, each gate in our 28nm standard cell library has 90 choices. Each choice can be represented using the tuple ($V_{dd}$,$V_{t}$,$size$). There are 3 choices for $V_{dd}$, 3 for $V_{t}$, and 10 choices for the $size$. Modifying one or more of these parameters may have an impact on the overall delay, power and area of the design.
+
+To select a gate configuration, the EDA tool uses several metrics such as slack and ratio of change in power to change in delay~\cite{hu:12}. In our work, we use {\em slack}, which is defined as the difference in the required arrival time of a signal and the actual arrival time of the signal at the output of a gate. A positive slack implies that the gate has room for optimization while a negative slack implies that the timing constraint at the particular gate is violated. 
+
+%based on the constraints specified by the designer. This choice can affect the  area, delay, and power of the design. 
+
+
+
+
+
+
+
+
+
+%For example, countermeasures such as masking is incorporated in the stage 1, the high-level description stage, while gate level schemes on the other hand is incorporated in stage 2, the gate level synthesis level. Incorporating security at these stages might cause the design to incur delay and area overheads leading to the design not meeting the required area and timing constraints in the subsequent stages. Further, incorporating security in the early stages may get undone by subsequent stages. In this work, we therefore choose to introduce the {\sf Karna} module after the design is placed. At this stage, a realistic estimation of the interconnect delay and power density is known. Thus, in this stage, we can accurately gauge the impact of the proposed security based modifications on the area, delay, and performance of the device. 
+
+
+
+
+%A typical EDA flow consists of several stages as shown in Figure~\ref{fig:vlsiflow}. Each stage in the flow has a specific objective -- optimize one or more of the delay, power or area. The modules at each stage rely on timing and power models of the gates to estimate the impact of the optimizations. %An EDA flow, which is security aware,  can address this objective in multiple stages. This choice can affect the other design constraints such as area, performance, and power. For example, countermeasures such as masking is incorporated in the stage 1, the high-level description stage, while gate level schemes on the other hand is incorporated in stage 2, the gate level synthesis level. Incorporating security at these stages might cause the design to incur delay and area overheads leading to the design not meeting the required area and timing constraints in the subsequent stages.
+
+
+
+
+%mention impact of V_t, size and V_dd.
+%mention how designer has freedom but that again becomes disadvantageous.
+
+
+%bring out delay area and security (TVLA).
+
+%use graph. have 3 graphs 
+
+% \begin{table*} %add area numbers to reinforce size.
+% \centering
+% \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+% %\toprule
+% %\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+% \hline
+% $V_t/ size$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\ \hline
+% %\midrule
+% $HV_t (V_t=2)$ & 1 & 2 & 3 & 4 & 6 & 8 & 16 & 32 & 64 & 128 \\ \hline
+% $RV_t (V_t=1)$ & 4 & 8 & 12 & 16 & 24 & 32 & 64 & 128 & 256 & 512 \\ \hline
+% $LV_t (V_t=0)$ & 16 & 32 & 48 & 64 & 96 & 128 & 256 & 512 & 1024 & 2048 \\ \hline
+% %\bottomrule
+
+
+% \end{tabular}
+% \caption{Table showing the variation of leakage power with $V_t$ and $size$ for an inverter.}
+% \label{tab1}
+% \end{table*}
+
+
+

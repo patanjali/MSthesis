@@ -1,3 +1,98 @@
+\section{Introduction}
+\label{sec:introduction}
+
+\noindent Dennard's law~\cite{dennard:74} states that the power density would remain constant with technology scaling even with the increase in MOS-device density.  With modern deep nanometer devices, optimization of power consumption has become more complex than optimization for delay or area. This is primarily due to the dominance of leakage power in the sub-100$n$$m$ technology. Techniques like supply voltage scaling and threshold voltage scaling have been used in past to reduce dynamic power consumption while maintaining/improving timing of critical path. However, in sub-100$n$$m$ regime, the exponential increase in sub-threshold leakage due to  threshold voltage scaling has caused leakage power to dominate in microprocessors~\cite{borkar:99,kim:03}. It is also to be noted that leakage power dissipation during idle state does not contribute to any useful computation. In addition, excessive leakage power dissipation can also cause power wastage leading to a  potential {\em thermal runaway}\cite{virat}. This has led to an extensive research on leakage power optimizations at different levels of the VLSI design flow under aggressive timing constraints. 
+
+\noindent Gate-sizing and threshold voltage ($V_t$)-sizing are two efficient techniques that are employed at the design stage for reduction of leakage power under timing constraints. In particular, gate-sizing has been very effective in the early and middle stages of the physical synthesis flow.
+% * <sristisravan@gmail.com> 2017-06-28T07:45:15.739Z:
+% 
+% Cite some papers for these statements
+% 
+% ^.
+However, in the post-route stage, gate sizing often necessitates 
+incremental placement, which can result in increase of turn-around-time of chip production~\cite{feng:09}. On the other hand, $V_t$ sizing provides enough room for significant optimization in power/timing without any effect on placement. Though, increasing the threshold voltage for a gate (say $g$) by  $V_t$ sizing can result in reducing the leakage power, it can significantly increase the delay. Hence, either gate-sizing or $V_t$ sizing or a mix of both is used to make the optimal choice of each gate depending on the design stage that the chip is present\cite{virat}.
+
+\noindent A standard cell library consists of different versions of the same cell, one for each threshold voltage. However, the number of versions for a given cell is finite and it is limited to the discrete values of the threshold voltages specified by the foundry. Thus, it is imperative to identify cells from the standard cell library that have appropriate gate-size/$V_t$ within the set of available values to minimize the overall leakage power of the circuit without violating the timing constraints.
+This optimization problem is called the {\em Timing Constrained Discrete Sizing Problem} (TC-DSP). In this paper, we focus on the TC-DSP for leakage power minimization in digital circuits. 
+
+\noindent In addition to the sizing problem, the rapidly shrinking fabrication technology has resulted in an increase in the design optimization effort due to various factors such as multiple process, voltage and temperature corners. This in turn has resulted in an increase in the design effort (design productivity) of chips to match the estimated parameter values at the design phase to what is desirable in the  post fabrication phase. Fast convergence to high quality solutions is thereby required so as to increase design productivity and meet the consumer demand. Practically, the problem of increasing design productivity becomes important during the optimization phase of the VLSI design; as the execution time of this phase spans over hours to days. %For example, reducing optimization time for a given parameter from 2 minutes to 1 second gives more than 2 orders of magnitude speed-up. But from a practical point of view, this reduction is not valuable as the actual reduction is only 119 seconds, which is comparatively very small in the overall design time, that spans several days or months. On the other hand, reducing optimization time from 5 days to 1 hour also gives a $2 \times$ speed-up as explained in the previous case. But in this case, the actual reduction in running time is 4 days and 23 hours, which can significantly improve the design productivity. 
+% * <sristisravan@gmail.com> 2017-06-28T07:43:33.360Z:
+% 
+% 119 seconds
+% 
+% ^ <slpskp@cse.iitm.ac.in> 2017-06-28T14:34:53.507Z.
+
+\indent ITRS 2011 \cite{itrs:2011} highlights the intensity of research carried out on low power design technology improvements. However, the designers are not able to effectively leverage all the optimization choices due to runtime constraints. For example, consider a design with three cells and a standard cell library with three $V_t$ and ten gate-size choices. If we just consider $V_t$ scaling for power optimization, the search space is $3^3$. Further, if the designer uses gate-sizing, the search space increases to $3^{10}$. Finally, if a mixed sizing technique is employed, the search space increases to $3^{30}$. Thus we can see that, design productivity heavily suffers due to a large exploration space available at each phase of optimization. The authors in  \cite{kahngtalk} list the following three hypothetical steps to improve design productivity without compromising power goals namely:  \begin{itemize}
+    \item  \textbf{Optimized back-end:} mixed height library floorplan/placement, ultimate place/route, power/clock distribution;
+    \item  \textbf{Modeling/sign-off criteria:} tightened Back End Of Line (BEOL) corners, reduced guardband and Adaptive Voltage Scaling (AVS) aware sign-off; and,
+    \item  \textbf{Bespoke,design-specific-flow:} predictive one-pass flow, optimal tool usage.
+ \end{itemize} 
+ Consider the following pseudocode which represents the template for any iterative greedy gate-sizing optimization algorithm as seen in \cite{hu:12},\cite{hu:13},\cite{mok:12}, and \cite{reiman:13}. The algorithm takes as inputs: the Netlist $C$; containing $N$ gates, that needs to be optimized, a multi-$V_t$ standard cell library, the target frequency $F$ and a function $\alpha(C)$. The function $\alpha(C)$ takes as inputs the circuit C, the timing values for each logic element got by performing a Static Timing Analysis (STA), and other foundry specific parameters for the different logic elements in C, to compute a cost for every gate in C.
+\begin{algorithm}
+%\algsetup{linenosize=\tiny}
+\scriptsize
+\LinesNumbered
+\title{Greedy Leakage optimization algorithm}
+\caption{The template for an iterative greedy leakage optimization algorithm }
+\label{alg:naive}
+    \KwIn{1) Netlist of the given circuit $C$ containing $N$ gates represented as a Directed Acyclic Graph (DAG). 2) Target frequency $F$. 3) A multi-$V_t$ standard cell library containing multiple cells with different threshold voltages and sizes for every gate; and, 4) Cost function $\alpha(C)$ that computes a cost for every gate in $C$.}
+    \KwOut{A leakage optimized netlist running at the target frequency $F$.}
+ $N \leftarrow gate\ count$\; 
+
+    \textit{Initial Configuration:} Assign to each of the $N$ gates a cell from the standard cell library matching its functionality. The $V_t$ and $size$ of each gate shall vary with different methods employing this template\;
+Set iteration count to $1$\;
+    Run Static Timing Analysis (STA) and compute $\alpha(C)$\; 
+    A $\leftarrow$ list of gates sorted in decreasing order according to cost computed by $\alpha(C)$\;
+   
+    \While{A not empty } {
+        \textit{Gate replacement:} Consider the first element of A (the gate g with the largest cost) and replace it with its unexplored slower choices (increase $V_t$ or decrease the $size$) so as to reduce the leakage power. Mark the choice as explored for gate g\;
+        Estimate the new power and the new delay of the circuit $C$ by performing STA\;
+        \If{delay violated} { 
+        \textit{Backtrack procedure:} 
+            Undo the gate replacement and delete it from A\;
+        }
+        \Else {
+            Increment iteration count\;
+            Compute $\alpha(C)$\;
+	    If all the choices for gate g, available in the standard cell library, have been explored delete it from A\;
+        }
+        Sort the gates in A according to decreasing order of cost computed by $\alpha(C)$\;
+    }
+\end{algorithm}
+
+\noindent It can be observed that the convergence of the above algorithm crucially depends on the initial configuration, the cost function $\alpha(C)$ which is used to determine the candidate gate for replacement and the number of STA calls.  Our proposed leakage optimization technique (\textit{MLTimer}) aims at resolving these bottlenecks. The main contributions of this work are as follows:
+\begin{itemize} %check if ieee uses itemize or enumerate??
+\item It has been empirically observed that there exists significant correlation between the timing slacks of gates in the current iteration to the gate replacements in the successive iterations. The outcome of this replacement is the fast convergence of the leakage optimization algorithm in lesser number of iterations;
+     \item  It can also be seen that a smart one-pass tool that can leverage the right optimization technique at the appropriate stage of the flow can improve design productivity significantly. A novel Support Vector Machine (SVM) based classifier, which provides a good initial design configuration is used to generate a leakage optimal design at the end;
+     \item The \textit{MLTimer} algorithm, which leverages the high iterative correlation between timing slacks in the current iteration and the gate replacements in the successive iterations, thereby enabling  {\em lazy timing analysis} to significantly improve the runtime; and, 
+\item An {\em Adaptive Window sizing (AWS) scheme for decision making} to perform {\em multiple  replacements} between successive timing updates.
+
+%\item A lazy adaptive heuristic,  that uses the solution provided by the learning algorithm to provide a leakage optimized solution while meeting the delay constraints.
+%\item To the best of our knowledge, this is the first work to use learning to solve the leakage optimization problem.
+%\item The solutions produced by our algorithm {\em Learntimer} are at least {\em an order of magnitude} faster while retaining the same solution quality as that of iterative greedy heuristics.
+%\item We demonstrate the efficiency of our algorithm on the ISPD2012 benchmarks.
+\end{itemize}
+To the best of our knowledge, this is the first work that employs ML technique to solve the well known leakage optimization problem. We demonstrate the efficiency of our algorithm on both the ISPD2012 benchmarks and a homegrown RISC-V (SHAKTIC) processor that runs linux~\cite{riscv}. 
+
+
+% \begin{figure*}[!ht]
+%  \begin{center}
+%  \includegraphics[scale=0.45]{fig/predict}
+% \captionsetup{singlelinecheck=off}
+% \caption [The figure shows the impact of the three hypothetical design steps on solution quality and design time. The proposed steps are Optimized back-end: $(mixed height library floorplan/placement, ultimate place/route, power/clock distribution)$ Modeling/sign-off criteria $(tightened BEOL corners, reduced guardband and AVS aware sign-off)$.\#1: Bespoke,design-specific-flow $(predictive one-pass flow, optimal tool usage)$ ]{The figure shows the impact of the three hypothetical design steps on solution quality (QoR) and design time. The proposed steps are 
+
+%  \label{fig:kahng}
+%  \end{center}
+% \end{figure*}
+ 
+The rest of the manuscript is organized as follows: Section~\ref{sec:background}  presents the problem along with the literature survey. Section \ref{sec:motivation} describes the need for a learning based leakage optimization technique. Section~\ref{sec:proposed} describes our proposed algorithm while the experimental setup is highlighted in Section~\ref{sec:experiment}. The results are presented in ~\ref{sec:results}. Section~\ref{sec:conclusion} concludes the paper.
+% * <sristisravan@gmail.com> 2017-06-28T07:46:32.613Z:
+% 
+% What does STA mean?
+% 
+% ^.
+
+
 In this chapter, we look at a novel variant of the UCB algorithm (referred to as Efficient-UCB-Variance (EUCBV)) for minimizing cumulative regret in the stochastic multi-armed bandit (SMAB) setting. EUCBV incorporates the arm elimination strategy proposed in UCB-Improved \citep{auer2010ucb} while taking into account the variance estimates to compute the arms' confidence bounds, similar to UCBV \citep{audibert2009exploration}. Through a theoretical analysis we establish that EUCBV incurs a \emph{gap-dependent} regret bound of {$O\left( \dfrac{K\sigma^2_{\max} \log (T\Delta^2 /K)}{\Delta}\right)$} after $T$ trials, where $\Delta$ is the minimal gap between optimal and sub-optimal arms; the above bound is an improvement over that of existing state-of-the-art UCB algorithms (such as UCB1, UCB-Improved, UCBV,  MOSS). Further, EUCBV incurs a \emph{gap-independent} regret bound of {$O\left(\sqrt{KT}\right)$}  which is an improvement over that of UCB1, UCBV and UCB-Improved, while being comparable with that of MOSS and OCUCB. Through an extensive numerical study, we show that EUCBV significantly outperforms the popular UCB variants (like MOSS, OCUCB, etc.) as well as Thompson sampling and Bayes-UCB algorithms. 
 
     The rest of the chapter is organized as follows. We elaborate our contributions in Section~\ref{sec:contri} and in Section~\ref{sec:eucbv} we present the  EUCBV algorithm. Our main theoretical results are stated in Section~\ref{sec:results}, while the proofs are established in Section~\ref{sec:proofTheorem}. Section~\ref{sec:expt} contains results and discussions from our numerical experiments and finally we summarize in Section \ref{sec:conc}.

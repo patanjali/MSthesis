@@ -1,119 +1,468 @@
-The main result of this chapter is presented in the following theorem, where we establish a regret upper bound for the proposed EUCBV  algorithm. 
-% \subsection*{Main Theorem}
-
-\subsubsection{Gap-Dependent bound of EUCBV}
-
-\begin{theorem}[\textbf{\textit{Gap-Dependent Bound}}]
-\label{Result:Theorem:1}
-For $T\geq K^{2.4}$, $\rho=\frac{1}{2}$ and $\psi=\frac{T}{K^2}$, the regret $R_T$ for EUCBV satisfies
-\begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
-\end{align*}
-
-for all $b\geq\sqrt{\frac{e}{T}}$ and $C_0, C_2$ are integer constants. 
-\end{theorem}
-
-\begin{customproof}{}[Outline]
-The proof is along the lines of the technique in \citet{auer2010ucb}. It comprises of three modules. In the first module we prove the necessary conditions for arm elimination within a specified number of rounds. However, here we require some additional technical results (see Lemma~\ref{proofTheorem:Lemma:1} and Lemma~\ref{proofTheorem:Lemma:2}) to bound the length of the confidence intervals. Further, note that our algorithm combines the variance-estimate based approach of \citet{audibert2009exploration} with the arm-elimination technique of \citet{auer2010ucb} (see Lemma~\ref{proofTheorem:Lemma:3}). Also, while \citet{auer2010ucb} uses Chernoff-Hoeffding bound (see \ref{app:chernoff}) to derive their regret bound whereas in our work we use  Bernstein inequality (as in \citet{audibert2009exploration}, see \ref{app:bernstein}) to obtain the bound. To bound the probability of the non-uniform arm selection before it gets eliminated we use Lemma~\ref{proofTheorem:Lemma:4} and Lemma~\ref{proofTheorem:Lemma:5}. In the second module we bound the number of pulls required if an arm is eliminated on or before a particular number of rounds. Note that the number of pulls allocated in a round $m$ for each arm is $n_{m}:=\bigg\lceil\frac{\log{(\psi T\epsilon_{m}^{2})}}{2\epsilon_{m}}\bigg\rceil$ which is much lower than the number of pulls of each arm required by UCB-Improved or Median-Elimination. We introduce the variance term in the most significant term in the bound by Lemma~\ref{proofTheorem:Lemma:6}. Finally, the third module deals with case of bounding the regret, given that a sub-optimal arm eliminates the optimal arm.
-% (see Lemma~\ref{proofTheorem:Lemma:9}). The detailed proof is available in Section \ref{sec:proofTheorem:Theorem1}.
-\hfill $\blacksquare$
-\end{customproof}
-
-\begin{discussion}
-\label{Result:discussion1}
-From the above result we see that the most significant term in the gap-dependent bound is of the order $O\left(\frac{K\sigma^2_{\max}\log{(T\Delta^{2}/K)}}{\Delta}\right)$ which is better than the existing results for UCB1, UCBV, MOSS and UCB-Improved (see Table~\ref{tab:comp-bds}). Also as like UCBV, this term scales with the variance. \citet{audibert2010best} have defined the term $H_1=\sum_{i=1}^{K}\frac{1}{\Delta_i^2}$, which is referred to as the hardness of a problem; \citet{bubeck2012regret} have conjectured that the gap-dependent regret upper bound can match $O\left(\frac{K\log{(T/H_1)}}{\Delta}\right)$. However, in  \citet{lattimore2015optimally} it is proved that the gap-dependent regret bound cannot be lower than $O\left(\sum_{i=2}^{K}\frac{\log\left(T/H_i\right)}{\Delta_i}\right)$, where $H_i=\sum_{j=1}^{K}\min\left\lbrace \frac{1}{\Delta_i^2},\frac{1}{\Delta_j^2}\right\rbrace$ (OCUCB proposed in \citet{lattimore2015optimally} achieves this bound). Further, in \citet{lattimore2015optimally} it is shown that only in the worst case scenario when all the gaps are equal (so that $H_1=H_{i}=\sum_{i=1}^{K}\frac{1}{\Delta^2}$) the above two bounds match. In the latter scenario, considering $\sigma^2_{\max}\leq \frac{1}{4}$ as all rewards are bounded in $[0,1]$, we see that the gap-dependent bound of EUCBV simplifies to $O\left(\frac{K\log{(T/H_1)}}{\Delta}\right)$, thus matching the gap-dependent bound of OCUCB which is order optimal.
-\end{discussion}
-
-
-\subsubsection{Gap-Independent bound of EUCBV}
-
-In this section, we specialize the result of Theorem \ref{Result:Theorem:1} in Corollary \ref{Result:Corollary:1} to  obtain the gap-independent worst case regret bound. %and Corollary \ref{Result:Corollary:2}.
-
-
-%\subsection*{Corollary 1}
-
-\begin{corollary}[\textbf{\textit{Gap-Independent Bound}}]
-\label{Result:Corollary:1}
-When the gaps of all the sub-optimal arms are identical, i.e., $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}, \forall i\in \A$ and $C_3$ being an integer constant, the
-regret of EUCBV is upper bounded by the following gap-independent expression:
-\begin{align*}
-	\E[R_{T}]\leq  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 80\sqrt{KT}.
-\end{align*}	
-\end{corollary}
-	
-%\begin{proof}
-%The proof is given in Appendix \ref{App:Corollary:1}.
-%\end{proof}
-
-\begin{customproof}{}
-\label{Proof:Corollary:1}
-From \cite{bubeck2011pure}  we know that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\frac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. Thus, we take $C=\left\lfloor \frac{T}{e}\right\rfloor$ and choose  $\Delta_{i}=\Delta=\sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ for all $i$.
-
-First, let us recall the result in Theorem \ref{Result:Theorem:1} below:
-\begin{align*}
-\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace \dfrac{C_0 K^{4}}{T^{\frac{1}{4}}} + \bigg(\Delta_{i}+\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2 K^{4}}{T^{\frac{1}{4}}} + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T.
-\end{align*}
-
-Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we obtain,
-	\begin{align*}
-	\sum_{i\in \A :\Delta_{i} > b}\dfrac{320\sigma_i^2\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} &\leq  \dfrac{320\sigma_{\max}^2 K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}}\\ 
-	&\leq  \dfrac{320\sigma_{\max}^2\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}\\
-	&\overset{(a)}{\leq} 320\sigma_{\max}^2\sqrt{KT} 
-	\end{align*}		
-	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. 	
-%For the term $\sum\limits_{i\in \A :\Delta_{i} > b}\dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ by substituting the value of $\Delta_i=\Delta=\sqrt{\dfrac{K\log K}{T}}$ we get,
-%\begin{align*}
-%\dfrac{C_0 K^{\frac{5}{2}+1}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_0 K^{\frac{5}{2}}}{\sqrt{T\sqrt{\dfrac{K\log K}{T}}}} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\leq \dfrac{C_0 K^{\frac{5}{2}+1}}{(KT\log K)^{\frac{1}{4}}} \leq \dfrac{C_0 K^3}{T^{\frac{1}{4}}}
-%\end{align*}	
-%	
-%Similarly for the term $\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}}$ we can show that,
-%\begin{align*}
-%\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} \dfrac{C_2^{'} K^{\frac{5}{2}}}{\sqrt{T\Delta_i}} &\leq \dfrac{C_2^{'} K^{\frac{5}{2}+1}}{\sqrt{T\sqrt{\dfrac{e}{T}}}} \leq \dfrac{C_2^{'} K^3}{T^{\frac{1}{4}}} 
-%\end{align*}
-Thus, the total worst case gap-independent bound is given by
-	\begin{align*}
-	\E[R_{T}] &\overset{(a)}{\leq}  \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 320\sigma_{\max}^2\sqrt{KT}
-	\overset{(b)}{\leq} \dfrac{C_3 K^5}{T^{\frac{1}{4}}} + 80\sqrt{KT}
-	\end{align*}	
-	
-where, in$(a)$, $C_3$ is an integer constant such that $C_3 = C_0 + C_2 $ and $(b)$ occurs because $\sigma_i^2 \in [0,\frac{1}{4}], \forall i\in \A$.
-
-\hfill $\blacksquare$	
-\end{customproof}
+\section{Results}
+\label{sec:results}
+% \begin{table}[!ht]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \begin{tabular}{|p{1.2cm}|l|l|l|l|l|l|}
+% \hline
+% \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Feature \\ Name\end{tabular}} & \multicolumn{2}{c}{Vt Classifier}                                       & \multicolumn{4}{|c|}{Size classifier}                                                                                                   \\ \cline{2-7} 
+%                                                                          & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{ 1} & \multicolumn{1}{c|}{ 2} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{4} \\ \hline
+% Sub-circuit                                                              & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% Gate Type                                                                & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% LNS                                                  & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% \#Fanins                                                                 & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% \#Fanouts                                                                & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% \begin{tabular}[c]{@{}l@{}}\#Negative \\ Slack Paths\end{tabular}                                          & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% Slack                                                                    & \multicolumn{1}{l|}{}        &                               &                               &                               &                              &                              \\ \hline
+% \end{tabular}
+% \end{table}
+% \begin{table*}[!ht]
+% \centering
+% \caption{result3}
+% \label{results3}
+% \begin{tabular}{|l|c|l|l|l|l|l|l|l|l|l|l|}
+% \hline
+% \multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}Benchmark \\  Name\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Number \\ Of gates\end{tabular} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Target \\ Delay\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Inital \\ Delay\end{tabular} & \multicolumn{2}{c|}{SVM}                                         & \multicolumn{2}{c|}{Final}                                      & \multicolumn{2}{c|}{Igor Markov}                               & \multicolumn{2}{c|}{Flach}                                     \\ \hline
+% \multicolumn{1}{|c|}{}                                                           &                                                            & \multicolumn{1}{c|}{}                                                        & \multicolumn{1}{c|}{}                                   & \multicolumn{1}{c|}{Delay (ns)} & \multicolumn{1}{c|}{Power (W)} & \multicolumn{1}{c|}{Delay (ns)} & \multicolumn{1}{c|}{Power(W)} & \multicolumn{1}{c|}{Delay(ns)} & \multicolumn{1}{c|}{Power(W)} & \multicolumn{1}{c|}{Delay(ns)} & \multicolumn{1}{c|}{Power(W)} \\ \hline
+% DMA\_fast                                                                        & 25.3K                                                      &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                0.299    &       &                               \\ \hline
+% DMA\_slow                                                                        & 25.3K                                                      &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                       0.145   &     &                               \\ \hline
+% pci\_fast                                                              & 33.2K                                                      &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                     0.183     &     &                               \\ \hline
+% pci\_slow                                                              & 33.2K                                                      &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                  0.111         &    &                               \\ \hline
+% des\_perf\_fast                                                                  & 111K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                         1.842   &   &                               \\ \hline
+% des\_perf\_slow                                                                  & 111K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                          0.614   &  &                               \\ \hline
+% vga\_lcd\_fast                                                                   & 165K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                            0.471  & &                               \\ \hline
+% vga\_lcd\_slow                                                                   & 165K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                            0.351  & &                               \\ \hline
+% b19\_fast                                                                        & 219K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                           0.771   & &                               \\ \hline
+% b19\_slow                                                                        & 219K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                             0.583 & &                               \\ \hline
+% leon3mp\_fast                                                                    & 649K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                             1.487 & &                               \\ \hline
+% leon3mp\_slow                                                                    & 649K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                            1.341  & &                               \\ \hline
+% netcard\_fast                                                                    & 959K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                            1.861  & &                               \\ \hline
+% netcard\_slow                                                                    & 959K                                                       &                                                                              &                                                         &                                 &                                &                                 &                               &                                &                                                           1.770  &  &                               \\ \hline
+% \end{tabular}
+% \end{table*}
 
 
-\begin{discussion}
-\label{Result:discussion2}
- In the non-stochastic scenario, \citet{auer2002nonstochastic} showed that the bound on the cumulative regret for EXP-4 is $O\left(\sqrt{KT\log K}\right)$. However, in the stochastic case, UCB1 proposed in \citet{auer2002finite} incurred a regret of order of  $O\left(\sqrt{KT\log T}\right)$ which is clearly improvable. From the above result we see that in the gap-independent bound of EUCBV the most significant term is $O\left(\sqrt{KT}\right)$ which  matches the upper bound of MOSS and OCUCB, and is better than UCB-Improved, UCB1 and UCBV (see Table~\ref{tab:comp-bds}).
-\end{discussion}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \begin{table}[]
+% \centering
+% \caption{My caption}
+% \label{my-label}
+% \begin{tabular}{|l|l|l|l|l|l|}
+% \hline
+% \multirow{3}{*}{Benchmark} & \multicolumn{5}{c|}{Runtime}                                                            \\ \cline{2-6} 
+%                            & \multirow{2}{*}{Igor Markov} & \multirow{2}{*}{Flach} & \multicolumn{3}{c|}{\textit{MLTimer}} \\ \cline{4-6} 
+%                            &                              &                        & SVM  & Delay Recovery  & Total  \\ \hline
+% DMA\_fast                  &                              &                        &      &                 &        \\ \hline
+% DMA\_slow                  &                              &                        &      &                 &        \\ \hline
+% pci\_fast        &                              &                        &      &                 &        \\ \hline
+% pci\_brdige32\_slow        &                              &                        &      &                 &        \\ \hline
+% vga\_lcd\_fast             &                              &                        &      &                 &        \\ \hline
+% vga\_lcd\_slow             &                              &                        &      &                 &        \\ \hline
+% des\_perf\_fast            &                              &                        &      &                 &        \\ \hline
+% des\_perf\_slow            &                              &                        &      &                 &        \\ \hline
+% b19\_fast                  &                              &                        &      &                 &        \\ \hline
+% b19\_slow                  &                              &                        &      &                 &        \\ \hline
+% leon3mp\_fast              &                              &                        &      &                 &        \\ \hline
+% leon3mp\_slow              &                              &                        &      &                 &        \\ \hline
+% netcard\_fast              &                              &                        &      &                 &        \\ \hline
+% netcard\_slow              &                              &                        &      &                 &        \\ \hline
+% \end{tabular}
+% \end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Shifted to Appendix
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\begin{proof}
-%\label{Proof:Corollary:1}
-%From \cite{bubeck2011pure}  we know that the function $x\in [0,1]\mapsto x\exp(-Cx^2)$ is  decreasing on $\left[\frac{1}{\sqrt{2C}},1\right ]$ for any $C>0$. Thus, we take $C=\left\lfloor \frac{T}{e}\right\rfloor$ and choose  $\Delta_{i}=\Delta=\sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ for all $i$.
-%
-%First, let us recall the result in Theorem \ref{Result:Theorem:1} below:
-%\begin{align*}
-%\E [R_{T}] \leq &\sum\limits_{i\in \A :\Delta_{i} > b}\bigg\lbrace 64 K + \bigg(\Delta_{i}+\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}}\bigg)\bigg \rbrace\\ 
-%  & +\sum\limits_{i\in \A :0 < \Delta_{i}\leq b} 32 K + \max_{i\in \A :0 < \Delta_{i}\leq b}\Delta_{i}T  
-%\end{align*}
-%
-%Now,  with  $\Delta_i =\Delta = \sqrt{\frac{K\log K}{T}}>\sqrt{\frac{e}{T}}$ we obtain,
-%	\begin{align*}
-%	&\sum_{i\in \A :\Delta_{i} > b}\dfrac{64\log{(\frac{T\Delta_{i}^{2}}{K})}}{\Delta_{i}} \leq  \dfrac{64K\sqrt{T}\log{(T\dfrac{K(\log K)}{T K})}}{\sqrt{K\log K}}\\ 
-%	&\leq  \dfrac{64\sqrt{KT}\log{(\log K)}}{\sqrt{\log K}}
-%	\overset{(a)}{\leq} 64\sqrt{KT} 
-%	\end{align*}		
-%	where $(a)$ follows from the identity $\dfrac{\log{(\log K)}}{\sqrt{\log K}}\leq 1$ for $K\geq 2$. Thus, the total worst case gap-independent bound is given by
-%	\begin{align*}
-%	\E[R_{T}]\leq 96 K^2 + 64\sqrt{KT}.
-%	\end{align*}	
-%\hfill $\blacksquare$	
-%\end{proof}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table*}[!t]
+\caption{Leakage power and Runtime comparisons between the baseline greedy algorithm and the \textit{MLTimer} algorithm on the ISPD 2012 benchmarks. Implementation 1 is the baseline implementation(non-SVM,non-adaptive timing analysis), Implementation 2 is with SVM and non-adaptive timing analysis, Implementation 3 is with non-SVM and adaptive timing analysis and Implementation 4 is with SVM and adaptive timing analysis. It can be seen that using just SVM improves the solution quality greatly, while using just the adaptive timing analysis improves the runtime. A combination of both improves the runtime and solution qualtiy.}
+\label{tab:tab5}
+
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multirow{2}{*}{Benchmarks} & \multirow{2}{*}{\#Gates} & \multicolumn{2}{l|}{Implementation 1}                                                                                                         & \multicolumn{2}{l|}{Implementation 2}                                                                                                           & \multicolumn{2}{l|}{Implementation 3}                                                                                                        & \multicolumn{2}{l|}{Implementation 4}                                                                                                        \\ \cline{3-10} 
+                            &                          & \begin{tabular}[c]{@{}l@{}}Run-\\ time \\ (mins)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Leakage \\ Power\\ (W)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Run-\\ time\\ (mins)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Leakage \\ Power\\ \\ (W)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Run-\\ time\\ (mins)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Leakage\\  Power\\ (W)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Run-\\ time\\ (mins)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Leakage \\ Power\\ (W)\end{tabular} \\ \hline
+DMA\_fast                   & 23,000                   & 16                                                            & 0.79                                                           & 14.00                                                        & 0.30                                                              & 14.00                                                        & 0.79                                                           & 13.00                                                        & 0.30                                                           \\ \hline
+pci\_bridge32\_fast         & 30,000                   & 37                                                            & 0.25                                                           & 17.00                                                        & 0.14                                                              & 17.00                                                        & 0.24                                                           & 17.00                                                        & 0.14                                                           \\ \hline
+des\_perf\_fast             & 102,000                  & 219                                                           & 1.73                                                           & 164.00                                                       & 1.80                                                              & 190.00                                                       & 1.73                                                           & 130.00                                                       & 1.80                                                           \\ \hline
+vga\_lcd\_fast              & 148,000                  & 384                                                           & 2.80                                                           & 139.00                                                       & 0.47                                                              & 207.00                                                       & 2.72                                                           & 77.00                                                        & 0.47                                                           \\ \hline
+b19\_fast                   & 213,000                  & 547                                                           & 2.13                                                           & 239.00                                                       & 0.75                                                              & 366.00                                                       & 2.13                                                           & 174.00                                                       & 0.75                                                           \\ \hline
+leon3mp\_fast               & 540,000                  & 2,046                                                         & 4.00                                                           & 875.00                                                       & 1.49                                                              & 716.00                                                       & 4.00                                                           & 639.00                                                       & 1.49                                                           \\ \hline
+netcard\_fast               & 861,000                  & 1,033                                                         & 2.09                                                           & 519.00                                                       & 1.77                                                              & 609.00                                                       & 2.07                                                           & 306.00                                                       & 1.77                                                           \\ \hline
+\end{tabular}
+\end{table*}
+
+\begin{table*}[!ht]
+%\centering
+\caption{Leakage power comparisons with ISPD 2012 contest winners and other state of the art works. We use geometric mean to calculate the efficiency of our proposed solution. We exclude the infeasible solutions in our mean calculation. All the solutions reported below have no timing violations.}
+\label{tab:tab6}
+
+    \begin{tabular}{|l|l|l|p{1.2cm}|p{1.6cm}|p{1.6cm}|p{1cm}|l|p{1.2cm}|}
+\hline
+\multirow{2}{*}{Benchmark} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Number \\ of gates\end{tabular}} & \multicolumn{5}{c|}{Leakage Power (W)} & \multicolumn{2}{c|}{Runtime (mins)}\\ \cline{3-9} 
+    &  & \cite{hu:12}  & NTUgs & UFRGSgs & Powervalve & \textbf{Ours} & \cite{hu:12} & \textbf{Ours}\\ \hline
+    \texttt{DMA\_fast} & 23,000 & 0.30  & 0.51 & 0.32 & 0.31 & 0.30 & 13.90 & 13.30\\ \hline
+    \texttt{DMA\_slow} & 23,000  & 0.15  & 0.21 & 0.16 & 0.15 & 0.14 & 9.90 & 7.51 \\ \hline
+    \texttt{pci\_fast} & 30,000 & 0.18  & 0.51 & 0.17 & 0.23 & 0.14 & 13.00 & 17.10
+     \\ \hline
+    \texttt{pci\_slow} & 30,000 & 0.11   & 0.20 & 0.12 & 0.12 & 0.09 & 10.20 & 9.32 \\ \hline
+    \texttt{des\_perf\_fast} & 102,000 & 1.84 & 2.39 & 3.52 & 2.32 & 1.80  & 82.70 & 130.40 \\ \hline
+    \texttt{des\_perf\_slow} & 102,000 & 0.61 & 0.67 & 0.88 & 0.70 & 0.64 & 70.10 & 43.50 \\ \hline
+    \texttt{vga\_lcd\_fast} & 148,000 & 0.47 & 0.76 & 0.58 & 0.77 & 0.47 & 45.60 & 77.32\\ \hline
+    \texttt{vga\_lcd\_slow} & 148,000 & 0.35 & 0.42 & 0.38 & 0.39 & 0.37 & 87.50 & 50.40 \\ \hline
+    \texttt{b19\_fast} & 213,000 & 0.77 & 2.71 & - & 4.49 & 0.75 & 206.50 & 174.11 \\ \hline
+    \texttt{b19\_slow} & 213,000 & 0.58 & 0.63 & 0.61 & 0.74 & 0.61 & 213.90 & 102.20\\ \hline
+    \texttt{leon3mp\_fast} & 540,000 & 1.49 & -&  - & 4.94 & 1.49 & 1,323.20 & 639.40\\ \hline
+    \texttt{leon3mp\_slow} & 540,000 & 1.34 & 1.42 & 1.79 & 2.96 & 1.30 & 1,274.20 & 325.13  \\ \hline
+    \texttt{netcard\_fast} & 861,000 & 1.86 & 2.01 & 2.30 & 2.97 & 1.86 & 1,096.90 & 306.57\\ \hline
+    \texttt{netcard\_slow} & 861,000 & 1.77 & 1.77 & 1.97 & 1.94 & 1.77 & 299.90 & 164.14\\ \hline
+Geometric mean &  & $1.03\times$ & $1.52\times$ & $1.13\times$ & $1.57\times$ &   & $1.44\times$ & \\ \hline
+\end{tabular}
+\end{table*}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table*}[!ht]
+\centering
+\caption{Leakage power comparisons with \cite{hu:13} on the  ISPD 2013 contest benchmark. All the solutions reported below are violation free. It can be observed that \texttt{MLTimer} outperforms \cite{hu:13} both with respect to leakage power and runtime on the larger benchmarks. The detailed results for other benchmarks were not reported in \cite{hu:13}.}
+\label{tab:tab34}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multirow{2}{*}{Benchmark} & \multirow{2}{*}{Gates} & \multicolumn{2}{l|}{\texttt{MLTimer}}                                                                                                  & \multicolumn{2}{l|}{\cite{hu:13}}                                                                                                  \\ \cline{3-6} 
+                           &                        & \begin{tabular}[c]{@{}l@{}}Run-\\ time\\ (mins)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Leakage\\ Power\\ (mW)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Run-\\ time\\ (mins)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Leakage \\ Power\\ (mW)\end{tabular} \\ \hline
+usb\_phy\_fast             & 510                    & 0.48                                                         & 2.03                                                           & \textbf{0.21}                                                & \textbf{1.56}                                                   \\ \hline
+usb\_phy\_slow             & 510                    & \textbf{0.11}                                                & 1.13                                                           & 0.17                                                         & \textbf{1.07}                                                   \\ \hline
+pci\_bridge32\_fast        & 28,000                 & 20.83                                                        & 116.87                                                         & \textbf{12.00}                                               & \textbf{101.90}                                                 \\ \hline
+pci\_bridge32\_slow        & 28,000                 & 6.78                                                         & 58.91                                                          & \textbf{5.39}                                                & \textbf{58.83}                                                  \\ \hline
+fft\_fast                  & 31,000                 & 40.00                                                        & 320.37                                                         & \textbf{32.58}                                               & \textbf{305.29}                                                 \\ \hline
+fft\_slow                  & 31,000                 & 25.00                                                        & 96.69                                                          & \textbf{17.40}                                               & \textbf{93.10}                                                  \\ \hline
+cordic\_slow               & 42,000                 & \textbf{94.40}                                               & \textbf{397.81}                                                & 98.39                                                        & 511.91                                                          \\ \hline
+des\_perf\_slow            & 104,000                & 88.18                                                        & 386.41                                                         & \textbf{62.30}                                               & \textbf{375.80}                                                 \\ \hline
+edit\_dist\_fast           & 121,000                & \textbf{163.10}                                              & \textbf{572.12}                                                & 170.60                                                       & 619.30                                                          \\ \hline
+edit\_dist\_slow           & 121,000                & \textbf{56.34}                                               & \textbf{423.50}                                                & 107.20                                                       & 465.60                                                          \\ \hline
+matrix\_mult\_slow         & 153,000                & \textbf{139.80}                                              & \textbf{482.23}                                                & 212.60                                                       & 499.90                                                          \\ \hline
+netcard\_fast              & 884,000                & \textbf{372.70}                                              & \textbf{5,157.93}                                              & 716.80                                                       & 5271.80                                                         \\ \hline
+netcard\_slow              & 884,000.               & \textbf{297.12}                                              & \textbf{5,102.25}                                              & 439.60                                                       & 5183.89                                                         \\ \hline
+GEOMETRIC MEAN             &                &                                               &                                               & 1.005                                                       & 1.005                                                         \\ \hline
+
+\end{tabular}
+\end{table*}
+
+% \begin{table*}[!ht]
+% \begin{center}
+% \label{results3}
+% \begin{tabular}{|p{2.1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{1.5cm}|}
+% \hline
+% Benchmark & $\#$ gates & %\multicolumn{2}{|c|}
+% {\textit{MLTimer}} &%\multicolumn{2}{|c|} 
+% {Igor Markov} ~\cite{hu:12} & Improvement \\
+% \hline
+%   &  & Leakage Power (W)      %& Running Time    
+%   & Leakage Power (W) & \\% & Running Time \\ 
+ 
+% \hline
+% %USB\_PHY &536 &$<$1s &$<$1s & - \\
+% \hline
+% DMA\_fast & 25.3K & 0.08W %& 17m
+% & 0.299W & 73\% \\ %& 13m\\
+% \hline
+% %DMA\_slow & 25.3 & 0.134W %& 1m44s
+% %& 0.145W & 7\%  \\% & 9.9m\\
+% %\hline
+% pci\_bridge	&	33.2K	&	0.1331W %&	1m29s
+% &	0.183W & 27\%\\%	&	13m \\
+% \hline
+% %pci\_bridge\_slow	&	33.2K	&	0.07W	%&	8m
+% %&	0.111W & 36\% \\%	&	11m \\
+% %\hline 
+% b19	&	219K  &		.58W	%&	9h
+% &	0.771W & 24\% \\%	&	206m \\
+% \hline
+% %b19\_slow 	&	219K &		0.486W%	&	9h	
+% %&	0.583W & 19.21\% \\	%&	213m \\
+% %\hline
+% Des\_perf & 165K & .546W %& 1331m       
+% & .471W & \-15.3\% \\%    & 45m \\
+% \hline
+% netcard & 959k & 1.8W %& 2046m 
+% & 1.861W & 6.01 \% \\% & 1096m \\
+% \hline
+% leon3mp & 649K & 2W %&  2816m 
+% & 1.487W & \-34.5\% \\ %& 1323.2 \\
+% \hline
+% Average & & & & 21.37\% \\ \hline
+% %leon3mp\_slow & 649K & 2W &  2816m & 1.487W & 1323.2 \\
+% %\hline
+% \end{tabular}
+% \caption{Leakage and Running Time Comparisons for ISPD benchmarks between \textit{MLTimer} and Igor Markov. In the table, {\bf h}, {\bf m} and {\bf s} stand for hours, minutes and seconds respectively.}
+
+
+% \end{center}
+% \end{table*}
+\subsection{Comparisons with state-of-the-art}
+
+The performance of our proposed algorithm is shown in Table~\ref{tab:tab5}. A simple greedy algorithm, implemented for obtaining the final $V_t$ and $size$ values, serves as the baseline algorithm. It can be seen that our \textit{MLTimer} implementation outperforms the baseline algorithm by 46\% in terms of solution quality. It can also be seen that the SVM module improves the solution quality and the adaptive timing analysis module improves the runtime. 
+
+We compare the performance of our algorithm with ~\cite{hu:12} which is the best performing heuristic based algorithm reported so far in the literature. We use the ISPD 2012 benchmark set and SHAKTIC to quantify the performance our algorithm. In comparing with the state-of-the-art techniques we make the following observations:
+\begin{itemize}
+\item Our solution outperforms the top 3 submissions of the ISPD 2012 contest NTUgs, UFRGSgs and Powervalve by 52\%,13\% and 57\% respectively.
+\item Our solution outperforms \cite{hu:12} both in terms of average runtime and solution quality by 44\% and 3\% respectively. Table~\ref{tab:tab6} highlights the performance of \textit{MLTimer} algorithm in terms of runtime and solution quality. This is because as most of the circuits share a large  number of repeating sub-circuits whose value is accurately predicted by the SVM engine and hence these gates do not undergo delay and power recovery algorithm leading to savings in runtime. 
+\item It can be seen from Table~\ref{tab:tab34} that our tool outperforms \cite{hu:13} which is an extension of \cite{hu:12}. It can be observed that while \textit{MLTimer} underperforms for the smaller benchmarks, it significantly outperforms \cite{hu:13} on the larger benchmarks. Although the overall improvement in solution quality is around 0.004\%, the improvement in the larger benchmarks is around 53\% for the runtime and 10\% for solution quality.
+\item In Table~\ref{tab:tab9} we compare our implementation with a commercial synthesis tool and our implementation of \cite{hu:12}. It can be observed our proposed solution performs significantly better than the commercial tool in terms of leakage power. 
+\end{itemize}
+
+\begin{table}[!t]
+    \caption{The Table comparing the performance of \textit{MLTimer} versus a commercial synthesis tool on SHAKTIC. We see that the solution quality is 57\% better than that of the tool.}
+    \label{tab:tab9}
+
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+        \hline
+        \textbf{Metric}           & \multicolumn{2}{c|}{Commercial Tool}                                                                                     &        &            & \multicolumn{2}{c|}{Percentage Improvement} \\ \hline
+                         & \begin{tabular}[c]{@{}l@{}}$LV_t$\\  synthesis\end{tabular} & \begin{tabular}[c]{@{}l@{}}Mixed $V_t$ \\ synthesis\end{tabular} & \cite{hu:12} & \textit{MLTimer} & Tool              & \cite{hu:12}       \\ \hline
+                    %         \textbf{Runtime (mins)}    & 38                                                       & 14                                                            & 87     & 64         & -78.12           &  26.44       \\ \hline
+                             \textbf{Leakage power (W)} & 5                                                        & 1                                                             & 0.59  & 0.43       & 57        & 27        \\ \hline
+    \end{tabular}
+
+\end{table}
+
+
+\subsection{Analysis of the Learning Module}
+
+
+\begin{table}[!t]
+\caption{Table showing the weights assigned to each feature at each stage of the $V_t$ and $size$ classifiers. An extremely low magnitude implies that the corresponding feature does not contribute significantly to the output and can thus be discarded. However it can be seen that none of the features chosen fall into that category.}
+\label{tab:tab7}
+
+    \centering
+
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+    \multirow{2}{*}{\textbf{Feature}}       & \multicolumn{2}{c|}{$\mathbf{V_t}$} & \multicolumn{5}{c|}{\textbf{size}}             \\ \cline{2-8} 
+                               & 1          & 2          & 1     & 2     & 3     & 4     & 5     \\ \hline
+    \textbf{Sub-circuit}                    & -0.88      & -0.43      & -0.58 & 1.32  & -0.08 & 0.44  & 0.16  \\ \hline
+    \textbf{Gate type}                      & -0.19      & -0.43      & -0.96 & -0.81 & 0.42  & -0.40 & 0.29  \\ \hline
+    \textbf{LNS}                            & 1.09       & 0.33       & -0.07 & -0.11 & 0.76  & 0.76  & 0.08  \\ \hline
+    \textbf{Number of Fanins}               & 2.64       & 0.04       & 3.27  & -2.38 & -1.10 & -0.34 & -1.26 \\ \hline
+    \textbf{Number of Fanouts}              & -2.92      & -0.29      & -4.08 & -0.53 & 1.82  & 0.50  & -1.07 \\ \hline
+    \textbf{Number of Negative Slack Paths} & 0.33       & -0.16      & 0.50  & 0.40  & -0.22 & 0.21  & -0.68 \\ \hline
+    \textbf{Slack}                          & 1.89       & 0.35       & 1.22  & -3.20 & -1.64 & -1.41 & 0.37  \\ \hline
+\end{tabular}
+
+\end{table}
+
+
+The learning module forms a critical component of our framework as it serves to reduce the runtime by using a simple SVM model that uses seven features.  A complex ML model with large number of redundant features might cause runtime overheads due to i) complex training procedure ii) complicated inference procedure, and; iii) reduced interpretability of the ML model. Hence there is a need to eliminate the redundant features in order to simplify the learning module. Logistic regression was performed to estimate the importance of the chosen features. The Logistic Regression model was initially trained on the set of chosen features and the importance of each feature,  obtained via the coefficient assigned by the model,  is quantified in Table~\ref{tab:tab7}.  It can be observed that none of the feature weights have extremely low value and hence cannot be eliminated.
+
+
+%As mentioned earlier, an improperly trained learning engine could initialize the netlist to a sub-optimal configuration leading to more delay and power recovery cycles than necessary thereby increasing the runtime overhead. The thresholding function plays an important role in predicting the final choice ($V_t$/$size$) for a given cell. We use the b19\_fast benchmark to show the impact of varying the thresholding function on the solution quality of the SVM engine. We show the impact of the thresholding function in table ~\ref{results4}. We see that as the thresholding function increases the runtime goes up. This is because the number of gates that are marked unsure increases causing more delay and power optimizations. We us class probability to determine the class label ($V_t$/$size$). We use a thresholding value of $0.75$ for both the $V_t$ classifiers while we use a thresholding value of x and y for the $size$ classifiers. 
+
+
+
+
+
+% \begin{table*}[!t]
+% \parbox{.3\linewidth}{
+% \begin{center}
+
+% \begin{tabular}{|p{3cm}|p{1.3cm}|}
+% \hline
+% Metric & Number \\ \hline
+% Total gates & 333\\
+% \hline
+% Combinational gate types &  11 \\ \hline
+% Sequential gates & 1 \\ \hline
+% $V_t$ choices & 3 \\ \hline
+% $size$ choices & 10 \\ \hline
+% $V_{cc}$ and $gnd$ cells & 2 \\ \hline
+% %leon3mp\_slow & 649K & -6401 &  -6479 & 1W & 47s \\
+% %\hline
+% \end{tabular}
+% \caption{Library statistics}
+% \label{tab:lib}
+% \end{center}
+% %\end{table*}
+% }
+% \hfill
+% \parbox{.6\linewidth}{
+% %\begin{table*}[!t]
+% \begin{center}
+
+% \begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|p{1.6cm}|p{1.6cm}|p{1.6cm}|}
+% \hline
+% Benchmark & \#Input & \#Output & \#Comb cell & \#Seq cell & \#Total cell \\
+% \hline
+% DMA &  683 & 276 & 23109 & 2192 & 25301\\ \hline
+% pci & 160 & 201& 29844& 3359& 33203\\ \hline
+% des\_perf &  234 & 140 & 102427 & 8802& 111229\\ \hline
+% vga\_lcd &  85 & 99 &  147812 & 17079 & 164891\\ \hline
+% b19 &  22 & 25 &  212674 & 6594 & 219268\\ \hline
+% leon3mp & 254 & 79 & 540352 &  108839 & 649191\\ \hline
+% netcard &  1836 & 10 & 860949 & 97831 & 958780\\ \hline
+
+% %leon3mp\_slow & 649K & -6401 &  -6479 & 1W & 47s \\
+% %\hline
+% \end{tabular}
+% \caption{Benchmark statistics}
+% \label{tab:benchmark}
+% \end{center}
+% }
+% \end{table*}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+
+% \begin{table*}[!t]
+% \parbox{.5\linewidth}{
+% \begin{center}
+
+% \label{tab:log}
+% \begin{tabular}{|p{2.5cm}|p{3cm}|}
+% \hline
+% Feature & Weight \\
+% \hline
+% Gate footprint &-0.8832794232852276 \\ \hline
+% Gateid & -0.1914242984939835 \\ \hline
+% Local negative slack & 1.090781658200261 \\ \hline
+% \#Fanins & 2.642338600894165  \\ \hline
+% \#Fanouts & -2.92081747517804  \\ \hline
+% \#Negative slack paths & 0.3349856667382776  \\ \hline
+% Slack & 1.894864001133556 \\ \hline
+
+% %leon3mp\_slow & 649K & -6401 &  -6479 & 1W & 47s \\
+% %\hline
+% \end{tabular}
+% \caption{Feature Weights for the first $V_t$ classifier }
+% \end{center}
+% %\end{table*}
+% }
+% \hfill
+% %\begin{table*}[!h]
+% \parbox{.5\linewidth}{
+% \begin{center}
+
+% \label{tab:log2}
+% \begin{tabular}{|p{2.5cm}|p{3cm}|}
+% \hline
+% Feature & Weight \\
+% \hline
+% Gate footprint & 0.03119793516364029
+% \\ \hline
+% Gateid &  0.346427255804566\\ \hline
+% Local negative slack & -0.01019723367101055\\ \hline
+% \#Fanins & -0.007490175140922838 \\ \hline
+% \#Fanouts & -0.2180352793079041 \\ \hline
+% \#Negative slack paths & -0.06062286295401311  \\ \hline
+% Slack & 0.663389798807628 \\ \hline
+
+% %leon3mp\_slow & 649K & -6401 &  -6479 & 1W & 47s \\
+% %\hline
+% \end{tabular}
+% \caption{Feature Weights for the second stage $V_t$ classifier }
+% \end{center}
+% }
+% \end{table*}
+
+The efficiency of the SVM engine is analyzed in Table~\ref{tab:tab8}. We see that on an average the SVM engine is able to recover a significant amount of power in a short amount of time. However, It can be observed that the solution provided by the SVM engine is not optimal hence  the delay and leakage power recovery steps are used to further optimize the solution provided by the learning step.
+
+ \begin{table*}[!t]
+  \caption{Leakage and Running Time Comparisons for ISPD benchmarks and ShaktiC with just SVM. In the table, {\bf h}, {\bf m} and {\bf s} stand for hours, minutes and seconds respectively. It can be seen that with the exception of leon3mp our SVM implementation is able to recover significant delay and power.} \
+\label{tab:tab8}
+
+     \begin{center}
+ \begin{tabular}{|p{4.2cm}|p{2cm}|p{2.2cm}|p{2cm}|p{2cm}|p{2cm}|}
+ \hline
+    \textbf{Benchmark} & \textbf{Gate count} & \textbf{Initial Worst Negative Slack (WNS)} & \multicolumn{3}{|c|}{ \textit{MLTimer}}  \\
+ \hline
+   &   & & WNS (ps) &  Leakage Power (W)      & Running Time          \\
+ \hline
+     \texttt{ DMA\_fast} & 25,300&  -1485 & -774 &0.09  & 3s \\
+ \hline
+     \texttt{pci\_bridge32\_fast}	& 33,200& -1881 & -2284	&	0.18   &	3s	 \\
+ \hline
+     \texttt{des\_perf\_fast} &  102,000 & -669 & -1029 &.316 & 1m        \\
+ \hline
+     \texttt{vga\_lcd\_fast} & 148,000 & -1254 & -2964 &.29 & 1m          \\
+\hline
+
+     \texttt{b19\_fast}	&	219,000 & -2835 & -1738	&	1.6 	&	15s	\\ \hline
+     \texttt{leon3mp\_fast} & 649,000 & -6401 & -3913 & 21 &  47s \\
+ \hline
+
+     \texttt{netcard\_fast} & 959,000 & -4102 &-3268 & 8 & 1m  \\ \hline
+     \texttt{ShaktiC} & 174,756 & -5199 & -1067 & 0.67 & 1m \\ 
+ \hline
+ \end{tabular}
+ \end{center}
+
+ \end{table*}
+\section{Conclusion}
+\label{sec:conclusion}
+Leakage optimization  techniques have been studied extensively for more than a decade.  However, the lack of a robust algorithm that is optimal in terms of both execution time and solution quality motivates research in this area. It is seen that varying window size adaptively according to the status of the timing updates produces faster solutions than for a fixed window size. The proposed \textit{MLTimer} algorithm improves the running-time considerably while still retaining the solution quality of a greedy heuristic. It is observed that for large circuits \textit{MLTimer} with initial configuration provided by SVM performs significantly better than when used with power optimal configuration as initial solution.  Extending the concepts involved in the construction of \textit{MLTimer} to other steps of EDA including placement and routing is an interesting direction for future work.
+% * <sristisravan@gmail.com> 2017-06-28T10:13:29.636Z:
+% 
+% Check "... the lack of a robust heuristic that optimal in terms of both.... "
+% 
+% ^.
+
+%\begin{table*}[t]
+% \begin{center}
+% \caption{Leakage and Running Time Comparisons for ISPD benchmarks with just SVM and delay recovery. In the table, {\bf h}, {\bf m} and {\bf s} stand for hours, minutes and seconds respectively.}
+% \label{results2}
+% \begin{tabular}{|p{1.7cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+% \hline
+% Benchmark & $\#$ gates & \multicolumn{3}{|c|}{\textit{MLTimer}}  \\
+% \hline
+%   &  & Delay(ps) &  Leakage Power (W)      & Running Time          \\
+% \hline
+% %USB\_PHY &536 &$<$1s &$<$1s & - \\
+% \hline
+% DMA_fast & 25.3K & &0.08W & 17m \\
+% \hline
+% DMA_slow & 25.3 & &0.134W & 1m44s \\
+% \hline
+% pci_bridge_fast	& 33.2K&	&	0.1331W &	1m29s	 \\
+% \hline
+% pci_bridge_slow	& 	33.2K&	&	0.07W	&	8m	\\
+% \hline 
+% b19_fast	&	219K  &	&	.58W	&	9h	\\
+% \hline
+% b19_slow 	&	219K & &		0.486W	&	9h	 \\
+% \hline
+% Des_perf_fast &  165K & &.546W & 1331m        \\
+% \hline
+% Des_perf_slow &  165K & & .546W & 1331m         \\
+% \hline
+% vga_lcd_slow & 165K & & .546W & 1331m          \\
+% \hline
+% vga_lcd_slow & 165K &  &.546W & 1331m          \\
+% \hline
+% netcard_fast & 959k & & 1.8W & 2046m  \\
+% \hline
+% netcard_slow & 959k & & 1.8W & 2046m \\
+% \hline
+% leon3mp_fast & 649K & & 2W &  --- \\
+% \hline
+% leon3mp_slow & 649K & & 2W &  --- \\
+% \hline
+% \end{tabular}
+% \end{center}
+%\end{table*}
+
+
+
+

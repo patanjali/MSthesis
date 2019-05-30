@@ -1,18 +1,38 @@
-%\documentclass[PhD]{iitmdiss}
-\documentclass[MS,twoside]{iitmdiss}
+\documentclass[PhD]{iitmdiss}
+%\documentclass[MS,twoside]{iitmdiss}
 %\documentclass[MTech]{iitmdiss}
 %\documentclass[BTech]{iitmdiss}
 \usepackage{times}
  \usepackage{t1enc}
-
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{hyperref} % hyperlinks for references.
 \usepackage{amsmath} % easier math formulae, align, subequations \ldots
-
-
+\usepackage{caption}
+\usepackage[ruled,linesnumbered]{algorithm2e} % For algorithms
+%\usepackage{subfig}
+ \usepackage{subcaption}
+ \usepackage{xfrac}
+ \usepackage{nicefrac}
+% \usepackage{footnote}
+% \makesavenoteenv{tabular}
+ \usepackage[font=small,labelfont=bf]{caption}
+ \usepackage{booktabs}
+ \usepackage{multirow}
+ \usepackage[font={footnotesize}]{caption}
+ \usepackage{amsthm}
+\newtheorem{thm}{Theorem}[] % the main one
+\newtheorem{lemma}[thm]{Lemma}
+\theoremstyle{plain} % just in case the style had changed
+ \newcommand{\thistheoremname}{}
+ \newtheorem{genericthm}[thm]{\thistheoremname}
+ \newenvironment{namedthm}[1]
+   {\renewcommand{\thistheoremname}{#1}%
+   \begin{genericthm}}
+   {\end{genericthm}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{ijcai17}
+\SetKw{Continue}{continue}
 
 
 \usepackage{macros}
@@ -29,11 +49,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page
 
-\title{Finite-time Analysis of Frequentist Strategies for Multi-armed Bandits}
+\title{Gate sizing for energy efficient and secure digital designs.}
 
-\author{Subhojyoti Mukherjee}
+\author{Patanjali SLPSK}
 
-\date{May 2018}
+\date{January 2018}
 \department{COMPUTER SCIENCE AND ENGINEERING}
 
 %\nocite{*}
@@ -53,9 +73,9 @@
 
 \vspace*{0.5in}
 
-\noindent This is to certify that the thesis titled {\bf Finite-time Analysis of Frequentist Strategies for Multi-armed Bandits}, submitted by {\bf Subhojyoti Mukherjee}, 
+\noindent This is to certify that the thesis titled {\bf Gate sizing for energy efficient and secure digital designs}, submitted by {\bf Patanjali SLPSK}, 
   to the Indian Institute of Technology, Madras, for
-the award of the degree of {\bf Master of Science (Research)}, is a bona fide
+the award of the degree of {\bf Doctor of Philosophy}, is a bona fide
 record of the research work done by him under our supervision.  The
 contents of this thesis, in full or in parts, have not been submitted
 to any other Institute or University for the award of any degree or
@@ -66,24 +86,17 @@ diploma.
 \begin{singlespacing}
 \hspace*{-0.25in}
 \parbox{2.5in}{
-\noindent {\bf Dr. Balaraman Ravindran} \\
+\noindent {\bf Dr. Kamakoti Veezhinathan} \\
 \noindent Research Guide \\ 
 \noindent Professor \\
 \noindent Dept. of Computer Science\\
 \noindent IIT-Madras, 600 036 \\
 } 
-\hspace*{1.0in} 
-\parbox{2.5in}{
-\noindent {\bf Dr. Nandan Sudarsanam} \\
-\noindent Research Co-Guide \\ 
-\noindent Assistant Professor \\
-\noindent Dept.  of  Management Studies\\
-\noindent IIT-Madras, 600 036 \\
-}  
+
 \end{singlespacing}
 \vspace*{0.25in}
 \noindent Place: Chennai\\
-Date: May 21, 2018
+Date: January, 2018
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,7 +114,7 @@ Date: May 21, 2018
 
 %\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Bandits, UCB, EUCBV, Thresholding Bandits,  AugUCB, changepoint detection, SECPD.}
 
-\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Stochastic Bandits, UCB, UCBV, EUCBV, Thresholding Bandits, APT, AugUCB}
+%\noindent KEYWORDS: \hspace*{0.5em} \parbox[t]{4.4in}{Reinforcement Learning, Stochastic Bandits, UCB, UCBV, EUCBV, Thresholding Bandits, APT, AugUCB}
 
 \vspace*{24pt}
 \noindent \input{abstract}
@@ -261,7 +274,7 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 % Introduction.
 \clearemptydoublepage
 \pagenumbering{arabic}
-\chapter{Introduction to Bandits}
+\chapter{Introduction}
 \label{chap:intro}
 
 \section{Reinforcement Learning}
@@ -270,15 +283,15 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 \section{Connection between Reinforcement Learning and Bandits}
 \label{conn:Bandits}
-\input{Chapter1/connBandits}
+%\input{Chapter1/connBandits}
 
 \section{Why study Bandits?}
 \label{study}
-\input{Chapter1/studyBandit}
+%\input{Chapter1/studyBandit}
 
 \section{Motivation}
 \label{motivation}
-\input{Chapter1/motivation}
+%\input{Chapter1/motivation}
 
 
 \section{Types of Information Feedback}
@@ -308,33 +321,33 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearemptydoublepage
-\chapter{Stochastic Multi-armed Bandits}
-\label{chap:SMAB}
+% \chapter{Stochastic Multi-armed Bandits}
+% \label{chap:SMAB}
 
-\section{Introduction to SMAB}
-\label{sec:intro}
-\input{Chapter2/intro}
+% \section{Introduction to SMAB}
+% \label{sec:intro}
+% \input{Chapter2/intro}
 
-\section{Notations and assumptions}
-\label{sec:notations}
-\input{Chapter2/notation}
+% \section{Notations and assumptions}
+% \label{sec:notations}
+% \input{Chapter2/notation}
 
-\section{Problem Definition}
-\label{sec:probDef}
-\input{Chapter2/probDef}
+% \section{Problem Definition}
+% \label{sec:probDef}
+% \input{Chapter2/probDef}
 
-\section{Motivation}
-\label{sec:motivation}
-\input{Chapter2/motivation}
+% \section{Motivation}
+% \label{sec:motivation}
+% \input{Chapter2/motivation}
 
-\section{Related Work in SMAB}
-\label{sec:related}
-\input{Chapter2/related}
+% \section{Related Work in SMAB}
+% \label{sec:related}
+% \input{Chapter2/related}
 
-\newpage
-\section{Summary}
-\label{chap2:conc}
-\input{Chapter2/conclusion}
+% \newpage
+% \section{Summary}
+% \label{chap2:conc}
+% \input{Chapter2/conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -345,35 +358,41 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 \clearemptydoublepage
 \chapter{Efficient UCB Variance: An Almost Optimal Algorithm in SMAB Setting}
 \label{chap:EUCBV}
+\input{Chapter3/introduction.tex}
+\input{Chapter3/background.tex}
+\input{Chapter3/motivation.tex}
+\input{Chapter3/problem.tex}
+\input{Chapter3/proposed.tex}
+\input{Chapter3/related.tex}
+\input{Chapter3/results.tex}
+% \section{Introduction}
+% \label{Chapter3:intro}
+% \input{Chapter3/introduction}
 
-\section{Introduction}
-\label{Chapter3:intro}
-\input{Chapter3/introduction}
 
+% \section{Our Contributions}
+% \label{sec:contri}
+% %\input{Chapter3/contribution}
 
-\section{Our Contributions}
-\label{sec:contri}
-\input{Chapter3/contribution}
+% \section{Algorithm: Efficient UCB Variance}
+% \label{sec:eucbv}
+% \input{Chapter3/ealgo}
 
-\section{Algorithm: Efficient UCB Variance}
-\label{sec:eucbv}
-\input{Chapter3/ealgo}
+% \section{Main Results} 
+% \label{sec:results}
+% \input{Chapter3/results}
 
-\section{Main Results} 
-\label{sec:results}
-\input{Chapter3/results}
+% \section{Proofs}
+% \label{sec:proofTheorem}
+% \input{Chapter3/proofTheorem}
 
-\section{Proofs}
-\label{sec:proofTheorem}
-\input{Chapter3/proofTheorem}
+% \section{Experiments}
+% \label{sec:expt}
+% \input{Chapter3/expts}
 
-\section{Experiments}
-\label{sec:expt}
-\input{Chapter3/expts}
-
-\section{Summary}
-\label{sec:conc}
-\input{Chapter3/Conclusion}
+% \section{Summary}
+% \label{sec:conc}
+% \input{Chapter3/Conclusion}
 
 
 
@@ -390,39 +409,39 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 \chapter{Thresholding Bandits}
 \label{chap:tbandit1}
 
-\section{Introduction to Thresholding Bandits}
-\label{tbandit:intro1}
-\input{Chapter4/intro}
+%\section{Introduction to Thresholding Bandits}
+%\label{tbandit:intro1}
+\input{Chapter4/introduction.tex}
 
-\section{Notations and Assumptions}
-\label{tbandit:notations}
-\input{Chapter4/notation}
+%\section{Notations and Assumptions}
+%\label{tbandit:notations}
+\input{Chapter4/background.tex}
 
-\section{Problem Definition}
-\label{tbandit:probDef}
-\input{Chapter4/probDef}
+%\section{Problem Definition}
+%\label{tbandit:probDef}
+\input{Chapter4/motivation.tex}
 
-\section{Motivation}
-\label{tbandit:motivation}
-\input{Chapter4/motivation}
+%section{Motivation}
+%\label{tbandit:motivation}
+\input{Chapter4/experiment.tex}
 
-\section{Related Work in Pure Exploration Problem}
-\label{tbandit:prevRes}
-\input{Chapter4/prevRes}
+%\section{Related Work in Pure Exploration Problem}
+%\label{tbandit:prevRes}
+\input{Chapter4/proposed.tex}
 
-\section{TBP Connection to Pure Exploration Problem}
-\label{tbandit:connection}
-\input{Chapter4/connection}
+%\section{TBP Connection to Pure Exploration Problem}
+%\label{tbandit:connection}
+\input{Chapter4/related.tex}
 
 
-\section{Related Work in Thresholding Bandits}
-\label{tbandit:prevResAPT}
-\input{Chapter4/prevResAPT}
+% \section{Related Work in Thresholding Bandits}
+% \label{tbandit:prevResAPT}
+% \input{Chapter4/prevResAPT}
 
 
 \section{Summary}
-\label{tbandit:conc}
-\input{Chapter4/conc}
+%\label{tbandit:conc}
+%\input{Chapter4/conc}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -432,37 +451,37 @@ xxxxxxxxxxx \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearemptydoublepage
-\chapter{Augmented UCB for Thresholding Bandit Problem}
-\label{chap:tbandit2}
+% \chapter{Augmented UCB for Thresholding Bandit Problem}
+% \label{chap:tbandit2}
 
-\section{Introduction}
-\label{tbandit:intro2}
-\input{Chapter5/intro}
-
-
-\section{Our Contributions}
-\label{tbandit:contribution}
-\input{Chapter5/contribution}
+% \section{Introduction}
+% \label{tbandit:intro2}
+% \input{Chapter5/intro}
 
 
-\section{Augmented-UCB Algorithm}
-\label{tbandit:algorithm}
-\input{Chapter5/algo}
+% \section{Our Contributions}
+% \label{tbandit:contribution}
+% \input{Chapter5/contribution}
 
 
-\section{Theoretical Results}
-\label{tbandit:results}
-\input{Chapter5/results}
+% \section{Augmented-UCB Algorithm}
+% \label{tbandit:algorithm}
+% \input{Chapter5/algo}
 
 
-\section{Numerical Experiments}
-\label{tbandit:expt}
-\input{Chapter5/expt}
+% \section{Theoretical Results}
+% \label{tbandit:results}
+% \input{Chapter5/results}
 
 
-\section{Summary}
-\label{tbandit:conclusion}
-\input{Chapter5/conclusion}
+% \section{Numerical Experiments}
+% \label{tbandit:expt}
+% \input{Chapter5/expt}
+
+
+% \section{Summary}
+% \label{tbandit:conclusion}
+% \input{Chapter5/conclusion}
 
 
 

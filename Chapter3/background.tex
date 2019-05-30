@@ -1,0 +1,111 @@
+\section{Background on Discrete Sizing Problem}
+\label{sec:background}
+The TC-DSP problem has been studied extensively in the last 30 years and various optimization techniques have been proposed. In this section, we present a summary of the these efforts.
+
+
+
+\subsection{The TC-DSP Problem}
+%should check if this wording reflects the equation based formulation.
+
+\noindent Consider a circuit $C$ containing $N$ gates. Let each of the gate be realizable using $m$ choices made available in the standard cell library provided by the standard cell library. Starting from the primary input(s), we define the instant that a signal reaches an input of a gate $g_i$ as the arrival time $A(i)$. Similarly, starting from the primary output(s), we define the maximum limit imposed for each arrival time to ensure operation of the  circuit at the target frequency as the required arrival time $R_{a}(i)$. Slack at the gate $g_i$ is defined as $R_{a}(i) - A(i)$. A positive slack implies that the timing constraint is satisfied, and a negative slack implies that the timing constraint at the particular gate is violated \cite{taucontest}.\\
+
+
+
+
+%Let each of the gate $g_i$ be realizable using several choices of $V_t$ made available in the foundry provided standard-cell library.
+ Let $x_{i}^{j}$ denote a discrete variable defined as follows:\\
+  \begin{equation}
+   {x_{i}^{j}} =
+   \left\{
+           \begin{array}{lllll}
+                  1, \ {\bf if}\ i^{th} gate\  in\ the\ given\ circuit\ is\ realized\\
+                  \  \  \ \ with\ j^{th}\ choice\ \ in\ the\ standard\\
+                  \   \  \ \ cell\  library\\
+                  0, \ {\bf otherwise}\\
+          \end{array}
+  \right.
+  \end{equation}
+ 
+ 
+ 
+%
+\noindent The optimization problem is to find $x_{i}^{j}$ for lowest leakage power, without violating the critical path timing. Let $fanin(i)$ be the set of all gates driving the $i^{th}$ gate in the circuit. Let $p_{i}^{j}$ and $d_{i}^{j}$ be the power and delay of the gate $g_{i}$ when realized with the $j^{th}$ choice in the standard cell library. $PO(C)$ and $PI(C)$ denote the set of  primary outputs and  primary inputs respectively of the given circuit $C$; and, $T$ denote the timing budget assigned to $C$. The leakage minimization problem for C can be formally stated as follows:
+\begin{equation}\label{opt_eqn_1} {\Large{\underset{}{\operatorname{minimize}}\sum_{i=1}^{N} \sum_{j=1}^{m} x_{i}^{j} p_{i}^{j}}}  \end{equation}
+\indent \indent \indent \indent \indent such that
+\begin{equation}\label{opt_eqn_2} \sum_{j=1}^{m} x_{i}^{j} = 1, \forall i, 1 \leq i \leq N\end{equation}
+%\begin{equation}\label{opt_eqn_3}  x_{g_{i,j}} \in \{0,1\}, \forall i, 1 \leq i \leq N_{gate}; \forall j, 1 \leq j \leq m \end{equation}
+    \begin{equation}\label{opt_eqn_4} A(i) + \sum_{j=1}^{m} d_{i}^{j} x_{i}^{j} \le A(k), \forall k \in fanin(i)\end{equation}
+\begin{equation}\label{opt_eqn_5} A(O) \le T, \forall O \in PO(C) \end{equation}
+\begin{equation}\label{opt_eqn_6} A(I) \ge 0, \forall I \in PI(C)\end{equation}\\
+\begin{equation} \label{opt_eqn_7} slew(x_{i}^{j}) < max slew(x_{i}^{j}), \forall i,1 \leq i \leq N  \end{equation}
+\begin{equation} \label{opt_eqn_8} capacitance(x_{i}^{j})<max capacitance(x_{i}^{j}),  \forall i,1 \leq i \leq N \end{equation} \\
+
+\noindent In the above equations~\ref{opt_eqn_5} and \ref{opt_eqn_6}, $A(O)$ and $A(I)$ denote the arrival-times at primary output wires and primary input wires of $C$ respectively. Equation~\ref{opt_eqn_1} presents the objective function that minimizes the leakage power of the given circuit.
+Equation~\ref{opt_eqn_2} ensures that exactly one version of gate $i$ is used among its available $m$ choices.
+Equations~\ref{opt_eqn_4}, \ref{opt_eqn_5} and \ref{opt_eqn_6} ensure that the arrival-time constraints are met for all the gates, primary inputs and primary outputs of $C$ respectively.
+
+\noindent The delay of a gate is obtained by using the input slew and load capacitance values to index to an array in the standard cell library. The replacement of a gate with its higher $V_t$ or lower $size$ variants might violate the slew constraints in its fanout cone or capacitance constraints in its fanin cone. Equations ~\ref{opt_eqn_7} and~\ref{opt_eqn_8} ensure that the replacement does not cause such violations.
+This formulation has been studied extensively in \cite{hu:12}, \cite{hu:13},\cite{reiman:13}, \cite{li:12}, \cite{ozdal:12},\cite{hu:13}, and \cite{rahman:12} .
+
+\subsection{Prior Work}
+
+Though, the above presented TC-DSP problem formulation has been studied extensively in the last 30 years, the works could not be compared as there was no standard framework to evaluate each proposed solution. Another challenge was that the solutions were largely academic and could not be extended to meet modern technologies. The various challenges faced during the circuit optimization phase in an industrial flow were formulated in \cite{ozdal:12}. The ISPD 2012\cite{ispd:12} contest framework was setup to address the above two challenges. 
+It had 7 benchmark netlists. The netlist sizes ranged from $25,000$ gates to $9,50,000$ gates. Each netlist has i) a Verilog file representing the functionality of the circuit; ii) a SPEF file that had the capacitance and resistance value for each net in the design; and, iii) two delay constraint files which could be used to realize a fast and a slow version of the same design respectively.
+
+The various solutions used to tackle the discrete sizing problem can be broadly classified as, i) Non analytical methods which use heuristic based techniques to solve the problem and ii) Analytical methods which try to solve it by posing the problem as a Lagrangian relaxation or as a Convex Optimization problem.
+
+\begin{itemize}
+\item \textbf{Non-Analytical Methods:}  Non-Analytical methods rely on greedy heuristics as shown in\cite{hu:12},\cite{mok:12},\cite{reiman:13} and  %dp formulation,
+\cite{rahman:12}. %rahman and sachen
+        A sensitivity guided heuristic to solve the TC-DSP was proposed by \cite{hu:12}. The authors use a \textit{go-with-the winners} approach. They also observe that evaluating the benchmarks using varying cost functions yields better results. Their proposed solution outperforms the winners of the ISPD2012 contest by a significant margin. A comprehensive survey of the existing leakage optimization techniques is presented in \cite{mok:12}. The authors in \cite{mok:12} also propose a peephole optimization based technique for gate sizing. A simulated annealing based approach to solve the TC-DSP was presented in \cite{reiman:13}. They use the \textit{fanout-of-4 rule} and \textit{logic effort} to initialize the netlist to a good initial configuration. However, their solution fails to achieve timing closure on all benchmark circuits. A $V_t$ optimization technique, that uses a new cost function  $\frac{\delta slack}{\delta leakage}$ where $ \delta slack$, $\delta leakage$ represent the slack variation and leakage variation due to the change in the $V_t$ of the cell respectively, is employed in \cite{rahman:12}. The gates are ranked in ascending order based on the above metric and swapped if there is no timing violation. 
+        Dynamic programming based solutions were proposed by \cite{li:12}, \cite{Ketkar:09},\cite{Liu:09} while works like \cite{livramento:14}, \cite{ren:08} employed a network flow based solution. %\cite{Liu:09} use GPU to speedup their DP based solution.
+% find the two references.
+
+
+\item \textbf{Analytical Methods:} Analytical methods try to solve the problem by posing it as 
+Convex Optimization Formulation or Lagrangian Formulation. Of these two, the Lagrangian relaxation problem has been shown to be more effective as seen in \cite{ozdal:12}, \cite{li:12},\cite{livramento:14},\cite{flach:13},\cite{livramento:13} and \cite{sharma:15}. The objective is to minimize the total leakage power in the circuit while penalizing any delay violations. A modified formulation that takes into account the capacitance and slew conditions is presented in \cite{li:12}. Their LR formulation improves both the solution quality and the runtime significantly. A multi-threaded approach to solve the problem is presented in \cite{sharma:15}. A new metric to identify the candidate gates that could be replaced with different $V_t$/$size$ choices is presented in \cite{reis:16}. 
+
+\end{itemize}
+
+Initial STA engines always processed an entire design, which is impractically expensive for evaluating every 
+        replacement~\cite{papa:10}. It is to be noted that replacing the $V_t$/$size$ of a gate $g_i$, changes the arrival times of gates only in the fan-in and fan-out cones\footnote{Fan-in/Fan-out cone of a gate $g$ is defined as the sub-circuit that drives/is driven by the gate $g$\cite{abramovci}.} of $g_i$, while the arrival times of other gates remain unaffected. By performing STA for the entire design, we may end up computing known values repeatedly. 
+        To improve the efficiency of the STA engine, several {\em incremental} STA techniques have been proposed in the past~\cite{lee:95},\cite{abato:96},\cite{sapatnekar:96},\cite{mondal:04},\cite{das:06}. In~\cite{lee:95}, {\em incremental} STA is performed by solving the {\em incremental longest path problem}, with a novel algorithm which is linear in the number of edges in the {\em dominance fan-out cone}. In~\cite{abato:96}, a frontier is established by recording the leftmost and rightmost gates in the fan-in and fan-out cone of each gate that gets affected by the change in relative timing values.
+Based on a request, incremental timing analysis is performed on the modified design
+employing the recorded frontiers of change to limit the timing analysis to 
+the {\em affected} regions of the circuit alone. An input based path sensitization approach 
+was used for incremental STA in~\cite{sapatnekar:96}.
+On a similar note, in~\cite{coudert:97}, the incremental timer is accelerated by only updating a 
+set of gates that are in the neighbourhood of the gate whose timing value has been updated. 
+In~\cite{mondal:04}, timing queries were modeled using temporal logic and an efficient 
+algorithm was proposed to answer those queries. Similarly, in~\cite{das:06}, a more 
+efficient incremental STA algorithm which exploits the circuit structure was proposed. 
+In all these works, path based algorithms were proposed to 
+increase the performance of incremental STA, but none of them except~\cite{abato:96} looked 
+at reducing the number of times the incremental STA needs to be performed. 
+Even in~\cite{abato:96}, although incremental STA is not performed in every iteration, 
+nonetheless some computation is performed in every iteration relating to the signal propagation. 
+As a result, the running time complexity does not decrease significantly compared to the use of a normal STA. 
+E.g., in~\cite{hu:12}, in spite of using a state-of-art incremental timer, the optimization 
+        took greater than $20$ hours for the larger benchmarks $(\ge 540,000)$ in the ISPD 2012 suite. It can be seen from the above works that the STA engines reported so far consume a significant time. The number of times the STA needs to be performed (timing updates) grows linearly with the size of the circuit. Reducing the number of times such updates are performed results in a reduction in the overall running time of the algorithm. This reduction without compromising on the solution quality is the challenge that forms one of the central themes of this paper.
+
+
+
+\noindent In the last four years, Machine Learning techniques have shown promise in solving complex optimization problems across various domains \cite{prowatch}. Learning based techniques have also been used to optimize specific bottlenecks in VLSI-CAD as shown in \cite{kahng:2} and \cite{kahng:3}. However to the best of our knowledge ours is the first work to employ Machine Learning for the problem of gate sizing.
+
+%compare both non-analytical and analytical methods.
+
+%~\cite{hu:12}, 
+
+
+
+%The TC-DSP is presented as an instance of Lagrangian Relaxation (LR) problem in~\cite{Hu:11}. The objective is to minimize leakage and the algorithm places a penalty for any delay violations. The timing constraints are introduced in the LR formulation.  The netlist is modeled as a directed acyclic graph and the discrete gate version characteristics are based
+%on timing tables provided by the gate library. A Dynamic Programming algorithm
+%based on critical tree extraction is proposed to solve the LR optimization problem for discrete gates. An accurate timer is used for sign-off and slack computation.
+
+%ideas that this section should contain: why do we need to take this approach.
+%
+%
+%
+
+
+
